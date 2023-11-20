@@ -6,7 +6,7 @@
 .pnp.js
 
 # IntelliJ IDEA
-.idea/*
+.idea/
 
 # testing
 /coverage
