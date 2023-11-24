@@ -1,0 +1,14 @@
+import { initializeApp } from "firebase/app";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyC5Rad2LVTavb-NN4uTfpDr-CvUtwkjeWc",
+  authDomain: "spuren-im-netz.firebaseapp.com",
+  projectId: "spuren-im-netz",
+  storageBucket: "spuren-im-netz.appspot.com",
+  messagingSenderId: "183896073812",
+  appId: "1:183896073812:web:e52452cf6f54e45e33efc1",
+  measurementId: "G-WJP9V4B6L7"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
