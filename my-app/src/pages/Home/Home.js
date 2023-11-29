@@ -11,8 +11,8 @@ function Home() {
                 </p>
             </div>
             <div style={{ display: "flex", justifyContent: "center" }}>
-                <img src="/images/EvilFox.png" alt="Fuchs" style={{ position: "absolute", bottom: 0, marginLeft: 500 }} />
-                <img src="/images/GoodFox.png" alt="Fuchs" style={{ position: "absolute", bottom: 0, marginRight: 500}} />
+                <img src="/my-app/src/images/EvilFox.png" alt="Fuchs" style={{ position: "absolute", bottom: 0, marginLeft: 500 }} />
+                <img src="/my-app/src/images/GoodFox.png" alt="Fuchs" style={{ position: "absolute", bottom: 0, marginRight: 500}} />
 
             </div>
 
