@@ -1,5 +1,7 @@
 import React from "react";
-import {textAlign} from "@mui/system";
+import GoodFox from "../../images/GoodFox.png";
+import EvilFox from "../../images/EvilFox.png";
+import "./Home.css"
 
 function Home() {
     return (
@@ -10,9 +12,13 @@ function Home() {
                     Willkommen!
                 </p>
             </div>
-            <div style={{ display: "flex", justifyContent: "center" }}>
-                <img src="/my-app/src/images/EvilFox.png" alt="Fuchs" style={{ position: "absolute", bottom: 0, marginLeft: 500 }} />
-                <img src="/my-app/src/images/GoodFox.png" alt="Fuchs" style={{ position: "absolute", bottom: 0, marginRight: 500}} />
+            <div className="test">
+            
+                <div><img src={GoodFox} alt="GoodFox"/></div>
+                <div>
+                <img src={EvilFox} alt="EvilFox"/>
+                </div>
+               
 
             </div>
 
