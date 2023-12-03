@@ -1,0 +1,32 @@
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+self["webpackHotUpdate_N_E"]("app/home/page",{
+
+/***/ "(app-pages-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-client-entry-loader.js?modules=%2FUsers%2Fliljanastefanelli%2FSchool4.0%2Fspuren-im-netz%2Fmy-app%2Fnode_modules%2Fnext%2Fdist%2Fclient%2Fimage-component.js&modules=%2FUsers%2Fliljanastefanelli%2FSchool4.0%2Fspuren-im-netz%2Fmy-app%2Fpublic%2Fimages%2FGoodFox.png&modules=%2FUsers%2Fliljanastefanelli%2FSchool4.0%2Fspuren-im-netz%2Fmy-app%2Fsrc%2Fapp%2Fhome%2FHome.css&server=false!":
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-flight-client-entry-loader.js?modules=%2FUsers%2Fliljanastefanelli%2FSchool4.0%2Fspuren-im-netz%2Fmy-app%2Fnode_modules%2Fnext%2Fdist%2Fclient%2Fimage-component.js&modules=%2FUsers%2Fliljanastefanelli%2FSchool4.0%2Fspuren-im-netz%2Fmy-app%2Fpublic%2Fimages%2FGoodFox.png&modules=%2FUsers%2Fliljanastefanelli%2FSchool4.0%2Fspuren-im-netz%2Fmy-app%2Fsrc%2Fapp%2Fhome%2FHome.css&server=false! ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+
+eval(__webpack_require__.ts("Promise.resolve(/*! import() eager */).then(__webpack_require__.t.bind(__webpack_require__, /*! ./node_modules/next/dist/client/image-component.js */ \"(app-pages-browser)/./node_modules/next/dist/client/image-component.js\", 23));\nPromise.resolve(/*! import() eager */).then(__webpack_require__.bind(__webpack_require__, /*! ./public/images/GoodFox.png */ \"(app-pages-browser)/./public/images/GoodFox.png\"));\nPromise.resolve(/*! import() eager */).then(__webpack_require__.bind(__webpack_require__, /*! ./src/app/home/Home.css */ \"(app-pages-browser)/./src/app/home/Home.css\"))//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwcC1wYWdlcy1icm93c2VyKS8uL25vZGVfbW9kdWxlcy9uZXh0L2Rpc3QvYnVpbGQvd2VicGFjay9sb2FkZXJzL25leHQtZmxpZ2h0LWNsaWVudC1lbnRyeS1sb2FkZXIuanM/bW9kdWxlcz0lMkZVc2VycyUyRmxpbGphbmFzdGVmYW5lbGxpJTJGU2Nob29sNC4wJTJGc3B1cmVuLWltLW5ldHolMkZteS1hcHAlMkZub2RlX21vZHVsZXMlMkZuZXh0JTJGZGlzdCUyRmNsaWVudCUyRmltYWdlLWNvbXBvbmVudC5qcyZtb2R1bGVzPSUyRlVzZXJzJTJGbGlsamFuYXN0ZWZhbmVsbGklMkZTY2hvb2w0LjAlMkZzcHVyZW4taW0tbmV0eiUyRm15LWFwcCUyRnB1YmxpYyUyRmltYWdlcyUyRkdvb2RGb3gucG5nJm1vZHVsZXM9JTJGVXNlcnMlMkZsaWxqYW5hc3RlZmFuZWxsaSUyRlNjaG9vbDQuMCUyRnNwdXJlbi1pbS1uZXR6JTJGbXktYXBwJTJGc3JjJTJGYXBwJTJGaG9tZSUyRkhvbWUuY3NzJnNlcnZlcj1mYWxzZSEiLCJtYXBwaW5ncyI6IkFBQUEsb09BQThJO0FBQzlJLGdMQUF1SDtBQUN2SCIsInNvdXJjZXMiOlsid2VicGFjazovL19OX0UvP2IxNTMiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0KC8qIHdlYnBhY2tNb2RlOiBcImVhZ2VyXCIgKi8gXCIvVXNlcnMvbGlsamFuYXN0ZWZhbmVsbGkvU2Nob29sNC4wL3NwdXJlbi1pbS1uZXR6L215LWFwcC9ub2RlX21vZHVsZXMvbmV4dC9kaXN0L2NsaWVudC9pbWFnZS1jb21wb25lbnQuanNcIik7XG5pbXBvcnQoLyogd2VicGFja01vZGU6IFwiZWFnZXJcIiAqLyBcIi9Vc2Vycy9saWxqYW5hc3RlZmFuZWxsaS9TY2hvb2w0LjAvc3B1cmVuLWltLW5ldHovbXktYXBwL3B1YmxpYy9pbWFnZXMvR29vZEZveC5wbmdcIik7XG5pbXBvcnQoLyogd2VicGFja01vZGU6IFwiZWFnZXJcIiAqLyBcIi9Vc2Vycy9saWxqYW5hc3RlZmFuZWxsaS9TY2hvb2w0LjAvc3B1cmVuLWltLW5ldHovbXktYXBwL3NyYy9hcHAvaG9tZS9Ib21lLmNzc1wiKSJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(app-pages-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-client-entry-loader.js?modules=%2FUsers%2Fliljanastefanelli%2FSchool4.0%2Fspuren-im-netz%2Fmy-app%2Fnode_modules%2Fnext%2Fdist%2Fclient%2Fimage-component.js&modules=%2FUsers%2Fliljanastefanelli%2FSchool4.0%2Fspuren-im-netz%2Fmy-app%2Fpublic%2Fimages%2FGoodFox.png&modules=%2FUsers%2Fliljanastefanelli%2FSchool4.0%2Fspuren-im-netz%2Fmy-app%2Fsrc%2Fapp%2Fhome%2FHome.css&server=false!\n"));
+
+/***/ }),
+
+/***/ "(app-pages-browser)/./public/images/GoodFox.png":
+/*!***********************************!*\
+  !*** ./public/images/GoodFox.png ***!
+  \***********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval(__webpack_require__.ts("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\"src\":\"/_next/static/media/GoodFox.777e3d51.png\",\"height\":429,\"width\":466,\"blurDataURL\":\"/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FGoodFox.777e3d51.png&w=8&q=70\",\"blurWidth\":8,\"blurHeight\":7});//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKGFwcC1wYWdlcy1icm93c2VyKS8uL3B1YmxpYy9pbWFnZXMvR29vZEZveC5wbmciLCJtYXBwaW5ncyI6IjtBQUFBLCtEQUFlLENBQUMsa01BQWtNIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vX05fRS8uL3B1YmxpYy9pbWFnZXMvR29vZEZveC5wbmc/ZDY5OSJdLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgZGVmYXVsdCB7XCJzcmNcIjpcIi9fbmV4dC9zdGF0aWMvbWVkaWEvR29vZEZveC43NzdlM2Q1MS5wbmdcIixcImhlaWdodFwiOjQyOSxcIndpZHRoXCI6NDY2LFwiYmx1ckRhdGFVUkxcIjpcIi9fbmV4dC9pbWFnZT91cmw9JTJGX25leHQlMkZzdGF0aWMlMkZtZWRpYSUyRkdvb2RGb3guNzc3ZTNkNTEucG5nJnc9OCZxPTcwXCIsXCJibHVyV2lkdGhcIjo4LFwiYmx1ckhlaWdodFwiOjd9OyJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(app-pages-browser)/./public/images/GoodFox.png\n"));
+
+/***/ })
+
+});
