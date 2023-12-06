@@ -1,0 +1,12 @@
+.phoneContainer {
+    border: 5px solid black;
+    border-radius: 32px;
+}
+
+.headerContainer {
+    display: flex;
+    justify-content: center;
+    background: #ededed;
+    border-top-left-radius: 28px;
+    border-top-right-radius: 28px;
+}
