@@ -4,8 +4,9 @@ import { useState } from 'react';
 import CreateAccount from './CreateAccount/CreateAccount';
 import CreateUserName from './CreateUserName/CreateUserName';
 
-export default function PhoneSimulator() {
+export default function PhoneSimulator({selectedAnswer}) {
     const [currentPage, setCurrentPage] = useState(1);
+    console.log("SELECTEDANSWER", selectedAnswer)
 
     const totalPages = 2;
   
@@ -27,7 +28,7 @@ export default function PhoneSimulator() {
         case 1:
           return <CreateAccount onNextPage={handleNextPage} />;
         case 2:
-          return <CreateUserName onNextPage={handleNextPage}/>;
+          return <CreateUserName onNextPage={handleNextPage} answer={selectedAnswer}/>;
         default:
           return null;
       }

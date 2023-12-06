@@ -1,12 +1,12 @@
 import React from "react";
+import CostumButton from "../Button/CustomButton.js"
 import "./AnswerBoxes.css"
 
-export default function AnswerBoxes({text}) {
+export default function AnswerBoxes({text, onClick}) {
 
     return (
-        <div className="AnswerBoxesComponent">
-           {text}
-        </div>
+        <CostumButton className="AnswerBoxesComponent" onClick={onClick} name={text} type="tertiary">
+        </CostumButton>
          
     )
 }

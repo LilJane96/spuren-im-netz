@@ -104,3 +104,20 @@ button.PrimaryButton:active::before {
     box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
     transform: translate3d(0, 0, -1em);
   }
+
+
+  /*Tertiary Button*/
+  button.TertiaryButton {
+    margin: 20px;
+    width: 260px;
+    padding: 13px 51px;
+    border: 2px solid black;
+    border-radius: 0.75em;
+    font-weight: 700;
+    color: black;
+    text-transform: uppercase;
+    background: white;
+    transform-style: preserve-3d;
+    transition: .15s cubic-bezier(0, 0, .6, 1);
+}
+
