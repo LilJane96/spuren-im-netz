@@ -1,0 +1,64 @@
+.bubble-container {
+  position: relative;
+}
+
+.image-container {
+
+}
+
+.container {
+    display: grid;
+    margin: 50px 10px;
+  }
+
+  .foxImg {
+    border: 6px solid #4E4E4E;
+    border-radius: 60px;
+  }
+
+  .content {
+    z-index: 3;
+    position: relative;
+    top: -47px
+  }
+.content, .overlay {
+    grid-area: 1 / 1;
+  }
+
+p.bubble {
+  position: relative;
+  width: 300px;
+  text-align: center;
+  line-height: 1.4em;
+  margin: 40px auto;
+  background-color: #fff;
+  border: 3px solid #333;
+  border-radius: 30px;
+  font-family: sans-serif;
+  padding: 20px;
+  font-size: large;
+}
+
+p.bubble:before,
+p.bubble:after {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+p.bubble:before {
+    left: 123px;
+    top: -40px;
+    border: 20px solid;
+    border-color: #333 transparent transparent #333;
+    rotate: 261deg;
+}
+
+p.bubble:after {
+    left: 126px;
+    top: -34px;
+    border: 20px solid;
+    border-color: #fff transparent transparent #fff;
+    rotate: 261deg;
+}

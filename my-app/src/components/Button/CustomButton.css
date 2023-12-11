@@ -1,0 +1,120 @@
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+button.PrimaryButton {
+    width: 260px;
+    padding: 14px 51px;
+    border-radius: 0.75em;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #DB94F3 0%, #BF56E3 100%);
+    transform-style: preserve-3d;
+    transition: .15s cubic-bezier(0, 0, .6, 1);
+}
+
+button.PrimaryButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: #9F2FC5;
+  transform: translate3d(0, .5em, -1em);
+  transition: .15s cubic-bezier(0, 0, .6, 1);
+}
+
+button.PrimaryButton:hover {
+  transform: translate(0, .25em);
+}
+
+button.PrimaryButton:hover::before {
+  transform: translate3d(0, .5em, -1em);
+}
+
+button.PrimaryButton:active {
+  transform: translate(0, .75em);
+}
+
+button.PrimaryButton:active::before {
+  box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+  transform: translate3d(0, 0, -1em);
+}
+
+/*Secondary Button*/
+  button.SecondaryButton {
+      width: 260px;
+      padding: 13px 51px;
+      border: 2px solid #B5E6FF;
+      border-radius: 0.75em;
+      font-weight: 700;
+      color: black;
+      text-transform: uppercase;
+      background: #B5E6FF;
+      transform-style: preserve-3d;
+      transition: .15s cubic-bezier(0, 0, .6, 1);
+  }
+  
+  button.SecondaryButton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background: #8BC0DB;
+    transform: translate3d(0, .5em, -1em);
+    transition: .15s cubic-bezier(0, 0, .6, 1);
+  }
+  
+  button.SecondaryButton:hover {
+    background: #B5E6FF;
+    transform: translate(0, .25em);
+  }
+  
+  button.SecondaryButton:hover::before {
+    transform: translate3d(0, .5em, -1em);
+  }
+  
+  button.SecondaryButton:active {
+    background: #B5E6FF;
+    transform: translate(0, .75em);
+  }
+  
+  button.SecondaryButton:active::before {
+    box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+    transform: translate3d(0, 0, -1em);
+  }
+
+
+  /*Tertiary Button*/
+  button.TertiaryButton {
+    margin: 20px;
+    width: 260px;
+    padding: 13px 51px;
+    border: 2px solid black;
+    border-radius: 0.75em;
+    font-weight: 700;
+    color: black;
+    text-transform: uppercase;
+    background: white;
+    transform-style: preserve-3d;
+    transition: .15s cubic-bezier(0, 0, .6, 1);
+}
+

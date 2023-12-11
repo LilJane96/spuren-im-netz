@@ -1,0 +1,58 @@
+.stepper {
+    display: flex;
+  }
+  
+  .step.active {
+    background: #7B1982;
+    padding: 10px;
+    border-radius: 30px;
+    box-shadow: 0px 5px 0px #BF56E3;
+  }
+  
+  .step {
+    position: relative;
+    margin: 10px 30px;
+    background: #FFFFFF;
+    padding: 10px;
+    border-radius: 30px;
+    box-shadow: 0px 3px 0px rgba(217, 217, 217, 1);
+  }
+  
+  .line {
+    position: absolute;
+    height: 6px;
+    width: 135%;
+    background-color: rgba(217, 217, 217, 1);
+    top: 50%;
+    transform: translateY(-50%);
+    right: 100%;
+  }
+  
+  .line.active {
+    background-color: #757575;
+  }
+  
+  .step.active .line {
+    background-color: #BF56E3;
+  }
+  
+  .stepGoal {
+    background: none;
+    box-shadow: none;
+    padding: 0px;
+    margin: 0px 25px;
+  }
+  .stepGoal.active {
+    background: none;
+    box-shadow: none;
+    padding: 0px;
+    margin: 0px 25px;
+  }
+  
+  .step.marked {
+    background: #757575;
+    padding: 10px;
+    border-radius: 30px;
+    box-shadow: 0px 3px 0px rgba(217, 217, 217, 1);
+  }
+  
