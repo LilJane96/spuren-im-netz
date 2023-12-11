@@ -4,7 +4,6 @@ import "./CreateAccount.css"
 export default function CreateAccount({onNextPage}) {
 
   const onButtonClick = () => {
-    console.log("Button is clicked")
     setTimeout(() => {
       onNextPage();
 

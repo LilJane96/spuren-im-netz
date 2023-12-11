@@ -6,7 +6,6 @@ import CreateUserName from './CreateUserName/CreateUserName';
 
 export default function PhoneSimulator({selectedAnswer}) {
     const [currentPage, setCurrentPage] = useState(1);
-    console.log("SELECTEDANSWER", selectedAnswer)
 
     const totalPages = 2;
   
@@ -22,7 +21,6 @@ export default function PhoneSimulator({selectedAnswer}) {
       }
     };
   
-    // Dynamische Auswahl der Simulator-Seite
     const renderSimulatorPage = () => {
       switch (currentPage) {
         case 1:
@@ -47,9 +45,6 @@ export default function PhoneSimulator({selectedAnswer}) {
         {renderSimulatorPage()}
       </div>
 
-  
-
-      
     </div>
             </section>
         </ScrollContainer>

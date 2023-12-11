@@ -5,10 +5,8 @@ import "./CreateUserName.css"
 
 export default function CreateUserName({onNextPage, answer}) {
   const [selectedAnswer, setSelectedAnswer] = useState("");
-  console.log("CreateUserName", answer)
 
   const onButtonClick = () => {
-    console.log("Button is clicked")
     setTimeout(() => {
       onNextPage();
     }, 300);

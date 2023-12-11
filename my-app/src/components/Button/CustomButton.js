@@ -15,8 +15,6 @@ const getButtonClass = (type) => {
 }
 
 export default function CustomButton({name, onClick, type}) {
-
-    // const buttonClass = type === "primary" ? "CustomButton PrimaryButton" : "CustomButton SecondaryButton";
     const buttonClass = getButtonClass(type);
  
     return (

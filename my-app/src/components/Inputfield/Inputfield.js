@@ -2,7 +2,6 @@ import React from "react";
 import "./Inputfield.css"
 
 export default function Inputfield({placeholder, value, onChange}) {
-    console.log("VALUE", value)
 
     return (
         <div className="InputfieldContainer">
