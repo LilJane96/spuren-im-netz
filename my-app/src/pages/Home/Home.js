@@ -12,7 +12,7 @@ function Home() {
                     Willkommen!
                 </p>
             </div>
-            <div className="test">
+            <div >
             
                 <div><img src={GoodFox} alt="GoodFox"/></div>
                 <div>

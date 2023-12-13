@@ -1,7 +1,8 @@
 .phoneContainer {
-    border: 5px solid black;
+    border: 8px solid black;
     border-radius: 32px;
     background-color: white;
+    height: 583px;
 }
 
 .headerContainer {

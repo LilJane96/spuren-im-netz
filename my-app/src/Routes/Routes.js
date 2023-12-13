@@ -11,9 +11,7 @@ function Directions() {
       <main >
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/frameone" element={<FrameOne />} />
-
-         
+          <Route path="/FrameOne" element={<FrameOne />} />
         </Routes>
       </main>
     </div>

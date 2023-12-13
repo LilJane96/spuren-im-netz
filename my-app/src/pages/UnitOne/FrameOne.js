@@ -19,12 +19,22 @@ const totalTasks = currentUnitData ? currentUnitData.task.length : 0;
 
 
 
-  const handleSubmit = (answer) => {
-    setSelectedAnswer(answer);
-  };
+const [speachbubbleText, setSpeachbubbleText] = useState("");
+
+const handleSubmit = (answer, isCorrect, rightAnswer, wrongAnswer) => {
+  setSelectedAnswer(answer);
+
+  if (isCorrect) {
+    setSpeachbubbleText(rightAnswer);
+  } else {
+    setSpeachbubbleText(wrongAnswer);
+  }
+};
+
 
   const handleNextTask = () => {
     setCurrentTaskIndex((prevIndex) => prevIndex + 1);
+    setSpeachbubbleText("");
 
     if (currentTaskIndex === totalTasks - 1) {
       setCurrentTaskIndex(0);
@@ -47,16 +57,25 @@ const totalTasks = currentUnitData ? currentUnitData.task.length : 0;
         <div className="test" key={index}>
             {currentTaskIndex === index && (
   <div className="frame" key={index}>
-    <Speachbubble text={tasks.step.map((obj) => obj.speachbubble)} />
+   {tasks.step.map((step, stepIndex) => (
+  step.speachbubble && <Speachbubble key={stepIndex} text={speachbubbleText || step.speachbubble} />
+))}
+
     <PhoneSimulator content={tasks.content} selectedAnswer={selectedAnswer} />
     <div className="boxContainer">
       <div className="answerContainer">
 
       {tasks.step.map((answer, stepIndex) => (
-  answer.answerboxes && answer.answerboxes.map((text, boxIndex) => (
-    <AnswerBoxes key={`${stepIndex}-${boxIndex}`} text={text} onClick={() => handleSubmit(text)} />
-  ))
-))}
+                answer.answerboxes &&
+                answer.answerboxes.map((answerObj, boxIndex) => (
+                  <AnswerBoxes
+                    key={`${stepIndex}-${boxIndex}`}
+                    text={answerObj.answer}
+                    onClick={() => handleSubmit(answerObj.answer, answerObj.right, answer?.rightAnswer, answer?.wrongAnswer)}
+                    isCorrect={answerObj.right}
+                  />
+                ))
+              ))}
 
       </div>
       <div className="buttonContainer">
