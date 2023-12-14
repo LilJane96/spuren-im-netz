@@ -1,9 +1,16 @@
-.container {
+.containerHome {
     position: relative;
+    display: grid;
+    margin: 150px 20px;
 }
 img {
     object-fit: contain;
 
+}
+.h1.spuren {
+    position: absolute;
+    top: 45%;
+    left: 56%;
 }
 
 .iphone {
@@ -16,10 +23,10 @@ img {
 
 .foxContainer {
     position: absolute;
-    top: 100px;
-    left: 50%;
-    max-width: 55%;
-    max-height: 55%;
+    top: 13px;
+    left: 56%;
+    max-width: 45%;
+    max-height: 45%;
     transform: translate(-50%, 0);
 }
 
@@ -27,25 +34,25 @@ img {
     position: absolute;
     max-width: 45%;
     max-height: 45%;
-    top: 27px;
-    left: -215px;
+    top: 135px;
+    left: -256px;
 }
 
 .evilFox {
     position: absolute;
     max-width: 45%;
     max-height: 45%;
-    top: 27px;
-    right: -223px;
+    top: 135px;
+    right: -158px;
 }
-.paragraphs {
+.paragraphsHome {
     position: absolute;
-    bottom: 355px;
+    bottom: 349px;
     left: 64px;
 }
 .button {
     position: absolute;
-    bottom: 308px;
+    bottom: 300px;
     left: 31px;
     max-width: 45%;
     max-height: 45%;

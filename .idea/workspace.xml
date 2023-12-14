@@ -6,16 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ac1a0cd9-18f7-49cb-a7b5-8e02d10bfadc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/Routes/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/Routes/Routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Button/CustomButton.css" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Button/CustomButton.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Inputfield/Inputfield.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Inputfield/Inputfield.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/PhoneSimulator/CreateAccount/CreateAccount.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/PhoneSimulator/CreateAccount/CreateAccount.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/PhoneSimulator/CreateUserName/CreateUserName.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/PhoneSimulator/CreateUserName/CreateUserName.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Speachbubble/Speachbubble.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Speachbubble/Speachbubble.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/pages/Home/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/pages/Home/Home.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/pages/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/pages/Home/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/pages/UnitOne/FrameOne.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/pages/UnitOne/FrameOne.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +152,7 @@
       <workItem from="1702456645818" duration="7811000" />
       <workItem from="1702465964613" duration="6279000" />
       <workItem from="1702488322045" duration="2145000" />
-      <workItem from="1702544820703" duration="3938000" />
+      <workItem from="1702544820703" duration="6151000" />
     </task>
     <servers />
   </component>

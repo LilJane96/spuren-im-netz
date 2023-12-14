@@ -4,25 +4,17 @@ import EvilFoxStanding from "../../images/EvilFoxStanding.png";
 import IphoneHomePage from "../../images/IphoneHomePage.png";
 import CustomButton from "../../components/Button/CustomButton";
 import "./Home.css"
-import {useHref} from "react-router-dom";
 import {Link} from "@mui/material";
-
-
 
 function Home() {
     return (
         <div>
-            <h1 style={{ textAlign: "center" }}>Spuren im Netz</h1>
-            <div style={{ display: "flex", justifyContent: "center" }}>
-                <p>
-                    Willkommen!
-                </p>
-            </div>
-            <div className="container">
-                <div className="iphone">
-                    <img src={IphoneHomePage} alt="Iphone"/>
-                </div>
+            <div className="containerHome">
+
                 <div className="foxContainer">
+                    <div className="iphone">
+                        <img src={IphoneHomePage} alt="Iphone"/>
+                    </div>
                     <div className="goodFox" >
                         <img src={GoodFoxStanding}  alt="GoodFox"/>
                     </div>
@@ -31,19 +23,24 @@ function Home() {
                     </div>
                 </div>
             </div>
-            <div className="paragraphs">
+            <div className="paragraphsHome">
+                <h1 className="spuren">Spuren im Netz</h1>
                 <p>
-                    Dies ist der erste Absatz.
+                            Willkommen!
                 </p>
                 <p>
-                    Dies ist der zweite Absatz.
+                            Dies ist der erste Absatz.
                 </p>
                 <p>
-                    Dies ist der dritte Absatz.
+                            Dies ist der zweite Absatz.
                 </p>
+                <p>
+                            Dies ist der dritte Absatz.
+                </p>
+
             </div>
             <div className="button">
-                <Link to="/FrameOne"><CustomButton  href name="Weiter" type="primary"></CustomButton></Link>
+                <Link to="/frameone"><CustomButton name="Weiter" type="primary"></CustomButton></Link>
             </div>
         </div>
     );
