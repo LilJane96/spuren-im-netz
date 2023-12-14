@@ -1,12 +1,18 @@
 .containerHome {
     position: relative;
-    display: grid;
+    display: flex;
     margin: 150px 20px;
 }
 img {
     object-fit: contain;
 
 }
+.barHomePage {
+    position: absolute;
+    top: 40%;
+    left: 4%;
+}
+
 .h1.spuren {
     position: absolute;
     top: 45%;

@@ -2,6 +2,7 @@ import React from "react";
 import GoodFoxStanding from "../../images/GoodFoxStanding.png";
 import EvilFoxStanding from "../../images/EvilFoxStanding.png";
 import IphoneHomePage from "../../images/IphoneHomePage.png";
+import BarHomePage from "../../images/BarHomePage.png"
 import CustomButton from "../../components/Button/CustomButton";
 import "./Home.css"
 import {Link} from "@mui/material";
@@ -23,19 +24,22 @@ function Home() {
                     </div>
                 </div>
             </div>
+            <div className="barHomePage">
+                <img src={BarHomePage} alt="Bar"/>
+            </div>
             <div className="paragraphsHome">
                 <h1 className="spuren">Spuren im Netz</h1>
+                <h4>
+                            Herzlich Willkommen zu Spuren im Netz!
+                </h4>
                 <p>
-                            Willkommen!
+                            Helfe Pixel beim Lösen seiner Fälle!
                 </p>
                 <p>
-                            Dies ist der erste Absatz.
+                            Werde ein Internet-Detektiv!
                 </p>
                 <p>
-                            Dies ist der zweite Absatz.
-                </p>
-                <p>
-                            Dies ist der dritte Absatz.
+                            Sei sicher im Internet unterwegs!
                 </p>
 
             </div>
