@@ -51,13 +51,11 @@ const totalTasks = currentUnitData ? currentUnitData.task.length : 0;
     <PhoneSimulator content={tasks.content} selectedAnswer={selectedAnswer} />
     <div className="boxContainer">
       <div className="answerContainer">
-
       {tasks.step.map((answer, stepIndex) => (
   answer.answerboxes && answer.answerboxes.map((text, boxIndex) => (
     <AnswerBoxes key={`${stepIndex}-${boxIndex}`} text={text} onClick={() => handleSubmit(text)} />
   ))
 ))}
-
       </div>
       <div className="buttonContainer">
         {currentTaskIndex < totalTasks - 1 ? (
@@ -73,7 +71,6 @@ const totalTasks = currentUnitData ? currentUnitData.task.length : 0;
   </div>
 )}
         </div>
-        
           ))}
       </div>
     </div>

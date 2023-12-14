@@ -1,7 +1,13 @@
 import React from "react";
-import GoodFox from "../../images/GoodFox.png";
-import EvilFox from "../../images/EvilFox.png";
+import GoodFoxStanding from "../../images/GoodFoxStanding.png";
+import EvilFoxStanding from "../../images/EvilFoxStanding.png";
+import IphoneHomePage from "../../images/IphoneHomePage.png";
+import CustomButton from "../../components/Button/CustomButton";
 import "./Home.css"
+import {useHref} from "react-router-dom";
+import {Link} from "@mui/material";
+
+
 
 function Home() {
     return (
@@ -12,18 +18,36 @@ function Home() {
                     Willkommen!
                 </p>
             </div>
-            <div className="test">
-            
-                <div><img src={GoodFox} alt="GoodFox"/></div>
-                <div>
-                <img src={EvilFox} alt="EvilFox"/>
+            <div className="container">
+                <div className="iphone">
+                    <img src={IphoneHomePage} alt="Iphone"/>
                 </div>
-               
-
+                <div className="foxContainer">
+                    <div className="goodFox" >
+                        <img src={GoodFoxStanding}  alt="GoodFox"/>
+                    </div>
+                    <div className="evilFox">
+                        <img src={EvilFoxStanding} alt="EvilFox"/>
+                    </div>
+                </div>
             </div>
-
+            <div className="paragraphs">
+                <p>
+                    Dies ist der erste Absatz.
+                </p>
+                <p>
+                    Dies ist der zweite Absatz.
+                </p>
+                <p>
+                    Dies ist der dritte Absatz.
+                </p>
+            </div>
+            <div className="button">
+                <Link to="/FrameOne"><CustomButton  href name="Weiter" type="primary"></CustomButton></Link>
+            </div>
         </div>
     );
 }
+
 
 export default Home;

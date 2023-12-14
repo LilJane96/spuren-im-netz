@@ -11,18 +11,15 @@ export default function CreateUserName({onNextPage, answer}) {
       onNextPage();
     }, 300);
   };
-
   const handleAnswerSelect = (answer) => {
     // setSelectedAnswer(answer);
   };
-
     return (
         <div className="CreateAccountContainer">
             <div className="frameContainer">
       <div>
         <h1>Create Username</h1>
       </div>
-     
         <div style={{margin: "95px 0"}}>
           <div style={{margin: "15px 0"}}>
         <Inputfield placeholder="Benutzername" value={answer} onChange={(e) => setSelectedAnswer(e.target.value)}></Inputfield>
