@@ -29,7 +29,7 @@ function Home() {
             </div>
             <div className="paragraphsHome">
                 <h1 className="spuren">Spuren im Netz</h1>
-                <h4>
+                <h4 className="h4HomePage">
                             Herzlich Willkommen zu Spuren im Netz!
                 </h4>
                 <p>
@@ -41,11 +41,9 @@ function Home() {
                 <p>
                             Sei sicher im Internet unterwegs!
                 </p>
-
-            </div>
-            <div className="button">
                 <Link to="/frameone"><CustomButton name="Weiter" type="primary"></CustomButton></Link>
             </div>
+
         </div>
     );
 }

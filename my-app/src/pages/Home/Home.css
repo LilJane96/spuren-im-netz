@@ -9,8 +9,12 @@ img {
 }
 .barHomePage {
     position: absolute;
-    top: 40%;
+    top: 41%;
     left: 4%;
+}
+
+.h4HomePage {
+    font-style: italic;
 }
 
 .h1.spuren {
@@ -53,7 +57,7 @@ img {
 }
 .paragraphsHome {
     position: absolute;
-    bottom: 349px;
+    bottom: 296px;
     left: 64px;
 }
 .button {
