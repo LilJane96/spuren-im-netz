@@ -8,7 +8,6 @@ export default function Speachbubble({ text }) {
       <div className="content">
         <img src={foxPicture} alt="Fox" className="foxImg"/>
       </div>
-      
       <div className="overlay"><p className="bubble speech">{text}</p></div>
     </div>
   );

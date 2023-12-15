@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac1a0cd9-18f7-49cb-a7b5-8e02d10bfadc" name="Changes" comment="" />
+    <list default="true" id="ac1a0cd9-18f7-49cb-a7b5-8e02d10bfadc" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,7 +55,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;8-create-homepage&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -66,11 +68,15 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Julian\WebstormProjects\spuren-im-netz\my-app\src\images" />
       <recent name="C:\Users\Julian\WebstormProjects\spuren-im-netz\my-app\public\images" />
     </key>
   </component>
   <component name="RunManager" selected="npm.start">
     <configuration name="App.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/my-app/src/App.js" working-dir="$PROJECT_DIR$/my-app/src">
+      <method v="2" />
+    </configuration>
+    <configuration name="LevelScreen.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/my-app/src/components/LevelScreen/LevelScreen.js" working-dir="$PROJECT_DIR$/my-app/src/components/LevelScreen">
       <method v="2" />
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
@@ -112,6 +118,7 @@
       <list>
         <item itemvalue="npm.start" />
         <item itemvalue="npm.build" />
+        <item itemvalue="Node.js.LevelScreen.js" />
         <item itemvalue="Node.js.App.js" />
         <item itemvalue="Docker.workflows/Dockerfile" />
       </list>
@@ -138,6 +145,14 @@
       <workItem from="1700989573452" duration="355000" />
       <workItem from="1701002319469" duration="13000" />
       <workItem from="1701262671597" duration="1318000" />
+      <workItem from="1702279654829" duration="2928000" />
+      <workItem from="1702456645818" duration="7811000" />
+      <workItem from="1702465964613" duration="6279000" />
+      <workItem from="1702488322045" duration="2145000" />
+      <workItem from="1702544820703" duration="9901000" />
+      <workItem from="1702627702279" duration="102000" />
+      <workItem from="1702628500081" duration="309000" />
+      <workItem from="1702653883490" duration="354000" />
     </task>
     <servers />
   </component>

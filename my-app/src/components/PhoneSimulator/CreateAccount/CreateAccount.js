@@ -6,9 +6,7 @@ export default function CreateAccount({onNextPage}) {
   const onButtonClick = () => {
     setTimeout(() => {
       onNextPage();
-
     }, 300);
-
   };
 
     return (

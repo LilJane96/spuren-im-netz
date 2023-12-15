@@ -9,7 +9,6 @@ button {
   font-size: inherit;
   font-family: inherit;
 }
-
 button.PrimaryButton {
     width: 260px;
     padding: 14px 51px;
@@ -21,7 +20,6 @@ button.PrimaryButton {
     transform-style: preserve-3d;
     transition: .15s cubic-bezier(0, 0, .6, 1);
 }
-
 button.PrimaryButton::before {
   content: '';
   position: absolute;
@@ -44,16 +42,13 @@ button.PrimaryButton:hover {
 button.PrimaryButton:hover::before {
   transform: translate3d(0, .5em, -1em);
 }
-
 button.PrimaryButton:active {
   transform: translate(0, .75em);
 }
-
 button.PrimaryButton:active::before {
   box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
   transform: translate3d(0, 0, -1em);
 }
-
 /*Secondary Button*/
   button.SecondaryButton {
       width: 260px;

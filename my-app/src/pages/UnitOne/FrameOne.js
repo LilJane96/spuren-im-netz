@@ -60,11 +60,9 @@ const handleSubmit = (answer, isCorrect, rightAnswer, wrongAnswer) => {
    {tasks.step.map((step, stepIndex) => (
   step.speachbubble && <Speachbubble key={stepIndex} text={speachbubbleText || step.speachbubble} />
 ))}
-
     <PhoneSimulator content={tasks.content} selectedAnswer={selectedAnswer} />
     <div className="boxContainer">
       <div className="answerContainer">
-
       {tasks.step.map((answer, stepIndex) => (
                 answer.answerboxes &&
                 answer.answerboxes.map((answerObj, boxIndex) => (
@@ -76,7 +74,6 @@ const handleSubmit = (answer, isCorrect, rightAnswer, wrongAnswer) => {
                   />
                 ))
               ))}
-
       </div>
       <div className="buttonContainer">
         {currentTaskIndex < totalTasks - 1 ? (
@@ -92,7 +89,6 @@ const handleSubmit = (answer, isCorrect, rightAnswer, wrongAnswer) => {
   </div>
 )}
         </div>
-        
           ))}
       </div>
     </div>
