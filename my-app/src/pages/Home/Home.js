@@ -11,7 +11,6 @@ function Home() {
     return (
         <div>
             <div className="containerHome">
-
                 <div className="foxContainer">
                     <div className="iphone">
                         <img src={IphoneHomePage} alt="Iphone"/>
@@ -42,6 +41,8 @@ function Home() {
                             Sei sicher im Internet unterwegs!
                 </p>
                 <Link href="/frameone"><CustomButton name="Start" type="primary"></CustomButton></Link>
+            </div>
+
             </div>
 
         </div>
