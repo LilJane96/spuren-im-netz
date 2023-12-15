@@ -11,7 +11,6 @@ function Home() {
     return (
         <div>
             <div className="containerHome">
-
                 <div className="foxContainer">
                     <div className="iphone">
                         <img src={IphoneHomePage} alt="Iphone"/>
