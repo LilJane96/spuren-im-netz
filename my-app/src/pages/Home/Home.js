@@ -43,8 +43,6 @@ function Home() {
                 <Link href="/frameone"><CustomButton name="Start" type="primary"></CustomButton></Link>
             </div>
 
-            </div>
-
         </div>
     );
 }
