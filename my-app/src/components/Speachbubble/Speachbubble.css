@@ -2,13 +2,9 @@
   position: relative;
 }
 
-.image-container {
-
-}
-
 .container {
     display: grid;
-    margin: 50px 10px;
+    margin: 50px 20px;
   }
 
   .foxImg {
@@ -25,37 +21,41 @@
     grid-area: 1 / 1;
   }
 
-p.bubble {
+div.bubble {
   position: relative;
   width: 300px;
   text-align: center;
   line-height: 1.4em;
   margin: 40px auto;
   background-color: #fff;
-  border: 3px solid #333;
+  box-shadow: 0px 4px 4px #C9BC48;
   border-radius: 30px;
   font-family: sans-serif;
   padding: 20px;
   font-size: large;
 }
 
-p.bubble:before,
-p.bubble:after {
+div.bubble .answer {
+font-weight: bold;
+}
+
+div.bubble:before,
+div.bubble:after {
   content: ' ';
   position: absolute;
   width: 0;
   height: 0;
 }
 
-p.bubble:before {
+div.bubble:before {
     left: 123px;
     top: -40px;
-    border: 20px solid;
-    border-color: #333 transparent transparent #333;
-    rotate: 261deg;
+    border: 24px solid;
+    border-color: #fff transparent transparent #fff;
+    rotate: 253deg;
 }
 
-p.bubble:after {
+div.bubble:after {
     left: 126px;
     top: -34px;
     border: 20px solid;

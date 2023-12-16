@@ -11,22 +11,28 @@
     color: black;
     font-size: 20px;
     font-weight: 700;
-    line-height: 26px;
+    line-height: 40px;
     word-wrap: break-word;
   }
   
-  /* Additional styles for the 'green' class */
+
   .AnswerBoxesComponent.green {
     background-color: #A0F959;
     width: 110%;
-
-    
+  }
+  .AnswerBoxesComponent.green:hover {
+    background-color: #A0F959;
   }
   
-  /* Additional styles for the 'red' class */
   .AnswerBoxesComponent.red {
     background-color: red; 
     width: 110%;
-    
+
+  }
+  .AnswerBoxesComponent.red:hover {
+    background-color: red;
   }
   
+  .AnswerBoxesComponent:hover {
+    background-color: #ffdcfa;
+  }

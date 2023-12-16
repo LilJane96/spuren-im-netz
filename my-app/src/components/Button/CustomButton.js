@@ -14,12 +14,12 @@ const getButtonClass = (type) => {
     }
 }
 
-export default function CustomButton({name, onClick, type}) {
+export default function CustomButton({name, onClick, type, disabled}) {
     const buttonClass = getButtonClass(type);
  
     return (
         <div>
-            <button className={buttonClass} onClick={onClick}>{name}</button>
+            <button className={buttonClass} onClick={onClick} disabled={disabled}>{name}</button>
         </div>
          
     )

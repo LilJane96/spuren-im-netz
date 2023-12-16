@@ -12,6 +12,7 @@ export default function FrameOne() {
 const [selectedAnswer, setSelectedAnswer] = useState("");
 const [currentUnitIndex, setCurrentUnitIndex] = useState(0);
 const [currentTaskIndex, setCurrentTaskIndex] = useState(0);
+const [nextSimulatorPage, setNextSimulatorPage] = useState(0);
 
 const currentUnitData = units[currentUnitIndex];
    
@@ -32,15 +33,18 @@ const handleSubmit = (answer, isCorrect, rightAnswer, wrongAnswer) => {
 };
 
 
-  const handleNextTask = () => {
-    setCurrentTaskIndex((prevIndex) => prevIndex + 1);
-    setSpeachbubbleText("");
+const handleNextTask = () => {
+  setCurrentTaskIndex((prevIndex) => prevIndex + 1);
+  setSpeachbubbleText("");
+  setSelectedAnswer("");
+  setNextSimulatorPage((prev) => prev + 1);
 
-    if (currentTaskIndex === totalTasks - 1) {
-      setCurrentTaskIndex(0);
-      setCurrentUnitIndex((prevIndex) => prevIndex + 1);
-    }
-  };
+  if (currentTaskIndex === totalTasks - 1) {
+    setCurrentTaskIndex(0);
+    setCurrentUnitIndex((prevIndex) => prevIndex + 1);
+  }
+  console.log("handleNextTask called test");
+};
 
   const handlefinishUnit = () => {
     setCurrentTaskIndex(0);
@@ -58,9 +62,9 @@ const handleSubmit = (answer, isCorrect, rightAnswer, wrongAnswer) => {
             {currentTaskIndex === index && (
   <div className="frame" key={index}>
    {tasks.step.map((step, stepIndex) => (
-  step.speachbubble && <Speachbubble key={stepIndex} text={speachbubbleText || step.speachbubble} />
-))}
-    <PhoneSimulator content={tasks.content} selectedAnswer={selectedAnswer} />
+  step.speachbubble && <Speachbubble key={stepIndex} text={step.speachbubble} getAnswer={speachbubbleText}/>
+  ))}
+    <PhoneSimulator content={tasks.content} selectedAnswer={selectedAnswer} nextPage={nextSimulatorPage}/>
     <div className="boxContainer">
       <div className="answerContainer">
       {tasks.step.map((answer, stepIndex) => (
@@ -73,11 +77,12 @@ const handleSubmit = (answer, isCorrect, rightAnswer, wrongAnswer) => {
                     isCorrect={answerObj.right}
                   />
                 ))
-              ))}
+      ))}
       </div>
       <div className="buttonContainer">
         {currentTaskIndex < totalTasks - 1 ? (
-          <CustomButton onClick={handleNextTask} name="Weiter" type="primary"></CustomButton>
+         selectedAnswer === "" ?  <CustomButton onClick={handleNextTask} name="Weiter" type="primary" disabled></CustomButton> : <CustomButton onClick={handleNextTask} name="Weiter" type="primary"></CustomButton>
+         
         ):
         (
             <CustomButton onClick={handlefinishUnit} name="Unit beenden" type="primary"></CustomButton>

@@ -9,6 +9,15 @@ button {
   font-size: inherit;
   font-family: inherit;
 }
+
+button.PrimaryButton:disabled {
+  background: linear-gradient(90deg, #ededed 0%, #a1a1a1 100%);
+}
+
+button.PrimaryButton:disabled::before {
+  background: linear-gradient(90deg, #d5d5d5 0%, #a1a1a1 100%);
+}
+
 button.PrimaryButton {
     width: 260px;
     padding: 14px 51px;

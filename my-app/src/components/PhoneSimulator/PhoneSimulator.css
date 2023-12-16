@@ -3,6 +3,7 @@
     border-radius: 32px;
     background-color: white;
     height: 583px;
+    min-width: 252px;
 }
 
 .headerContainer {
