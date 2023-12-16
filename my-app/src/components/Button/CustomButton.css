@@ -1,6 +1,7 @@
 button {
-  position: relative;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   outline: none;
   border: 0;
@@ -8,18 +9,20 @@ button {
   text-decoration: none;
   font-size: inherit;
   font-family: inherit;
+  width: 141px;
+  height: 58px;
 }
 
 button.PrimaryButton:disabled {
-  background: linear-gradient(90deg, #ededed 0%, #a1a1a1 100%);
+  background: linear-gradient(90deg, #DB94F3 0%, #c687d1 100%) 46%;
+  color: #FFFFFF99;
 }
 
 button.PrimaryButton:disabled::before {
-  background: linear-gradient(90deg, #d5d5d5 0%, #a1a1a1 100%);
+  background: rgba(159, 47, 197, 0.6);
 }
 
 button.PrimaryButton {
-    width: 260px;
     padding: 14px 51px;
     border-radius: 0.75em;
     font-weight: 700;

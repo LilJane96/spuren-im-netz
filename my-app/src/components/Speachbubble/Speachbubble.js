@@ -1,7 +1,7 @@
 import foxPicture from "../../images/foxPicture.png";
 import "./Speachbubble.css";
 
-export default function Speachbubble({ text, getAnswer }) {
+export default function Speachbubble({ text, reason }) {
 
   return (
     <div className="bubble-container container">
@@ -9,12 +9,29 @@ export default function Speachbubble({ text, getAnswer }) {
         <img src={foxPicture} alt="Fox" className="foxImg"/>
       </div>
       
-      <div className="overlay">
+      {/* <div className="overlay">
         <div className="bubble speech">
           <p>{text}</p>
           {getAnswer && <p className="answer">{getAnswer}</p>}
         </div>
+      </div> */}
+
+      <div className="overlay">
+    <div className="bubble speech">
+    {Array.isArray(text) ? (text.map((paragraph, index) => {
+        if (paragraph.type === "paragraph") {
+          return <p key={index}>{paragraph.content}</p>;
+        } else if (paragraph.type === "bold") {
+          return <p key={index}><strong>{paragraph.content}</strong></p>;
+        } else {
+          return null; 
+        }
+      })) : 
+        <p style={{fontWeight: "bold"}}>{text}</p>
+    }
+      {reason !== "" && <p>{reason}</p> }
       </div>
+    </div>
     </div>
   );
 }

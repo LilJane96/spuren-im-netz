@@ -1,9 +1,9 @@
 import { useState } from "react";
 import CustomButton from "../../Button/CustomButton";
 import Inputfield from "../../Inputfield/Inputfield";
-import "./CreateUserName.css"
+import "./CreatePassword.css"
 
-export default function CreateUserName({answer}) {
+export default function CreatePassword({answer}) {
   const [selectedAnswer, setSelectedAnswer] = useState("");
 
 
@@ -15,7 +15,7 @@ export default function CreateUserName({answer}) {
       </div>
         <div >
           <div style={{margin: "15px 0"}}>
-        <Inputfield placeholder="Benutzername" value={answer} onChange={(e) => setSelectedAnswer(e.target.value)}></Inputfield>
+        <Inputfield type="password" placeholder="Passwort" value={answer} onChange={(e) => setSelectedAnswer(e.target.value)}></Inputfield>
             </div>
             <div style={{margin: "15px 0"}}>
           </div>

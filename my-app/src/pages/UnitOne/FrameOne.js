@@ -10,6 +10,7 @@ import "./FrameOne.css";
 
 export default function FrameOne() {
 const [selectedAnswer, setSelectedAnswer] = useState("");
+const [reasonText, setReasonText] = useState("");
 const [currentUnitIndex, setCurrentUnitIndex] = useState(0);
 const [currentTaskIndex, setCurrentTaskIndex] = useState(0);
 const [nextSimulatorPage, setNextSimulatorPage] = useState(0);
@@ -22,8 +23,9 @@ const totalTasks = currentUnitData ? currentUnitData.task.length : 0;
 
 const [speachbubbleText, setSpeachbubbleText] = useState("");
 
-const handleSubmit = (answer, isCorrect, rightAnswer, wrongAnswer) => {
+const handleSubmit = (answer, isCorrect, rightAnswer, wrongAnswer, reason) => {
   setSelectedAnswer(answer);
+  setReasonText(reason);
 
   if (isCorrect) {
     setSpeachbubbleText(rightAnswer);
@@ -34,22 +36,25 @@ const handleSubmit = (answer, isCorrect, rightAnswer, wrongAnswer) => {
 
 
 const handleNextTask = () => {
+  setTimeout(() => {
   setCurrentTaskIndex((prevIndex) => prevIndex + 1);
   setSpeachbubbleText("");
   setSelectedAnswer("");
+  setReasonText("");
   setNextSimulatorPage((prev) => prev + 1);
 
   if (currentTaskIndex === totalTasks - 1) {
     setCurrentTaskIndex(0);
     setCurrentUnitIndex((prevIndex) => prevIndex + 1);
   }
-  console.log("handleNextTask called test");
+}, 300);
 };
 
   const handlefinishUnit = () => {
     setCurrentTaskIndex(0);
     setCurrentUnitIndex((prevIndex) => prevIndex +1)
   };
+
 
   return (
     <div className="frameOneContainer">
@@ -58,11 +63,11 @@ const handleNextTask = () => {
       </div>
       <div className="frameContainer">
           {currentUnitData.task.map((tasks, index) => (
-        <div className="test" key={index}>
+        <div className="currentFrame" key={index}>
             {currentTaskIndex === index && (
   <div className="frame" key={index}>
    {tasks.step.map((step, stepIndex) => (
-  step.speachbubble && <Speachbubble key={stepIndex} text={step.speachbubble} getAnswer={speachbubbleText}/>
+  step.speachbubble && <Speachbubble key={stepIndex} text={speachbubbleText || step.speachbubble} reason={reasonText}/>
   ))}
     <PhoneSimulator content={tasks.content} selectedAnswer={selectedAnswer} nextPage={nextSimulatorPage}/>
     <div className="boxContainer">
@@ -73,7 +78,7 @@ const handleNextTask = () => {
                   <AnswerBoxes
                     key={`${stepIndex}-${boxIndex}`}
                     text={answerObj.answer}
-                    onClick={() => handleSubmit(answerObj.answer, answerObj.right, answer?.rightAnswer, answer?.wrongAnswer)}
+                    onClick={() => handleSubmit(answerObj.answer, answerObj.right, answer?.rightAnswer, answer?.wrongAnswer, answer?.reason)}
                     isCorrect={answerObj.right}
                   />
                 ))

@@ -33,6 +33,7 @@ div.bubble {
   font-family: sans-serif;
   padding: 20px;
   font-size: large;
+  text-align: left;
 }
 
 div.bubble .answer {

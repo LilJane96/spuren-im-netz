@@ -2,31 +2,27 @@
 import { ScrollContainer } from 'react-nice-scroll';
 import "./PhoneSimulator.css";
 import { useState } from 'react';
-import CreateAccount from './CreateAccount/CreateAccount';
+import CreatePassword from './CreatePassword/CreatePassword';
 import CreateUserName from './CreateUserName/CreateUserName';
+import Privacy from './Privacy/Privacy';
 
 export default function PhoneSimulator({ selectedAnswer, nextPage }) {
   const [currentPage, setCurrentPage] = useState(1);
-  const totalPages = 2;
-
-
-  console.log("nextPage", nextPage);
-
+  
   const handleNextPage = () => {
-    if (currentPage < totalPages) {
       setCurrentPage(currentPage + 1);
-      console.log("handleNextPage called", nextPage);
-      nextPage(); // Die nextPage-Funktion wird direkt hier aufgerufen
-    }
+      nextPage(); 
   };
   
 
   const renderSimulatorPage = () => {
     switch (nextPage) {
       case 0:
-        return <CreateAccount onNextPage={handleNextPage} />;
+        return <CreateUserName answer={selectedAnswer} onNextPage={handleNextPage} />;
       case 1:
-        return <CreateUserName answer={selectedAnswer} />;
+        return <CreatePassword answer={selectedAnswer} />;
+        case 2:
+          return <Privacy answer={selectedAnswer} />;
       default:
         return null;
     }

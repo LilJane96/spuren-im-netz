@@ -1,6 +1,6 @@
 .AnswerBoxesComponent {
-    margin: 20px;
-    width: 100%;
+    margin: 20px 0;
+    width: 323px;
     height: 100%;
     padding: 20px 35px;
     background-color: white;
@@ -18,19 +18,17 @@
 
   .AnswerBoxesComponent.green {
     background-color: #A0F959;
-    width: 110%;
   }
   .AnswerBoxesComponent.green:hover {
     background-color: #A0F959;
   }
   
   .AnswerBoxesComponent.red {
-    background-color: red; 
-    width: 110%;
+    background-color: #FF8653; 
 
   }
   .AnswerBoxesComponent.red:hover {
-    background-color: red;
+    background-color: #FF8653;
   }
   
   .AnswerBoxesComponent:hover {
