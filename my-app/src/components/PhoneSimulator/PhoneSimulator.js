@@ -5,9 +5,13 @@ import { useState } from 'react';
 import CreatePassword from './CreatePassword/CreatePassword';
 import CreateUserName from './CreateUserName/CreateUserName';
 import Privacy from './Privacy/Privacy';
+import PropTypes from 'prop-types';
+import UploadPicture from './UploadPicture/UploadPicture';
 
 export default function PhoneSimulator({ selectedAnswer, nextPage }) {
   const [currentPage, setCurrentPage] = useState(1);
+
+  
   
   const handleNextPage = () => {
       setCurrentPage(currentPage + 1);
@@ -23,6 +27,8 @@ export default function PhoneSimulator({ selectedAnswer, nextPage }) {
         return <CreatePassword answer={selectedAnswer} />;
         case 2:
           return <Privacy answer={selectedAnswer} />;
+          case 3:
+            return <UploadPicture answer={selectedAnswer} />;
       default:
         return null;
     }
@@ -44,4 +50,10 @@ export default function PhoneSimulator({ selectedAnswer, nextPage }) {
       </ScrollContainer>
     </div>
   );
+}
+
+
+PhoneSimulator.prototype = {
+  selectedAnswer: PropTypes.string.isRequired,
+  nextPage: PropTypes.number.isRequired
 }

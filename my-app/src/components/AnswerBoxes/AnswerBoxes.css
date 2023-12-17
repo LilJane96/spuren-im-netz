@@ -15,6 +15,14 @@
     word-wrap: break-word;
   }
   
+  .AnswerBoxesComponent.imageContent {
+    margin: 10px;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   .AnswerBoxesComponent.green {
     background-color: #A0F959;
@@ -34,3 +42,9 @@
   .AnswerBoxesComponent:hover {
     background-color: #ffdcfa;
   }
+
+  p.textContainer {
+    margin: 0;
+  }
+
+  

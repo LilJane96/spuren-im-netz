@@ -16,7 +16,11 @@ const [currentTaskIndex, setCurrentTaskIndex] = useState(0);
 const [nextSimulatorPage, setNextSimulatorPage] = useState(0);
 
 const currentUnitData = units[currentUnitIndex];
-   
+
+const answersLength = currentUnitData.task.map(task =>
+  task.step.reduce((acc, step) => acc + (step.answerboxes ? step.answerboxes.length : 0), 0)
+);
+
 const totalTasks = currentUnitData ? currentUnitData.task.length : 0;
 
 
@@ -71,18 +75,20 @@ const handleNextTask = () => {
   ))}
     <PhoneSimulator content={tasks.content} selectedAnswer={selectedAnswer} nextPage={nextSimulatorPage}/>
     <div className="boxContainer">
-      <div className="answerContainer">
+    <div className={`answerContainer ${answersLength[index] >= 4 ? "fourOrMore" : "smallerThenFour"}`}>
       {tasks.step.map((answer, stepIndex) => (
-                answer.answerboxes &&
-                answer.answerboxes.map((answerObj, boxIndex) => (
-                  <AnswerBoxes
-                    key={`${stepIndex}-${boxIndex}`}
-                    text={answerObj.answer}
-                    onClick={() => handleSubmit(answerObj.answer, answerObj.right, answer?.rightAnswer, answer?.wrongAnswer, answer?.reason)}
-                    isCorrect={answerObj.right}
-                  />
-                ))
-      ))}
+  answer.answerboxes &&
+  answer.answerboxes.map((answerObj, boxIndex) => (
+    <AnswerBoxes
+      key={`${stepIndex}-${boxIndex}`}
+      type={answerObj.type}
+      text={answerObj.answer}
+      onClick={() => handleSubmit(answerObj.answer, answerObj.right, answer?.rightAnswer, answer?.wrongAnswer, answer?.reason)}
+      isCorrect={answerObj.right}
+      imageUrl={answerObj.imageUrl}
+    />
+  ))
+))}
       </div>
       <div className="buttonContainer">
         {currentTaskIndex < totalTasks - 1 ? (

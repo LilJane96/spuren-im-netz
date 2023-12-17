@@ -27,9 +27,18 @@
     display: flex;
     justify-content: end;
 }
-
 .answerContainer {
-    /* display: flex;
+
+}
+
+.fourOrMore {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px
+}
+
+
+.smallerThenFour {
+    display: flex;
     flex-direction: column;
-    align-items: center; */
 }

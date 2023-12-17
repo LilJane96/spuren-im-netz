@@ -44,9 +44,9 @@ const units = [
                 }
               ],
               answerboxes: [
-                { answer: "Password", right: false },
-                { answer: "kYh5&0!mlta", right: true },
-                { answer: "meinName123", right: false }
+                { type: "text", answer: "Password", right: false },
+                { type: "text", answer: "kYh5&0!mlta", right: true },
+                { type: "text", answer: "meinName123", right: false },
               ],
               rightAnswer: "Super! Das ist ein sehr gutes Passwort. ",
               wrongAnswer: "Schade, versuche es nochmal!",
@@ -86,9 +86,12 @@ const units = [
             { 
               speachbubble: "Zuerst müssen wir einen guten Namen aussuchen. Welchen Namen würdest du auswählen?",
               answerboxes: [
-                { answer: "Your name", right: true },
-                { answer: "User123", right: false },
-                { answer: "Something", right: false }
+              { type: "image", imageUrl: "image1.jpg", right: true },
+              { type: "image", imageUrl: "image2.jpg", right: false },
+              { type: "image", imageUrl: "image3.jpg", right: false },
+              { type: "image", imageUrl: "image4.jpg", right: false },
+
+
               ],
               rightAnswer: "Super! Das ist ein sehr guter Name.",
               wrongAnswer: "Schade, versuche es nochmal!"
