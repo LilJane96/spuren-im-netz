@@ -86,10 +86,10 @@ const units = [
             { 
               speachbubble: "Zuerst müssen wir einen guten Namen aussuchen. Welchen Namen würdest du auswählen?",
               answerboxes: [
-              { type: "image", imageUrl: "image1.jpg", right: true },
-              { type: "image", imageUrl: "image2.jpg", right: false },
-              { type: "image", imageUrl: "image3.jpg", right: false },
-              { type: "image", imageUrl: "image4.jpg", right: false },
+              { type: "image", answer: "image1.jpg", right: true },
+              { type: "image", answer: "image2.jpg", right: false },
+              { type: "image", answer: "image3.jpg", right: false },
+              { type: "image", answer: "image4.jpg", right: false },
 
 
               ],

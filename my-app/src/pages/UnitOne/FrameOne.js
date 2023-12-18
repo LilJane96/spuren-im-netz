@@ -54,6 +54,7 @@ const handleNextTask = () => {
 }, 300);
 };
 
+
   const handlefinishUnit = () => {
     setCurrentTaskIndex(0);
     setCurrentUnitIndex((prevIndex) => prevIndex +1)
@@ -85,7 +86,7 @@ const handleNextTask = () => {
       text={answerObj.answer}
       onClick={() => handleSubmit(answerObj.answer, answerObj.right, answer?.rightAnswer, answer?.wrongAnswer, answer?.reason)}
       isCorrect={answerObj.right}
-      imageUrl={answerObj.imageUrl}
+      imageUrl={answerObj.answer}
     />
   ))
 ))}

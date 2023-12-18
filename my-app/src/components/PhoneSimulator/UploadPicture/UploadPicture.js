@@ -3,8 +3,6 @@ import AddPhotoAlternateOutlinedIcon from '@mui/icons-material/AddPhotoAlternate
 import "./UploadPicture.css"
 
 export default function UploadPicture({answer}) {
-  const [selectedAnswer, setSelectedAnswer] = useState("");
-
 
     return (
         <div className="UploadImageContainer">
@@ -12,9 +10,11 @@ export default function UploadPicture({answer}) {
         <h4>Profilbild hochladen</h4>
       </div>
         <div className="ImageContainer">
-          <div className="IconContainer">
+        <div className="IconContainer">
+          {answer ?<img src={process.env.PUBLIC_URL + answer} style={{width: "150px", height: "150px"}}></img> :  
             <AddPhotoAlternateOutlinedIcon style={{fontSize: "xx-large"}}/>
-            </div>      
+             }
+        </div>
       </div>
     </div>
     )

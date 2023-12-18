@@ -1,15 +1,16 @@
 .frameContainer {
     display: flex;
     justify-content: center;
-    margin: 5px 0;
 }
 
 .frame {
     width: 33.33%;
     padding: 15px;
     display: flex;
+    justify-content: space-between; /* Änderung hier */
     align-items: center;
 }
+
 
 .boxContainer {
     display: flex;
@@ -34,7 +35,7 @@
 .fourOrMore {
     display: grid;
     grid-template-columns: auto auto;
-    gap: 10px
+    gap: 0 10px;
 }
 
 

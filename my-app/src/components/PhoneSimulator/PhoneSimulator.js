@@ -11,13 +11,10 @@ import UploadPicture from './UploadPicture/UploadPicture';
 export default function PhoneSimulator({ selectedAnswer, nextPage }) {
   const [currentPage, setCurrentPage] = useState(1);
 
-  
-  
   const handleNextPage = () => {
       setCurrentPage(currentPage + 1);
       nextPage(); 
   };
-  
 
   const renderSimulatorPage = () => {
     switch (nextPage) {
