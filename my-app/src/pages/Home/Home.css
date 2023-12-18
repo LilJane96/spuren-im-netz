@@ -3,6 +3,9 @@
     display: flex;
     margin: 150px 20px;
 }
+
+
+
 img {
     object-fit: contain;
 
@@ -67,3 +70,4 @@ img {
     max-width: 45%;
     max-height: 45%;
 }
+

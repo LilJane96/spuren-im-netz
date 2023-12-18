@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import GoodFoxStanding from "../../images/GoodFoxStanding.png";
 import EvilFoxStanding from "../../images/EvilFoxStanding.png";
 import IphoneHomePage from "../../images/IphoneHomePage.png";
@@ -6,10 +6,19 @@ import BarHomePage from "../../images/BarHomePage.png"
 import CustomButton from "../../components/Button/CustomButton";
 import "./Home.css"
 import {Link} from "@mui/material";
+import PopUpChooseName from "../../components/PopUpChooseName/PopUpChooseName";
+
 
 function Home() {
+    const [open, setOpen] = useState(false);
+    const [name, setName] = useState("Unbekannt");
+    const handleOpenPopup = () => {
+        setOpen(true);
+    };
     return (
-        <div>
+        <div className="testPopup">
+            <CustomButton name="Weiter" type="primary" onClick={handleOpenPopup}>Pop-up öffnen</CustomButton>
+            <PopUpChooseName open={open} name={name} />
             <div className="containerHome">
                 <div className="foxContainer">
                     <div className="iphone">
@@ -29,23 +38,24 @@ function Home() {
             <div className="paragraphsHome">
                 <h1 className="spuren">Spuren im Netz</h1>
                 <h4 className="h4HomePage">
-                            Herzlich Willkommen zu Spuren im Netz!
+                    Herzlich Willkommen zu Spuren im Netz!
                 </h4>
                 <p>
-                            Helfe Pixel beim Lösen seiner Fälle!
+                    Hilf Pixel beim Lösen seiner Fälle!
                 </p>
                 <p>
-                            Werde ein Internet-Detektiv!
+                    Werde ein Internet-Detektiv!
                 </p>
                 <p>
-                            Sei sicher im Internet unterwegs!
+                    Sei sicher im Internet unterwegs!
                 </p>
                 <Link href="/frameone"><CustomButton name="Start" type="primary"></CustomButton></Link>
             </div>
-
-        </div>
+            </div>
     );
 }
+
+
 
 
 export default Home;
