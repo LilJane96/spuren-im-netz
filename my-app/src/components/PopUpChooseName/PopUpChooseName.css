@@ -1,3 +1,25 @@
-.PopUpChooseName {
 
+.dialogTitleH3 {
+    text-align: center;
+}
+
+.dialogTitleH4 {
+    text-align: center;
+}
+.dialogContent {
+    display: flex;
+    justify-content: center;
+}
+
+.iconYellow {
+    color: yellow;
+    font-size: 100px;
+}
+.iconBlue {
+    color: blue;
+    font-size: 100px;
+}
+.dialogActions {
+    justify-content: center;
+    margin-bottom: 15px;
 }
