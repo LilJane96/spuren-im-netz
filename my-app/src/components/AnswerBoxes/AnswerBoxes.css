@@ -1,6 +1,6 @@
 .AnswerBoxesComponent {
-    margin: 20px;
-    width: 100%;
+    margin: 20px 0;
+    width: 323px;
     height: 100%;
     padding: 20px 35px;
     background-color: white;
@@ -11,22 +11,46 @@
     color: black;
     font-size: 20px;
     font-weight: 700;
-    line-height: 26px;
+    line-height: 40px;
     word-wrap: break-word;
   }
   
-  /* Additional styles for the 'green' class */
+  .AnswerBoxesComponent.imageContent {
+    margin: 3px -1px;
+    width: 129px;
+    height: 135px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .AnswerBoxesComponent.green {
     background-color: #A0F959;
-    width: 110%;
-
-    
+  }
+  .AnswerBoxesComponent.green:hover {
+    background-color: #A0F959;
   }
   
-  /* Additional styles for the 'red' class */
   .AnswerBoxesComponent.red {
-    background-color: red; 
-    width: 110%;
-    
+    background-color: #FF8653; 
+
+  }
+  .AnswerBoxesComponent.red:hover {
+    background-color: #FF8653;
   }
   
+  .AnswerBoxesComponent:hover {
+    background-color: #ffdcfa;
+  }
+
+  p.textContainer {
+    margin: 0;
+  }
+
+  .textContainer.image {
+    width: 205px;
+    height: 134px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }

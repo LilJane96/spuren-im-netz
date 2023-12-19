@@ -1,0 +1,32 @@
+.PrivacyContainer {
+    display: flex;
+    align-items: center;
+    margin: 10px 15px;
+    justify-content: space-between;
+}
+
+.headlineContainer {
+    display: flex;
+}
+
+.header {
+    margin: 0 5px;
+}
+
+.SwitchContainer {
+    margin: 0 -20px 0 0px;
+}
+
+.TextContainer {
+    margin: 20px;
+}
+
+.PrivacyText {
+    white-space: pre-wrap;
+    color: #000;
+    font-family: Quicksand;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

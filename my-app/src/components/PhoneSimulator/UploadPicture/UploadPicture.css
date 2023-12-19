@@ -1,0 +1,30 @@
+.UploadImageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.UploadImageContainer .ImageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 35px 0;
+    width: 151.327px;
+    height: 151.327px;
+    flex-shrink: 0;
+    border-radius: 23.556px;
+    background: #C7ECFF;
+    box-shadow: 0px 5px 0px 0px #96C1D7;
+}
+
+
+.IconContainer {
+    display: flex;
+}
+
+.UploadImageContainer .ProfilePicture {
+    width: 150px;
+    height: 152px;
+    object-fit: cover;
+    border-radius: 22px;
+}

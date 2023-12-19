@@ -1,8 +1,11 @@
 .phoneContainer {
+    display: flex;
+    flex-direction: column;
+    height: 74vh;
     border: 8px solid black;
     border-radius: 32px;
     background-color: white;
-    height: 583px;
+    min-width: 252px;
 }
 
 .headerContainer {
@@ -12,3 +15,20 @@
     border-top-left-radius: 28px;
     border-top-right-radius: 28px;
 }
+
+.sectionContainer {
+    flex: 1; /* Nimmt den verfügbaren Platz ein, um sicherzustellen, dass die Bottombar unten bleibt */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section {
+    height: 65vh;
+    overflow-x: hidden;
+  }
+  
+  .bottombar {
+    margin-top: auto; 
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }

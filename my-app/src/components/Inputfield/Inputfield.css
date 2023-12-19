@@ -1,6 +1,7 @@
 .InputfieldContainer .inputfieldComponent{
     padding: 10px;
-    width: 240px;
+    width: 200px;
+    height: 30px;
     border: 1px solid;
-    border-radius: 6px;
+    border-radius: 17px;
 }
