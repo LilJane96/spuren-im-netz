@@ -30,7 +30,7 @@ export default function PhoneSimulator({ selectedAnswer, nextPage }) {
       case 3:
         return <UploadPicture answer={selectedAnswer} />;
       case 4:
-        return <MyProfil />;
+        return <MyProfil answer={selectedAnswer}/>;
       default:
         return null;
     }

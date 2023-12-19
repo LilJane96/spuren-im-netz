@@ -115,6 +115,14 @@ const units = [
                   content: "Welche Informationen hier würdest du deinem Profil hinzufügen?"
                 },
               ],
+              answerboxes: [
+                { type: "text", answer: "Option 1", right: false },
+                { type: "text", answer: "Option 2", right: true },
+                { type: "text", answer: "Option 3", right: false },
+              ],
+              rightAnswer: "Super! Das ist eine gute Entscheidung.",
+              wrongAnswer: "Schade, versuche es nochmal!",
+              reason: "Dein Profil auf “öffentlich” zu stellen ist nicht gut, da sonst jeder alles von deinen Bildern und Posts sehen kann. Öffentliche Profile sind z.B. für Unternehmen, die sich ein Profil erstellen, um Werbung auf ihrem Profil für ihre Produkte zu machen."
             }
           ]
           },

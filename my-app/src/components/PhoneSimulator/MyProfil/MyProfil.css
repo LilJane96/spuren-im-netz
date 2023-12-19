@@ -25,6 +25,7 @@
 .ImageContainer .text {
     text-align: center;
     margin: 3px;
+    font-size: 12px;
 }
 
 .flexContainer .textContainer {

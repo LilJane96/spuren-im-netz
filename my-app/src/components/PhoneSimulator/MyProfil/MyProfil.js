@@ -3,7 +3,7 @@ import CustomButton from "../../Button/CustomButton"
 import ProfilePicture from "../../../images/image1.jpg";
 import "./MyProfil.css"
 
-export default function MyProfil() {
+export default function MyProfil({answer}) {
 
 
     return (
@@ -13,7 +13,7 @@ export default function MyProfil() {
             </div>
             <div className="ImageContainer">
                 <img src={ProfilePicture} alt="Profilbild" className="ProfilePicture"/>
-                <p className="text">The users picked bio text should be displayed here!</p>
+                {answer ? (<p className="text">{answer}</p>) : (<p className="text">The users picked bio text<br /> should be displayed here!</p>)}
             </div>
             <div className="flexContainer">
                 <div className="textContainer">
@@ -35,39 +35,8 @@ export default function MyProfil() {
                 </div>
             </div>
             <div className="Line"/>
-            <div>
-                <p>Test</p>
-            </div>
-            <div>
-                <p>Test</p>
-            </div>
-            <div>
-                <p>Test</p>
-            </div>
-            <div>
-                <p>Test</p>
-            </div>
-            <div>
-                <p>Test</p>
-            </div>
-            <div>
-                <p>Test</p>
-            </div>
-            <div>
-                <p>Test</p>
-            </div>
-            <div>
-                <p>Test</p>
-            </div>
-            <div>
-                <p>Test</p>
-            </div>
-            <div>
-                <p>Test</p>
-            </div>
-            <div>
-                <p>Test</p>
-            </div>
+            
+          
         </div>
     )
 }

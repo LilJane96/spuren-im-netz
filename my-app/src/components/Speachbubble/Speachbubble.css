@@ -48,18 +48,18 @@ div.bubble:after {
   height: 0;
 }
 
-div.bubble:before {
-    left: 123px;
-    top: -40px;
-    border: 24px solid;
-    border-color: #fff transparent transparent #fff;
-    rotate: 253deg;
+.circle {
+  position: absolute;
+  left: 76px;
+  top: -34px;
+  width: 77px;
+  height: 84px;
+  bottom: -36%;
+  border-radius: 62%;
+  rotate: 1deg;
+  box-shadow: 3.5vmin 0 white, 4vmin -0.5vmin white, 4vmin -1.5vmin 0 -0.5vmin white;
+  clip-path: polygon(0% 49%, 150% 48%, 150% 100%, 0% 100%);
+  transform: rotatex(162deg);
+  z-index: 0;
 }
 
-div.bubble:after {
-    left: 126px;
-    top: -34px;
-    border: 20px solid;
-    border-color: #fff transparent transparent #fff;
-    rotate: 261deg;
-}

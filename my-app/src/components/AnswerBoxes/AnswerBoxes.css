@@ -16,8 +16,8 @@
   }
   
   .AnswerBoxesComponent.imageContent {
-    margin: 10px 0;
-    width: 135px;
+    margin: 3px -1px;
+    width: 129px;
     height: 135px;
     display: flex;
     justify-content: center;

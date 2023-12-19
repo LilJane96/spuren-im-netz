@@ -13,6 +13,7 @@ const [selectedAnswer, setSelectedAnswer] = useState("");
 const [reasonText, setReasonText] = useState("");
 const [currentUnitIndex, setCurrentUnitIndex] = useState(0);
 const [currentTaskIndex, setCurrentTaskIndex] = useState(0);
+const [currentStep, setCurrentStep] = useState(1);
 const [nextSimulatorPage, setNextSimulatorPage] = useState(0);
 
 const currentUnitData = units[currentUnitIndex];
@@ -42,17 +43,19 @@ const handleSubmit = (answer, isCorrect, rightAnswer, wrongAnswer, reason) => {
 
 const handleNextTask = () => {
   setTimeout(() => {
-  setCurrentTaskIndex((prevIndex) => prevIndex + 1);
-  setSpeachbubbleText("");
-  setSelectedAnswer("");
-  setReasonText("");
-  setNextSimulatorPage((prev) => prev + 1);
+    setCurrentTaskIndex((prevIndex) => prevIndex + 1);
+    setCurrentStep((prevStep) => prevStep + 1);
+    setSpeachbubbleText("");
+    setSelectedAnswer("");
+    setReasonText("");
+    setNextSimulatorPage((prev) => prev + 1);
 
-  if (currentTaskIndex === totalTasks - 1) {
-    setCurrentTaskIndex(0);
-    setCurrentUnitIndex((prevIndex) => prevIndex + 1);
-  }
-}, 300);
+    if (currentTaskIndex === totalTasks - 1) {
+      setCurrentTaskIndex(0);
+      setCurrentUnitIndex((prevIndex) => prevIndex + 1);
+      setCurrentStep(1);
+    }
+  }, 300);
 };
 
 
@@ -61,54 +64,73 @@ const handleNextTask = () => {
     setCurrentUnitIndex((prevIndex) => prevIndex +1)
   };
 
+  const handleGoBack = () => {
+    if (currentStep > 1) {
+      setCurrentTaskIndex((prevIndex) => prevIndex - 1);
+      setCurrentStep((prevStep) => prevStep - 1);
+      setSpeachbubbleText("");
+      setSelectedAnswer("");
+      setReasonText("");
+      setNextSimulatorPage((prev) => prev - 1);
+    }
+  };
+
 
   return (
     <div className="frameOneContainer">
       <div className="stepperContainer">
-        <Stepper currentStep={currentTaskIndex + 1} totalSteps={totalTasks} />
+        <Stepper currentStep={currentStep} totalSteps={totalTasks} />
       </div>
       <div className="frameContainer">
-          {currentUnitData.task.map((tasks, index) => (
-        <div className="currentFrame" key={index}>
+        {currentUnitData.task.map((tasks, index) => (
+          <div className="currentFrame" key={index}>
             {currentTaskIndex === index && (
-  <div className="frame" key={index}>
-   {tasks.step.map((step, stepIndex) => (
-  step.speachbubble && <Speachbubble key={stepIndex} text={speachbubbleText || step.speachbubble} reason={reasonText}/>
-  ))}
-    <PhoneSimulator content={tasks.content} selectedAnswer={selectedAnswer} nextPage={nextSimulatorPage}/>
-    <div className="boxContainer">
-    <div className={`answerContainer ${answersLength[index] >= 4 ? "fourOrMore" : "smallerThenFour"}`}>
-      {tasks.step.map((answer, stepIndex) => (
-  answer.answerboxes &&
-  answer.answerboxes.map((answerObj, boxIndex) => (
-    <AnswerBoxes
-      key={`${stepIndex}-${boxIndex}`}
-      type={answerObj.type}
-      text={answerObj.answer}
-      onClick={() => handleSubmit(answerObj.answer, answerObj.right, answer?.rightAnswer, answer?.wrongAnswer, answer?.reason)}
-      isCorrect={answerObj.right}
-      imageUrl={answerObj.answer}
-      imgAnswer={answerObj.imgAnswer}
-    />
-  ))
-))}
-      </div>
-      <div className="buttonContainer">
-        {currentTaskIndex < totalTasks - 1 ? (
-         selectedAnswer === "" ?  <CustomButton onClick={handleNextTask} name="Weiter" type="primary" disabled></CustomButton> : <CustomButton onClick={handleNextTask} name="Weiter" type="primary"></CustomButton>
-         
-        ):
-        (
-            <CustomButton onClick={handlefinishUnit} name="Unit beenden" type="primary"></CustomButton>
-          )
-        }
-       
-      </div>
-    </div>
-  </div>
-)}
-        </div>
-          ))}
+              <div>
+              <div className="frame" key={index}>
+                {tasks.step.map((step, stepIndex) => (
+                  step.speachbubble && <Speachbubble key={stepIndex} text={speachbubbleText || step.speachbubble} reason={reasonText} />
+                ))}
+                <PhoneSimulator content={tasks.content} selectedAnswer={selectedAnswer} nextPage={nextSimulatorPage} />
+                <div className="boxContainer">
+                  <div className={`answerContainer ${answersLength[index] >= 4 ? "fourOrMore" : "smallerThenFour"}`}>
+                    {tasks.step.map((answer, stepIndex) => (
+                      answer.answerboxes &&
+                      answer.answerboxes.map((answerObj, boxIndex) => (
+                        <AnswerBoxes
+                          key={`${stepIndex}-${boxIndex}`}
+                          type={answerObj.type}
+                          text={answerObj.answer}
+                          onClick={() => handleSubmit(answerObj.answer, answerObj.right, answer?.rightAnswer, answer?.wrongAnswer, answer?.reason)}
+                          isCorrect={answerObj.right}
+                          imageUrl={answerObj.answer}
+                          imgAnswer={answerObj.imgAnswer}
+                        />
+                      ))
+                    ))}
+                  </div>
+                 
+                </div>
+                </div>
+                <div className="buttonContainer">
+                    {currentTaskIndex > 0 ? (
+                      <CustomButton onClick={handleGoBack} name="Zurück" type="tertiary"></CustomButton>
+                    ) : 
+                    (
+                      <CustomButton onClick={handleGoBack} name="Zurück" type="tertiary" disabled></CustomButton>
+                    )}
+                    {currentTaskIndex < totalTasks - 1 ? (
+                      selectedAnswer === "" ? <CustomButton onClick={handleNextTask} name="Weiter" type="primary" disabled></CustomButton> : <CustomButton onClick={handleNextTask} name="Weiter" type="primary"></CustomButton>
+
+                    ) : (
+                      <CustomButton onClick={handlefinishUnit} name="Unit beenden" type="primary"></CustomButton>
+                    )}
+
+                  </div>
+              </div>
+              
+            )}
+          </div>
+        ))}
       </div>
     </div>
   );

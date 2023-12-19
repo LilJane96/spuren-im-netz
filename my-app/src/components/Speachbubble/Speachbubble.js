@@ -8,16 +8,10 @@ export default function Speachbubble({ text, reason }) {
       <div className="content">
         <img src={foxPicture} alt="Fox" className="foxImg"/>
       </div>
-      
-      {/* <div className="overlay">
-        <div className="bubble speech">
-          <p>{text}</p>
-          {getAnswer && <p className="answer">{getAnswer}</p>}
-        </div>
-      </div> */}
 
       <div className="overlay">
     <div className="bubble speech">
+      <div className="circle"></div>
     {Array.isArray(text) ? (text.map((paragraph, index) => {
         if (paragraph.type === "paragraph") {
           return <p key={index}>{paragraph.content}</p>;

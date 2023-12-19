@@ -14,7 +14,9 @@
     flex-shrink: 0;
     border-radius: 23.556px;
     background: #C7ECFF;
+    box-shadow: 0px 5px 0px 0px #96C1D7;
 }
+
 
 .IconContainer {
     display: flex;
@@ -22,7 +24,7 @@
 
 .UploadImageContainer .ProfilePicture {
     width: 150px;
-    height: 150px;
+    height: 152px;
     object-fit: cover;
-    border-radius: 16px
+    border-radius: 22px;
 }
