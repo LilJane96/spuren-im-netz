@@ -28,6 +28,7 @@ const totalTasks = currentUnitData ? currentUnitData.task.length : 0;
 const [speachbubbleText, setSpeachbubbleText] = useState("");
 
 const handleSubmit = (answer, isCorrect, rightAnswer, wrongAnswer, reason) => {
+  console.log("AN", answer)
   setSelectedAnswer(answer);
   setReasonText(reason);
 
@@ -87,6 +88,7 @@ const handleNextTask = () => {
       onClick={() => handleSubmit(answerObj.answer, answerObj.right, answer?.rightAnswer, answer?.wrongAnswer, answer?.reason)}
       isCorrect={answerObj.right}
       imageUrl={answerObj.answer}
+      imgAnswer={answerObj.imgAnswer}
     />
   ))
 ))}

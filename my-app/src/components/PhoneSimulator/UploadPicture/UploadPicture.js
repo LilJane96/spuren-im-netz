@@ -4,6 +4,7 @@ import "./UploadPicture.css"
 
 export default function UploadPicture({answer}) {
 
+  console.log("ANSWER", answer)
     return (
         <div className="UploadImageContainer">
       <div>
@@ -11,7 +12,7 @@ export default function UploadPicture({answer}) {
       </div>
         <div className="ImageContainer">
         <div className="IconContainer">
-          {answer ?<img src={process.env.PUBLIC_URL + answer} style={{width: "150px", height: "150px"}}></img> :  
+          {answer ?<img src={process.env.PUBLIC_URL + answer} className="ProfilePicture"></img> :  
             <AddPhotoAlternateOutlinedIcon style={{fontSize: "xx-large"}}/>
              }
         </div>

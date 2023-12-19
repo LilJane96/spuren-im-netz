@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "./AnswerBoxes.css";
 
-export default function AnswerBoxes({ type, text, imageUrl, onClick, isCorrect }) {
+export default function AnswerBoxes({ type, text, imageUrl, onClick, isCorrect, imgAnswer }) {
   const [clicked, setClicked] = useState(false);
+  console.log("IMG", imageUrl)
 
   const handleClick = () => {
     if (isCorrect === true) {
@@ -23,12 +24,15 @@ export default function AnswerBoxes({ type, text, imageUrl, onClick, isCorrect }
       return <p className="textContainer text">{text}</p>;
     } else if (type === "image") {
       return (
-        <img
+        <div style={{display: "flex", alignItems: "center", flexDirection: "column"}}>
+          <img
           className="textContainer image"
           src={process.env.PUBLIC_URL + imageUrl}
           alt="Bildbeschreibung"
-          style={{ maxWidth: "177px", height: "177px" }}
         />
+        <p style={{margin: "0"}}>{imgAnswer}</p>
+        </div>
+        
       );
     }
 

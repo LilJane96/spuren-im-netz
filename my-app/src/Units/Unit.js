@@ -86,10 +86,10 @@ const units = [
             { 
               speachbubble: "Zuerst müssen wir einen guten Namen aussuchen. Welchen Namen würdest du auswählen?",
               answerboxes: [
-              { type: "image", answer: "image1.jpg", right: true },
-              { type: "image", answer: "image2.jpg", right: false },
-              { type: "image", answer: "image3.jpg", right: false },
-              { type: "image", answer: "image4.jpg", right: false },
+              { type: "image", answer: "image1.jpg", imgAnswer: "Nature image", right: true },
+              { type: "image", answer: "image2.jpg", imgAnswer: "Self-portrait", right: false },
+              { type: "image", answer: "image3.jpg", imgAnswer: "Self-portrait", right: false },
+              { type: "image", answer: "image4.jpg", imgAnswer: "Image of idol", right: false },
 
 
               ],
@@ -98,31 +98,23 @@ const units = [
             }
           ]
       },
-      {
-        step: [
-          { 
-            speachbubble: "Zuerst müssen wir einen guten Namen aussuchen. Welchen Namen würdest du auswählen?",
-            answerboxes: [
-              { answer: "Your name", right: true },
-              { answer: "User123", right: false },
-              { answer: "Something", right: false }
-            ],
-            rightAnswer: "Super! Das ist ein sehr guter Name.",
-            wrongAnswer: "Schade, versuche es nochmal!"
-          }
-        ]
-    },
         {
           step: [
             { 
-              speachbubble: "Zuerst müssen wir einen guten Namen aussuchen. Welchen Namen würdest du auswählen?",
-              answerboxes: [
-                { answer: "Your name", right: true },
-                { answer: "User123", right: false },
-                { answer: "Something", right: false }
+              speachbubble: [
+                {
+                  type: "bold",
+                  content: "Das sieht doch super aus! Wie ein echter Meisterdetektiv! "
+                },
+                {
+                  type: "paragraph",
+                  content: "Lass uns nun noch einige Informationen über dich zu deinem Profil hinzufügen. Überlege dir gut, welche Sachen du auf deinem Profil eintragen willst."
+                },
+                {
+                  type: "paragraph",
+                  content: "Welche Informationen hier würdest du deinem Profil hinzufügen?"
+                },
               ],
-              rightAnswer: "Super! Das ist ein sehr guter Name.",
-              wrongAnswer: "Schade, versuche es nochmal!"
             }
           ]
           },

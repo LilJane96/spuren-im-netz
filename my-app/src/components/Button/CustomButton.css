@@ -63,16 +63,18 @@ button.PrimaryButton:active::before {
 }
 /*Secondary Button*/
   button.SecondaryButton {
-      width: 260px;
-      padding: 13px 51px;
-      border: 2px solid #B5E6FF;
-      border-radius: 0.75em;
-      font-weight: 700;
-      color: black;
-      text-transform: uppercase;
-      background: #B5E6FF;
-      transform-style: preserve-3d;
-      transition: .15s cubic-bezier(0, 0, .6, 1);
+    width: 170px;
+    height: 32px;
+    padding: 0px;
+    border: 2px solid #B5E6FF;
+    border-radius: 0.75em;
+    font-weight: 700;
+    color: black;
+    text-transform: uppercase;
+    background: #B5E6FF;
+    transform-style: preserve-3d;
+    transition: .15s cubic-bezier(0, 0, .6, 1);
+    font-size: 12px;
   }
   
   button.SecondaryButton::before {

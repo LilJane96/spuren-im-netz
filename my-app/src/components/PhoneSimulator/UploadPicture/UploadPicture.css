@@ -4,7 +4,7 @@
     align-items: center;
 }
 
-.ImageContainer {
+.UploadImageContainer .ImageContainer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,4 +18,11 @@
 
 .IconContainer {
     display: flex;
+}
+
+.UploadImageContainer .ProfilePicture {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 16px
 }

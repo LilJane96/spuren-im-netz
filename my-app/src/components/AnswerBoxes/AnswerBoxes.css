@@ -47,4 +47,10 @@
     margin: 0;
   }
 
-  
+  .textContainer.image {
+    width: 205px;
+    height: 134px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
