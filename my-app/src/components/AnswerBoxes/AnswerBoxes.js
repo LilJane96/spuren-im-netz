@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import BILD from "../../images/image1.jpg";
 import "./AnswerBoxes.css";
 
 export default function AnswerBoxes({ type, text, imageUrl, onClick, isCorrect, imgAnswer }) {
   const [clicked, setClicked] = useState(false);
-  console.log("IMG", imageUrl)
 
   const handleClick = () => {
       setClicked(true);
@@ -27,11 +25,6 @@ export default function AnswerBoxes({ type, text, imageUrl, onClick, isCorrect, 
           src={process.env.PUBLIC_URL + `/${imageUrl}`}
           alt="Bildbeschreibung"
         />
-        {/* <img
-          className="textContainer image"
-          src={BILD}
-          alt="Bildbeschreibung"
-        /> */}
         <p style={{margin: "0"}}>{imgAnswer}</p>
         </div>
         

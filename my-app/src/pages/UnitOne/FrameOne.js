@@ -6,8 +6,10 @@ import Stepper from "../../components/Stepper/Stepper";
 import { findUnitById } from '../../Units/Unit';
 import CustomButton from "../../components/Button/CustomButton";
 import { useParams } from 'react-router-dom';
-import "./FrameOne.css";
 import { Link } from "@mui/material";
+import getUnitsArray from "../../utilis/unitsLocalStorage";
+import { v4 } from "uuid";
+import "./FrameOne.css";
 
 
 export default function FrameOne() {
@@ -17,14 +19,19 @@ const [currentTaskIndex, setCurrentTaskIndex] = useState(0);
 const [currentStep, setCurrentStep] = useState(1);
 const [nextSimulatorPage, setNextSimulatorPage] = useState(0);
 const [speachbubbleText, setSpeachbubbleText] = useState("");
-
-
 const { unitId } = useParams();
 const currentUnitData = findUnitById(unitId);
 
-  if (!currentUnitData) {
-    return <div>Unit nicht gefunden</div>;
-  }
+// Überprüfen, ob das UnitsArray im Local Storage existiert
+let units = JSON.parse(localStorage.getItem("UnitsArray")) || {};
+
+if (!units[unitId]) {
+  units[unitId] = [];
+}
+
+if (!currentUnitData) {
+  return <div>Unit nicht gefunden</div>;
+}
 
 
 const answersLength = currentUnitData.task.map(task =>
@@ -35,11 +42,19 @@ const totalTasks = currentUnitData ? currentUnitData.task.length : 0;
 
 
 
-
-const handleSubmit = (answer, isCorrect, rightAnswer, wrongAnswer, reason) => {
-  console.log("AN", answer)
+const handleSubmit = (step, answer, isCorrect, rightAnswer, wrongAnswer, reason) => {
   setSelectedAnswer(answer);
   setReasonText(reason);
+  const newItem = {
+    answer: answer,
+    isCorrect: isCorrect,
+  };
+
+  // Add the new item to the array for the current unit
+  units[unitId].push(newItem);
+
+  // Saving the updated array in local storage
+  localStorage.setItem("UnitsArray", JSON.stringify(units));
 
   if (isCorrect) {
     setSpeachbubbleText(rightAnswer);
@@ -102,12 +117,13 @@ const handleNextTask = () => {
                 <div className="boxContainer">
                   <div className={`answerContainer ${answersLength[index] >= 4 ? "fourOrMore" : "smallerThenFour"}`}>
                     {tasks.step.map((answer, stepIndex) => (
+                      answer.answerboxes &&
                       answer?.answerboxes.map((answerObj, boxIndex) => (
                         <AnswerBoxes
                           key={`${stepIndex}-${boxIndex}`}
                           type={answerObj?.type}
                           text={answerObj?.answer}
-                          onClick={() => handleSubmit(answerObj?.answer, answerObj?.right, answer?.rightAnswer, answer?.wrongAnswer, answer?.reason)}
+                          onClick={() => handleSubmit(currentStep, answerObj?.answer, answerObj?.right, answer?.rightAnswer, answer?.wrongAnswer, answer?.reason)}
                           isCorrect={answerObj?.right}
                           imageUrl={answerObj?.answer}
                           imgAnswer={answerObj?.imgAnswer}
