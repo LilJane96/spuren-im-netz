@@ -9,8 +9,8 @@ function Directions() {
       <main >
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/frameone/:unitId" element={<FrameOne />} />
           <Route path="/hub" element={<Hub />} />
+          <Route path="frameone/:unitId" element={<FrameOne />} />
         </Routes>
       </main>
     </div>
