@@ -3,29 +3,22 @@
   }
   
   .step.active {
-    background: #7B1982;
-    padding: 10px;
-    border-radius: 30px;
-    box-shadow: 0px 5px 0px #BF56E3;
   }
   
   .step {
     position: relative;
-    margin: 21px 60px;
-    background: #FFFFFF;
-    padding: 10px;
-    border-radius: 30px;
-    box-shadow: 0px 3px 0px rgba(217, 217, 217, 1);
+    margin: 21px 100px;
   }
   
   .line {
     position: absolute;
-    height: 6px;
-    width: 120px;
-    background-color: rgba(217, 217, 217, 1);
-    top: 50%;
+    height: 10px;
+    width: 232px;
+    background-color: rgb(255 255 255);
+    top: 34%;
     transform: translateY(-50%);
-    right: 100%;
+    right: 80%;
+    z-index: -1;
   }
   
   .line.active {
@@ -40,13 +33,18 @@
     background: none;
     box-shadow: none;
     padding: 0px;
-    margin: 15px 0 15px 60px;
+    margin: 18px 0 15px -20px;
   }
+
+  .stepGoal .line {
+    width: 110px;
+  }
+  
   .stepGoal.active {
     background: none;
     box-shadow: none;
     padding: 0px;
-    margin: 15px 0 15px 60px;
+    margin: 18px 0 15px -20px;
 
   }
   
