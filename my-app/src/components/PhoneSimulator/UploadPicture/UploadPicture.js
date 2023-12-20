@@ -1,5 +1,5 @@
-import { useState } from "react";
 import AddPhotoAlternateOutlinedIcon from '@mui/icons-material/AddPhotoAlternateOutlined';
+import PropTypes from 'prop-types';
 import "./UploadPicture.css"
 
 export default function UploadPicture({answer}) {
@@ -12,7 +12,7 @@ export default function UploadPicture({answer}) {
       </div>
         <div className="ImageContainer">
         <div className="IconContainer">
-          {answer ?<img src={process.env.PUBLIC_URL + answer} className="ProfilePicture"></img> :  
+          {answer ?<img src={process.env.PUBLIC_URL + `/${answer}`} className="ProfilePicture"></img> :  
             <AddPhotoAlternateOutlinedIcon style={{fontSize: "xx-large"}}/>
              }
         </div>
@@ -20,3 +20,7 @@ export default function UploadPicture({answer}) {
     </div>
     )
 }
+
+UploadPicture.propTypes = {
+  answer: PropTypes.string.isRequired
+};

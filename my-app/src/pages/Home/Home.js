@@ -40,7 +40,7 @@ function Home() {
                 <p>
                             Sei sicher im Internet unterwegs!
                 </p>
-                <Link href="/frameone"><CustomButton name="Start" type="primary"></CustomButton></Link>
+                <Link href="/hub"><CustomButton name="Start" type="primary"></CustomButton></Link>
             </div>
 
         </div>

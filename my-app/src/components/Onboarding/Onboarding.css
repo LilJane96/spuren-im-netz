@@ -3,7 +3,7 @@
     z-index: 999;
 }
 
-.text{
+.wrapper .text{
     position: absolute;
     display: flex;
     align-items: end;

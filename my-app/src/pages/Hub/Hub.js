@@ -1,4 +1,4 @@
-import {React, useState } from "react";
+import { React } from "react";
 import {Link} from "@mui/material";
 import "./Hub.css";
 import Onboarding from "../../components/Onboarding/Onboarding";
@@ -18,7 +18,7 @@ function Hub() {
             <img className="backpack" src={Backpack} alt="Backpack" />
             <img className="map" src={PhoneMap} alt="Map" />
             <div className="pins">
-                <Link href="/frameone">
+                <Link href="/frameone/unit1">
                     <img className="pinOne" src={Pin1Active} alt="Pin" />
                 </Link>
             </div>

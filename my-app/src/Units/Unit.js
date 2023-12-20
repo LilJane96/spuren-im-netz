@@ -1,7 +1,7 @@
 const units = [
     {
       id: 1,
-      name: "Unit 1",
+      name: "unit1",
       task: [
         {
           step: [
@@ -130,7 +130,7 @@ const units = [
     },
     {
         id: 1,
-        name: "Unit 2",
+        name: "unit2",
         task: [
           {
             step: [
@@ -222,3 +222,6 @@ const units = [
   
   export default units;
   
+  export const findUnitById = (unitId) => {
+    return units.find((unit) => unit.name === unitId);
+  };

@@ -3,20 +3,29 @@ import Speachbubble from "../../components/Speachbubble/Speachbubble";
 import PhoneSimulator from "../../components/PhoneSimulator/PhoneSimulator";
 import AnswerBoxes from "../../components/AnswerBoxes/AnswerBoxes";
 import Stepper from "../../components/Stepper/Stepper";
-import units from "../../Units/Unit";
+import { findUnitById } from '../../Units/Unit';
 import CustomButton from "../../components/Button/CustomButton";
+import { useParams } from 'react-router-dom';
 import "./FrameOne.css";
+import { Link } from "@mui/material";
 
 
 export default function FrameOne() {
 const [selectedAnswer, setSelectedAnswer] = useState("");
 const [reasonText, setReasonText] = useState("");
-const [currentUnitIndex, setCurrentUnitIndex] = useState(0);
 const [currentTaskIndex, setCurrentTaskIndex] = useState(0);
 const [currentStep, setCurrentStep] = useState(1);
 const [nextSimulatorPage, setNextSimulatorPage] = useState(0);
+const [speachbubbleText, setSpeachbubbleText] = useState("");
 
-const currentUnitData = units[currentUnitIndex];
+
+const { unitId } = useParams();
+const currentUnitData = findUnitById(unitId);
+
+  if (!currentUnitData) {
+    return <div>Unit nicht gefunden</div>;
+  }
+
 
 const answersLength = currentUnitData.task.map(task =>
   task.step.reduce((acc, step) => acc + (step.answerboxes ? step.answerboxes.length : 0), 0)
@@ -26,7 +35,6 @@ const totalTasks = currentUnitData ? currentUnitData.task.length : 0;
 
 
 
-const [speachbubbleText, setSpeachbubbleText] = useState("");
 
 const handleSubmit = (answer, isCorrect, rightAnswer, wrongAnswer, reason) => {
   console.log("AN", answer)
@@ -52,17 +60,17 @@ const handleNextTask = () => {
 
     if (currentTaskIndex === totalTasks - 1) {
       setCurrentTaskIndex(0);
-      setCurrentUnitIndex((prevIndex) => prevIndex + 1);
+      // setCurrentUnitIndex((prevIndex) => prevIndex + 1);
       setCurrentStep(1);
     }
   }, 300);
 };
 
 
-  const handlefinishUnit = () => {
-    setCurrentTaskIndex(0);
-    setCurrentUnitIndex((prevIndex) => prevIndex +1)
-  };
+  // const handlefinishUnit = () => {
+  //   setCurrentTaskIndex(0);
+  //   // setCurrentUnitIndex((prevIndex) => prevIndex +1)
+  // };
 
   const handleGoBack = () => {
     if (currentStep > 1) {
@@ -94,16 +102,15 @@ const handleNextTask = () => {
                 <div className="boxContainer">
                   <div className={`answerContainer ${answersLength[index] >= 4 ? "fourOrMore" : "smallerThenFour"}`}>
                     {tasks.step.map((answer, stepIndex) => (
-                      answer.answerboxes &&
-                      answer.answerboxes.map((answerObj, boxIndex) => (
+                      answer?.answerboxes.map((answerObj, boxIndex) => (
                         <AnswerBoxes
                           key={`${stepIndex}-${boxIndex}`}
-                          type={answerObj.type}
-                          text={answerObj.answer}
-                          onClick={() => handleSubmit(answerObj.answer, answerObj.right, answer?.rightAnswer, answer?.wrongAnswer, answer?.reason)}
-                          isCorrect={answerObj.right}
-                          imageUrl={answerObj.answer}
-                          imgAnswer={answerObj.imgAnswer}
+                          type={answerObj?.type}
+                          text={answerObj?.answer}
+                          onClick={() => handleSubmit(answerObj?.answer, answerObj?.right, answer?.rightAnswer, answer?.wrongAnswer, answer?.reason)}
+                          isCorrect={answerObj?.right}
+                          imageUrl={answerObj?.answer}
+                          imgAnswer={answerObj?.imgAnswer}
                         />
                       ))
                     ))}
@@ -122,7 +129,9 @@ const handleNextTask = () => {
                       selectedAnswer === "" ? <CustomButton onClick={handleNextTask} name="Weiter" type="primary" disabled></CustomButton> : <CustomButton onClick={handleNextTask} name="Weiter" type="primary"></CustomButton>
 
                     ) : (
-                      <CustomButton onClick={handlefinishUnit} name="Unit beenden" type="primary"></CustomButton>
+                      <Link href="/hub">
+                        <CustomButton name="Unit beenden" type="primary" />
+                      </Link>
                     )}
 
                   </div>
