@@ -29,16 +29,16 @@ function Home() {
             <div className="paragraphsHome">
                 <h1 className="spuren">Spuren im Netz</h1>
                 <h4 className="h4HomePage">
-                            Herzlich Willkommen zu Spuren im Netz!
+                    Herzlich Willkommen zu Spuren im Netz!
                 </h4>
                 <p>
-                            Helfe Pixel beim Lösen seiner Fälle!
+                    Helfe Pixel beim Lösen seiner Fälle!
                 </p>
                 <p>
-                            Werde ein Internet-Detektiv!
+                    Werde ein Internet-Detektiv!
                 </p>
                 <p>
-                            Sei sicher im Internet unterwegs!
+                    Sei sicher im Internet unterwegs!
                 </p>
                 <Link href="/hub"><CustomButton name="Start" type="primary"></CustomButton></Link>
             </div>
