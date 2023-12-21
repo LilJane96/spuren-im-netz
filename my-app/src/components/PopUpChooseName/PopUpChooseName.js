@@ -7,30 +7,25 @@ import {
     DialogContent,
     DialogContentText,
     DialogTitle,
-    Icon,
     Link, ListItemButton,
     ListItemIcon
 } from "@mui/material";
 import CustomButton from "../Button/CustomButton";
 import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 import {useState} from "react";
-
-export default function PopUpChooseName({ open, onNameSelected, onColorSelected }) {
+export default function PopUpChooseName({ open }) {
 
     const [selectedColor, setSelectedColor] = useState("");
     const [inputValue, setInputValue] = useState("");
     const handleInputChange = (event) => {
         setInputValue(event.target.value);
+        console.log(inputValue);
     };
     const handleIconClick = (color) => {
-        setSelectedColor(color);
-    };
-    const handleContinueClick = () => {
-        onNameSelected(inputValue);
-        onColorSelected(selectedColor);
+    setSelectedColor(color);
+    console.log(selectedColor);
     };
     return (
         <div className="PopUpChooseName">
