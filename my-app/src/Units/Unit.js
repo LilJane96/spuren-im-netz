@@ -6,6 +6,7 @@ const units = [
         {
           step: [
             { 
+              question: "Username",
               speachbubble: [
                 {
                   type: "paragraph",
@@ -29,6 +30,7 @@ const units = [
         {
           step: [
             { 
+              question: "Passwort",
               speachbubble: [
                 {
                   type: "bold",
@@ -57,6 +59,7 @@ const units = [
         {
           step: [
             { 
+              question: "Privatsphäre",
               speachbubble: [
                 {
                   type: "paragraph",
@@ -84,6 +87,7 @@ const units = [
         {
           step: [
             { 
+              question: "Profilbild",
               speachbubble: "Zuerst müssen wir einen guten Namen aussuchen. Welchen Namen würdest du auswählen?",
               answerboxes: [
               { type: "image", answer: "image1.jpg", imgAnswer: "Nature image", right: true },
@@ -101,6 +105,7 @@ const units = [
         {
           step: [
             { 
+              question: "Informationen",
               speachbubble: [
                 {
                   type: "bold",

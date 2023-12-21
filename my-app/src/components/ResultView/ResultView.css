@@ -1,0 +1,130 @@
+.ResultViewContainer {
+    margin: 100px 27px 45px 27px;
+}
+
+.ResultViewContainer .Background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 535px;
+    height: 470px;
+    border-radius: 16px;
+}
+
+.ResultViewContainer .Description {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ResultViewContainer .Description .Text p {
+    color: #000;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0 0 6px 0;
+}
+
+.ResultViewContainer .colorBox {
+    border-radius: 10px;
+    width: 39px;
+    height: 27px;
+    margin: 0 7px 0 14px;
+}
+
+.ResultViewContainer .DescriptionContainer {
+    display: flex;
+    align-items: center;
+}
+
+.ResultViewContainer .DescriptionContainer .Row {
+    display: flex;
+    align-items: center;
+}
+
+.ResultViewContainer .DescriptionContainer p {
+    font-weight: bold;
+}
+
+.ResultViewContainer .colorBox.one {
+    border: 3px solid var(--borderGreen, #82E731);
+    background: #A0F959;
+}
+
+.ResultViewContainer .colorBox.two {
+    border: 3px solid var(--borderGreen, #EED600);
+    background: #FFF069;
+}
+
+.ResultViewContainer .colorBox.three {
+    border: 3px solid var(--borderGreen, #FD6B1B);
+    background: #FF955B;
+}
+
+.Description ul{
+    margin: 0 0 5px;
+    padding: 0;
+}
+
+.ResultRowContainer .List {
+    display: flex;
+    align-items: center;
+    margin: 10px 0 14px 0;
+    border-radius: 19px;
+    background: #A0F959;
+    width: 485px;
+    height: 44px;
+  }
+
+  .ResultRowContainer .List.one {
+    background: #A0F959;
+  }
+
+  .ResultRowContainer .List.two {
+    background: #EED600;
+  }
+
+  .ResultRowContainer .List.three {
+    background: #FD6B1B;
+  }
+
+  .ResultRowContainer .List p {
+    color: #000;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0 0px 0 10px;
+    text-align: left;
+  }
+
+  .ResultRowContainer .List p.Trys {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  
+  .ResultRowContainer .List > div:first-child {
+    width: 100px;
+    flex-grow: 4; 
+  }
+ 
+  .ResultRowContainer .List > div:nth-child(2) {
+    width: 85px;
+    flex-grow: 1; 
+  }
+
+  .ResultRowContainer .List > div:last-child {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 1px;
+    flex-grow: 1; 
+  }
+  

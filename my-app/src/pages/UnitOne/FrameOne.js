@@ -7,8 +7,6 @@ import { findUnitById } from '../../Units/Unit';
 import CustomButton from "../../components/Button/CustomButton";
 import { useParams } from 'react-router-dom';
 import { Link } from "@mui/material";
-import getUnitsArray from "../../utilis/unitsLocalStorage";
-import { v4 } from "uuid";
 import "./FrameOne.css";
 
 
@@ -19,15 +17,21 @@ const [currentTaskIndex, setCurrentTaskIndex] = useState(0);
 const [currentStep, setCurrentStep] = useState(1);
 const [nextSimulatorPage, setNextSimulatorPage] = useState(0);
 const [speachbubbleText, setSpeachbubbleText] = useState("");
+const [count, setCount] = useState(0);
 const { unitId } = useParams();
 const currentUnitData = findUnitById(unitId);
 
-// Überprüfen, ob das UnitsArray im Local Storage existiert
+
 let units = JSON.parse(localStorage.getItem("UnitsArray")) || {};
 
 if (!units[unitId]) {
-  units[unitId] = [];
-}
+  units[unitId] = {
+    attempts: 0,
+    wrongAttempts: 0,
+    taskAttempts: {},
+    answers: [],
+  }
+};
 
 if (!currentUnitData) {
   return <div>Unit nicht gefunden</div>;
@@ -40,27 +44,63 @@ const answersLength = currentUnitData.task.map(task =>
 
 const totalTasks = currentUnitData ? currentUnitData.task.length : 0;
 
+const findAnswerIndex = (taskIndex) => {
+  return units[unitId].answers.findIndex((answer) => answer.taskIndex === taskIndex);
+};
 
-
-const handleSubmit = (step, answer, isCorrect, rightAnswer, wrongAnswer, reason) => {
+const handleSubmit = (question, answer, isCorrect, rightAnswer, wrongAnswer, reason) => {
   setSelectedAnswer(answer);
   setReasonText(reason);
-  const newItem = {
-    answer: answer,
-    isCorrect: isCorrect,
-  };
+  
+  console.log("isCorrect", isCorrect)
 
-  // Add the new item to the array for the current unit
-  units[unitId].push(newItem);
-
-  // Saving the updated array in local storage
-  localStorage.setItem("UnitsArray", JSON.stringify(units));
-
-  if (isCorrect) {
-    setSpeachbubbleText(rightAnswer);
-  } else {
-    setSpeachbubbleText(wrongAnswer);
+  if(!isCorrect){
+    setCount(prevCount => prevCount + 1);
   }
+
+  console.log("count", count)
+ // Hinzufügen des taskIndex zu jeder Antwort
+ const newItem = {
+  question: question,
+  answer: answer,
+  isCorrect: isCorrect,
+  taskIndex: currentTaskIndex,
+  wrongAttempts: count, // Setze Anzahl der falschen Versuche auf 0 oder 1
+};
+
+// Increment attempts count
+units[unitId].attempts++;
+
+// // Check if the answer is incorrect and increment wrong attempts count
+// if (!isCorrect) {
+//   // Increment wrong attempts count for the current task
+//   newItem.wrongAttempts = 1;
+//   units[unitId].wrongAttempts += 1;
+// }
+
+const existingAnswerIndex = findAnswerIndex(currentTaskIndex);
+
+// Check if an answer for the current task already exists in the answers array
+if (existingAnswerIndex !== -1) {
+  // Update existing answer
+  units[unitId].answers[existingAnswerIndex] = newItem;
+} else {
+  // Add the new item to the array for the current unit
+  units[unitId].answers.push(newItem);
+}
+
+// Increment wrong attempts count for the current task
+units[unitId].taskAttempts[currentTaskIndex] =
+  (units[unitId].taskAttempts[currentTaskIndex] || 0) + newItem.wrongAttempts;
+
+// Saving the updated array in local storage
+localStorage.setItem("UnitsArray", JSON.stringify(units));
+
+if (isCorrect) {
+  setSpeachbubbleText(rightAnswer);
+} else {
+  setSpeachbubbleText(wrongAnswer);
+}
 };
 
 
@@ -72,20 +112,14 @@ const handleNextTask = () => {
     setSelectedAnswer("");
     setReasonText("");
     setNextSimulatorPage((prev) => prev + 1);
+    setCount(0);
 
     if (currentTaskIndex === totalTasks - 1) {
       setCurrentTaskIndex(0);
-      // setCurrentUnitIndex((prevIndex) => prevIndex + 1);
       setCurrentStep(1);
     }
   }, 300);
 };
-
-
-  // const handlefinishUnit = () => {
-  //   setCurrentTaskIndex(0);
-  //   // setCurrentUnitIndex((prevIndex) => prevIndex +1)
-  // };
 
   const handleGoBack = () => {
     if (currentStep > 1) {
@@ -123,7 +157,7 @@ const handleNextTask = () => {
                           key={`${stepIndex}-${boxIndex}`}
                           type={answerObj?.type}
                           text={answerObj?.answer}
-                          onClick={() => handleSubmit(currentStep, answerObj?.answer, answerObj?.right, answer?.rightAnswer, answer?.wrongAnswer, answer?.reason)}
+                          onClick={() => handleSubmit(answer?.question, answerObj?.answer, answerObj?.right, answer?.rightAnswer, answer?.wrongAnswer, answer?.reason)}
                           isCorrect={answerObj?.right}
                           imageUrl={answerObj?.answer}
                           imgAnswer={answerObj?.imgAnswer}
@@ -145,7 +179,7 @@ const handleNextTask = () => {
                       selectedAnswer === "" ? <CustomButton onClick={handleNextTask} name="Weiter" type="primary" disabled></CustomButton> : <CustomButton onClick={handleNextTask} name="Weiter" type="primary"></CustomButton>
 
                     ) : (
-                      <Link href="/hub">
+                      <Link href="/result/unit1">
                         <CustomButton name="Unit beenden" type="primary" />
                       </Link>
                     )}
