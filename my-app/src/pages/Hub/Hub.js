@@ -1,4 +1,4 @@
-import { React } from "react";
+import {React, useState} from "react";
 import {Link} from "@mui/material";
 import "./Hub.css";
 import Onboarding from "../../components/Onboarding/Onboarding";
@@ -6,10 +6,15 @@ import PhoneMap from "../../images/PhoneMap.png";
 import Pin1Active from "../../images/Pins/Pin1Active.png";
 import Backpack from "../../images/Backpack.png"
 import FoxPicture from "../../images/foxPicture.png";
+import PopUpChooseName from "../../components/PopUpChooseName/PopUpChooseName";
 
 
 function Hub() {
 
+    const [open, setOpen] = useState(false);
+    const handleOpenPopup = () => {
+        setOpen(true);
+    };
     return (
     <>
         <Onboarding />
@@ -18,9 +23,10 @@ function Hub() {
             <img className="backpack" src={Backpack} alt="Backpack" />
             <img className="map" src={PhoneMap} alt="Map" />
             <div className="pins">
-                <Link href="/frameone/unit1">
-                    <img className="pinOne" src={Pin1Active} alt="Pin" />
-                </Link>
+                    <img onClick={handleOpenPopup} className="pinOne" src={Pin1Active} alt="Pin" />
+            </div>
+            <div>
+                <PopUpChooseName open={open}></PopUpChooseName>
             </div>
         </div>
     </>

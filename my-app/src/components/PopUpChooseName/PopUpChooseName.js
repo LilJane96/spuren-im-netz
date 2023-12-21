@@ -63,7 +63,7 @@ export default function PopUpChooseName({ open }) {
                     </DialogContentText>
                 </DialogContent>
                 <DialogActions style={{justifyContent: "center" , marginBottom: 15}} >
-                    <Link href="/frameone"><CustomButton name="Weiter" type="primary"></CustomButton></Link>
+                    <Link href="/frameone/unit1"><CustomButton name="Weiter" type="primary"></CustomButton></Link>
                 </DialogActions>
             </Dialog>
         </div>
