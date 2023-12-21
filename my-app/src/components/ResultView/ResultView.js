@@ -1,7 +1,7 @@
 import React from 'react';
 import TitleBackground from '../TitleBackground/TitleBackground';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import FavoriteIcon from '@mui/icons-material/Favorite';
+import HeartFilled from "../../images/HeartActive.svg"
 import { useParams } from 'react-router-dom';
 import "./ResultView.css"
 
@@ -13,10 +13,6 @@ export default function ResultView() {
     if (!units[unitId]) {
       return <div>Keine Ergebnisse gefunden</div>;
     }
-  
-    const totalAttempts = units[unitId].attempts;
-    const totalWrongAttempts = units[unitId].wrongAttempts;
-    const taskAttempts = units[unitId].taskAttempts;
 
   return (
     <div className='ResultViewContainer'>
@@ -24,7 +20,7 @@ export default function ResultView() {
         <TitleBackground text="‘Unit 1: Konto erstellen’ bestanden"/>
         <div className='Description'>
           <div className='Text'>
-            <p>Spitze gemacht! Du hast echt das Zeug zu einem Meisterdetektiv zu werden! </p>
+            <p>Spitze gemacht!</p>
           </div>
           <div className='DescriptionContainer'>
             <div className='Row'>
@@ -44,21 +40,9 @@ export default function ResultView() {
                             <div>
                                 <p>{obj.question}</p>
                             </div>
-                            <div>
-                                {(() => {
-                                if (obj.wrongAttempts === 0) {
-                                return <p className='Trys'>Erster Versuch</p>;
-                                } else if (obj.wrongAttempts === 1) {
-                                return <p className='Trys'>Zweiter Versuch</p>;
-                                } else {
-                                return <p className='Trys'>Dritter Versuch</p>;
-                                }
-                            })()}
-                            </div>
-                            <div>
-                            <div style={{borderLeft: "1px solid black", height: "26px", opacity: "0.5"}}/>
-
-                                {obj.wrongAttempts === 0 ? <FavoriteIcon style={{color: "#D063E2"}}/> : <FavoriteBorderIcon />}
+                            <div className='Heart'>
+                                {obj.wrongAttempts === 0 ? <div style={{margin: "7px 0 0 0"}}><img src={HeartFilled} style={{width: "33px", height: "29px"}}/> </div> : <FavoriteBorderIcon className="customHeartIcon" style={{width: "33px", height: "29px"}}/>}
+                                
                                 
                             </div>
                         </li>
