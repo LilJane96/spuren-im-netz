@@ -11,13 +11,14 @@
 .headerContainer {
     display: flex;
     justify-content: center;
-    background: #ededed;
-    border-top-left-radius: 28px;
-    border-top-right-radius: 28px;
+    background: #3C68A9;
+    color: white;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
 }
 
 .sectionContainer {
-    flex: 1; /* Nimmt den verfügbaren Platz ein, um sicherzustellen, dass die Bottombar unten bleibt */
+    flex: 1; 
     display: flex;
     flex-direction: column;
   }
