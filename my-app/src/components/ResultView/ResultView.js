@@ -8,7 +8,6 @@ import "./ResultView.css"
 export default function ResultView() {
     const { unitId } = useParams();
     const units = JSON.parse(localStorage.getItem("UnitsArray")) || {};
-    console.log("UNITS", units[unitId])
   
     if (!units[unitId]) {
       return <div>Keine Ergebnisse gefunden</div>;

@@ -17,8 +17,6 @@ export default function Result() {
     setCurrentStep((prevStep) => Math.max(prevStep - 1, 1)); // Gehe zur vorherigen Seite, begrenzt auf mindestens 1
   };
 
-  console.log("currentStep", currentStep)
-
   return (
     <div className="ResultContainer">
       <div className='ResultView'>

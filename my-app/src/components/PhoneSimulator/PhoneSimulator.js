@@ -12,7 +12,6 @@ import Bottombar from '../Bottombar/Bottombar';
 
 export default function PhoneSimulator({content, selectedAnswer, nextPage }) {
   const [currentPage, setCurrentPage] = useState(0);
-  console.log("Content", content)
 
   const handleNextPage = () => {
     setCurrentPage(currentPage + 1);

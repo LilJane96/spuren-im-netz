@@ -4,7 +4,6 @@ import "./UploadPicture.css"
 
 export default function UploadPicture({answer}) {
 
-  console.log("ANSWER", answer)
     return (
         <div className="UploadImageContainer">
       <div>

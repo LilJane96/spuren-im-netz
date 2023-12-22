@@ -46,10 +46,6 @@ useEffect(() => {
   fetchData();
 }, [unitId]);
 
-const currentTask = currentUnitData ? currentUnitData.task[currentTaskIndex] : null;
-
-console.log("currentTask", currentTask)
-
 let units = JSON.parse(localStorage.getItem("UnitsArray")) || {};
 
 if (!units[unitId]) {
@@ -61,7 +57,6 @@ if (!units[unitId]) {
   }
 };
 
-console.log("current", currentUnitData)
 
 if (!currentUnitData) {
   return <div>Unit nicht gefunden</div>;
@@ -82,13 +77,10 @@ const handleSubmit = (question, answer, isCorrect, rightAnswer, wrongAnswer, rea
   setSelectedAnswer(answer);
   setReasonText(reason);
   
-  console.log("isCorrect", isCorrect)
-
   if(!isCorrect){
     setCount(prevCount => prevCount + 1);
   }
 
-  console.log("count", count)
  // Hinzufügen des taskIndex zu jeder Antwort
  const newItem = {
   question: question,
@@ -126,9 +118,6 @@ if (isCorrect) {
 }
 };
 
-console.log("UNIT", unitId);
-console.log("currentStep", currentStep);
-
 const handleNextTask = () => {
   setTimeout(() => {
     setCurrentTaskIndex((prevIndex) => prevIndex + 1);
@@ -138,13 +127,7 @@ const handleNextTask = () => {
     setReasonText("");
     setNextSimulatorPage((prev) => prev + 1);
     setCount(0);
-
-    // if (currentTaskIndex === totalTasks - 1) {
-    //   setCurrentTaskIndex(0);
-    //   setCurrentStep(1);
-    // } else {
-      // Navigiere zum nächsten Schritt
-      const nextStep = currentStep + 1;
+    const nextStep = currentStep + 1;
     navigate(`/frameone/${unitId}/step${nextStep}`);
     // }
   }, 300);
@@ -210,7 +193,7 @@ const handleNextTask = () => {
                       selectedAnswer === "" ? <CustomButton onClick={handleNextTask} name="Weiter" type="primary" disabled></CustomButton> : <CustomButton onClick={handleNextTask} name="Weiter" type="primary"></CustomButton>
 
                     ) : (
-                      <Link href="/result/unit1/step1">
+                      <Link href={`/result/${unitId}/step1`}>
                         <CustomButton name="Unit beenden" type="primary" />
                       </Link>
                     )}

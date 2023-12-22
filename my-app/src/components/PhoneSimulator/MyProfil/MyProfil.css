@@ -55,7 +55,10 @@
     margin: 15px;
 }
 
-p {
+.answerText {
     margin: 0;
-    padding: 0;
+    text-align: center;
+    height: 56px;
+    display: flex;
+    align-items: center;
 }

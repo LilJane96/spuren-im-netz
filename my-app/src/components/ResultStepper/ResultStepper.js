@@ -3,9 +3,6 @@ import './ResultStepper.css';
 
 export default function ResultStepper({ totalSteps, currentStep }) {
 
-    console.log("totalSteps", totalSteps);
-    console.log("currentStep", currentStep);
-
   const renderCircles = () => {
     const circles = [];
     for (let i = 0; i < totalSteps; i++) {
