@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Speachbubble from "../../components/Speachbubble/Speachbubble";
 import PhoneSimulator from "../../components/PhoneSimulator/PhoneSimulator";
 import AnswerBoxes from "../../components/AnswerBoxes/AnswerBoxes";
 import Stepper from "../../components/Stepper/Stepper";
 import { findUnitById } from '../../Units/Unit';
 import CustomButton from "../../components/Button/CustomButton";
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { Link } from "@mui/material";
 import "./FrameOne.css";
 
@@ -14,13 +14,41 @@ export default function FrameOne() {
 const [selectedAnswer, setSelectedAnswer] = useState("");
 const [reasonText, setReasonText] = useState("");
 const [currentTaskIndex, setCurrentTaskIndex] = useState(0);
-const [currentStep, setCurrentStep] = useState(1);
 const [nextSimulatorPage, setNextSimulatorPage] = useState(0);
 const [speachbubbleText, setSpeachbubbleText] = useState("");
 const [count, setCount] = useState(0);
-const { unitId } = useParams();
-const currentUnitData = findUnitById(unitId);
+const { unitId, stepId } = useParams();
+const [currentUnitData, setCurrentUnitData] = useState(null);
 
+
+const [currentStep, setCurrentStep] = useState(1);
+const navigate = useNavigate();
+
+useEffect(() => {
+  // Setze den aktuellen Schritt basierend auf der URL
+  const stepFromUrl = parseInt(stepId.replace('step', ''), 10) || 1;
+  setCurrentStep(stepFromUrl);
+}, [stepId]);
+
+useEffect(() => {
+  // Setze den aktuellen Task-Index basierend auf dem aktuellen Schritt
+  const taskIndex = currentStep - 1;
+  setCurrentTaskIndex(taskIndex);
+}, [currentStep]);
+
+useEffect(() => {
+  // Setze die Unit-Daten basierend auf der Unit-ID
+  const fetchData = async () => {
+    const data = await findUnitById(unitId);
+    setCurrentUnitData(data);
+  };
+
+  fetchData();
+}, [unitId]);
+
+const currentTask = currentUnitData ? currentUnitData.task[currentTaskIndex] : null;
+
+console.log("currentTask", currentTask)
 
 let units = JSON.parse(localStorage.getItem("UnitsArray")) || {};
 
@@ -32,6 +60,8 @@ if (!units[unitId]) {
     answers: [],
   }
 };
+
+console.log("current", currentUnitData)
 
 if (!currentUnitData) {
   return <div>Unit nicht gefunden</div>;
@@ -65,18 +95,11 @@ const handleSubmit = (question, answer, isCorrect, rightAnswer, wrongAnswer, rea
   answer: answer,
   isCorrect: isCorrect,
   taskIndex: currentTaskIndex,
-  wrongAttempts: count, // Setze Anzahl der falschen Versuche auf 0 oder 1
+  wrongAttempts: count,
 };
 
 // Increment attempts count
 units[unitId].attempts++;
-
-// // Check if the answer is incorrect and increment wrong attempts count
-// if (!isCorrect) {
-//   // Increment wrong attempts count for the current task
-//   newItem.wrongAttempts = 1;
-//   units[unitId].wrongAttempts += 1;
-// }
 
 const existingAnswerIndex = findAnswerIndex(currentTaskIndex);
 
@@ -103,6 +126,8 @@ if (isCorrect) {
 }
 };
 
+console.log("UNIT", unitId);
+console.log("currentStep", currentStep);
 
 const handleNextTask = () => {
   setTimeout(() => {
@@ -114,10 +139,14 @@ const handleNextTask = () => {
     setNextSimulatorPage((prev) => prev + 1);
     setCount(0);
 
-    if (currentTaskIndex === totalTasks - 1) {
-      setCurrentTaskIndex(0);
-      setCurrentStep(1);
-    }
+    // if (currentTaskIndex === totalTasks - 1) {
+    //   setCurrentTaskIndex(0);
+    //   setCurrentStep(1);
+    // } else {
+      // Navigiere zum nächsten Schritt
+      const nextStep = currentStep + 1;
+    navigate(`/frameone/${unitId}/step${nextStep}`);
+    // }
   }, 300);
 };
 
@@ -129,6 +158,8 @@ const handleNextTask = () => {
       setSelectedAnswer("");
       setReasonText("");
       setNextSimulatorPage((prev) => prev - 1);
+      const nextStep = currentStep - 1;
+      navigate(`/frameone/${unitId}/step${nextStep}`);
     }
   };
 
@@ -147,7 +178,7 @@ const handleNextTask = () => {
                 {tasks.step.map((step, stepIndex) => (
                   step.speachbubble && <Speachbubble key={stepIndex} text={speachbubbleText || step.speachbubble} reason={reasonText} />
                 ))}
-                <PhoneSimulator content={tasks.content} selectedAnswer={selectedAnswer} nextPage={nextSimulatorPage} />
+                <PhoneSimulator content={currentStep} selectedAnswer={selectedAnswer} nextPage={nextSimulatorPage} />
                 <div className="boxContainer">
                   <div className={`answerContainer ${answersLength[index] >= 4 ? "fourOrMore" : "smallerThenFour"}`}>
                     {tasks.step.map((answer, stepIndex) => (
@@ -179,7 +210,7 @@ const handleNextTask = () => {
                       selectedAnswer === "" ? <CustomButton onClick={handleNextTask} name="Weiter" type="primary" disabled></CustomButton> : <CustomButton onClick={handleNextTask} name="Weiter" type="primary"></CustomButton>
 
                     ) : (
-                      <Link href="/result/unit1">
+                      <Link href="/result/unit1/step1">
                         <CustomButton name="Unit beenden" type="primary" />
                       </Link>
                     )}

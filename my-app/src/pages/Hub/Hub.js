@@ -18,7 +18,7 @@ function Hub() {
             <img className="backpack" src={Backpack} alt="Backpack" />
             <img className="map" src={PhoneMap} alt="Map" />
             <div className="pins">
-                <Link href="/frameone/unit1">
+                <Link href="/frameone/unit1/step1">
                     <img className="pinOne" src={Pin1Active} alt="Pin" />
                 </Link>
             </div>

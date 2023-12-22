@@ -11,8 +11,8 @@ function Directions() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/hub" element={<Hub />} />
-          <Route path="frameone/:unitId" element={<FrameOne />} />
-          <Route path="/result/:unitId" element={<Result />} />
+          <Route path="frameone/:unitId/:stepId" element={<FrameOne />} />
+          <Route path="/result/:unitId/:stepId" element={<Result />} />
         </Routes>
       </main>
     </div>

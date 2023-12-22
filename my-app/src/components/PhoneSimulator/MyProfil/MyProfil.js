@@ -1,19 +1,27 @@
 
 import CustomButton from "../../Button/CustomButton"
 import ProfilePicture from "../../../images/image1.jpg";
+import { useParams } from "react-router-dom";
 import "./MyProfil.css"
 
+
 export default function MyProfil({answer}) {
+
+    const { unitId } = useParams();
+    const units = JSON.parse(localStorage.getItem("UnitsArray")) || {};
+    console.log("UNITS", units[unitId])
+    let name = "";
+    const username = units[unitId].answers.map((obj) => obj.question === "Username" && obj.answer);
+    console.log("Username", username)
 
 
     return (
         <div className="MyProfilContainer">
-            <div>
-                <h3>Mein Profil</h3>
-            </div>
             <div className="ImageContainer">
-                <img src={ProfilePicture} alt="Profilbild" className="ProfilePicture"/>
-                {answer ? (<p className="text">{answer}</p>) : (<p className="text">The users picked bio text<br /> should be displayed here!</p>)}
+
+                 <img src={ProfilePicture} alt="Profilbild" className="ProfilePicture"/>
+                 <p className="text">{username}</p>
+                {/*{answer ? (<p className="text">{answer}</p>) : (<p className="text">The users picked bio text<br /> should be displayed here!</p>)} */}
             </div>
             <div className="flexContainer">
                 <div className="textContainer">

@@ -36,7 +36,11 @@ export default function Result() {
         <ResultStepper totalSteps={totalTasks} currentStep={currentStep} />
         <div className='ButtonContainer'>
             <div className='Button'>
-                <CustomButton onClick={handlePreviousPage} name="Zurück" type="tertiary"></CustomButton>
+        {currentStep === 1 ? 
+                (<CustomButton onClick={handlePreviousPage} name="Zurück" type="tertiary" disabled></CustomButton>)
+                :
+                (<CustomButton onClick={handlePreviousPage} name="Zurück" type="tertiary"></CustomButton>)
+        }
             </div>
             <div className='Button'>
                 <CustomButton onClick={handleNextPage} name="Weiter" type="primary"></CustomButton>

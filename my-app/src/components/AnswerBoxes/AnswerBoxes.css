@@ -16,9 +16,9 @@
   }
   
   .AnswerBoxesComponent.imageContent {
-    margin: 3px -1px;
-    width: 129px;
-    height: 135px;
+    margin: 6px 0px;
+    width: 123px;
+    height: 131px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,11 +45,13 @@
 
   .AnswerBoxesComponent p.textContainer {
     margin: 0;
+    text-align: center;
+    line-height: 1.5em;
   }
 
   .textContainer.image {
-    width: 201px;
-    height: 134px;
+    width: 193px;
+    height: 131px;
     object-fit: cover;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;

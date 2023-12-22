@@ -13,7 +13,7 @@
     height: 60px;
     object-fit: cover;
     border-radius: 42px;
-    margin: 0 0 10px 0;
+    margin: 10px 0 10px 0;
 }
 
 .ImageContainer {
@@ -24,8 +24,9 @@
 
 .ImageContainer .text {
     text-align: center;
-    margin: 3px;
-    font-size: 12px;
+    margin: 0px;
+    font-size: 15px;
+    font-weight: bold;
 }
 
 .flexContainer .textContainer {
@@ -52,4 +53,9 @@
     opacity: 0.34;
     background: #000;
     margin: 15px;
+}
+
+p {
+    margin: 0;
+    padding: 0;
 }

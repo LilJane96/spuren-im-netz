@@ -109,21 +109,17 @@ const units = [
               speachbubble: [
                 {
                   type: "bold",
-                  content: "Das sieht doch super aus! Wie ein echter Meisterdetektiv! "
+                  content: "Super! Jetzt haben wir alle wichtigen Informationen in die Bio eingetragen."
                 },
                 {
                   type: "paragraph",
-                  content: "Lass uns nun noch einige Informationen über dich zu deinem Profil hinzufügen. Überlege dir gut, welche Sachen du auf deinem Profil eintragen willst."
-                },
-                {
-                  type: "paragraph",
-                  content: "Welche Informationen hier würdest du deinem Profil hinzufügen?"
+                  content: "Sie verraten nicht zu viel über dich und du achtest auf die Privatssphäre von anderen."
                 },
               ],
               answerboxes: [
-                { type: "text", answer: "Option 1", right: false },
-                { type: "text", answer: "Option 2", right: true },
-                { type: "text", answer: "Option 3", right: false },
+                { type: "text", answer: <span>13 <br />📍Hermann Butzer Schule</span>, right: false },
+                { type: "text", answer: "Fußballliebhaber ⚽ | Künstler 🎨 ", right: true },
+                { type: "text", answer: "*beleidigender Sprache oder  unangemessene Inhalte*", right: false },
               ],
               rightAnswer: "Super! Das ist eine gute Entscheidung.",
               wrongAnswer: "Schade, versuche es nochmal!",

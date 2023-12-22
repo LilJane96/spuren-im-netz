@@ -10,8 +10,9 @@ import UploadPicture from './UploadPicture/UploadPicture';
 import MyProfil from './MyProfil/MyProfil';
 import Bottombar from '../Bottombar/Bottombar';
 
-export default function PhoneSimulator({ selectedAnswer, nextPage }) {
+export default function PhoneSimulator({content, selectedAnswer, nextPage }) {
   const [currentPage, setCurrentPage] = useState(0);
+  console.log("Content", content)
 
   const handleNextPage = () => {
     setCurrentPage(currentPage + 1);
@@ -19,16 +20,16 @@ export default function PhoneSimulator({ selectedAnswer, nextPage }) {
   };
 
   const renderSimulatorPage = () => {
-    switch (nextPage) {
-      case 0:
-        return <CreateUserName answer={selectedAnswer} onNextPage={handleNextPage} />;
+    switch (content) {
       case 1:
-        return <CreatePassword answer={selectedAnswer} />;
+        return <CreateUserName answer={selectedAnswer} onNextPage={handleNextPage} />;
       case 2:
-        return <Privacy answer={selectedAnswer} />;
+        return <CreatePassword answer={selectedAnswer} />;
       case 3:
-        return <UploadPicture answer={selectedAnswer} />;
+        return <Privacy answer={selectedAnswer} />;
       case 4:
+        return <UploadPicture answer={selectedAnswer} />;
+      case 5:
         return <MyProfil answer={selectedAnswer}/>;
       default:
         return null;
