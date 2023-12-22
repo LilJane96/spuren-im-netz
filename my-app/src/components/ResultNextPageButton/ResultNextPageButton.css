@@ -1,0 +1,34 @@
+.triangle {
+	position: relative;
+	background-color: #A74FD1;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+	text-align: left;
+    margin: 0 0 -22px 0px;
+}
+
+.triangle:disabled {
+    fill: #D063E2;
+    opacity: 0.5;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+.triangle:before,
+.triangle:after {
+	content: '';
+	position: absolute;
+	background-color: inherit;
+}
+.triangle,
+.triangle:before,
+.triangle:after {
+	width:  1.3em;
+	height: 1.3em;
+	border-top-right-radius: 30%;
+}
+
+
+.triangle:before {
+	transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
+}
+.triangle:after {
+	transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+}

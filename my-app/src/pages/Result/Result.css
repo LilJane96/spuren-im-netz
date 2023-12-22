@@ -1,0 +1,24 @@
+.ResultContainer {
+  
+}
+
+.ResultView {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ResultStepper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ResultStepper .ButtonContainer {
+    display: flex;
+}
+
+.ResultContainer .ButtonContainer .Button {
+    margin: 25px 60px;
+}

@@ -1,30 +1,66 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Speachbubble from "../../components/Speachbubble/Speachbubble";
 import PhoneSimulator from "../../components/PhoneSimulator/PhoneSimulator";
 import AnswerBoxes from "../../components/AnswerBoxes/AnswerBoxes";
 import Stepper from "../../components/Stepper/Stepper";
 import { findUnitById } from '../../Units/Unit';
 import CustomButton from "../../components/Button/CustomButton";
-import { useParams } from 'react-router-dom';
-import "./FrameOne.css";
+import { useNavigate, useParams } from 'react-router-dom';
 import { Link } from "@mui/material";
+import "./FrameOne.css";
 
 
 export default function FrameOne() {
 const [selectedAnswer, setSelectedAnswer] = useState("");
 const [reasonText, setReasonText] = useState("");
 const [currentTaskIndex, setCurrentTaskIndex] = useState(0);
-const [currentStep, setCurrentStep] = useState(1);
 const [nextSimulatorPage, setNextSimulatorPage] = useState(0);
 const [speachbubbleText, setSpeachbubbleText] = useState("");
+const [count, setCount] = useState(0);
+const { unitId, stepId } = useParams();
+const [currentUnitData, setCurrentUnitData] = useState(null);
 
 
-const { unitId } = useParams();
-const currentUnitData = findUnitById(unitId);
+const [currentStep, setCurrentStep] = useState(1);
+const navigate = useNavigate();
 
-  if (!currentUnitData) {
-    return <div>Unit nicht gefunden</div>;
+useEffect(() => {
+  // Setze den aktuellen Schritt basierend auf der URL
+  const stepFromUrl = parseInt(stepId.replace('step', ''), 10) || 1;
+  setCurrentStep(stepFromUrl);
+}, [stepId]);
+
+useEffect(() => {
+  // Setze den aktuellen Task-Index basierend auf dem aktuellen Schritt
+  const taskIndex = currentStep - 1;
+  setCurrentTaskIndex(taskIndex);
+}, [currentStep]);
+
+useEffect(() => {
+  // Setze die Unit-Daten basierend auf der Unit-ID
+  const fetchData = async () => {
+    const data = await findUnitById(unitId);
+    setCurrentUnitData(data);
+  };
+
+  fetchData();
+}, [unitId]);
+
+let units = JSON.parse(localStorage.getItem("UnitsArray")) || {};
+
+if (!units[unitId]) {
+  units[unitId] = {
+    attempts: 0,
+    wrongAttempts: 0,
+    taskAttempts: {},
+    answers: [],
   }
+};
+
+
+if (!currentUnitData) {
+  return <div>Unit nicht gefunden</div>;
+}
 
 
 const answersLength = currentUnitData.task.map(task =>
@@ -33,21 +69,54 @@ const answersLength = currentUnitData.task.map(task =>
 
 const totalTasks = currentUnitData ? currentUnitData.task.length : 0;
 
-
-
-
-const handleSubmit = (answer, isCorrect, rightAnswer, wrongAnswer, reason) => {
-  console.log("AN", answer)
-  setSelectedAnswer(answer);
-  setReasonText(reason);
-
-  if (isCorrect) {
-    setSpeachbubbleText(rightAnswer);
-  } else {
-    setSpeachbubbleText(wrongAnswer);
-  }
+const findAnswerIndex = (taskIndex) => {
+  return units[unitId].answers.findIndex((answer) => answer.taskIndex === taskIndex);
 };
 
+const handleSubmit = (question, answer, isCorrect, rightAnswer, wrongAnswer, reason) => {
+  setSelectedAnswer(answer);
+  setReasonText(reason);
+  
+  if(!isCorrect){
+    setCount(prevCount => prevCount + 1);
+  }
+
+ // Hinzufügen des taskIndex zu jeder Antwort
+ const newItem = {
+  question: question,
+  answer: answer,
+  isCorrect: isCorrect,
+  taskIndex: currentTaskIndex,
+  wrongAttempts: count,
+};
+
+// Increment attempts count
+units[unitId].attempts++;
+
+const existingAnswerIndex = findAnswerIndex(currentTaskIndex);
+
+// Check if an answer for the current task already exists in the answers array
+if (existingAnswerIndex !== -1) {
+  // Update existing answer
+  units[unitId].answers[existingAnswerIndex] = newItem;
+} else {
+  // Add the new item to the array for the current unit
+  units[unitId].answers.push(newItem);
+}
+
+// Increment wrong attempts count for the current task
+units[unitId].taskAttempts[currentTaskIndex] =
+  (units[unitId].taskAttempts[currentTaskIndex] || 0) + newItem.wrongAttempts;
+
+// Saving the updated array in local storage
+localStorage.setItem("UnitsArray", JSON.stringify(units));
+
+if (isCorrect) {
+  setSpeachbubbleText(rightAnswer);
+} else {
+  setSpeachbubbleText(wrongAnswer);
+}
+};
 
 const handleNextTask = () => {
   setTimeout(() => {
@@ -57,20 +126,12 @@ const handleNextTask = () => {
     setSelectedAnswer("");
     setReasonText("");
     setNextSimulatorPage((prev) => prev + 1);
-
-    if (currentTaskIndex === totalTasks - 1) {
-      setCurrentTaskIndex(0);
-      // setCurrentUnitIndex((prevIndex) => prevIndex + 1);
-      setCurrentStep(1);
-    }
+    setCount(0);
+    const nextStep = currentStep + 1;
+    navigate(`/frameone/${unitId}/step${nextStep}`);
+    // }
   }, 300);
 };
-
-
-  // const handlefinishUnit = () => {
-  //   setCurrentTaskIndex(0);
-  //   // setCurrentUnitIndex((prevIndex) => prevIndex +1)
-  // };
 
   const handleGoBack = () => {
     if (currentStep > 1) {
@@ -80,6 +141,8 @@ const handleNextTask = () => {
       setSelectedAnswer("");
       setReasonText("");
       setNextSimulatorPage((prev) => prev - 1);
+      const nextStep = currentStep - 1;
+      navigate(`/frameone/${unitId}/step${nextStep}`);
     }
   };
 
@@ -98,16 +161,17 @@ const handleNextTask = () => {
                 {tasks.step.map((step, stepIndex) => (
                   step.speachbubble && <Speachbubble key={stepIndex} text={speachbubbleText || step.speachbubble} reason={reasonText} />
                 ))}
-                <PhoneSimulator content={tasks.content} selectedAnswer={selectedAnswer} nextPage={nextSimulatorPage} />
+                <PhoneSimulator content={currentStep} selectedAnswer={selectedAnswer} nextPage={nextSimulatorPage} />
                 <div className="boxContainer">
                   <div className={`answerContainer ${answersLength[index] >= 4 ? "fourOrMore" : "smallerThenFour"}`}>
                     {tasks.step.map((answer, stepIndex) => (
+                      answer.answerboxes &&
                       answer?.answerboxes.map((answerObj, boxIndex) => (
                         <AnswerBoxes
                           key={`${stepIndex}-${boxIndex}`}
                           type={answerObj?.type}
                           text={answerObj?.answer}
-                          onClick={() => handleSubmit(answerObj?.answer, answerObj?.right, answer?.rightAnswer, answer?.wrongAnswer, answer?.reason)}
+                          onClick={() => handleSubmit(answer?.question, answerObj?.answer, answerObj?.right, answer?.rightAnswer, answer?.wrongAnswer, answer?.reason)}
                           isCorrect={answerObj?.right}
                           imageUrl={answerObj?.answer}
                           imgAnswer={answerObj?.imgAnswer}
@@ -129,7 +193,7 @@ const handleNextTask = () => {
                       selectedAnswer === "" ? <CustomButton onClick={handleNextTask} name="Weiter" type="primary" disabled></CustomButton> : <CustomButton onClick={handleNextTask} name="Weiter" type="primary"></CustomButton>
 
                     ) : (
-                      <Link href="/hub">
+                      <Link href={`/result/${unitId}/step1`}>
                         <CustomButton name="Unit beenden" type="primary" />
                       </Link>
                     )}

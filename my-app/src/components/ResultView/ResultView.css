@@ -1,0 +1,178 @@
+.ResultViewContainer {
+  margin: 100px 27px 45px 27px;
+}
+
+.ResultViewContainer .Background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  width: 691px;
+  height: 408px;
+  box-sizing: content-box;
+    border-width: 8px;
+    border-style: solid;
+    border: double 10px transparent;
+    border-radius: 16px;
+    background-image: linear-gradient(white, white), radial-gradient(circle at top left, #DBB5EC,#BA64E3);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+.ResultViewContainer .Description {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.ResultViewContainer .Description .Text p {
+  color: #A74FD1;
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.ResultViewContainer .colorBox {
+  border-radius: 10px;
+  width: 39px;
+  height: 27px;
+  margin: 0 7px 0 14px;
+}
+
+.ResultViewContainer .DescriptionContainer {
+  display: flex;
+  align-items: center;
+}
+
+.ResultViewContainer .DescriptionContainer .Row {
+  display: flex;
+  align-items: center;
+}
+
+.ResultViewContainer .DescriptionContainer p {
+  font-weight: bold;
+}
+
+.ResultViewContainer .colorBox.one {
+  border: 3px solid #82E731;
+  background: #A0F959;
+}
+
+.ResultViewContainer .colorBox.two {
+  border: 3px solid #EED600;
+  background: #FFF069;
+}
+
+.ResultViewContainer .colorBox.three {
+  border: 3px solid #FD6B1B;
+  background: #FF955B;
+}
+
+.ResultViewContainer .Description ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ResultViewContainer .Description li {
+  width: calc(30.33% - 10px);
+  margin: 9px 10px 14px 13px;
+}
+
+.ResultRowContainer .List {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0 14px 0;
+  border-radius: 19px;
+  width: 168px;
+  height: 99px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.ResultRowContainer .List.one {
+  border-radius: 10px;
+  border: 3px solid #82E731;
+  background: #A0F959;
+}
+
+.ResultRowContainer .List.two {
+  border-radius: 10px;
+  border: 3px solid #EED600;
+  background: #FFF069;
+}
+
+.ResultRowContainer .List.three {
+  border-radius: 10px;
+  border: 3px solid #FD6B1B;
+  background: #FF955B;
+}
+
+.ResultRowContainer .List p {
+  color: #000;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0 0px 0 10px;
+  text-align: left;
+}
+
+.ResultRowContainer .List p.Trys {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.ResultRowContainer .List > div:first-child {
+  width: 100px;
+  flex-grow: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ResultRowContainer .List .Heart {
+  width: 43px;
+  height: 43px;
+  background: white;
+  position: absolute;
+  bottom: -9px;
+  right: -10px;
+  border-radius: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.ResultRowContainer .List.one .Heart {
+  border: 3px solid #82E731;
+
+  && .customHeartIcon {
+    color: #82E731;
+  }
+}
+
+.ResultRowContainer .List.two .Heart {
+  border: 3px solid #EED600;
+
+  && .customHeartIcon {
+    color: #EED600;
+  }
+}
+
+.ResultRowContainer .List.three .Heart {
+  border: 3px solid #FD6B1B;
+
+  && .customHeartIcon {
+    color: #FD6B1B;
+  }
+}

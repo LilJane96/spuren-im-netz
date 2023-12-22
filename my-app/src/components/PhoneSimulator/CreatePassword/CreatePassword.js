@@ -11,7 +11,7 @@ export default function CreatePassword({answer}) {
         <div className="CreateAccountContainer">
             <div className="frameContainer">
       <div>
-        <h1>Create Username</h1>
+        <h1>Passwort erstellen</h1>
       </div>
         <div >
           <div style={{margin: "15px 0"}}>
