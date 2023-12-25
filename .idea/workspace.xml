@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac1a0cd9-18f7-49cb-a7b5-8e02d10bfadc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/my-app/src/images/OpenResultBox.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/PopUpChooseName/PopUpChooseName.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/PopUpChooseName/PopUpChooseName.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/pages/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/pages/Home/Home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/pages/Hub/Hub.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/pages/Hub/Hub.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +58,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "19-create-resultpopup",
     "ignore.virus.scanning.warn.message": "true",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
@@ -160,6 +161,7 @@
       <workItem from="1702907513548" duration="2783000" />
       <workItem from="1702917595828" duration="7565000" />
       <workItem from="1703007357471" duration="2895000" />
+      <workItem from="1703501995151" duration="4605000" />
     </task>
     <servers />
   </component>

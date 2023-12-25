@@ -7,6 +7,7 @@ import Pin1Active from "../../images/Pins/Pin1Active.png";
 import Backpack from "../../images/Backpack.png"
 import FoxPicture from "../../images/foxPicture.png";
 import PopUpChooseName from "../../components/PopUpChooseName/PopUpChooseName";
+import PopUpResultScreen from "../../components/PopUpResultScreen/PopUpResultScreen";
 
 
 function Hub() {
@@ -26,7 +27,10 @@ function Hub() {
                     <img onClick={handleOpenPopup} className="pinOne" src={Pin1Active} alt="Pin" />
             </div>
             <div>
-                <PopUpChooseName open={open}></PopUpChooseName>
+                <PopUpChooseName open={false}></PopUpChooseName>
+            </div>
+            <div>
+                <PopUpResultScreen open={open}></PopUpResultScreen>
             </div>
         </div>
     </>

@@ -1,0 +1,21 @@
+.contentResultPopUp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.containerDialogResult {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.DialogContentText {
+    font-size: medium;
+
+}
+.DialogTitle {
+    font-size: medium;
+}
