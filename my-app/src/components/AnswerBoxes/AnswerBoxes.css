@@ -4,7 +4,7 @@
     height: 100%;
     padding: 20px 35px;
     background-color: white;
-    box-shadow: 0px 4px 4px #C9BC48;
+    box-shadow: 0px 4px 4px var(--box-shadow);
     border-radius: 15px;
     display: flex;
     justify-content: center;
