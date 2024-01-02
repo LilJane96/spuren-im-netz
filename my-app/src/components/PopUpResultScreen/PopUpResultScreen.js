@@ -4,6 +4,7 @@ import OpenResultBox from "../../images/OpenResultBox.png";
 import CloseResultBox from "../../images/ClosedResultBox.png";
 import React, {useState} from "react";
 import CustomButton from "../Button/CustomButton";
+import GoodFoxResultReward from "../../images/GoodFoxResultReward.png"
 
 export default function PopUpResultScreen({ open }) {
 
@@ -21,10 +22,9 @@ export default function PopUpResultScreen({ open }) {
     return (
         <div className="containerDialogResult">
             <Dialog
-                sx={{ '& .MuiDialog-paper': { width: '100%', height: 600 } }}
+                sx={{ '& .MuiDialog-paper': { width: '80%', height: 400 } }}
                 open={open}
                 maxWidth={"md"}
-
             >
                 <div className="contentResultPopUp">
             <DialogContent sx={{
@@ -58,9 +58,11 @@ export default function PopUpResultScreen({ open }) {
                 <DialogActions style={{justifyContent: "center" , marginBottom: 10}} >
                     <Link href="/hub"><CustomButton name="Weiter" type="primary"></CustomButton></Link>
                 </DialogActions>
+                <div className="GoodFoxResult">
+                    <img src={GoodFoxResultReward} alt="GoodFoxResult" />
+                </div>
             </DialogContent>
                 </div>
-
             </Dialog>
 
         </div>
