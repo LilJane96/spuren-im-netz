@@ -25,7 +25,6 @@ const PopUpChooseName = ({ open }) => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        // Beim Laden der Komponente die ausgewählte Farbe aus dem Local Storage abrufen
         const storedColor = localStorage.getItem('selectedColor');
         if (storedColor) {
             setSelectedColor(storedColor);
@@ -43,6 +42,7 @@ const PopUpChooseName = ({ open }) => {
     };
 
     const handleContinueClick = () => {
+        localStorage.setItem('userName', inputValue);
         localStorage.setItem('selectedColor', selectedColor);
         navigate("/frameone/unit1/step1");
     };
