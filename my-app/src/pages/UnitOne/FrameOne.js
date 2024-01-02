@@ -25,19 +25,16 @@ const [currentStep, setCurrentStep] = useState(1);
 const navigate = useNavigate();
 
 useEffect(() => {
-  // Setze den aktuellen Schritt basierend auf der URL
   const stepFromUrl = parseInt(stepId.replace('step', ''), 10) || 1;
   setCurrentStep(stepFromUrl);
 }, [stepId]);
 
 useEffect(() => {
-  // Setze den aktuellen Task-Index basierend auf dem aktuellen Schritt
   const taskIndex = currentStep - 1;
   setCurrentTaskIndex(taskIndex);
 }, [currentStep]);
 
 useEffect(() => {
-  // Setze die Unit-Daten basierend auf der Unit-ID
   const fetchData = async () => {
     const data = await findUnitById(unitId);
     setCurrentUnitData(data);
@@ -81,7 +78,6 @@ const handleSubmit = (question, answer, isCorrect, rightAnswer, wrongAnswer, rea
     setCount(prevCount => prevCount + 1);
   }
 
- // Hinzufügen des taskIndex zu jeder Antwort
  const newItem = {
   question: question,
   answer: answer,
@@ -90,7 +86,6 @@ const handleSubmit = (question, answer, isCorrect, rightAnswer, wrongAnswer, rea
   wrongAttempts: count,
 };
 
-// Increment attempts count
 units[unitId].attempts++;
 
 const existingAnswerIndex = findAnswerIndex(currentTaskIndex);
@@ -146,11 +141,16 @@ const handleNextTask = () => {
     }
   };
 
+  const handleEndUnit = () => {
+    navigate(`/hub`);
+  }
+
 
   return (
     <div className="frameOneContainer">
       <div className="stepperContainer">
         <Stepper currentStep={currentStep} totalSteps={totalTasks} />
+        <CustomButton type="quaternary" onClick={handleEndUnit}/>
       </div>
       <div className="frameContainer">
         {currentUnitData.task.map((tasks, index) => (

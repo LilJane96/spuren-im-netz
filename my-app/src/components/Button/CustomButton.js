@@ -9,6 +9,8 @@ const getButtonClass = (type) => {
           return "CustomButton SecondaryButton";
         case "tertiary":
           return "CustomButton TertiaryButton";
+          case "quaternary":
+            return "CustomButton QuaternaryButton";
         default:
           return "CustomButton";
     }

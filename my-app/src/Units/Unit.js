@@ -1,3 +1,5 @@
+const userName = localStorage.getItem('userName');
+
 const units = [
     {
       id: 1,
@@ -18,7 +20,7 @@ const units = [
                 }
               ],
               answerboxes: [
-                { answer: "Your name", right: true },
+                { answer: userName, right: true },
                 { answer: "User123", right: false },
                 { answer: "Something", right: false }
               ],

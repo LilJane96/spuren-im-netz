@@ -60,7 +60,7 @@ export default function PhoneSimulator({content, selectedAnswer, nextPage }) {
   );
 }
 
-PhoneSimulator.propTypes = {
-  selectedAnswer: PropTypes.string.isRequired,
-  nextPage: PropTypes.func.isRequired
-};
+// PhoneSimulator.propTypes = {
+//   selectedAnswer: PropTypes.string.isRequired,
+//   nextPage: PropTypes.func.isRequired
+// };
