@@ -6,20 +6,18 @@ import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import { getSelectedColor } from './utilis/colorUtils';
 
-// Initialisieren Sie die ausgewählte Farbe hier
 const initialColor = getSelectedColor();
 
-// Setzen Sie die ausgewählte Farbe als Attribut auf dem HTML-Element
 document.documentElement.setAttribute('data-theme', initialColor);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <React.StrictMode>
   <BrowserRouter>
     <App />
   </BrowserRouter>
 </React.StrictMode>,
- document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
