@@ -9,6 +9,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-image: var(--background-img);
   background-color: var(--background);
+  font-family: sans-serif;
 }
 
 code {

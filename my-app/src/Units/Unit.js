@@ -20,6 +20,8 @@ export default function UnitsArray() {
                   content: "Welchen Namen würdest du auswählen?"
                 }
               ],
+              phoneSimulatorStep: 1,
+              title: "Erstelle einen Account",
               answerboxes: [
                 { answer: userName, right: true },
                 { answer: "User123", right: false },
@@ -48,6 +50,8 @@ export default function UnitsArray() {
                   content: "Welches Passwort würdest du wählen?"
                 }
               ],
+              phoneSimulatorStep: 2,
+              title: "Erstelle einen Account",
               answerboxes: [
                 { type: "text", answer: "Password", right: false },
                 { type: "text", answer: "kYh5&0!mlta", right: true },
@@ -77,6 +81,8 @@ export default function UnitsArray() {
                   content: "Soll dein Detektivprofil für alle sichtbar sein oder nur für gute Freunde? Wähle aus!"
                 },
               ],
+              phoneSimulatorStep: 3,
+              title: "Erstelle einen Account",
               answerboxes: [
                 { answer: "Privat", right: true },
                 { answer: "Öffentlich", right: false },
@@ -105,6 +111,8 @@ export default function UnitsArray() {
                   content: "Welches Bild würdest du hochladen?"
                 },
               ],
+              phoneSimulatorStep: 4,
+              title: "Erstelle einen Account",
               answerboxes: [
               { type: "image", answer: "natureIMG.png", imgAnswer: "Natur", right: true },
               { type: "image", answer: "portraitIMG.png", imgAnswer: "Dein Porträt", right: false },
@@ -137,6 +145,8 @@ export default function UnitsArray() {
                   content: "Welche Informationen hier würdest du deinem Profil hinzufügen?"
                 },
               ],
+              phoneSimulatorStep: 5,
+              title: "Erstelle einen Account",
               answerboxes: [
                 { type: "text", answer: <span>13 <br />📍Hermann Butzer Schule</span>, right: false },
                 { type: "text", answer: "Fußballliebhaber ⚽ | Künstler 🎨 ", right: true },
@@ -168,12 +178,15 @@ export default function UnitsArray() {
                     content: "Wähle eine Antwort aus!"
                   }
                 ],
+              phoneSimulatorStep: 6,
+              title: "Nachrichten",
                 answerboxes: [
                   { answer: "Akzeptieren", right: false },
                   { answer: "Ablehnen", right: true }
                 ],
-                rightAnswer: "Super! Das ist ein sehr guter Name.",
-                wrongAnswer: "Schade, versuche es nochmal!"
+                rightAnswer: "Probiere es nochmal! ",
+                wrongAnswer: "Schade, versuche es nochmal!",
+                reason: "Wenn man nicht weiß woher eine Nachricht kommt, sollte man diese immer zuerst ablehnen."
               }
             ]
           },
@@ -191,6 +204,8 @@ export default function UnitsArray() {
                     content: "Welches Profil soll ich anklicken?"
                   }
                 ],
+              phoneSimulatorStep: 7,
+              title: "Suche",
                 answerboxes: [
                   { type: "text", answer: "1. Profil", right: false },
                   { type: "text", answer: "2. Profil", right: true },
@@ -216,6 +231,8 @@ export default function UnitsArray() {
                     content: "Woher kommt diese Person?"
                   },
                 ],
+              phoneSimulatorStep: 8,
+              title: "",
                 answerboxes: [
                   { answer: "Stuttgart", right: false },
                   { answer: "Standort", right: true },
@@ -241,6 +258,8 @@ export default function UnitsArray() {
                     content: "Wie alt ist diese Person?"
                   },
                 ],
+              phoneSimulatorStep: 9,
+              title: "",
                 answerboxes: [
                   { type: "text", answer: "39", right: false },
                   { type: "text", answer: "12", right: true },
@@ -266,6 +285,8 @@ export default function UnitsArray() {
                     content: "Welchen Beruf hat die Person?"
                   },
                 ],
+              phoneSimulatorStep: 10,
+              title: "",
                 answerboxes: [
                   { type: "text", answer: "Dieb", right: true },
                   { type: "text", answer: "Lehrer", right: false },

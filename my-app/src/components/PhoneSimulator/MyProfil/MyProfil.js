@@ -2,6 +2,7 @@
 import CustomButton from "../../Button/CustomButton"
 import { useParams } from "react-router-dom";
 import "./MyProfil.css"
+import Bottombar from "../../Bottombar/Bottombar";
 
 
 export default function MyProfil({answer}) {
@@ -14,6 +15,7 @@ export default function MyProfil({answer}) {
     .map((obj) => obj.answer);
 
     return (
+        <>
         <div className="MyProfilContainer">
             <div className="ImageContainer">
 
@@ -44,7 +46,10 @@ export default function MyProfil({answer}) {
             </div>
             <div className="Line"/>
             
-          
         </div>
+        <div className="BottombarContainer">
+            <Bottombar/>
+        </div>
+    </>
     )
 }

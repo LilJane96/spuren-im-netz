@@ -62,3 +62,8 @@
     display: flex;
     align-items: center;
 }
+
+.BottombarContainer{
+    position: absolute;
+    bottom: 82px;
+}

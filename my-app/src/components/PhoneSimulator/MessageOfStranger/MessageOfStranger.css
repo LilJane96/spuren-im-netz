@@ -1,0 +1,44 @@
+.MessageContainer .ButtonContainer {
+    display: flex;
+}
+
+.MessageContainer .ImageContainer {
+    margin: 10px 0;
+}
+
+.MessageContainer .AcceptMessageViewContainer {
+    box-shadow: 0px -9px 14px -2px #cacaca;
+    text-align: center;
+    margin: 0;
+    padding: 1px;
+}
+
+.MessageContainer .firstText {
+    font-weight: 700;
+}
+
+.MessageContainer .secondText {
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.MessageContainer .ButtonContainer .btn {
+    border-radius: 5px;
+    width: 108px;
+    height: 54px;
+    margin: 0 10px;
+    color: #F71717;
+    font-weight: bold;
+}
+
+.MessageContainer .ButtonContainer .btn.notAccept {
+    color: #1778F7;
+}
+
+
+
+
+  
+  .selected {
+   background: rgb(202, 202, 215);
+  }

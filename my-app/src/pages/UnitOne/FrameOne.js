@@ -156,7 +156,7 @@ const handleNextTask = () => {
                 {tasks.step.map((step, stepIndex) => (
                   step.speachbubble && <Speachbubble key={stepIndex} text={speachbubbleText || step.speachbubble} reason={reasonText} />
                 ))}
-                <PhoneSimulator content={currentStep} selectedAnswer={selectedAnswer} nextPage={nextSimulatorPage} />
+                <PhoneSimulator title={tasks.step.map((obj) => obj.title)} content={tasks.step.map((obj) => obj.phoneSimulatorStep)} selectedAnswer={selectedAnswer} nextPage={currentStep} />
                 <div className="boxContainer">
                   <div className={`answerContainer ${answersLength[index] >= 4 ? "fourOrMore" : "smallerThenFour"}`}>
                     {tasks.step.map((answer, stepIndex) => (
@@ -191,9 +191,13 @@ const handleNextTask = () => {
                         <CustomButton onClick={handleNextTask} name="Weiter" type="primary"></CustomButton>
                       )
                     ) : (
-                      <Link href={`/result/${unitId}/step1`}>
+                      selectedAnswer === "" || !units[unitId]?.answers[currentTaskIndex]?.isCorrect ?
+                      <CustomButton name="Unit beenden" type="primary" disabled={true}/>
+                       :
+                       <Link href={`/result/${unitId}/step1`}>
                         <CustomButton name="Unit beenden" type="primary" />
                       </Link>
+                      
                     )}
 
                   </div>
