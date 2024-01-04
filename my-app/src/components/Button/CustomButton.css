@@ -47,6 +47,14 @@ button.PrimaryButton::before {
   transition: .15s cubic-bezier(0, 0, .6, 1);
 }
 
+button.PrimaryButton:disabled:hover {
+  transform: none;
+}
+
+button.PrimaryButton:disabled:active {
+  transform: none;
+}
+
 button.PrimaryButton:hover {
   transform: translate(0, .25em);
 }
@@ -56,10 +64,6 @@ button.PrimaryButton:hover::before {
 }
 button.PrimaryButton:active {
   transform: translate(0, .75em);
-}
-button.PrimaryButton:active::before {
-  box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
-  transform: translate3d(0, 0, -1em);
 }
 
 /*Secondary Button*/
@@ -107,10 +111,10 @@ button.PrimaryButton:active::before {
     transform: translate(0, .75em);
   }
   
-  button.SecondaryButton:active::before {
+  /* button.SecondaryButton:active::before {
     box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
     transform: translate3d(0, 0, -1em);
-  }
+  } */
 
 
   /*Tertiary Button*/
@@ -158,10 +162,19 @@ button.PrimaryButton:active::before {
   button.TertiaryButton:active {
     transform: translate(0, .75em);
   }
-  button.TertiaryButton:active::before {
+
+  button.TertiaryButton:disabled:hover {
+    transform: none;
+  }
+  
+  button.TertiaryButton:disabled:active {
+    transform: none;
+  }
+  
+  /* button.TertiaryButton:active::before {
     box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
     transform: translate3d(0, 0, -1em);
-  }
+  } */
 
 
   /*Quaternary Button*/

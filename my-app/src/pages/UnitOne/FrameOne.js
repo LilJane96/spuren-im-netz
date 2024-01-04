@@ -185,8 +185,11 @@ const handleNextTask = () => {
                       <CustomButton onClick={handleGoBack} name="Zurück" type="tertiary" disabled></CustomButton>
                     )}
                     {currentTaskIndex < totalTasks - 1 ? (
-                      selectedAnswer === "" ? <CustomButton onClick={handleNextTask} name="Weiter" type="primary" disabled></CustomButton> : <CustomButton onClick={handleNextTask} name="Weiter" type="primary"></CustomButton>
-
+                      selectedAnswer === "" || !units[unitId]?.answers[currentTaskIndex]?.isCorrect ? (
+                        <CustomButton onClick={handleNextTask} name="Weiter" type="primary" disabled></CustomButton>
+                      ) : (
+                        <CustomButton onClick={handleNextTask} name="Weiter" type="primary"></CustomButton>
+                      )
                     ) : (
                       <Link href={`/result/${unitId}/step1`}>
                         <CustomButton name="Unit beenden" type="primary" />
