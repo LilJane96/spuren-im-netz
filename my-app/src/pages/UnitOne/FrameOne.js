@@ -3,7 +3,7 @@ import Speachbubble from "../../components/Speachbubble/Speachbubble";
 import PhoneSimulator from "../../components/PhoneSimulator/PhoneSimulator";
 import AnswerBoxes from "../../components/AnswerBoxes/AnswerBoxes";
 import Stepper from "../../components/Stepper/Stepper";
-import { findUnitById } from '../../Units/Unit';
+import UnitsArray from '../../Units/Unit';
 import CustomButton from "../../components/Button/CustomButton";
 import { useNavigate, useParams } from 'react-router-dom';
 import { Link } from "@mui/material";
@@ -19,8 +19,6 @@ const [speachbubbleText, setSpeachbubbleText] = useState("");
 const [count, setCount] = useState(0);
 const { unitId, stepId } = useParams();
 const [currentUnitData, setCurrentUnitData] = useState(null);
-
-
 const [currentStep, setCurrentStep] = useState(1);
 const navigate = useNavigate();
 
@@ -35,13 +33,10 @@ useEffect(() => {
 }, [currentStep]);
 
 useEffect(() => {
-  const fetchData = async () => {
-    const data = await findUnitById(unitId);
-    setCurrentUnitData(data);
-  };
-
-  fetchData();
+  const unitData = UnitsArray().find((unit) => unit.name === unitId);
+  setCurrentUnitData(unitData);
 }, [unitId]);
+
 
 let units = JSON.parse(localStorage.getItem("UnitsArray")) || {};
 

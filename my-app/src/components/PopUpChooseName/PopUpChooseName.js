@@ -7,9 +7,8 @@ import {
     DialogContent,
     DialogContentText,
     DialogTitle,
-    Link, ListItemButton,
+    ListItemButton,
     ListItemIcon,
-    ThemeProvider
 } from "@mui/material";
 import CustomButton from "../Button/CustomButton";
 import List from '@mui/material/List';
@@ -32,6 +31,10 @@ const PopUpChooseName = ({ open }) => {
         }
     }, []);
 
+    useEffect(() => {
+        localStorage.setItem('userName', inputValue);
+    }, [inputValue]);
+
     const handleInputChange = (event) => {
         setInputValue(event.target.value);
     };
@@ -46,7 +49,7 @@ const PopUpChooseName = ({ open }) => {
         localStorage.setItem('selectedColor', selectedColor);
         navigate("/frameone/unit1/step1");
     };
-
+    
     return (
         <div className="PopUpChooseName">
                 <Dialog
@@ -83,11 +86,8 @@ const PopUpChooseName = ({ open }) => {
                         </DialogContentText>
                     </DialogContent>
                     <DialogActions style={{ justifyContent: "center", marginBottom: 15 }} >
-                        {/* <Link href="/frameone/unit1/step1" onClick={handleContinueClick}> */}
                             {inputValue.length > 0 && selectedColor.length > 0 ? 
                             <CustomButton name="Weiter" type="primary" onClick={handleContinueClick}></CustomButton> : <CustomButton name="Weiter" type="primary" disabled={true}></CustomButton>}
-                            
-                            {/* </Link> */}
                     </DialogActions>
                 </Dialog>
         </div>

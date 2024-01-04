@@ -1,6 +1,7 @@
-const userName = localStorage.getItem('userName');
+export default function UnitsArray() {
+ const userName = localStorage.getItem('userName');
 
-const units = [
+  return [
     {
       id: 1,
       name: "unit1",
@@ -279,9 +280,4 @@ const units = [
         ]
       },
   ];
-  
-  export default units;
-  
-  export const findUnitById = (unitId) => {
-    return units.find((unit) => unit.name === unitId);
-  };
+}
