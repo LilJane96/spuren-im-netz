@@ -10,6 +10,8 @@ import UploadPicture from './UploadPicture/UploadPicture';
 import MyProfil from './MyProfil/MyProfil';
 import Bottombar from '../Bottombar/Bottombar';
 import MessageOfStranger from './MessageOfStranger/MessageOfStranger';
+import SearchPerson from './SearchPerson/SearchPerson';
+import UserProfile from './UserProfile/UserProfile';
 
 export default function PhoneSimulator({title, content, selectedAnswer, nextPage }) {
   const [currentPage, setCurrentPage] = useState(0);
@@ -38,6 +40,14 @@ export default function PhoneSimulator({title, content, selectedAnswer, nextPage
         return <MyProfil answer={selectedAnswer}/>;
       case 6:
         return <MessageOfStranger answer={selectedAnswer}/>;
+      case 7:
+        return <SearchPerson answer={selectedAnswer}/>;
+      case 8:
+        return <UserProfile answer={selectedAnswer}/>;
+      case 9:
+        return <UserProfile answer={selectedAnswer}/>;
+      case 10:
+        return <UserProfile answer={selectedAnswer}/>;
       default:
         return null;
     }

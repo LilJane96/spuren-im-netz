@@ -8,7 +8,7 @@ export default function MessageOfStranger({ answer }) {
 
 
   return (
-    <div className={`MessageContainer ${selectedAnswer === 'reject' ? 'rejectStyle' : ''}`}>
+    <div className="MessageContainer">
       <div className="ImageContainer">
         <img src={AnnonymProfile} alt="Profilbild" className="ProfilePicture" />
         <p className="text">Felix</p>

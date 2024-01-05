@@ -1,15 +1,15 @@
-.MyProfilContainer {
-    margin: 50px 0 0 0;
+.UserProfileContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 50px 0;
 }
 
-.MyProfilContainer .flexContainer {
+.flexContainer {
     display: flex;
 }
 
-.MyProfilContainer .ProfilePicture {
+.UserProfileContainer .ProfilePicture {
     width: 60px;
     height: 60px;
     object-fit: cover;
@@ -17,38 +17,52 @@
     margin: 10px 0 10px 0;
 }
 
-.MyProfilContainer .ImageContainer {
-    display: flex;
+.ImageContainer {
+    /* display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; */
 }
 
-.MyProfilContainer .ImageContainer .text {
+.ImageContainer .text {
     text-align: center;
     margin: 0px;
     font-size: 15px;
     font-weight: bold;
 }
 
-.MyProfilContainer .flexContainer .textContainer {
+.flexContainer .textContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 18px 5px 15px 5px;
 }
 
-.MyProfilContainer .count{
+.count{
     margin: 0;
     padding: 0;
     font-weight: bold;
 }
 
-.MyProfilContainer .text {
+.text {
     margin: 0;
     padding: 0;
 }
 
-.MyProfilContainer .Line {
+.UserProfileContainer ul li{
+    display: flex;
+    float: left;
+    margin: 11px;
+    width: 40%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.UserProfileContainer ul{
+    list-style-type: disc;
+}
+
+.UserProfileContainer .Line {
     width: 250px;
     height: 1px;
     opacity: 0.34;
@@ -56,7 +70,7 @@
     margin: 15px;
 }
 
-.MyProfilContainer .answerText {
+.answerText {
     margin: 0;
     text-align: center;
     height: 56px;
@@ -64,7 +78,22 @@
     align-items: center;
 }
 
+.ImageContainer {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.ImageContainer li {
+    height: 115px;
+}
+
+.ImageContainer img {
+    border-radius: 15px;
+}
+
 .BottombarContainer{
     position: absolute;
     bottom: 82px;
 }
+

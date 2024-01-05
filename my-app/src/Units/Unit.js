@@ -207,13 +207,12 @@ export default function UnitsArray() {
               phoneSimulatorStep: 7,
               title: "Suche",
                 answerboxes: [
-                  { type: "text", answer: "1. Profil", right: false },
-                  { type: "text", answer: "2. Profil", right: true },
-                  { type: "text", answer: "3. Profil", right: false },
+                  { type: "text", answer: "FelixMüller", right: false },
+                  { type: "text", answer: "Felicia29", right: false },
+                  { type: "text", answer: "Felix", right: true },
                 ],
-                rightAnswer: "Super! Das ist ein sehr gutes Passwort. ",
+                rightAnswer: "Super! Du hast die richtige Wahl getroffen.",
                 wrongAnswer: "Schade, versuche es nochmal!",
-                reason: "Du hast viele verschiedene Zeichen verwendet. Das wird es einem Hacker schwer machen, dass Passwort zu knacken."
               }
             ]
           },
@@ -232,15 +231,14 @@ export default function UnitsArray() {
                   },
                 ],
               phoneSimulatorStep: 8,
-              title: "",
+              title: "Profil",
                 answerboxes: [
                   { answer: "Stuttgart", right: false },
                   { answer: "Standort", right: true },
                   { answer: "Hannover", right: false },
                 ],
-                rightAnswer: "Super! Das ist eine gute Entscheidung.",
-                wrongAnswer: "Schade, versuche es nochmal!",
-                reason: "Dein Profil auf “öffentlich” zu stellen ist nicht gut, da sonst jeder alles von deinen Bildern und Posts sehen kann. Öffentliche Profile sind z.B. für Unternehmen, die sich ein Profil erstellen, um Werbung auf ihrem Profil für ihre Produkte zu machen."
+                rightAnswer: "Ausgezeichnet! Die Person stammt aus “Ort”. Nun sind wir schon einen wichtigen Schritt weiter.",
+                wrongAnswer: "Probiere es nochmal! Die Person stammt von einem anderen Ort",
               }
             ]
           },
@@ -259,10 +257,10 @@ export default function UnitsArray() {
                   },
                 ],
               phoneSimulatorStep: 9,
-              title: "",
+              title: "Profil",
                 answerboxes: [
-                  { type: "text", answer: "39", right: false },
-                  { type: "text", answer: "12", right: true },
+                  { type: "text", answer: "39", right: true },
+                  { type: "text", answer: "12", right: false },
                   { type: "text", answer: "19", right: false },
                 ],
                 rightAnswer: "Ausgezeichnet!",
@@ -286,7 +284,7 @@ export default function UnitsArray() {
                   },
                 ],
               phoneSimulatorStep: 10,
-              title: "",
+              title: "Profil",
                 answerboxes: [
                   { type: "text", answer: "Dieb", right: true },
                   { type: "text", answer: "Lehrer", right: false },
