@@ -1,0 +1,68 @@
+.ImageGalleryOverlay .ProfileContainer {
+  display: flex;
+  align-items: center;
+}
+
+.ImageBlock {
+  margin: 0 12px;
+}
+
+.ImageBlock span {
+  font-weight: bold;
+}
+
+.ImageGalleryOverlay .ProfileContainer p {
+  margin: 15px 10px;
+  font-weight: bold;
+}
+
+.ProfileContainer .icon {
+  width: 18px;
+  padding: 0 8px 0 0
+}
+
+.ImageGalleryOverlay .ProfileImage {
+  width: 32px;
+  height: 31px;
+}
+
+.GalleryContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 70px 0 0 0;
+}
+
+.GalleryImage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.GalleryImage img {
+  width: 230px;
+  height: 230px;
+  border-radius: 10px;
+}
+
+.ImageBlock p {
+  font-weight: 400;
+  font-size: 13px;
+  margin: 4px 0 15px 0;
+}
+
+.GalleryImage p {
+  width: 227px;
+  margin: 3px 0 14px 0;
+}
+
+.GalleryImage.selected {
+  border-color: #3C68A9; 
+}
+
+.ImageBlock img {
+  width: 242px;
+  height: 242px;
+  border-radius: 10px;
+  object-fit: cover;
+}

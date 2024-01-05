@@ -9,6 +9,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-image: var(--background-img);
   background-color: var(--background);
+  font-family: sans-serif;
+
 }
 
 code {
@@ -20,3 +22,11 @@ h1, h2, h3, h4 {
   margin: 10px;
 }
 
+:root::-webkit-scrollbar{
+  display: none;
+}
+
+:root {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}

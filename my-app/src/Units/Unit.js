@@ -20,6 +20,8 @@ export default function UnitsArray() {
                   content: "Welchen Namen würdest du auswählen?"
                 }
               ],
+              phoneSimulatorStep: 1,
+              title: "Erstelle einen Account",
               answerboxes: [
                 { answer: userName, right: true },
                 { answer: "User123", right: false },
@@ -48,6 +50,8 @@ export default function UnitsArray() {
                   content: "Welches Passwort würdest du wählen?"
                 }
               ],
+              phoneSimulatorStep: 2,
+              title: "Erstelle einen Account",
               answerboxes: [
                 { type: "text", answer: "Password", right: false },
                 { type: "text", answer: "kYh5&0!mlta", right: true },
@@ -77,6 +81,8 @@ export default function UnitsArray() {
                   content: "Soll dein Detektivprofil für alle sichtbar sein oder nur für gute Freunde? Wähle aus!"
                 },
               ],
+              phoneSimulatorStep: 3,
+              title: "Erstelle einen Account",
               answerboxes: [
                 { answer: "Privat", right: true },
                 { answer: "Öffentlich", right: false },
@@ -105,6 +111,8 @@ export default function UnitsArray() {
                   content: "Welches Bild würdest du hochladen?"
                 },
               ],
+              phoneSimulatorStep: 4,
+              title: "Erstelle einen Account",
               answerboxes: [
               { type: "image", answer: "natureIMG.png", imgAnswer: "Natur", right: true },
               { type: "image", answer: "portraitIMG.png", imgAnswer: "Dein Porträt", right: false },
@@ -137,6 +145,8 @@ export default function UnitsArray() {
                   content: "Welche Informationen hier würdest du deinem Profil hinzufügen?"
                 },
               ],
+              phoneSimulatorStep: 5,
+              title: "Erstelle einen Account",
               answerboxes: [
                 { type: "text", answer: <span>13 <br />📍Hermann Butzer Schule</span>, right: false },
                 { type: "text", answer: "Fußballliebhaber ⚽ | Künstler 🎨 ", right: true },
@@ -157,7 +167,7 @@ export default function UnitsArray() {
           {
             step: [
               { 
-                question: "Username",
+                question: "Message",
                 speachbubble: [
                   {
                     type: "paragraph",
@@ -168,19 +178,22 @@ export default function UnitsArray() {
                     content: "Wähle eine Antwort aus!"
                   }
                 ],
+              phoneSimulatorStep: 6,
+              title: "Nachrichten",
                 answerboxes: [
                   { answer: "Akzeptieren", right: false },
                   { answer: "Ablehnen", right: true }
                 ],
-                rightAnswer: "Super! Das ist ein sehr guter Name.",
-                wrongAnswer: "Schade, versuche es nochmal!"
+                rightAnswer: "Sehr gut!",
+                wrongAnswer: "Probiere es nochmal! ",
+                reason: "Es ist immer besser, zuerst die Anfrage abzulehnen, wenn man gar nicht weiß, wer hinter dieser Nachricht steckt."
               }
             ]
           },
           {
             step: [
               { 
-                question: "Passwort",
+                question: "Search",
                 speachbubble: [
                   {
                     type: "paragraph",
@@ -191,21 +204,22 @@ export default function UnitsArray() {
                     content: "Welches Profil soll ich anklicken?"
                   }
                 ],
+              phoneSimulatorStep: 7,
+              title: "Suche",
                 answerboxes: [
-                  { type: "text", answer: "1. Profil", right: false },
-                  { type: "text", answer: "2. Profil", right: true },
-                  { type: "text", answer: "3. Profil", right: false },
+                  { type: "text", answer: "FelixMüller", right: false },
+                  { type: "text", answer: "Felicia29", right: false },
+                  { type: "text", answer: "Felix", right: true },
                 ],
-                rightAnswer: "Super! Das ist ein sehr gutes Passwort. ",
+                rightAnswer: "Super! Du hast die richtige Wahl getroffen.",
                 wrongAnswer: "Schade, versuche es nochmal!",
-                reason: "Du hast viele verschiedene Zeichen verwendet. Das wird es einem Hacker schwer machen, dass Passwort zu knacken."
               }
             ]
           },
           {
             step: [
               { 
-                question: "Privatsphäre",
+                question: "User profile",
                 speachbubble: [
                   {
                     type: "paragraph",
@@ -216,21 +230,22 @@ export default function UnitsArray() {
                     content: "Woher kommt diese Person?"
                   },
                 ],
+              phoneSimulatorStep: 8,
+              title: "Profil",
                 answerboxes: [
                   { answer: "Stuttgart", right: false },
                   { answer: "Standort", right: true },
                   { answer: "Hannover", right: false },
                 ],
-                rightAnswer: "Super! Das ist eine gute Entscheidung.",
-                wrongAnswer: "Schade, versuche es nochmal!",
-                reason: "Dein Profil auf “öffentlich” zu stellen ist nicht gut, da sonst jeder alles von deinen Bildern und Posts sehen kann. Öffentliche Profile sind z.B. für Unternehmen, die sich ein Profil erstellen, um Werbung auf ihrem Profil für ihre Produkte zu machen."
+                rightAnswer: "Ausgezeichnet! Die Person stammt aus “Ort”. Nun sind wir schon einen wichtigen Schritt weiter.",
+                wrongAnswer: "Probiere es nochmal! Die Person stammt von einem anderen Ort",
               }
             ]
           },
           {
             step: [
               { 
-                question: "Profilbild",
+                question: "User Profile",
                 speachbubble: [
                   {
                     type: "paragraph",
@@ -241,31 +256,34 @@ export default function UnitsArray() {
                     content: "Wie alt ist diese Person?"
                   },
                 ],
+              phoneSimulatorStep: 9,
+              title: "Profil",
                 answerboxes: [
-                  { type: "text", answer: "39", right: false },
-                  { type: "text", answer: "12", right: true },
+                  { type: "text", answer: "39", right: true },
+                  { type: "text", answer: "12", right: false },
                   { type: "text", answer: "19", right: false },
                 ],
-                rightAnswer: "Ausgezeichnet!",
-                wrongAnswer: "Schade, versuche es nochmal!",
-                reason: "Wenn du ein Bild hochlädst, solltest du immer gut überlegen, was darauf zu sehen ist. Andere Menschen möchten vielleicht gar nicht, dass du ein Foto von Ihnen hochlädst. Dies ist auch verboten, man sollten die Personen immer zuerst fragen."
+                rightAnswer: "Super! Die Person ist 39 alt. Klasse gemacht!!",
+                wrongAnswer: "Guter Versuch! Aber leider stimmt das nicht. Probiere es nochmal!",
               }
             ]
         },
           {
             step: [
               { 
-                question: "Informationen",
+                question: "User profile",
                 speachbubble: [
                   {
                     type: "paragraph",
-                    content: "Oh, 39 Jahre alt? Das ist aber ganz schön alt. Alle meine Freunde sind viel jünger. Das ist schon sehr komisch. Kannst du mir noch sagen, welchen Beruf sie ausübt? "
+                    content: "Oh, 39 Jahre alt? Das ist aber ganz schön alt. Alle meine Freunde sind viel jünger. Das ist schon sehr komisch. Kannst du mir noch sagen, welchen Beruf die Person ausübt? "
                   },
                   {
                     type: "bold",
                     content: "Welchen Beruf hat die Person?"
                   },
                 ],
+              phoneSimulatorStep: 10,
+              title: "Profil",
                 answerboxes: [
                   { type: "text", answer: "Dieb", right: true },
                   { type: "text", answer: "Lehrer", right: false },
