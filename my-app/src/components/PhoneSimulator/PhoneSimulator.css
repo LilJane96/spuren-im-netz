@@ -9,14 +9,16 @@
 }
 
 .headerContainer {
-    display: flex;
-    justify-content: center;
-    background: #3C68A9;
-    color: white;
-    border-top-left-radius: 24px;
-    border-top-right-radius: 24px;
-    position: absolute;
-    width: 264px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #3C68A9;
+  color: white;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  position: absolute;
+  width: 264px;
+  height: 51px;
 }
 
 .sectionContainer {
@@ -30,6 +32,21 @@
   .section {
     height: 74vh;
     overflow-x: hidden;
+  }
+
+  section::-webkit-scrollbar {
+    width: 0;  /* Verstecke die Scrollbar in Webkit (Chrome, Safari) */
+  }
+  
+  .section {
+    scrollbar-width: none;  /* Verstecke die Scrollbar in Firefox */
+    -ms-overflow-style: none;  /* Verstecke die Scrollbar in IE/Edge */
+  }
+  
+  /* Falls benötigt: Stile für die inneren Inhalte, um den Inhalt scrollbar zu machen */
+  .section-content {
+    overflow-y: scroll;  /* Stelle sicher, dass der Inhalt scrollbar bleibt */
+    max-height: 74vh;  /* oder die gewünschte Höhe */
   }
   
   .bottombar {

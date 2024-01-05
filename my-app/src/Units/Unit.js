@@ -167,7 +167,7 @@ export default function UnitsArray() {
           {
             step: [
               { 
-                question: "Username",
+                question: "Message",
                 speachbubble: [
                   {
                     type: "paragraph",
@@ -184,16 +184,16 @@ export default function UnitsArray() {
                   { answer: "Akzeptieren", right: false },
                   { answer: "Ablehnen", right: true }
                 ],
-                rightAnswer: "Probiere es nochmal! ",
-                wrongAnswer: "Schade, versuche es nochmal!",
-                reason: "Wenn man nicht weiß woher eine Nachricht kommt, sollte man diese immer zuerst ablehnen."
+                rightAnswer: "Sehr gut!",
+                wrongAnswer: "Probiere es nochmal! ",
+                reason: "Es ist immer besser, zuerst die Anfrage abzulehnen, wenn man gar nicht weiß, wer hinter dieser Nachricht steckt."
               }
             ]
           },
           {
             step: [
               { 
-                question: "Passwort",
+                question: "Search",
                 speachbubble: [
                   {
                     type: "paragraph",
@@ -219,7 +219,7 @@ export default function UnitsArray() {
           {
             step: [
               { 
-                question: "Privatsphäre",
+                question: "User profile",
                 speachbubble: [
                   {
                     type: "paragraph",
@@ -245,7 +245,7 @@ export default function UnitsArray() {
           {
             step: [
               { 
-                question: "Profilbild",
+                question: "User Profile",
                 speachbubble: [
                   {
                     type: "paragraph",
@@ -263,20 +263,19 @@ export default function UnitsArray() {
                   { type: "text", answer: "12", right: false },
                   { type: "text", answer: "19", right: false },
                 ],
-                rightAnswer: "Ausgezeichnet!",
-                wrongAnswer: "Schade, versuche es nochmal!",
-                reason: "Wenn du ein Bild hochlädst, solltest du immer gut überlegen, was darauf zu sehen ist. Andere Menschen möchten vielleicht gar nicht, dass du ein Foto von Ihnen hochlädst. Dies ist auch verboten, man sollten die Personen immer zuerst fragen."
+                rightAnswer: "Super! Die Person ist 39 alt. Klasse gemacht!!",
+                wrongAnswer: "Guter Versuch! Aber leider stimmt das nicht. Probiere es nochmal!",
               }
             ]
         },
           {
             step: [
               { 
-                question: "Informationen",
+                question: "User profile",
                 speachbubble: [
                   {
                     type: "paragraph",
-                    content: "Oh, 39 Jahre alt? Das ist aber ganz schön alt. Alle meine Freunde sind viel jünger. Das ist schon sehr komisch. Kannst du mir noch sagen, welchen Beruf sie ausübt? "
+                    content: "Oh, 39 Jahre alt? Das ist aber ganz schön alt. Alle meine Freunde sind viel jünger. Das ist schon sehr komisch. Kannst du mir noch sagen, welchen Beruf die Person ausübt? "
                   },
                   {
                     type: "bold",

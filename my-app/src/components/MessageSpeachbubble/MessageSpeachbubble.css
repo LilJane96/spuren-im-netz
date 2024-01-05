@@ -1,10 +1,12 @@
 .MessageSpeachbubble div.bubble{
-    width: 190px;
+    width: 163px;
     color: white;
     background-color: #3C68A9;
     text-align: left;
     font-size: 15px;
     margin: 17px 20px 22px 20px;
+    padding: 10px 6px 9px 22px;
+    box-shadow: none;
 }
 
 .MessageSpeachbubble .container {

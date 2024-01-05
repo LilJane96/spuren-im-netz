@@ -55,7 +55,7 @@ export default function PhoneSimulator({title, content, selectedAnswer, nextPage
 
   return (
     <div className='phoneContainer'>
-      <ScrollContainer>
+      <ScrollContainer >
         <div className="sectionContainer">
           <section className="section">
             <div className='headerContainer'>
