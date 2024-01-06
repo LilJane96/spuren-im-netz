@@ -18,7 +18,7 @@
 
 .ProfileContainer .icon {
   width: 18px;
-  padding: 0 8px 0 0
+  padding: 0 8px 0 0;
 }
 
 .ImageGalleryOverlay .ProfileImage {
@@ -30,7 +30,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 70px 0 0 0;
+  margin: 55px 0 0 0;
 }
 
 .GalleryImage {
@@ -57,7 +57,7 @@
 }
 
 .GalleryImage.selected {
-  border-color: #3C68A9; 
+  border-color: #3c68a9;
 }
 
 .ImageBlock img {

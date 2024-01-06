@@ -1,6 +1,6 @@
 .bottombar {
   width: 243px;
-  background-color: rgba(249, 249, 249, 0.94);
+  background-color: rgba(249, 249, 249);
   display: flex;
   justify-content: space-between;
   padding: 10px;
