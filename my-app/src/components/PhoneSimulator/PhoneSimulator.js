@@ -1,17 +1,15 @@
-// PhoneSimulator.js
 import { ScrollContainer } from 'react-nice-scroll';
-import "./PhoneSimulator.css";
 import { useState } from 'react';
 import CreatePassword from './CreatePassword/CreatePassword';
 import CreateUserName from './CreateUserName/CreateUserName';
 import Privacy from './Privacy/Privacy';
-import PropTypes from 'prop-types';
 import UploadPicture from './UploadPicture/UploadPicture';
 import MyProfil from './MyProfil/MyProfil';
-import Bottombar from '../Bottombar/Bottombar';
 import MessageOfStranger from './MessageOfStranger/MessageOfStranger';
 import SearchPerson from './SearchPerson/SearchPerson';
 import UserProfile from './UserProfile/UserProfile';
+import "./PhoneSimulator.css";
+
 
 export default function PhoneSimulator({title, content, selectedAnswer, nextPage }) {
   const [currentPage, setCurrentPage] = useState(0);

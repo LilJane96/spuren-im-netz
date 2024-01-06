@@ -1,18 +1,18 @@
 .phoneContainer {
-    display: flex;
-    flex-direction: column;
-    height: 74vh;
-    border: 8px solid black;
-    border-radius: 32px;
-    background-color: white;
-    /* min-width: 252px; */
+  display: flex;
+  flex-direction: column;
+  height: 74vh;
+  border: 8px solid black;
+  border-radius: 32px;
+  background-color: white;
+  /* min-width: 252px; */
 }
 
-.headerContainer {
+.phoneContainer .headerContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #3C68A9;
+  background: #3c68a9;
   color: white;
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
@@ -21,36 +21,36 @@
   height: 51px;
 }
 
-.sectionContainer {
-    flex: 1; 
-    display: flex;
-    flex-direction: column;
-    width: 264px;
-    height: 557px;
-  }
+.phoneContainer .sectionContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 264px;
+  height: 557px;
+}
 
-  .section {
-    height: 74vh;
-    overflow-x: hidden;
-  }
+.phoneContainer .section {
+  height: 74vh;
+  overflow-x: hidden;
+}
 
-  section::-webkit-scrollbar {
-    width: 0;  /* Verstecke die Scrollbar in Webkit (Chrome, Safari) */
-  }
-  
-  .section {
-    scrollbar-width: none;  /* Verstecke die Scrollbar in Firefox */
-    -ms-overflow-style: none;  /* Verstecke die Scrollbar in IE/Edge */
-  }
-  
-  /* Falls benötigt: Stile für die inneren Inhalte, um den Inhalt scrollbar zu machen */
-  .section-content {
-    overflow-y: scroll;  /* Stelle sicher, dass der Inhalt scrollbar bleibt */
-    max-height: 74vh;  /* oder die gewünschte Höhe */
-  }
-  
-  .bottombar {
-    margin-top: auto; 
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-  }
+section::-webkit-scrollbar {
+  width: 0; /* Verstecke die Scrollbar in Webkit (Chrome, Safari) */
+}
+
+.section {
+  scrollbar-width: none; /* Verstecke die Scrollbar in Firefox */
+  -ms-overflow-style: none; /* Verstecke die Scrollbar in IE/Edge */
+}
+
+/* Falls benötigt: Stile für die inneren Inhalte, um den Inhalt scrollbar zu machen */
+.section-content {
+  overflow-y: scroll; /* Stelle sicher, dass der Inhalt scrollbar bleibt */
+  max-height: 74vh; /* oder die gewünschte Höhe */
+}
+
+.bottombar {
+  margin-top: auto;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}

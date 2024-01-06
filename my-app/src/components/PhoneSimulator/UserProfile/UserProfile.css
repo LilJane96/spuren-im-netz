@@ -1,108 +1,108 @@
 .UserProfileContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0;
 }
 
 .UserProfileContainer .flexContainer {
-    display: flex;
+  display: flex;
 }
 
 .UserProfileContainer .ProfilePicture {
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-    border-radius: 42px;
-    margin: 10px 0 10px 0;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 42px;
+  margin: 10px 0 10px 0;
 }
 
 .UserProfileContainer .ProfileImageContainer .text {
-    text-align: center;
-    margin: 0px;
-    font-size: 15px;
-    font-weight: bold;
+  text-align: center;
+  margin: 0px;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 .UserProfileContainer .flexContainer .textContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 18px 0px 15px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 18px 0px 15px 15px;
 }
 
-.UserProfileContainer .count{
-    margin: 0;
-    padding: 0;
-    font-weight: bold;
+.UserProfileContainer .count {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
 }
 
 .UserProfileContainer .text {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
-.UserProfileContainer ul li{
-    display: flex;
-    float: left;
-    margin: 4px 11px;
-    width: 40%;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+.UserProfileContainer ul li {
+  display: flex;
+  float: left;
+  margin: 4px 11px;
+  width: 40%;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
-.UserProfileContainer ul{
-    list-style-type: disc;
+.UserProfileContainer ul {
+  list-style-type: disc;
 }
 
 .UserProfileContainer .Line {
-    width: 250px;
-    height: 1px;
-    opacity: 0.34;
-    background: #000;
-    margin: 15px;
+  width: 250px;
+  height: 1px;
+  opacity: 0.34;
+  background: #000;
+  margin: 15px;
 }
 
 .UserProfileContainer .answerText {
-    margin: 0;
-    text-align: center;
-    height: 56px;
-    display: flex;
-    align-items: center;
+  margin: 0;
+  text-align: center;
+  height: 56px;
+  display: flex;
+  align-items: center;
 }
 
 .UserProfileContainer .ImageContainer {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .UserProfileContainer .ImageContainer li {
-    height: 115px;
+  height: 115px;
 }
 
 .UserProfileContainer .ImageContainer img {
-    width: 110px;
-    height: 110px;
-    object-fit: cover;
-    border-radius: 15px;
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 15px;
 }
 
-.UserProfileContainer .BottombarContainer{
-    position: absolute;
-    bottom: 82px;
+.UserProfileContainer .BottombarContainer {
+  position: absolute;
+  bottom: 82px;
 }
-
 
 .ImageScrollContainer {
-    margin: 10px 0;
+  margin: 10px 0;
 }
 
 .ImageScrollContainer .backBtn {
-    z-index: 999;
-    position: absolute;
-    left: 567px;
-    top: 131px;
-    color: white;
+  z-index: 999;
+  position: absolute;
+  left: 567px;
+  top: 131px;
+  color: white;
+  margin: 0 15px;
 }
