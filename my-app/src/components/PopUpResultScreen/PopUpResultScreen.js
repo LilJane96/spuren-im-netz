@@ -4,7 +4,9 @@ import OpenResultBox from "../../images/OpenResultBox.png";
 import CloseResultBox from "../../images/ClosedResultBox.png";
 import React, {useState} from "react";
 import CustomButton from "../Button/CustomButton";
-import GoodFoxResultReward from "../../images/GoodFoxResultReward.png"
+import ResultPopUpStar1 from "../../images/ResultPopUpStar1.png"
+import ResultPopUpStar2 from "../../images/ResultPopUpStar2.png"
+import ResultPopUpStar3 from "../../images/ResultPopUpStar3.png"
 
 export default function PopUpResultScreen({ open }) {
 
@@ -22,7 +24,7 @@ export default function PopUpResultScreen({ open }) {
     return (
         <div className="containerDialogResult">
             <Dialog
-                sx={{ '& .MuiDialog-paper': { width: '80%', height: 400 } }}
+                sx={{ '& .MuiDialog-paper': {overflow: 'inherit', width: '100%', height: 600 } }}
                 open={open}
                 maxWidth={"md"}
             >
@@ -35,8 +37,9 @@ export default function PopUpResultScreen({ open }) {
                 textAlign: 'center',
                 gap: '1'
             }} >
+                <div className="dialog-logo-outside "/>
                 {showText && (
-                    <DialogTitle textAlign={"center"} variant={"h4"}>Sehr gut 🌟 Du hast echt das Zeug zu einem Meisterdetektiv zu werden!
+                    <DialogTitle textAlign={"center"} variant={"h5"}>Sehr gut 🌟 Du hast echt das Zeug zu einem Meisterdetektiv zu werden!
                 </DialogTitle>
                     )}
                 {!showText && (
@@ -44,6 +47,13 @@ export default function PopUpResultScreen({ open }) {
                     Klasse gemacht!
                 </DialogContentText>
             )}
+                <div className="starContainer">
+                    <img src={ResultPopUpStar1} alt={""} className="leftStar" />
+                    <div className="rightStars">
+                        <img src={ResultPopUpStar2} alt={""} />
+                        <img src={ResultPopUpStar3} alt={""}/>
+                    </div>
+                </div>
                 <img  align={"center"} onClick={handleBoxOpen}  src={imageSrc} alt="ClosedBox" style={{width: imageSrcWidth, cursor: 'pointer', margin: '45px' }}/>
                 {showText && (
                     <DialogContentText variant={"h6"}>
@@ -58,13 +68,9 @@ export default function PopUpResultScreen({ open }) {
                 <DialogActions style={{justifyContent: "center" , marginBottom: 10}} >
                     <Link href="/hub"><CustomButton name="Weiter" type="primary"></CustomButton></Link>
                 </DialogActions>
-                <div className="GoodFoxResult">
-                    <img src={GoodFoxResultReward} alt="GoodFoxResult" />
-                </div>
             </DialogContent>
                 </div>
             </Dialog>
-
         </div>
     );
 }

@@ -19,6 +19,25 @@
 .DialogTitle {
     font-size: medium;
 }
-.GoodFoxResult {
-    margin-right: 100px;
+.dialog-logo-outside {
+    width: 238px;
+    height: 398px;
+    left: -210px;
+    top: 45px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url("../../images/GoodFoxResultReward.png");
+}
+.starContainer {
+    display: flex;
+    align-items: center;
+}
+
+.leftStar {
+    margin-right: 10px; /* Ändere dies nach Bedarf, um den Abstand zwischen den Sternen anzupassen */
+}
+
+.rightStars {
+    display: flex;
 }
