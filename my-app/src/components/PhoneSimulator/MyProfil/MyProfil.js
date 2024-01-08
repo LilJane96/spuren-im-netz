@@ -37,7 +37,7 @@ export default function MyProfil({answer}) {
                 </div>
             </div>
             <div>
-                {answer ? (<p className="answerText">{answer}</p>) : (<p className="answerText">The users picked bio text<br /> should be displayed here!</p>)}
+                {answer ? (<p className="answerText">{answer}</p>) : (<p className="answerText"><br/></p>)}
             </div>
             <div>
                  <div>

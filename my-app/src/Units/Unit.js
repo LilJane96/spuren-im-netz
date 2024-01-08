@@ -28,7 +28,8 @@ export default function UnitsArray() {
                 { answer: "Something", right: false }
               ],
               rightAnswer: "Super! Das ist ein sehr guter Name.",
-              wrongAnswer: "Schade, versuche es nochmal!"
+              wrongAnswer: "Schade, versuche es nochmal! Dieser Name ist nicht gut. " +
+                  "Denk daran, dass es wichtig ist, einen Namen zu wählen, der persönlich ist, aber gleichzeitig deine Identität schützt"
             }
           ]
         },
@@ -58,8 +59,8 @@ export default function UnitsArray() {
                 { type: "text", answer: "meinName123", right: false },
               ],
               rightAnswer: "Super! Das ist ein sehr gutes Passwort. ",
-              wrongAnswer: "Schade, versuche es nochmal!",
-              reason: "Du hast viele verschiedene Zeichen verwendet. Das wird es einem Hacker schwer machen, dass Passwort zu knacken."
+              wrongAnswer: "Probiere es noch einmal!",
+              reason: "Ein Passwort sollte immer aus möglichst vielen Zeichen bestehen. Dafür verwendet man Buchstaben, Zahlen und Sonderzeichen wie z.B. !$%."
             }
           ]
         },
@@ -117,7 +118,7 @@ export default function UnitsArray() {
               { type: "image", answer: "natureIMG.png", imgAnswer: "Natur", right: true },
               { type: "image", answer: "portraitIMG.png", imgAnswer: "Dein Porträt", right: false },
               { type: "image", answer: "friendsIMG.png", imgAnswer: "Dein/-e  Freund/-in", right: false },
-              { type: "image", answer: "petsIMG.png", imgAnswer: "Dein Haustier", right: false },
+              { type: "image", answer: "petsIMG.png", imgAnswer: "Dein Haustier", right: true },
 
 
               ],
@@ -150,11 +151,11 @@ export default function UnitsArray() {
               answerboxes: [
                 { type: "text", answer: <span>13 <br />📍Hermann Butzer Schule</span>, right: false },
                 { type: "text", answer: "Fußballliebhaber ⚽ | Künstler 🎨 ", right: true },
-                { type: "text", answer: "*beleidigender Sprache oder  unangemessene Inhalte*", right: false },
+                { type: "text", answer: "Alter und Adresse von meinen Freunden", right: false },
               ],
               rightAnswer: "Super! Jetzt haben wir alle wichtigen Informationen in die Bio eingetragen.",
               wrongAnswer: "Schade, versuche es nochmal!",
-              reason: "Sie verraten nicht zu viel über dich und du achtest auf die Privatssphäre von anderen."
+              reason: "Wenn du Informationen auf deinem Profil über dich selbst mit anderen teilst, solltest du immer darauf achten, dass nicht zu viel über dich verraten wird. Du solltest auch keine Informationen über andere in deinem Profil teilen."
             }
           ]
           },
@@ -235,9 +236,9 @@ export default function UnitsArray() {
                 answerboxes: [
                   { answer: "Stuttgart", right: false },
                   { answer: "Standort", right: true },
-                  { answer: "Hannover", right: false },
+                  { answer: "Berlin", right: false },
                 ],
-                rightAnswer: "Ausgezeichnet! Die Person stammt aus “Ort”. Nun sind wir schon einen wichtigen Schritt weiter.",
+                rightAnswer: "Ausgezeichnet! Die Person stammt aus Standort. Das ist ganz schön merkwürdig, ich kenne niemanden aus dieser Stadt. Nun sind wir schon einen wichtigen Schritt weiter.",
                 wrongAnswer: "Probiere es nochmal! Die Person stammt von einem anderen Ort",
               }
             ]
@@ -289,9 +290,9 @@ export default function UnitsArray() {
                   { type: "text", answer: "Lehrer", right: false },
                   { type: "text", answer: "Schauspieler", right: false },
                 ],
-                rightAnswer: "Super! Jetzt haben wir alle wichtigen Informationen in die Bio eingetragen.",
+                rightAnswer: "Super! Das ist die richtige Antwort",
                 wrongAnswer: "Schade, versuche es nochmal!",
-                reason: "Sie verraten nicht zu viel über dich und du achtest auf die Privatssphäre von anderen."
+                reason: "Auf vielen Profilen kann man über eine Person Informationen sammeln. Dazu muss man nur mal die Posts anschauen."
               }
             ]
             },

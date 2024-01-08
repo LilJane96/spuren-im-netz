@@ -1,11 +1,16 @@
 import Backpack from "../../../images/ProfileImages/Backpack.png";
-import Bike from "../../../images/ProfileImages/Bike.png";
+import Bike from "../../../images/ProfileImages/Bike.jpg";
+import DVD from "../../../images/ProfileImages/DVD.jpeg";
+import Playstation from "../../../images/ProfileImages/Playstation.jpeg";
 import Breakfast from "../../../images/ProfileImages/Breakfast.png";
-import Vaccation from "../../../images/ProfileImages/Vaccation.png";
+import Vacation from "../../../images/ProfileImages/Vacation.jpg";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import Profilepicture from "../../../images/SearchPearsonImages/Annonym.png";
 import ImageOne from "../../../images/image1.jpg";
 import ImageTwo from "../../../images/image2.jpg";
+import Ring from "../../../images/ProfileImages/Ring.jpg";
+import Grill from "../../../images/ProfileImages/Grill.jpg";
+import HausPlaystation from "../../../images/ProfileImages/HausPlaystation.jpg";
 import ImageThree from "../../../images/image3.jpg";
 import ImageFour from "../../../images/image4.jpg";
 import Bottombar from "../../Bottombar/Bottombar";
@@ -19,13 +24,13 @@ const images = [
     img: Backpack,
     text: "Schaut mal, Leute, diese Person hat ihren Rucksack nicht sicher aufbewahrt 🔒 ... er gehört jetzt mir, haha",
   },
-  { id: 2, img: Bike, text: "Bike Image" },
-  { id: 3, img: Breakfast, text: "Breakfast Image" },
-  { id: 4, img: Vaccation, text: "Vaccation Image" },
-  { id: 5, img: ImageOne, text: "ImageOne Image" },
-  { id: 6, img: ImageTwo, text: "ImageTwo Image" },
-  { id: 7, img: ImageThree, text: "ImageThree Image" },
-  { id: 8, img: ImageFour, text: "ImageFour Image" },
+  { id: 2, img: Bike, text: "Mein neues Fahrrad. Stand hier einfach nur rum, so ein nettes Geschenk." },
+  { id: 3, img: DVD, text: "Verkaufe hier gut erhaltene DVDs. Wie neu! 5 Euro das Stück" },
+  { id: 4, img: Vacation, text: "Urlaub ist sehr schön!" },
+  { id: 5, img: Playstation, text: "Habt ihr auch schon die neue PS5? Mein Nachbar hat sie einfach nicht mehr gebraucht, haha :D" },
+  { id: 6, img: Ring, text: "Glitzert so schön. Noch einer davon und dann ab in den Urlauuub :) :) :)" },
+  { id: 7, img: Grill, text: "Meint ihr das lohnt sich? Hm, muss ich nochmal einen Kollegen fragen." },
+  { id: 8, img: HausPlaystation, text: "Hab hier gerade im Wohnzimmer eine schöne Playstation 5 entdeckt, würde soooo gerne auch eine haben!" },
 ];
 
 export default function UserProfile({ answer }) {
