@@ -41,6 +41,7 @@ function Home() {
                     Sei sicher im Internet unterwegs!
                 </p>
                 <Link href="/hub"><CustomButton name="Start" type="primary"></CustomButton></Link>
+
             </div>
 
         </div>

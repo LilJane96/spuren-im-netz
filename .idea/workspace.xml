@@ -6,10 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="ac1a0cd9-18f7-49cb-a7b5-8e02d10bfadc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/PopUpResultScreen/PopUpResultScreen.css" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/PopUpResultScreen/PopUpResultScreen.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/PopUpResultScreen/PopUpResultScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/PopUpResultScreen/PopUpResultScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/Units/Unit.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/Units/Unit.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/components/PhoneSimulator/MyProfil/MyProfil.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/PhoneSimulator/MyProfil/MyProfil.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/components/PhoneSimulator/UserProfile/UserProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/PhoneSimulator/UserProfile/UserProfile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/images/ProfileImages/Bike.png" beforeDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +29,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -74,6 +83,7 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Julian\WebstormProjects\spuren-im-netz\my-app\src\images\ProfileImages" />
       <recent name="C:\Users\Julian\WebstormProjects\spuren-im-netz\my-app\src\images" />
+      <recent name="C:\Users\julia\Documents\StudiumMM7_6.Semester\spuren-im-netz_2\my-app\src\images" />
       <recent name="C:\Users\Julian\WebstormProjects\spuren-im-netz\my-app\public\images" />
     </key>
   </component>
@@ -163,6 +173,8 @@
       <workItem from="1702907513548" duration="2783000" />
       <workItem from="1702917595828" duration="7565000" />
       <workItem from="1703007357471" duration="2895000" />
+      <workItem from="1703501995151" duration="4605000" />
+      <workItem from="1704195537074" duration="1068000" />
     </task>
     <servers />
   </component>
