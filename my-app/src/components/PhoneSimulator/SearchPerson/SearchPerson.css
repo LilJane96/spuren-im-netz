@@ -1,0 +1,49 @@
+.SearchPersonContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.SearchPersonContainer .SearchbarContainer {
+    margin: 25px 0;
+}
+
+.SearchPersonContainer .PersonsList {
+    margin: 0;
+    padding: 0;
+}
+
+.SearchPersonContainer .PersonsList li {
+    list-style: none;
+    width: 238px;
+    height: 46px;
+    border-radius: 8px;
+    background: #F1F1F1;
+    margin: 12px 0px;
+    display: flex;
+    align-items: center;
+    padding: 7px 4px;
+    justify-content: space-between;
+}
+.SearchPersonContainer .ProfilePicture {
+    border-radius: 30px;
+}
+
+.left-content {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.right-content {
+    margin: 10px;
+}
+
+.left-content .name {
+    margin: 10px;
+}
+
+.SearchPersonContainer .PersonsList .selected {
+    background-color: rgb(202, 202, 215) !important; 
+  }

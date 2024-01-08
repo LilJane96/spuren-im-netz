@@ -1,31 +1,30 @@
-.hub{
-    position: relative;
+.hub {
+  position: relative;
 }
 
-
-.fox{
-    position: absolute;
-    left: 45px;
-    top: 45px;  
-    border: 6px solid #4E4E4E;
-    border-radius: 60px;
+.fox {
+  position: absolute;
+  left: 45px;
+  top: 45px;
+  border: 6px solid #4e4e4e;
+  border-radius: 60px;
+  cursor: pointer;
 }
 
-.backpack{
-    position: absolute;
-    right: 45px;
-    top: 45px;
+.backpack {
+  position: absolute;
+  right: 45px;
+  top: 45px;
 }
 
-.map{
-    position: absolute;
-    right: 0;
-    top:150px;
+.map {
+  position: absolute;
+  right: 0;
+  top: 150px;
 }
 
-.pinOne{
-    position: absolute;
-    top: 230px;
-    left: 530px;
+.pinOne {
+  position: absolute;
+  top: 230px;
+  left: 530px;
 }
-

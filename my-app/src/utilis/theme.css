@@ -1,0 +1,44 @@
+:root {
+    --background-default: #FFFFFF; /* Standard-Hintergrundfarbe */
+    --background-blue: #003148; /* Hintergrundfarbe für 'blue' */
+    /* Füge hier weitere Farbvariablen für andere Themes hinzu, wenn benötigt */
+}
+
+[data-theme='default'] {
+    --background: #FFF174;
+    --background-img: url("../images/BackgroundImageYellow.png");    
+    --box-shadow: #C9BC48;
+    --button-bg-color: linear-gradient(90deg, #DB94F3 0%, #c687d1 100%);
+    --button-bg-color-disabled: linear-gradient(90deg, #DB94F3 0%, #c687d1 46%);
+    --button-before-back-disabled: rgba(235, 219, 77, 0.50);
+    --button-before-back: rgba(235, 219, 77, 1);
+    --button-before: rgba(159, 47, 197, 1);
+    --button-before-disabled: rgba(159, 47, 197, 0.50);
+
+}
+
+[data-theme='blue'] {
+    --background: #E3F6FF;
+    --background-img: url("../images/BackgroundImageBlue.png");    
+    --box-shadow: #D3BCDC;
+    --button-bg-color: linear-gradient(90deg, #9FDDFD 0%, #00A6FB 100%);
+    --button-bg-color-disabled: linear-gradient(90deg, #9FDDFD 0%, #00A6FB 46%);
+    --button-before-back-disabled: #DEBFE9;
+    --button-before: #2A6D8F;
+    --button-before-back: #D3BCDC;
+    --button-before: #2A6D8F;
+    --button-before-disabled: #2a6d8fd1;
+
+}
+
+[data-theme='yellow'] {
+    --background: #FFF174;
+    --background-img: url("../images/BackgroundImageYellow.png");    
+    --box-shadow: #C9BC48;
+    --button-bg-color: linear-gradient(90deg, #DB94F3 0%, #c687d1 100%);
+    --button-bg-color-disabled: linear-gradient(90deg, #DB94F3 0%, #c687d1 46%);
+    --button-before-back-disabled: rgba(235, 219, 77, 0.50);
+    --button-before-back: rgba(235, 219, 77, 1);
+    --button-before: rgba(159, 47, 197, 1);
+    --button-before-disabled: rgba(159, 47, 197, 0.7);
+}

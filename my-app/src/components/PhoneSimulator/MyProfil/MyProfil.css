@@ -1,10 +1,11 @@
 .MyProfilContainer {
+    margin: 50px 0 0 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.flexContainer {
+.MyProfilContainer .flexContainer {
     display: flex;
 }
 
@@ -16,33 +17,33 @@
     margin: 10px 0 10px 0;
 }
 
-.ImageContainer {
+.MyProfilContainer .ImageContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.ImageContainer .text {
+.MyProfilContainer .ImageContainer .text {
     text-align: center;
     margin: 0px;
     font-size: 15px;
     font-weight: bold;
 }
 
-.flexContainer .textContainer {
+.MyProfilContainer .flexContainer .textContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 18px 5px 15px 5px;
 }
 
-.count{
+.MyProfilContainer .count{
     margin: 0;
     padding: 0;
     font-weight: bold;
 }
 
-.text {
+.MyProfilContainer .text {
     margin: 0;
     padding: 0;
 }
@@ -55,10 +56,15 @@
     margin: 15px;
 }
 
-.answerText {
+.MyProfilContainer .answerText {
     margin: 0;
     text-align: center;
     height: 56px;
     display: flex;
     align-items: center;
+}
+
+.BottombarContainer{
+    position: absolute;
+    bottom: 82px;
 }

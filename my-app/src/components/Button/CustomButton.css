@@ -14,26 +14,26 @@ button {
 }
 
 button.PrimaryButton:disabled {
-  background: linear-gradient(90deg, #DB94F3 0%, #c687d1 100%) 46%;
-  color: #FFFFFF99;
+  background: var(--button-bg-color-disabled);
+  color: #ffffff99;
 }
 
 button.PrimaryButton:disabled::before {
-  background: rgba(159, 47, 197, 0.6);
+  background: var(--button-before-disabled);
 }
 
 button.PrimaryButton {
-    padding: 14px 51px;
-    border-radius: 1.3em;
-    font-weight: 700;
-    color: white;
-    text-transform: uppercase;
-    background: linear-gradient(90deg, #DB94F3 0%, #BF56E3 100%);
-    transform-style: preserve-3d;
-    transition: .15s cubic-bezier(0, 0, .6, 1);
+  padding: 14px 51px;
+  border-radius: 1.3em;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  background: var(--button-bg-color);
+  transform-style: preserve-3d;
+  transition: 0.15s cubic-bezier(0, 0, 0.6, 1);
 }
 button.PrimaryButton::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   right: 0;
@@ -42,140 +42,142 @@ button.PrimaryButton::before {
   width: 100%;
   height: 100%;
   border-radius: inherit;
-  background: #9F2FC5;
-  transform: translate3d(0, .5em, -1em);
-  transition: .15s cubic-bezier(0, 0, .6, 1);
+  background: var(--button-before);
+  transform: translate3d(0, 0.5em, -1em);
+  transition: 0.15s cubic-bezier(0, 0, 0.6, 1);
+}
+
+button.PrimaryButton:disabled:hover {
+  transform: none;
+}
+
+button.PrimaryButton:disabled:active {
+  transform: none;
 }
 
 button.PrimaryButton:hover {
-  transform: translate(0, .25em);
+  transform: translate(0, 0.25em);
 }
 
 button.PrimaryButton:hover::before {
-  transform: translate3d(0, .5em, -1em);
+  transform: translate3d(0, 0.5em, -1em);
 }
 button.PrimaryButton:active {
-  transform: translate(0, .75em);
-}
-button.PrimaryButton:active::before {
-  box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
-  transform: translate3d(0, 0, -1em);
+  transform: translate(0, 0.75em);
 }
 
 /*Secondary Button*/
-  button.SecondaryButton {
-    width: 170px;
-    height: 32px;
-    padding: 0px;
-    border: 2px solid #B5E6FF;
-    border-radius: 1.3em;
-    font-weight: 700;
-    color: black;
-    text-transform: uppercase;
-    background: #B5E6FF;
-    transform-style: preserve-3d;
-    transition: .15s cubic-bezier(0, 0, .6, 1);
-    font-size: 12px;
-  }
-  
-  button.SecondaryButton::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: inherit;
-    background: #8BC0DB;
-    transform: translate3d(0, .5em, -1em);
-    transition: .15s cubic-bezier(0, 0, .6, 1);
-  }
-  
-  button.SecondaryButton:hover {
-    background: #B5E6FF;
-    transform: translate(0, .25em);
-  }
-  
-  button.SecondaryButton:hover::before {
-    transform: translate3d(0, .5em, -1em);
-  }
-  
-  button.SecondaryButton:active {
-    background: #B5E6FF;
-    transform: translate(0, .75em);
-  }
-  
-  button.SecondaryButton:active::before {
-    box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
-    transform: translate3d(0, 0, -1em);
-  }
-
-
-  /*Tertiary Button*/
-  button.TertiaryButton:disabled {
-    background: linear-gradient(90deg, #ffffff 0%, #e4e4e4 100%) 46%;
-    color: #555555;
-  }
-  
-  button.TertiaryButton:disabled::before {
-    background: #EBDB4D;
-  }
-  
-  button.TertiaryButton {
-      padding: 14px 51px;
-      border-radius: 1.3em;
-      font-weight: 700;
-      color: black;
-      text-transform: uppercase;
-      background: linear-gradient(90deg, #ffffff 0%, #ffffff 100%);
-      transform-style: preserve-3d;
-      transition: .15s cubic-bezier(0, 0, .6, 1);
-  }
-  button.TertiaryButton::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: inherit;
-    background: #EBDB4D;
-    transform: translate3d(0, .5em, -1em);
-    transition: .15s cubic-bezier(0, 0, .6, 1);
-  }
-  
-  button.TertiaryButton:hover {
-    transform: translate(0, .25em);
-  }
-  
-  button.TertiaryButton:hover::before {
-    transform: translate3d(0, .5em, -1em);
-  }
-  button.TertiaryButton:active {
-    transform: translate(0, .75em);
-  }
-  button.TertiaryButton:active::before {
-    box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
-    transform: translate3d(0, 0, -1em);
-  }
-
-
-  /*Quaternary Button*/
-  button.QuaternaryButton {
-    margin: 20px;
-    width: 260px;
-    padding: 13px 51px;
-    border: 2px solid black;
-    border-radius: 0.75em;
-    font-weight: 700;
-    color: black;
-    text-transform: uppercase;
-    background: white;
-    transform-style: preserve-3d;
-    transition: .15s cubic-bezier(0, 0, .6, 1);
+button.SecondaryButton {
+  width: 170px;
+  height: 32px;
+  padding: 0px;
+  border: 2px solid #b5e6ff;
+  border-radius: 1.3em;
+  font-weight: 700;
+  color: black;
+  text-transform: uppercase;
+  background: #b5e6ff;
+  transform-style: preserve-3d;
+  transition: 0.15s cubic-bezier(0, 0, 0.6, 1);
+  font-size: 12px;
 }
 
+button.SecondaryButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: #8bc0db;
+  transform: translate3d(0, 0.5em, -1em);
+  transition: 0.15s cubic-bezier(0, 0, 0.6, 1);
+}
+
+button.SecondaryButton:hover {
+  background: #b5e6ff;
+  transform: translate(0, 0.25em);
+}
+
+button.SecondaryButton:hover::before {
+  transform: translate3d(0, 0.5em, -1em);
+}
+
+button.SecondaryButton:active {
+  background: #b5e6ff;
+  transform: translate(0, 0.75em);
+}
+
+/* button.SecondaryButton:active::before {
+    box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+    transform: translate3d(0, 0, -1em);
+  } */
+
+/*Tertiary Button*/
+button.TertiaryButton:disabled {
+  background: linear-gradient(90deg, #ffffff 0%, #e4e4e4 100%) 46%;
+  color: #555555;
+}
+
+button.TertiaryButton:disabled::before {
+  background: var(--button-before-back-disabled);
+}
+
+button.TertiaryButton {
+  padding: 14px 51px;
+  border-radius: 1.3em;
+  font-weight: 700;
+  color: black;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #ffffff 0%, #ffffff 100%);
+  transform-style: preserve-3d;
+  transition: 0.15s cubic-bezier(0, 0, 0.6, 1);
+}
+button.TertiaryButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--button-before-back);
+  transform: translate3d(0, 0.5em, -1em);
+  transition: 0.15s cubic-bezier(0, 0, 0.6, 1);
+}
+
+button.TertiaryButton:hover {
+  transform: translate(0, 0.25em);
+}
+
+button.TertiaryButton:hover::before {
+  transform: translate3d(0, 0.5em, -1em);
+}
+button.TertiaryButton:active {
+  transform: translate(0, 0.75em);
+}
+
+button.TertiaryButton:disabled:hover {
+  transform: none;
+}
+
+button.TertiaryButton:disabled:active {
+  transform: none;
+}
+
+button.QuaternaryButton {
+  background: white url(../../images/CrossButton.svg) center/contain no-repeat;
+  background-size: 50%;
+  width: 65px;
+  height: 65px;
+  padding: 0;
+  margin: 0 0 0 30px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 6px #d2d2d2;
+  z-index: 999;
+}

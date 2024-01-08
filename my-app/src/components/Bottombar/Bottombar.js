@@ -8,18 +8,18 @@ import './Bottombar.css'; // Du kannst eine separate CSS-Datei für die Styles e
 const Bottombar = () => {
   return (
     <div className="bottombar">
-      <a href="#">
+      <div>
         <HomeRoundedIcon />
-      </a>
-      <a href="#">
+      </div>
+      <div>
         <SearchRoundedIcon />
-      </a>
-      <a href="#">
+      </div>
+      <div>
         <AddRoundedIcon />
-      </a>
-      <a href="#">
+      </div>
+      <div>
         <AccountCircleRoundedIcon />
-      </a>
+      </div>
     </div>
   );
 };

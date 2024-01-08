@@ -3,7 +3,7 @@ import Speachbubble from "../../components/Speachbubble/Speachbubble";
 import PhoneSimulator from "../../components/PhoneSimulator/PhoneSimulator";
 import AnswerBoxes from "../../components/AnswerBoxes/AnswerBoxes";
 import Stepper from "../../components/Stepper/Stepper";
-import { findUnitById } from '../../Units/Unit';
+import UnitsArray from '../../Units/Unit';
 import CustomButton from "../../components/Button/CustomButton";
 import { useNavigate, useParams } from 'react-router-dom';
 import { Link } from "@mui/material";
@@ -19,32 +19,24 @@ const [speachbubbleText, setSpeachbubbleText] = useState("");
 const [count, setCount] = useState(0);
 const { unitId, stepId } = useParams();
 const [currentUnitData, setCurrentUnitData] = useState(null);
-
-
 const [currentStep, setCurrentStep] = useState(1);
 const navigate = useNavigate();
 
 useEffect(() => {
-  // Setze den aktuellen Schritt basierend auf der URL
   const stepFromUrl = parseInt(stepId.replace('step', ''), 10) || 1;
   setCurrentStep(stepFromUrl);
 }, [stepId]);
 
 useEffect(() => {
-  // Setze den aktuellen Task-Index basierend auf dem aktuellen Schritt
   const taskIndex = currentStep - 1;
   setCurrentTaskIndex(taskIndex);
 }, [currentStep]);
 
 useEffect(() => {
-  // Setze die Unit-Daten basierend auf der Unit-ID
-  const fetchData = async () => {
-    const data = await findUnitById(unitId);
-    setCurrentUnitData(data);
-  };
-
-  fetchData();
+  const unitData = UnitsArray().find((unit) => unit.name === unitId);
+  setCurrentUnitData(unitData);
 }, [unitId]);
+
 
 let units = JSON.parse(localStorage.getItem("UnitsArray")) || {};
 
@@ -81,7 +73,6 @@ const handleSubmit = (question, answer, isCorrect, rightAnswer, wrongAnswer, rea
     setCount(prevCount => prevCount + 1);
   }
 
- // Hinzufügen des taskIndex zu jeder Antwort
  const newItem = {
   question: question,
   answer: answer,
@@ -90,7 +81,6 @@ const handleSubmit = (question, answer, isCorrect, rightAnswer, wrongAnswer, rea
   wrongAttempts: count,
 };
 
-// Increment attempts count
 units[unitId].attempts++;
 
 const existingAnswerIndex = findAnswerIndex(currentTaskIndex);
@@ -146,11 +136,16 @@ const handleNextTask = () => {
     }
   };
 
+  const handleEndUnit = () => {
+    navigate(`/hub`);
+  }
+
 
   return (
     <div className="frameOneContainer">
       <div className="stepperContainer">
         <Stepper currentStep={currentStep} totalSteps={totalTasks} />
+        <CustomButton type="quaternary" onClick={handleEndUnit}/>
       </div>
       <div className="frameContainer">
         {currentUnitData.task.map((tasks, index) => (
@@ -161,7 +156,7 @@ const handleNextTask = () => {
                 {tasks.step.map((step, stepIndex) => (
                   step.speachbubble && <Speachbubble key={stepIndex} text={speachbubbleText || step.speachbubble} reason={reasonText} />
                 ))}
-                <PhoneSimulator content={currentStep} selectedAnswer={selectedAnswer} nextPage={nextSimulatorPage} />
+                <PhoneSimulator title={tasks.step.map((obj) => obj.title)} content={tasks.step.map((obj) => obj.phoneSimulatorStep)} selectedAnswer={selectedAnswer} nextPage={currentStep} />
                 <div className="boxContainer">
                   <div className={`answerContainer ${answersLength[index] >= 4 ? "fourOrMore" : "smallerThenFour"}`}>
                     {tasks.step.map((answer, stepIndex) => (
@@ -190,12 +185,19 @@ const handleNextTask = () => {
                       <CustomButton onClick={handleGoBack} name="Zurück" type="tertiary" disabled></CustomButton>
                     )}
                     {currentTaskIndex < totalTasks - 1 ? (
-                      selectedAnswer === "" ? <CustomButton onClick={handleNextTask} name="Weiter" type="primary" disabled></CustomButton> : <CustomButton onClick={handleNextTask} name="Weiter" type="primary"></CustomButton>
-
+                      selectedAnswer === "" || !units[unitId]?.answers[currentTaskIndex]?.isCorrect ? (
+                        <CustomButton onClick={handleNextTask} name="Weiter" type="primary" disabled></CustomButton>
+                      ) : (
+                        <CustomButton onClick={handleNextTask} name="Weiter" type="primary"></CustomButton>
+                      )
                     ) : (
-                      <Link href={`/result/${unitId}/step1`}>
+                      selectedAnswer === "" || !units[unitId]?.answers[currentTaskIndex]?.isCorrect ?
+                      <CustomButton name="Unit beenden" type="primary" disabled={true}/>
+                       :
+                       <Link href={`/result/${unitId}/step1`}>
                         <CustomButton name="Unit beenden" type="primary" />
                       </Link>
+                      
                     )}
 
                   </div>
