@@ -35,9 +35,13 @@
 }
 
 .leftStar {
-    margin-right: 10px; /* Ändere dies nach Bedarf, um den Abstand zwischen den Sternen anzupassen */
+    position: absolute;
+    left: 95px;
+    top: 145px;
 }
 
 .rightStars {
-    display: flex;
+    position: absolute;
+    right: 100px;
+    top: 225px;
 }

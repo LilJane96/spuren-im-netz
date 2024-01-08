@@ -56,7 +56,7 @@ export default function PopUpResultScreen({ open }) {
                 </div>
                 <img  align={"center"} onClick={handleBoxOpen}  src={imageSrc} alt="ClosedBox" style={{width: imageSrcWidth, cursor: 'pointer', margin: '45px' }}/>
                 {showText && (
-                    <DialogContentText variant={"h6"}>
+                    <DialogContentText style={{justifyContent: "center" , marginTop: 20, marginBottom: 10}} variant={"h5"} >
                         Klicke auf die Schatztruhe, um deine Belohnung einzusammeln!
                     </DialogContentText>
                 )}
@@ -65,8 +65,8 @@ export default function PopUpResultScreen({ open }) {
                         Du hast eine Lupe erhalten!
                     </DialogContentText>
                 )}
-                <DialogActions style={{justifyContent: "center" , marginBottom: 10}} >
-                    <Link href="/hub"><CustomButton name="Weiter" type="primary"></CustomButton></Link>
+                <DialogActions style={{justifyContent: "center" , marginTop: 20, marginBottom: 10}} >
+                    <Link href="/hub"><CustomButton name="Weiter" type="primary" style={{ width: '200px' }}></CustomButton></Link>
                 </DialogActions>
             </DialogContent>
                 </div>

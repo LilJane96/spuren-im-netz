@@ -11,7 +11,6 @@ import PopUpResultScreen from "../../components/PopUpResultScreen/PopUpResultScr
 
 
 function Hub() {
-
     const [open, setOpen] = useState(false);
     const handleOpenPopup = () => {
         setOpen(true);
@@ -28,9 +27,6 @@ function Hub() {
             </div>
             <div>
                 <PopUpChooseName open={false}></PopUpChooseName>
-            </div>
-            <div>
-                <PopUpResultScreen open={open}></PopUpResultScreen>
             </div>
         </div>
     </>
