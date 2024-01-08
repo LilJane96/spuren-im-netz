@@ -24,7 +24,21 @@
 }
 
 .pinOne {
+  cursor: pointer;
   position: absolute;
   top: 230px;
   left: 530px;
+}
+
+.pinTwoInactive {
+  position: absolute;
+  top: 420px;
+  left: 670px;
+}
+
+.pinTwo {
+  cursor: pointer;
+  position: absolute;
+  top: 330px;
+  left: 750px;
 }
