@@ -5,6 +5,10 @@ import Soccer from "../../images/ProfileImages/Soccer.png";
 import Cube from "../../images/ProfileImages/Cube.png";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import FoxProfilePic from "../../images/ProfileImages/FoxProfilePic.png";
+import HomeGoodFox from "../../images/HomeGoodFox.jpg";
+import TablesGoodFox from "../../images/TablesGoodFox.jpg";
+import PuzzleGoodFox from "../../images/PuzzleGoodFox.jpg";
+import ForestWalkGoodFox from "../../images/ForestWalkGoodFox.jpg";
 import ImageOne from "../../images/image1.jpg";
 import ImageTwo from "../../images/image2.jpg";
 import ImageThree from "../../images/image3.jpg";
@@ -19,12 +23,12 @@ const images = [
   {
     id: 1,
     img: House,
-    text: "Home Sweet Home",
+    text: "Mein Zuhause!",
   },
-  { id: 2, img: Puzzle, text: "Puzzle Image" },
-  { id: 3, img: Soccer, text: "Soccer Image" },
-  { id: 4, img: Cube, text: "Cube Image" },
-  { id: 5, img: ImageOne, text: "ImageOne Image" },
+  { id: 2, img: PuzzleGoodFox, text: "Mein Lieblingshobby!" },
+  { id: 3, img: TablesGoodFox, text: "Meine guten Freunde Elias und Niklas beim Tischkicker spielen." },
+  { id: 4, img: HomeGoodFox, text: "Lange Straße 15 in Berlin, Herr Müller. So ein schönes Haus!" },
+  { id: 5, img: ForestWalkGoodFox, text: "Schaut mal Leute, ich habe heute diese Menschen an meinem Haus vorbeilaufen gesehen und direkt ein Foto gemacht :D" },
   { id: 6, img: ImageTwo, text: "ImageTwo Image" },
   { id: 7, img: ImageThree, text: "ImageThree Image" },
   { id: 8, img: ImageFour, text: "ImageFour Image" },
@@ -108,8 +112,8 @@ export default function GoodFoxProfile({ open, onClose }) {
                           <div>
                             <p className="answerText">
                               <span>
-                                🦊 Pixel | 21 | 🕵️ Social media detective <br />
-                                📍 The wild forest 24, Oak 3 <br />
+                                🦊 Pixel | 21 | 🕵️ Detektiv für Soziale Medien <br />
+                                📍 Im Wald 24, Eiche 3 <br />
                                 🇩🇪 Deutschland
                               </span>
                             </p>
