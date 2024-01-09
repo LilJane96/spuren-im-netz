@@ -23,9 +23,9 @@ export default function UnitsArray() {
               phoneSimulatorStep: 1,
               title: "Erstelle einen Account",
               answerboxes: [
-                { answer: userName, right: true },
-                { answer: "User123", right: false },
-                { answer: "Something", right: false }
+                { answer: userName, right: false },
+                { answer: "Fußballstar oder MegaMaler", right: true },
+                { answer: "Name meiner Oma ", right: false }
               ],
               rightAnswer: "Super! Das ist ein sehr guter Name.",
               wrongAnswer: "Schade, versuche es nochmal! Dieser Name ist nicht gut. " +
