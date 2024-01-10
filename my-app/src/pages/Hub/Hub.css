@@ -9,12 +9,15 @@
   border: 6px solid #4e4e4e;
   border-radius: 60px;
   cursor: pointer;
+  z-index: 3;
 }
 
 .backpack {
+  cursor: pointer;
   position: absolute;
   right: 45px;
   top: 45px;
+  z-index: 3;
 }
 
 .map {
