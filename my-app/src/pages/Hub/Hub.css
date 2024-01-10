@@ -20,25 +20,25 @@
 .map {
   position: absolute;
   right: 0;
-  top: 150px;
+  top: 30px;
 }
 
 .pinOne {
   cursor: pointer;
   position: absolute;
-  top: 230px;
+  top: 110px;
   left: 530px;
 }
 
 .pinTwoInactive {
   position: absolute;
-  top: 420px;
+  top: 305px;
   left: 670px;
 }
 
 .pinTwo {
   cursor: pointer;
   position: absolute;
-  top: 330px;
-  left: 750px;
+  top: 210px;
+  left: 755px;
 }

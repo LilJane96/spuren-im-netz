@@ -1,5 +1,4 @@
 import { React, useState } from "react";
-import { Link } from "@mui/material";
 import "./Hub.css";
 import Onboarding from "../../components/Onboarding/Onboarding";
 import PhoneMap from "../../images/PhoneMap.png";
