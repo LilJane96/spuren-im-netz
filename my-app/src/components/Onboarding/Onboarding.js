@@ -1,10 +1,21 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import "./Onboarding.css";
 import CustomButton from "../Button/CustomButton";
 
 export default function Onboarding() {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
 
+  const [isFirstVisit, setIsFirstVisit] = useState(false);
+
+  useEffect(() => {
+    const hasVisitedBefore = localStorage.getItem('hasVisitedBefore');
+
+    if (!hasVisitedBefore) {
+      localStorage.setItem('hasVisitedBefore', true);
+      setIsFirstVisit(true);
+    }
+  }, []);
+    
   const incrementTextIndex = () => {
     setCurrentTextIndex((index) => index + 1);
   };
@@ -18,7 +29,7 @@ export default function Onboarding() {
 
   return (
     <>
-          {currentTextIndex < 4 ? (
+          {isFirstVisit && currentTextIndex < 4 ? (
               <div className="wrapper">
                     <div className="text">
                         <p className="textBubble">{onboardingContent[currentTextIndex]}</p>
