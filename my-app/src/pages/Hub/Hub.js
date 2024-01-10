@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Hub.css";
 import Onboarding from "../../components/Onboarding/Onboarding";
 import PhoneMap from "../../images/PhoneMap.png";
@@ -9,12 +9,18 @@ import Backpack from "../../images/Backpack.png";
 import FoxPicture from "../../images/foxPicture.png";
 import PopUpChooseName from "../../components/PopUpChooseName/PopUpChooseName";
 import GoodFoxProfile from "../../components/GoodFoxProfile/GoodFoxProfile";
-
+import { useNavigate } from "react-router-dom";
 
 function Hub() {
   const [open, setOpen] = useState(false);
   const [openFoxProfile, setOpenFoxProfile] = useState(false);
+  const [units, setUnits] = useState({});
+  const navigate = useNavigate();
 
+  useEffect(() => {
+    const storedUnits = JSON.parse(localStorage.getItem("UnitsArray")) || {};
+    setUnits(storedUnits);
+  }, []);
 
   const handleOpenPopup = () => {
     setOpen(true);
@@ -22,6 +28,10 @@ function Hub() {
 
   const handleOpenFoxProfile = () => {
     setOpenFoxProfile(true);
+  };
+
+  const handleOpenUnit = (obj) => {
+    navigate(`/frameone/${obj}/step1`);
   };
 
   return (
@@ -43,12 +53,12 @@ function Hub() {
             src={Pin1Active}
             alt="Pin"
           />
-            <img
-              onClick={handleOpenPopup}
-              className="pinTwoInactive"
-              src={Pin2Inactive}
-              alt="Pin"
-            />
+          <img
+            onClick={() => handleOpenUnit("unit2")}
+            className="pinTwoInactive"
+            src={units.unit1?.done ? Pin2Active : Pin2Inactive}
+            alt="Pin"
+          />
         </div>
         <div>
           <PopUpChooseName open={open}></PopUpChooseName>
