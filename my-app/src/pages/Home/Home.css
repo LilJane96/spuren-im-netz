@@ -1,7 +1,7 @@
 .containerHome {
     position: relative;
     display: flex;
-    margin: 150px 20px;
+    margin: 28px 20px;
 }
 .containerHome img {
     object-fit: contain;
@@ -10,7 +10,7 @@
 .barHomePage {
     position: absolute;
     top: 41%;
-    left: 4%;
+    left: 8%;
 }
 
 .h4HomePage {
@@ -57,8 +57,8 @@
 }
 .paragraphsHome {
     position: absolute;
-    bottom: 291px;
-    left: 67px;
+    bottom: 201px;
+    left: 121px;
 }
 .button {
     position: absolute;
@@ -66,4 +66,9 @@
     left: 31px;
     max-width: 45%;
     max-height: 45%;
+}
+.titleAndSubtitleHome {
+    position: absolute;
+    bottom: 390px;
+    left: 109px;
 }
