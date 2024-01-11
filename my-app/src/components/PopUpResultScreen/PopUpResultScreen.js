@@ -15,6 +15,8 @@ export default function PopUpResultScreen({ open, unit }) {
     const [imageSrc, setImageSrc] = useState(CloseResultBox);
     const [imageSrcWidth, setImageSrcWidth] = useState("25%")
     const [showText, setShowText] = useState(true);
+    const [buttonStatus, setButtonStatus] = useState(true);
+
     //default value?
     function getOpenBoxImage(unit) {
         switch (unit) {
@@ -32,6 +34,7 @@ export default function PopUpResultScreen({ open, unit }) {
     const handleBoxOpen = () => {
         setOpenBox(true);
         setImageSrc(getOpenBoxImage(unit));
+        setButtonStatus(false);
         setShowText(false)
         setImageSrcWidth("56%")
     };
@@ -83,7 +86,7 @@ export default function PopUpResultScreen({ open, unit }) {
                     </DialogContentText>
                 )}
                 <DialogActions style={{justifyContent: "center" , marginTop: 20, marginBottom: 10}} >
-                    <Link href={`/result/${unit}/step1`}><CustomButton name="Weiter" type="primary" style={{ width: '200px' }}></CustomButton></Link>
+                    <Link href={`/result/${unit}/step1`}><CustomButton disabled={buttonStatus} name="Schau dir deine Ergebnisse an!" type="primary" style={{ width: '200px' }}></CustomButton></Link>
                 </DialogActions>
             </DialogContent>
                 </div>
