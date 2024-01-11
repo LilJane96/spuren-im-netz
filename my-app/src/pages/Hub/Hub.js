@@ -51,14 +51,18 @@ function Hub() {
             onClick={handleOpenPopup}
             className="pinOne"
             src={Pin1Active}
-            alt="Pin"
+            alt="Unit 1"
           />
-          <img
-            onClick={() => handleOpenUnit("unit2")}
-            className="pinTwoInactive"
-            src={units.unit1?.done ? Pin2Active : Pin2Inactive}
-            alt="Pin"
-          />
+          {units.unit1?.done ? (
+            <img
+              onClick={() => handleOpenUnit("unit2")}
+              className="pinTwoInactive"
+              src={Pin2Active}
+              alt="Unit 2"
+            />
+          ) : (
+            <img className="pinTwoInactive" src={Pin2Inactive} alt="Unit 2" />
+          )}
         </div>
         <div>
           <PopUpChooseName open={open}></PopUpChooseName>

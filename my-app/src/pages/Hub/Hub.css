@@ -26,6 +26,9 @@
   top: 30px;
 }
 
+.pins {
+  cursor: pointer;
+}
 .pinOne {
   cursor: pointer;
   position: absolute;
