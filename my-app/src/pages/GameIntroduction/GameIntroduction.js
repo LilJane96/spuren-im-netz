@@ -2,15 +2,21 @@ import React, { useState, useEffect } from "react";
 import IntroductionArray from "../../utilis/Introduction";
 import "./GameIntroduction.css";
 import CustomButton from "../../components/Button/CustomButton";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 export default function GameIntroduction() {
   const [currentStep, setCurrentStep] = useState(0);
   const [backgroundImage, setBackgroundImage] = useState("");
   const navigate = useNavigate();
-  const introductionData = IntroductionArray().filter(
-    (item) => item.name === "GameIntroduction"
-  )[0];
+  const { unitId } = useParams();
+  console.log("unitId", unitId);
+
+  // Call the IntroductionArray function to get the array based on unitId
+  const introductionData = IntroductionArray().find(
+    (item) => item.name === unitId
+  );
+
+  console.log("introductionData", introductionData);
 
   // Set the background image when the component mounts or when the step changes
   useEffect(() => {
@@ -32,7 +38,7 @@ export default function GameIntroduction() {
     if (currentStep < introductionData.steps.length - 1) {
       setCurrentStep(currentStep + 1);
     } else {
-      navigate("/hub");
+      navigate(introductionData.navigate);
     }
   };
 
@@ -47,14 +53,30 @@ export default function GameIntroduction() {
       className="GameIntroductionContainer"
       style={{
         backgroundImage: `url(${backgroundImage})`,
-        height: "100vh",
       }}>
       {introductionData.steps.map((obj, index) => (
         <div
           key={obj.step}
           style={{ display: index === currentStep ? "block" : "none" }}>
-          <div className="IntroductionText">
-            <p className="textBubble">{obj.text}</p>
+          <div
+            className="IntroductionText"
+            style={{
+              justifyContent:
+                unitId === "GameIntroduction" ? "flex-end" : "center",
+            }}>
+            {obj.text ? (
+              <p
+                className="textBubble"
+                style={{
+                  width: unitId === "GameIntroduction" ? "600px" : "740px",
+                  padding:
+                    unitId === "GameIntroduction" ? "40px 18px" : "25px 18px",
+                }}>
+                {obj.text}
+              </p>
+            ) : (
+              <div style={{ height: "180px" }}></div>
+            )}
           </div>
         </div>
       ))}

@@ -32,7 +32,7 @@ function Home() {
         <p>Helfe Pixel beim Lösen seiner Fälle!</p>
         <p>Werde ein Internet-Detektiv!</p>
         <p>Sei sicher im Internet unterwegs!</p>
-        <Link href="/introduction">
+        <Link href="/introduction/GameIntroduction">
           <CustomButton name="Start" type="primary"></CustomButton>
         </Link>
       </div>

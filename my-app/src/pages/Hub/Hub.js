@@ -31,7 +31,7 @@ function Hub() {
   };
 
   const handleOpenUnit = (obj) => {
-    navigate(`/frameone/${obj}/step1`);
+    navigate("/introduction/unit2");
   };
 
   return (

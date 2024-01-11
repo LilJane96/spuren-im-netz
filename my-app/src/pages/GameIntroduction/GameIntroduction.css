@@ -1,11 +1,12 @@
 .GameIntroductionContainer {
   display: flex;
   flex-direction: column;
+  height: 100vh;
+  background-size: cover;
 }
 
 .GameIntroductionContainer .IntroductionText {
   display: flex;
-  justify-content: flex-end;
   margin: 10px 50px;
 }
 
