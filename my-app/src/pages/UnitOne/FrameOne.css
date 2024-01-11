@@ -1,50 +1,49 @@
 .frameContainer {
-    display: flex;
-    justify-content: center;
+  /* display: flex;
+  justify-content: center; */
 }
 
 .frame {
-    width: 33.33%;
-    padding: 15px 15px 0;
-    display: flex;
-    justify-content: space-between; /* Änderung hier */
-    align-items: center;
+  width: 1209px;
+  height: 450px;
+  padding: 15px 15px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
-
 .boxContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    margin: 0 50px;
-    width: 232px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  margin: 0 50px;
+  width: 232px;
 }
 
 .stepperContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.buttonContainer {
-    display: flex;
-    justify-content: space-between;
-    padding:0px 45px 0 15px;
-    margin: -70px 15px;
+.frameContainer .buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: -35px 38px;
 }
 
 .answerContainer {
-    width: 100%;
+  width: 100%;
 }
 
 .fourOrMore {
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 0 10px;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 0 10px;
 }
 
-
 .smallerThenFour {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }

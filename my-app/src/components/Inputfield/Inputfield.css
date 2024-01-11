@@ -1,8 +1,8 @@
-.InputfieldContainer .inputfieldComponent{
-    padding: 10px;
-    width: 200px;
-    height: 30px;
-    border: 1px solid;
-    border-radius: 17px;
-    font-weight: bold;
+.InputfieldContainer .inputfieldComponent {
+  padding: 10px;
+  width: 193px;
+  height: 25px;
+  border: 1px solid;
+  border-radius: 17px;
+  font-weight: bold;
 }

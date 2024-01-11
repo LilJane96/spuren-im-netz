@@ -1,32 +1,36 @@
-.MessageSpeachbubble div.bubble{
-    width: 163px;
-    color: white;
-    background-color: #3C68A9;
-    text-align: left;
-    font-size: 15px;
-    margin: 17px 20px 22px 20px;
-    padding: 10px 6px 9px 22px;
-    box-shadow: none;
+.MessageSpeachbubble div.bubble {
+  width: 163px;
+  color: white;
+  background-color: #3c68a9;
+  text-align: left;
+  font-size: 15px;
+  margin: 17px 20px 22px 20px;
+  padding: 10px 6px 9px 22px;
+  box-shadow: none;
 }
 
 .MessageSpeachbubble .container {
-    margin: 0;
+  margin: 0;
 }
 
 .MessageSpeachbubble .circle {
-    left: -15px;
-    top: 59px;
-    box-shadow: 3.5vmin 0 #3C68A9, 4vmin -0.5vmin #3C68A9, 4vmin -1.5vmin 0 -0.5vmin white;
-    transform: rotatex(35deg);
-    width: 71px;
-    height: 66px
+  left: -15px;
+  top: 59px;
+  box-shadow: 3.5vmin 0 #3c68a9, 4vmin -0.5vmin #3c68a9,
+    4vmin -1.5vmin 0 -0.5vmin white;
+  transform: rotatex(35deg);
+  width: 71px;
+  height: 66px;
 }
 
 .MessageSpeachbubble .content {
-    padding: 26px 0px 0px 8px;
+  padding: 26px 0px 0px 8px;
+  z-index: 3;
+  position: relative;
+  top: -47px;
 }
 
 .MessageSpeachbubble .contentImg {
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
 }

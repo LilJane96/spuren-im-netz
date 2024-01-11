@@ -75,14 +75,14 @@ export default function GameIntroduction() {
                   width: unitId === "GameIntroduction" ? "600px" : "740px",
                   padding:
                     unitId === "GameIntroduction" ? "40px 18px" : "25px 18px",
-                  margin: unitId === "GameIntroduction" ? "0" : "auto",
+                  margin: unitId === "GameIntroduction" ? "0" : "0 auto",
                 }}>
                 {obj.text}
               </p>
             ) : (
               <div
                 className="placeholder"
-                style={{ height: "180px", width: "775px" }}></div>
+                style={{ height: "130px", width: "775px" }}></div>
             )}
             <div className="EndUnit">
               <CustomButton type="quaternary" onClick={handleEndUnit} />
