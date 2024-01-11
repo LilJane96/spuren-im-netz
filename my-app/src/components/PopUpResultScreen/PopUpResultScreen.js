@@ -69,14 +69,16 @@ export default function PopUpResultScreen({ open, unit }) {
                         <img src={ResultPopUpStar3} alt={""}/>
                     </div>
                 </div>
-                <img  align={"center"} onClick={handleBoxOpen}  src={imageSrc} alt="ClosedBox" style={{width: imageSrcWidth, cursor: 'pointer', margin: '45px' }}/>
+                <img  align={"center"} onClick={handleBoxOpen}  src={imageSrc} alt="ClosedBox" style={{
+                    width: imageSrcWidth, cursor: 'pointer', margin: '45px', marginTop: showText ? "20px" : "0px",
+                    marginBottom: showText ? "10px" : "45px" }}/>
                 {showText && (
-                    <DialogContentText style={{justifyContent: "center" , marginTop: 20, marginBottom: 10}} variant={"h5"} >
+                    <DialogContentText style={{justifyContent: "center" , marginTop: 20, marginBottom: 10}} variant={"h6"} >
                         Klicke auf die Schatztruhe, um deine Belohnung einzusammeln!
                     </DialogContentText>
                 )}
                 {!showText && (
-                    <DialogContentText variant={"h4"} >
+                    <DialogContentText variant={"h5"} >
                         Du hast eine Lupe erhalten!
                     </DialogContentText>
                 )}
