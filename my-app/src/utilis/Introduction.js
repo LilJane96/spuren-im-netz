@@ -15,6 +15,7 @@ export default function IntroductionArray() {
           text: "Ich bin schon seit vielen Jahren als Detektiv tätig und habe zahlreiche Fälle gelöst! Hier links kannst du einige meiner Erfolge sehen. Aber in letzter Zeit gibt es einen Fall, der mich beschäftigt, und ich bräuchte deine Hilfe, um einen gefährlichen Dieb zu finden!",
         },
       ],
+      backTo: "/",
       navigate: "/hub",
     },
     {
@@ -36,6 +37,7 @@ export default function IntroductionArray() {
           backgroundImage: "/images/FoxHomeThree.png",
         },
       ],
+      backTo: "/hub",
       navigate: "/frameone/unit2/step1;",
     },
   ];

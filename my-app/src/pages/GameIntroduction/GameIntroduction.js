@@ -48,6 +48,10 @@ export default function GameIntroduction() {
     }
   };
 
+  const handleEndUnit = () => {
+    navigate(introductionData.backTo);
+  };
+
   return (
     <div
       className="GameIntroductionContainer"
@@ -62,7 +66,7 @@ export default function GameIntroduction() {
             className="IntroductionText"
             style={{
               justifyContent:
-                unitId === "GameIntroduction" ? "flex-end" : "center",
+                unitId === "GameIntroduction" ? "flex-end" : "space-between",
             }}>
             {obj.text ? (
               <p
@@ -71,15 +75,22 @@ export default function GameIntroduction() {
                   width: unitId === "GameIntroduction" ? "600px" : "740px",
                   padding:
                     unitId === "GameIntroduction" ? "40px 18px" : "25px 18px",
+                  margin: unitId === "GameIntroduction" ? "0" : "auto",
                 }}>
                 {obj.text}
               </p>
             ) : (
-              <div style={{ height: "180px" }}></div>
+              <div
+                className="placeholder"
+                style={{ height: "180px", width: "775px" }}></div>
             )}
+            <div className="EndUnit">
+              <CustomButton type="quaternary" onClick={handleEndUnit} />
+            </div>
           </div>
         </div>
       ))}
+
       <div className="ButtonContainer">
         {currentStep > 0 ? (
           <CustomButton onClick={handleGoBack} name="Zurück" type="tertiary" />

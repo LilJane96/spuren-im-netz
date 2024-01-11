@@ -7,7 +7,8 @@
 
 .GameIntroductionContainer .IntroductionText {
   display: flex;
-  margin: 10px 50px;
+  align-items: flex-start;
+  margin: 35px 50px;
 }
 
 .GameIntroductionContainer .IntroductionText .textBubble {
@@ -29,6 +30,9 @@
   line-height: normal;
 }
 
+.GameIntroductionContainer .IntroductionText .EndUnit {
+  margin: 0;
+}
 .GameIntroductionContainer .ButtonContainer {
   display: flex;
   justify-content: space-between;
