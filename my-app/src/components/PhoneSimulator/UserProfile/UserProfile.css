@@ -91,7 +91,7 @@
 
 .UserProfileContainer .BottombarContainer {
   position: absolute;
-  bottom: 82px;
+  bottom: 66px;
 }
 
 .ImageScrollContainer {
@@ -101,8 +101,8 @@
 .ImageScrollContainer .backBtn {
   z-index: 999;
   position: absolute;
-  left: 567px;
-  top: 131px;
+  left: 518px;
+  top: 99px;
   color: white;
   margin: 0 15px;
 }
