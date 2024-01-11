@@ -1,22 +1,37 @@
 import {Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Link} from "@mui/material";
 import "./PopUpResultScreen.css"
-import OpenResultBox from "../../images/OpenResultBox.png";
+import OpenResultUnit1 from "../../images/OpenResultUnit1.png";
 import CloseResultBox from "../../images/ClosedResultBox.png";
+import OpenResultUnit2 from "../../images/OpenResultUnit2.jpg";
 import React, {useState} from "react";
 import CustomButton from "../Button/CustomButton";
 import ResultPopUpStar1 from "../../images/ResultPopUpStar1.png"
 import ResultPopUpStar2 from "../../images/ResultPopUpStar2.png"
 import ResultPopUpStar3 from "../../images/ResultPopUpStar3.png"
 
-export default function PopUpResultScreen({ open }) {
+export default function PopUpResultScreen({ open, unit }) {
 
     const [openBox, setOpenBox] = useState(false);
     const [imageSrc, setImageSrc] = useState(CloseResultBox);
     const [imageSrcWidth, setImageSrcWidth] = useState("25%")
     const [showText, setShowText] = useState(true);
+    //default value?
+    function getOpenBoxImage(unit) {
+        switch (unit) {
+            case "default":
+                return OpenResultUnit1;
+            case "unit1":
+                return OpenResultUnit1;
+            case "unit2":
+                return OpenResultUnit2;
+            default:
+                return OpenResultUnit1;
+        }
+    }
+
     const handleBoxOpen = () => {
         setOpenBox(true);
-        setImageSrc(OpenResultBox);
+        setImageSrc(getOpenBoxImage(unit));
         setShowText(false)
         setImageSrcWidth("56%")
     };
@@ -66,7 +81,7 @@ export default function PopUpResultScreen({ open }) {
                     </DialogContentText>
                 )}
                 <DialogActions style={{justifyContent: "center" , marginTop: 20, marginBottom: 10}} >
-                    <Link href="/hub"><CustomButton name="Weiter" type="primary" style={{ width: '200px' }}></CustomButton></Link>
+                    <Link href={`/result/${unit}/step1`}><CustomButton name="Weiter" type="primary" style={{ width: '200px' }}></CustomButton></Link>
                 </DialogActions>
             </DialogContent>
                 </div>
