@@ -132,7 +132,6 @@ export default function FrameOne() {
       setCount(0);
       const nextStep = currentStep + 1;
       navigate(`/frameone/${unitId}/step${nextStep}`);
-      // }
     }, 300);
   };
 
@@ -152,13 +151,17 @@ export default function FrameOne() {
   const handleEndUnit = () => {
     navigate(`/hub`);
   };
+  console.log("UNIT", unitId);
 
   const handleGoToResult = () => {
     units[unitId].topic = currentUnitData.topic;
     units[unitId].done = true;
     localStorage.setItem("UnitsArray", JSON.stringify(units));
-    navigate(`/finishedGame/step1`);
-    //navigate(`/result/${unitId}/step1`);
+    if (unitId === "unit1") {
+      setOpenBox(true);
+    } else {
+      navigate(`/finishedGame/step1`);
+    }
   };
 
   return (
