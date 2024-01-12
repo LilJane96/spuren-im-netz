@@ -1,58 +1,57 @@
 .AnswerBoxesComponent {
-    margin: 20px 0;
-    width: 323px;
-    height: 100%;
-    padding: 20px 35px;
-    background-color: white;
-    box-shadow: 0px 4px 4px var(--box-shadow);
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    color: black;
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 40px;
-    word-wrap: break-word;
-  }
-  
-  .AnswerBoxesComponent.imageContent {
-    margin: 6px 0px;
-    width: 123px;
-    height: 131px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  margin: 20px 0;
+  width: 323px;
+  height: 100%;
+  padding: 20px 35px;
+  background-color: white;
+  box-shadow: 0px 4px 4px var(--box-shadow);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  color: black;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 40px;
+  word-wrap: break-word;
+}
 
-  .AnswerBoxesComponent.green {
-    background-color: #A0F959;
-  }
-  .AnswerBoxesComponent.green:hover {
-    background-color: #A0F959;
-  }
-  
-  .AnswerBoxesComponent.red {
-    background-color: #FF8653; 
+.AnswerBoxesComponent.imageContent {
+  margin: 6px 0px;
+  width: 123px;
+  height: 131px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  }
-  .AnswerBoxesComponent.red:hover {
-    background-color: #FF8653;
-  }
-  
-  .AnswerBoxesComponent:hover {
-    background-color: #ffdcfa;
-  }
+.AnswerBoxesComponent.green {
+  background-color: #a0f959;
+}
+.AnswerBoxesComponent.green:hover {
+  background-color: #a0f959;
+}
 
-  .AnswerBoxesComponent p.textContainer {
-    margin: 0;
-    text-align: center;
-    line-height: 1.5em;
-  }
+.AnswerBoxesComponent.red {
+  background-color: #ff8653;
+}
+.AnswerBoxesComponent.red:hover {
+  background-color: #ff8653;
+}
 
-  .textContainer.image {
-    width: 193px;
-    height: 131px;
-    object-fit: cover;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-  }
+.AnswerBoxesComponent:hover {
+  background-color: #ffdcfa;
+}
+
+.AnswerBoxesComponent p.textContainer {
+  margin: 0;
+  text-align: center;
+  line-height: 1.5em;
+}
+
+.textContainer.image {
+  width: 193px;
+  height: 131px;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}

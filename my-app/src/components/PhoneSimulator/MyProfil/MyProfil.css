@@ -61,9 +61,10 @@
   text-align: center;
   display: flex;
   align-items: center;
+  padding: 5px;
 }
 
 .BottombarContainer {
   position: absolute;
-  bottom: 66px;
+  bottom: 44px;
 }

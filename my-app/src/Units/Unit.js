@@ -191,7 +191,12 @@ export default function UnitsArray() {
                 },
                 {
                   type: "text",
-                  answer: "Fußballliebhaber ⚽ | Künstler 🎨 ",
+                  answer: (
+                    <span>
+                      Fußballliebhaber ⚽ <br />
+                      Künstler 🎨
+                    </span>
+                  ),
                   right: true,
                 },
                 {
