@@ -1,44 +1,110 @@
 :root {
-    --background-default: #FFFFFF; /* Standard-Hintergrundfarbe */
-    --background-blue: #003148; /* Hintergrundfarbe für 'blue' */
-    /* Füge hier weitere Farbvariablen für andere Themes hinzu, wenn benötigt */
+  --background-default: #ffffff; /* Standard-Hintergrundfarbe */
+  --background-blue: #003148; /* Hintergrundfarbe für 'blue' */
+  /* Füge hier weitere Farbvariablen für andere Themes hinzu, wenn benötigt */
 }
 
-[data-theme='default'] {
-    --background: #FFF174;
-    --background-img: url("../images/BackgroundImageYellow.png");    
-    --box-shadow: #C9BC48;
-    --button-bg-color: linear-gradient(90deg, #DB94F3 0%, #c687d1 100%);
-    --button-bg-color-disabled: linear-gradient(90deg, #DB94F3 0%, #c687d1 46%);
-    --button-before-back-disabled: rgba(235, 219, 77, 0.50);
-    --button-before-back: rgba(235, 219, 77, 1);
-    --button-before: rgba(159, 47, 197, 1);
-    --button-before-disabled: rgba(159, 47, 197, 0.50);
-
+[data-theme="default"] {
+  --background: #fff174;
+  --background-img: url("../images/BackgroundImages/BackgroundImageYellow.png");
+  --box-shadow: #c9bc48;
+  --button-bg-color: linear-gradient(90deg, #db94f3 0%, #c687d1 100%);
+  --button-bg-color-disabled: linear-gradient(90deg, #db94f3 0%, #c687d1 46%);
+  --button-before-back-disabled: rgba(235, 219, 77, 0.5);
+  --button-before-back: rgba(235, 219, 77, 1);
+  --button-before: rgba(159, 47, 197, 1);
+  --button-before-disabled: rgba(159, 47, 197, 0.5);
+  --stepper-color: #bf56e3;
 }
 
-[data-theme='blue'] {
-    --background: #E3F6FF;
-    --background-img: url("../images/BackgroundImageBlue.png");    
-    --box-shadow: #D3BCDC;
-    --button-bg-color: linear-gradient(90deg, #9FDDFD 0%, #00A6FB 100%);
-    --button-bg-color-disabled: linear-gradient(90deg, #9FDDFD 0%, #00A6FB 46%);
-    --button-before-back-disabled: #DEBFE9;
-    --button-before: #2A6D8F;
-    --button-before-back: #D3BCDC;
-    --button-before: #2A6D8F;
-    --button-before-disabled: #2a6d8fd1;
-
+[data-theme="green"] {
+  --background: #b5f491;
+  --background-img: url("../images/BackgroundImages/BackgroundImageGreen.png");
+  --box-shadow: #6fc948;
+  --button-bg-color: linear-gradient(90deg, #9994f3 0%, #8790d1 100%);
+  --button-bg-color-disabled: linear-gradient(90deg, #9694f3 0%, #8791d1 46%);
+  --button-before-back-disabled: rgba(77, 235, 125, 0.5);
+  --button-before-back: rgb(77, 235, 88);
+  --button-before: rgb(47, 47, 197);
+  --button-before-disabled: rgba(70, 47, 197, 0.7);
+  --stepper-color: #878cef;
 }
 
-[data-theme='yellow'] {
-    --background: #FFF174;
-    --background-img: url("../images/BackgroundImageYellow.png");    
-    --box-shadow: #C9BC48;
-    --button-bg-color: linear-gradient(90deg, #DB94F3 0%, #c687d1 100%);
-    --button-bg-color-disabled: linear-gradient(90deg, #DB94F3 0%, #c687d1 46%);
-    --button-before-back-disabled: rgba(235, 219, 77, 0.50);
-    --button-before-back: rgba(235, 219, 77, 1);
-    --button-before: rgba(159, 47, 197, 1);
-    --button-before-disabled: rgba(159, 47, 197, 0.7);
+[data-theme="red"] {
+  --background: #a74444;
+  --background-img: url("../images/BackgroundImages/BackgroundImageRed.png");
+  --box-shadow: #c94848;
+  --button-bg-color: linear-gradient(90deg, #9ada67 0%, #69b62a 100%);
+  --button-bg-color-disabled: linear-gradient(90deg, #9ecf81 0%, #5ec365 90%);
+  --button-before-back-disabled: rgb(77 235 127 / 50%);
+  --button-before-back: rgb(95 235 77);
+  --button-before: #6a904c;
+  --button-before-disabled: #b0db8dc4;
+  --stepper-color: #9eef87;
+}
+
+[data-theme="blue"] {
+  --background: #e3f6ff;
+  --background-img: url("../images/BackgroundImages/BackgroundImageBlue.png");
+  --box-shadow: #d3bcdc;
+  --button-bg-color: linear-gradient(90deg, #9fddfd 0%, #00a6fb 100%);
+  --button-bg-color-disabled: linear-gradient(90deg, #9fddfd 0%, #00a6fb 46%);
+  --button-before-back-disabled: #debfe9;
+  --button-before: #2a6d8f;
+  --button-before-back: #d3bcdc;
+  --button-before: #2a6d8f;
+  --button-before-disabled: #2a6d8fd1;
+  --stepper-color: #bf56e3;
+}
+
+[data-theme="orange"] {
+  --background: #a74444;
+  --background-img: url("../images/BackgroundImages/BackgroundImageRed.png");
+  --box-shadow: #c94848;
+  --button-bg-color: linear-gradient(90deg, #9ada67 0%, #69b62a 100%);
+  --button-bg-color-disabled: linear-gradient(90deg, #9ecf81 0%, #5ec365 90%);
+  --button-before-back-disabled: rgb(77 235 127 / 50%);
+  --button-before-back: rgb(95 235 77);
+  --button-before: #6a904c;
+  --button-before-disabled: #b0db8dc4;
+  --stepper-color: #bf56e3;
+}
+
+[data-theme="yellow"] {
+  --background: #fff174;
+  --background-img: url("../images/BackgroundImages/BackgroundImageYellow.png");
+  --box-shadow: #c9bc48;
+  --button-bg-color: linear-gradient(90deg, #db94f3 0%, #c687d1 100%);
+  --button-bg-color-disabled: linear-gradient(90deg, #db94f3 0%, #c687d1 46%);
+  --button-before-back-disabled: rgba(235, 219, 77, 0.5);
+  --button-before-back: rgba(235, 219, 77, 1);
+  --button-before: rgba(159, 47, 197, 1);
+  --button-before-disabled: rgba(159, 47, 197, 0.7);
+  --stepper-color: #bf56e3;
+}
+
+[data-theme="pink"] {
+  --background: #a74444;
+  --background-img: url("../images/BackgroundImages/BackgroundImageRed.png");
+  --box-shadow: #c94848;
+  --button-bg-color: linear-gradient(90deg, #9ada67 0%, #69b62a 100%);
+  --button-bg-color-disabled: linear-gradient(90deg, #9ecf81 0%, #5ec365 90%);
+  --button-before-back-disabled: rgb(77 235 127 / 50%);
+  --button-before-back: rgb(95 235 77);
+  --button-before: #6a904c;
+  --button-before-disabled: #b0db8dc4;
+  --stepper-color: #bf56e3;
+}
+
+[data-theme="purple"] {
+  --background: #a74444;
+  --background-img: url("../images/BackgroundImages/BackgroundImageRed.png");
+  --box-shadow: #c94848;
+  --button-bg-color: linear-gradient(90deg, #9ada67 0%, #69b62a 100%);
+  --button-bg-color-disabled: linear-gradient(90deg, #9ecf81 0%, #5ec365 90%);
+  --button-before-back-disabled: rgb(77 235 127 / 50%);
+  --button-before-back: rgb(95 235 77);
+  --button-before: #6a904c;
+  --button-before-disabled: #b0db8dc4;
+  --stepper-color: #bf56e3;
 }

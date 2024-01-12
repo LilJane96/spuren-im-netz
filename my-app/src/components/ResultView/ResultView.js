@@ -1,7 +1,7 @@
 import React from "react";
 import TitleBackground from "../TitleBackground/TitleBackground";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import HeartFilled from "../../images/HeartActive.svg";
+import HeartFilled from "../../images/Stepper/HeartActive.svg";
 import { useParams } from "react-router-dom";
 import "./ResultView.css";
 

@@ -1,25 +1,55 @@
+.InputContainer .ColorContainer {
+  margin: 30px 0 0;
+}
 
 .dialogTitleH3 {
-    text-align: center;
+  padding: 28px 18px 5px !important;
+
+  text-align: center;
 }
 
 .dialogTitleH4 {
-    text-align: center;
+  padding: 28px 18px;
+  text-align: center;
 }
 .dialogContent {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .iconYellow {
-    color: yellow;
-    font-size: 100px;
+  color: yellow;
+  font-size: 100px;
 }
 .iconBlue {
-    color: blue;
-    font-size: 100px;
+  color: blue;
+  font-size: 100px;
 }
 .dialogActions {
-    justify-content: center;
-    margin-bottom: 15px;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.NameInputFieldContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.NameInputFieldContainer input {
+  width: 523px;
+  height: 50px;
+  flex-shrink: 0;
+  border-radius: 16px;
+  background: #d9d9d9;
+  border: none;
+  padding: 0 12px;
+  color: #000;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.NameInputFieldContainer input:focus-visible {
+  outline: 2px solid var(--background);
 }
