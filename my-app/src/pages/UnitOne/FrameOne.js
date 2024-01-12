@@ -154,11 +154,10 @@ export default function FrameOne() {
   };
 
   const handleGoToResult = () => {
-    setOpenBox(true)
     units[unitId].topic = currentUnitData.topic;
     units[unitId].done = true;
     localStorage.setItem("UnitsArray", JSON.stringify(units));
-
+    navigate(`/finishedGame/step1`);
     //navigate(`/result/${unitId}/step1`);
   };
 
@@ -237,39 +236,39 @@ export default function FrameOne() {
                       type="tertiary"
                       disabled></CustomButton>
                   )}
-                  {
-                    currentTaskIndex < totalTasks - 1 ? (
-                      selectedAnswer === "" ||
-                      !units[unitId]?.answers[currentTaskIndex]?.isCorrect ? (
-                        <CustomButton
-                          onClick={handleNextTask}
-                          name="Weiter"
-                          type="primary"
-                          disabled></CustomButton>
-                      ) : (
-                        <CustomButton
-                          onClick={handleNextTask}
-                          name="Weiter"
-                          type="primary"></CustomButton>
-                      )
-                    ) : selectedAnswer === "" ||
-                      !units[unitId]?.answers[currentTaskIndex]?.isCorrect ? (
+                  {currentTaskIndex < totalTasks - 1 ? (
+                    selectedAnswer === "" ||
+                    !units[unitId]?.answers[currentTaskIndex]?.isCorrect ? (
                       <CustomButton
-                        name="Unit beenden"
+                        onClick={handleNextTask}
+                        name="Weiter"
                         type="primary"
-                        disabled={true}
-                      />
+                        disabled></CustomButton>
                     ) : (
-                      <Link >
-                        <PopUpResultScreen open={openBox} unit={unitId}></PopUpResultScreen>
+                      <CustomButton
+                        onClick={handleNextTask}
+                        name="Weiter"
+                        type="primary"></CustomButton>
+                    )
+                  ) : selectedAnswer === "" ||
+                    !units[unitId]?.answers[currentTaskIndex]?.isCorrect ? (
+                    <CustomButton
+                      name="Unit beenden"
+                      type="primary"
+                      disabled={true}
+                    />
+                  ) : (
+                    <Link>
+                      <PopUpResultScreen
+                        open={openBox}
+                        unit={unitId}></PopUpResultScreen>
                       <CustomButton
                         name="Unit beenden"
                         type="primary"
                         onClick={handleGoToResult}
                       />
-                      </Link>
-                    )
-                  }
+                    </Link>
+                  )}
                 </div>
               </div>
             )}
