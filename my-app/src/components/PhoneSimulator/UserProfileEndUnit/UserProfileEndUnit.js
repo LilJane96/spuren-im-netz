@@ -69,16 +69,16 @@ export default function UserProfileEndUnit() {
 
     setTimeout(() => {
       navigate("/finishedGame/step2");
-    }, 7000);
+    }, 6500);
   }, []);
 
   return (
-    <div className="UserProfileContainer">
+    <div className="UserProfileEndUnitContainer">
       <div className="SwitchProfilePictureContainer">
         <img
           src={currentImage}
           alt="Profilbild"
-          className={`ProfilePicture ${isFlipping ? "flipAnimation" : ""}`}
+          className={`SkipProfilePicture ${isFlipping ? "flipAnimation" : ""}`}
         />
       </div>
       <div className="ProfileImageContainer">
