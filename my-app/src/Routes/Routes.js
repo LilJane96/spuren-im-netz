@@ -1,15 +1,17 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "../pages/Home/Home"
+import Home from "../pages/Home/Home";
 import FrameOne from "../pages/UnitOne/FrameOne";
 import Hub from "../pages/Hub/Hub";
 import Result from "../pages/Result/Result";
+import GameIntroduction from "../pages/GameIntroduction/GameIntroduction";
 
 function Directions() {
   return (
     <div className="Routes">
-      <main >
+      <main>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/introduction/:unitId" element={<GameIntroduction />} />
           <Route path="/hub" element={<Hub />} />
           <Route path="frameone/:unitId/:stepId" element={<FrameOne />} />
           <Route path="/result/:unitId/:stepId" element={<Result />} />

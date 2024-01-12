@@ -3,23 +3,29 @@
 }
 
 .container {
-    display: grid;
-    margin: 50px 20px;
-  }
+  display: grid;
+  margin: 50px 20px;
+}
 
-  .foxImg {
-    border: 6px solid #4E4E4E;
-    border-radius: 60px;
-  }
+.foxImg {
+  border: 6px solid #4e4e4e;
+  border-radius: 60px;
+}
 
-  .content {
-    z-index: 3;
-    position: relative;
-    top: -47px
-  }
-.content, .overlay {
-    grid-area: 1 / 1;
-  }
+.SpeachbubbleContainer .content {
+  z-index: 3;
+  position: relative;
+  top: -47px;
+  left: 53px;
+}
+
+.SpeachbubbleContainer .content img {
+  width: 90px;
+}
+.content,
+.overlay {
+  grid-area: 1 / 1;
+}
 
 div.bubble {
   position: relative;
@@ -31,18 +37,18 @@ div.bubble {
   box-shadow: 0px 4px 4px var(--box-shadow);
   border-radius: 30px;
   font-family: sans-serif;
-  padding: 20px;
+  padding: 4px 20px;
   font-size: large;
   text-align: left;
 }
 
 div.bubble .answer {
-font-weight: bold;
+  font-weight: bold;
 }
 
 div.bubble:before,
 div.bubble:after {
-  content: ' ';
+  content: " ";
   position: absolute;
   width: 0;
   height: 0;
@@ -50,16 +56,21 @@ div.bubble:after {
 
 .circle {
   position: absolute;
-  left: 76px;
+  left: 111px;
   top: -34px;
   width: 77px;
   height: 84px;
   bottom: -36%;
   border-radius: 62%;
   rotate: 1deg;
-  box-shadow: 3.5vmin 0 white, 4vmin -0.5vmin white, 4vmin -1.5vmin 0 -0.5vmin white;
+  box-shadow: 3.5vmin 0 white, 4vmin -0.5vmin white,
+    4vmin -1.5vmin 0 -0.5vmin white;
   clip-path: polygon(0% 49%, 150% 48%, 150% 100%, 0% 100%);
   transform: rotatex(162deg);
   z-index: 0;
 }
 
+.bubble.speech p {
+  margin: 15px 0;
+  padding: 0;
+}

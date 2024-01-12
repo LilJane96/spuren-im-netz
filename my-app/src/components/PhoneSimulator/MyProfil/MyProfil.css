@@ -1,70 +1,70 @@
 .MyProfilContainer {
-    margin: 50px 0 0 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  margin: 50px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .MyProfilContainer .flexContainer {
-    display: flex;
+  display: flex;
 }
 
 .MyProfilContainer .ProfilePicture {
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-    border-radius: 42px;
-    margin: 10px 0 10px 0;
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 42px;
+  margin: 10px 0 10px 0;
 }
 
 .MyProfilContainer .ImageContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .MyProfilContainer .ImageContainer .text {
-    text-align: center;
-    margin: 0px;
-    font-size: 15px;
-    font-weight: bold;
+  text-align: center;
+  margin: 0px;
+  font-size: 15px;
+  font-weight: bold;
 }
 
 .MyProfilContainer .flexContainer .textContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 18px 5px 15px 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 18px 5px 15px 5px;
 }
 
-.MyProfilContainer .count{
-    margin: 0;
-    padding: 0;
-    font-weight: bold;
+.MyProfilContainer .count {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
 }
 
 .MyProfilContainer .text {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .MyProfilContainer .Line {
-    width: 250px;
-    height: 1px;
-    opacity: 0.34;
-    background: #000;
-    margin: 15px;
+  width: 211px;
+  height: 1px;
+  opacity: 0.34;
+  background: #000;
+  margin: 9px;
 }
 
 .MyProfilContainer .answerText {
-    margin: 0;
-    text-align: center;
-    height: 56px;
-    display: flex;
-    align-items: center;
+  margin: 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  padding: 5px;
 }
 
-.BottombarContainer{
-    position: absolute;
-    bottom: 82px;
+.BottombarContainer {
+  position: absolute;
+  bottom: 44px;
 }

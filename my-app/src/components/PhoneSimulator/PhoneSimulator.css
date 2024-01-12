@@ -1,7 +1,7 @@
 .phoneContainer {
   display: flex;
   flex-direction: column;
-  height: 74vh;
+  height: 77vh;
   border: 8px solid black;
   border-radius: 32px;
   background-color: white;
@@ -17,7 +17,7 @@
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
   position: absolute;
-  width: 264px;
+  width: 244px;
   height: 51px;
 }
 
@@ -25,12 +25,12 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  width: 264px;
-  height: 557px;
+  width: 244px;
+  height: 475px;
 }
 
 .phoneContainer .section {
-  height: 74vh;
+  height: 76vh;
   overflow-x: hidden;
 }
 

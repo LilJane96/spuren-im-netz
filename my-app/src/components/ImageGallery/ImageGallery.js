@@ -3,6 +3,7 @@ import AnnonymProfile from "../../images/AnnonymProfile.png";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
+import Bottombar from "../Bottombar/Bottombar";
 import "./ImageGallery.css";
 
 export default function ImageGallery({
@@ -62,6 +63,9 @@ export default function ImageGallery({
               </div>
             </div>
           ))}
+          <div className="BottombarContainer">
+            <Bottombar />
+          </div>
         </div>
       </div>
     </div>
