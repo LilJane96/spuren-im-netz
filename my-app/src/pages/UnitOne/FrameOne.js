@@ -8,6 +8,7 @@ import CustomButton from "../../components/Button/CustomButton";
 import { useNavigate, useParams } from "react-router-dom";
 import { Link } from "@mui/material";
 import "./FrameOne.css";
+import PopUpResultScreen from "../../components/PopUpResultScreen/PopUpResultScreen";
 
 export default function FrameOne() {
   const [selectedAnswer, setSelectedAnswer] = useState("");
@@ -20,6 +21,7 @@ export default function FrameOne() {
   const [currentUnitData, setCurrentUnitData] = useState(null);
   const [currentStep, setCurrentStep] = useState(1);
   const navigate = useNavigate();
+  const [openBox, setOpenBox] = useState(false);
 
   useEffect(() => {
     const stepFromUrl = parseInt(stepId.replace("step", ""), 10) || 1;
@@ -152,10 +154,12 @@ export default function FrameOne() {
   };
 
   const handleGoToResult = () => {
+    setOpenBox(true)
     units[unitId].topic = currentUnitData.topic;
     units[unitId].done = true;
     localStorage.setItem("UnitsArray", JSON.stringify(units));
-    navigate(`/result/${unitId}/step1`);
+
+    //navigate(`/result/${unitId}/step1`);
   };
 
   return (
@@ -256,14 +260,15 @@ export default function FrameOne() {
                         disabled={true}
                       />
                     ) : (
-                      //  <Link href={`/result/${unitId}/step1`}>
+                      <Link >
+                        <PopUpResultScreen open={openBox} unit={unitId}></PopUpResultScreen>
                       <CustomButton
                         name="Unit beenden"
                         type="primary"
                         onClick={handleGoToResult}
                       />
+                      </Link>
                     )
-                    // </Link>
                   }
                 </div>
               </div>
