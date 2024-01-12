@@ -1,0 +1,15 @@
+.FinishGameContainer {
+}
+
+.FinishGameContainer .PhoneSimulator {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+}
+
+.FinishGameContainer .phoneContainer {
+}
+
+.FinishGameContainer .BottombarContainer {
+  bottom: 84px;
+}

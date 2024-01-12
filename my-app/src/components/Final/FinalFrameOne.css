@@ -1,0 +1,11 @@
+.FinalFrameOneContainer {
+  display: flex;
+  align-items: flex-end;
+  height: 79vh;
+  margin: -50px 40px;
+  justify-content: space-between;
+}
+
+.FinalFrameOneContainer .SpeachbubbleContainer {
+  margin: 0 0 125px;
+}

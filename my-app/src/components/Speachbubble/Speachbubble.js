@@ -27,7 +27,7 @@ export default function Speachbubble({ text, reason }) {
                 }
               })
             ) : (
-              <p style={{ fontWeight: "bold" }}>{text}</p>
+              <p style={{ fontWeight: "light" }}>{text}</p>
             )}
             {reason !== "" && <p>{reason}</p>}
           </div>

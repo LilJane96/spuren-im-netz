@@ -1,0 +1,141 @@
+.UserProfileEndUnitContainer {
+}
+
+.UserProfileEndUnitContainer .ProfileImageContainer {
+  /* Stile für die Animation */
+  .flipAnimation {
+    transform: rotateY(180deg);
+  }
+}
+
+.UserProfileEndUnitContainer .ProfileImageContainer img {
+  height: 35px;
+  margin: 10px 0 0;
+}
+
+.SwitchProfilePictureContainer {
+  z-index: 999;
+  position: absolute;
+  background: #ffffffd9;
+  width: 244px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 77vh;
+  border-radius: 20px;
+  margin: -50px;
+}
+
+/* CSS für Hover-Effekt, entfernt das :hover */
+.SwitchProfilePictureContainer .SkipProfilePicture {
+  width: 180px;
+  height: 180px;
+  border-radius: 18px;
+  transition: transform 1s ease;
+}
+
+/* Fügt eine zusätzliche Klasse für den Hover-Effekt hinzu, wenn isFlipping true ist */
+.SwitchProfilePictureContainer img.flipAnimation {
+  transform: rotateY(180deg);
+}
+
+.UserProfileEndUnitContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.UserProfileEndUnitContainer .flexContainer {
+  display: flex;
+}
+
+.UserProfileEndUnitContainer .ProfileImageContainer .text {
+  text-align: center;
+  margin: 0px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.UserProfileEndUnitContainer .flexContainer .textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 18px 0px 15px 15px;
+}
+
+.UserProfileEndUnitContainer .count {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+.UserProfileEndUnitContainer .text {
+  margin: 0;
+  padding: 0;
+}
+
+.UserProfileEndUnitContainer ul li {
+  display: flex;
+  float: left;
+  margin: 4px 11px;
+  width: 40%;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.UserProfileEndUnitContainer ul {
+  list-style-type: disc;
+}
+
+.UserProfileEndUnitContainer .Line {
+  width: 250px;
+  height: 1px;
+  opacity: 0.34;
+  background: #000;
+  margin: 15px;
+}
+
+.UserProfileEndUnitContainer .answerText {
+  margin: 0;
+  text-align: center;
+  height: 56px;
+  display: flex;
+  align-items: center;
+}
+
+.UserProfileEndUnitContainer .ImageContainer {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.UserProfileEndUnitContainer .ImageContainer li {
+  height: 115px;
+}
+
+.UserProfileEndUnitContainer .ImageContainer img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.UserProfileEndUnitContainer .BottombarContainer {
+  position: absolute;
+  bottom: 50px;
+}
+
+.ImageScrollContainer {
+  margin: 10px 0;
+}
+
+.ImageScrollContainer .backBtn {
+  z-index: 999;
+  position: absolute;
+  left: 518px;
+  top: 107px;
+  color: white;
+  margin: 0 15px;
+}

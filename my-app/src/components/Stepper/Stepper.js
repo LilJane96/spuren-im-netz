@@ -1,40 +1,11 @@
 import React from "react";
 import Heart from "../../images/Stepper/Heart.svg";
-import HeartActiveBlue from "../../images/Stepper/HeartActiveBlue.svg";
-import HeartActiveGreen from "../../images/Stepper/HeartActiveGreen.svg";
-import HeartActive from "../../images/Stepper/HeartActive.svg";
+import HeartActiveDefault from "../../images/Stepper/HeartActive.svg";
 import Goal from "../../images/Stepper/Goal.svg";
 
 import "./Stepper.css";
 
 const Stepper = ({ currentStep, totalSteps }) => {
-  const theme =
-    document.documentElement.getAttribute("data-theme") || "default";
-  console.log("Theme", document.documentElement.getAttribute("data-theme"));
-
-  const getActiveHeart = () => {
-    switch (theme) {
-      case "default":
-        return HeartActive;
-      case "green":
-        return HeartActiveBlue;
-      case "red":
-        return HeartActiveGreen;
-      case "blue":
-        return HeartActive;
-      case "orange":
-        return HeartActive;
-      case "yellow":
-        return HeartActive;
-      case "pink":
-        return HeartActive;
-      case "purple":
-        return HeartActive;
-      default:
-        return HeartActive;
-    }
-  };
-
   return (
     <div className="stepper">
       {[...Array(totalSteps)].map((_, index) => (
@@ -45,14 +16,22 @@ const Stepper = ({ currentStep, totalSteps }) => {
           }`}>
           <div className="icon">
             {index + 1 < currentStep ? (
-              <img src={getActiveHeart()} alt={`Step ${index + 1}`} />
+              <img
+                src={HeartActiveDefault}
+                alt={`Step ${index + 1}`}
+                style={{ width: "42px", height: "41px" }}
+              />
             ) : index + 1 === totalSteps ? (
-              <img src={Goal} alt={`Step ${index + 1}`} />
+              <img
+                src={Goal}
+                alt={`Step ${index + 1}`}
+                style={{ width: "59px", height: "44px" }}
+              />
             ) : (
               <img
                 src={Heart}
                 alt={`Step ${index + 1}`}
-                style={{ width: "51px", height: "49px" }}
+                style={{ width: "42px", height: "37px" }}
               />
             )}
             {index > 0 && (

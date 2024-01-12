@@ -91,7 +91,7 @@
 
 .UserProfileContainer .BottombarContainer {
   position: absolute;
-  bottom: 44px;
+  bottom: 50px;
 }
 
 .ImageScrollContainer {
@@ -102,7 +102,7 @@
   z-index: 999;
   position: absolute;
   left: 518px;
-  top: 111px;
+  top: 107px;
   color: white;
   margin: 0 15px;
 }
