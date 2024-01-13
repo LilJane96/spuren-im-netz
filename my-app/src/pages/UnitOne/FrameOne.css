@@ -4,8 +4,8 @@
 }
 
 .frame {
-  width: 1209px;
-  height: 450px;
+  width: 90%;
+  height: 73vh;
   padding: 15px 15px 0;
   display: flex;
   justify-content: space-around;

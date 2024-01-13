@@ -10,6 +10,7 @@ import SearchPerson from "./SearchPerson/SearchPerson";
 import UserProfile from "./UserProfile/UserProfile";
 import "./PhoneSimulator.css";
 import UserProfileEndUnit from "./UserProfileEndUnit/UserProfileEndUnit";
+import Bottombar from "../Bottombar/Bottombar";
 
 export default function PhoneSimulator({
   title,
@@ -24,9 +25,15 @@ export default function PhoneSimulator({
     nextPage();
   };
 
+  const shouldRenderBottombar = () => {
+    // Add page numbers for which you want to show the Bottombar
+    const pagesWithBottombar = [5]; // Adjust as needed
+
+    return pagesWithBottombar.includes(parseInt(content, 10));
+  };
+
   const renderSimulatorPage = () => {
     const contentNumber = parseInt(content, 10);
-    console.log("contentNumber", contentNumber);
     switch (contentNumber) {
       case 1:
         return (
@@ -67,6 +74,7 @@ export default function PhoneSimulator({
             </div>
             <div className="social-media-learning-app">
               <div className="middle-panel">{renderSimulatorPage()}</div>
+              {shouldRenderBottombar() && <Bottombar />}
             </div>
           </section>
         </div>

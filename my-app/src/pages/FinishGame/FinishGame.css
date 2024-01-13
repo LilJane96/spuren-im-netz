@@ -2,9 +2,9 @@
 }
 
 .FinishGameContainer .PhoneSimulator {
-  display: flex;
-  justify-content: center;
-  margin: 50px;
+  position: fixed;
+  top: 13%;
+  left: 40%;
 }
 
 .FinishGameContainer .phoneContainer {

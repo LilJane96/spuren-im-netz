@@ -7,6 +7,7 @@
 
 .MyProfilContainer .flexContainer {
   display: flex;
+  justify-content: center;
 }
 
 .MyProfilContainer .ProfilePicture {
@@ -59,12 +60,10 @@
 .MyProfilContainer .answerText {
   margin: 0;
   text-align: center;
-  display: flex;
-  align-items: center;
   padding: 5px;
 }
 
-.BottombarContainer {
-  position: absolute;
-  bottom: 50px;
+.MyProfilContainer .BottombarContainer {
+  position: relative;
+  bottom: -21px;
 }

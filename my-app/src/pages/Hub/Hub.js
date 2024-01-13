@@ -36,7 +36,7 @@ function Hub() {
 
   return (
     <>
-      <Onboarding />
+      {/* <Onboarding /> */}
       <div className="hub">
         <img
           className="fox"

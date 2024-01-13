@@ -89,10 +89,10 @@
   border-radius: 15px;
 }
 
-.UserProfileContainer .BottombarContainer {
+/* .UserProfileContainer .BottombarContainer {
   position: absolute;
   bottom: 50px;
-}
+} */
 
 .ImageScrollContainer {
   margin: 10px 0;
@@ -101,8 +101,8 @@
 .ImageScrollContainer .backBtn {
   z-index: 999;
   position: absolute;
-  left: 518px;
-  top: 107px;
+  left: 0;
+  top: 14px;
   color: white;
   margin: 0 15px;
 }

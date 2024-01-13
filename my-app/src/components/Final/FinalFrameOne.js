@@ -15,6 +15,10 @@ export default function FinalFrameOne() {
     document.body.style.backgroundImage = `url(${backgroundImage})`;
     document.body.style.backgroundSize = "cover";
     document.body.style.backgroundPosition = "center";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.display = "flex";
+    document.body.style.flexDirection = "column";
+    document.body.style.height = "100vh";
 
     // Aufräumen beim Verlassen der Komponente
     return () => {

@@ -12,7 +12,7 @@
 .GoodFoxProfileContainer .phoneContainer {
   display: flex;
   flex-direction: column;
-  height: 80vh;
+  height: 513px;
   border: 8px solid black;
   border-radius: 32px;
   background-color: white;
@@ -52,7 +52,7 @@
 }
 
 .GoodFoxProfileContainer .section {
-  height: 79vh;
+  height: 475px;
   overflow-x: hidden;
 }
 
@@ -72,7 +72,7 @@
 
 .GoodFoxProfileContainer .section-content {
   overflow-y: scroll;
-  max-height: 74vh;
+  max-height: 475px;
 }
 
 .GoodFoxProfileContainer .ProfileImageContainer {
@@ -86,10 +86,10 @@
   background: #ffd646;
 }
 
-.GoodFoxProfileContainer .BottombarContainer {
+/* .GoodFoxProfileContainer .BottombarContainer {
   position: absolute;
   bottom: 0px;
-}
+} */
 
 .GoodFoxProfileContainer .closeProfile {
   margin: 92px 272px;

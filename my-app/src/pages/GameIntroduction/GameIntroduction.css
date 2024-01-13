@@ -3,6 +3,8 @@
   flex-direction: column;
   height: 100vh;
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .GameIntroductionContainer .IntroductionText {
@@ -34,7 +36,12 @@
   margin: 0;
 }
 .GameIntroductionContainer .ButtonContainer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: flex;
   justify-content: space-between;
-  margin: 280px 50px 0;
+  margin: 0 50px;
+  padding: 35px 20px; /* Optional: Füge Padding für den Abstand zu den Seiten hinzu */
 }

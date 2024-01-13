@@ -16,8 +16,6 @@ export default function GameIntroduction() {
     (item) => item.name === unitId
   );
 
-  console.log("introductionData", introductionData);
-
   // Set the background image when the component mounts or when the step changes
   useEffect(() => {
     setBackgroundImage(

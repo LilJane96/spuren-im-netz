@@ -14,8 +14,8 @@ export default function MyProfil({ answer }) {
     .map((obj) => obj.answer);
 
   return (
-    <>
-      <div className="MyProfilContainer">
+    <div className="MyProfilContainer">
+      <div>
         <div className="ImageContainer">
           <img
             src={process.env.PUBLIC_URL + `/${profilePicture}`}
@@ -47,9 +47,6 @@ export default function MyProfil({ answer }) {
         </div>
         <div className="Line" />
       </div>
-      <div className="BottombarContainer">
-        <Bottombar />
-      </div>
-    </>
+    </div>
   );
 }

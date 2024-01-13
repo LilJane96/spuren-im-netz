@@ -6,23 +6,29 @@ import { useNavigate } from "react-router-dom";
 
 export default function FinalFrameTwo() {
   const navigate = useNavigate();
+
   useEffect(() => {
-    // Speichere das aktuelle Body-Hintergrundbild
     const originalBackground = document.body.style.backgroundImage;
 
-    // Setze das neue Hintergrundbild für den Body
     document.body.style.backgroundImage = `url(${backgroundImage})`;
-    document.body.style.backgroundSize = "cover"; // Ändere die backgroundSize-Eigenschaft
-    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundSize = "cover";
     document.body.style.backgroundPosition = "center";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.display = "flex";
+    document.body.style.flexDirection = "column";
+    document.body.style.height = "100vh";
 
     // Aufräumen beim Verlassen der Komponente
     return () => {
-      // Setze das ursprüngliche Hintergrundbild zurück
       document.body.style.backgroundImage = originalBackground;
+      document.body.style.backgroundSize = "";
+      document.body.style.backgroundPosition = "";
+      document.body.style.backgroundRepeat = "";
+      document.body.style.display = "";
+      document.body.style.flexDirection = "";
+      document.body.style.height = "";
     };
   }, []);
-
   const handleNextStep = () => {
     navigate("/finishedGame/step4");
   };

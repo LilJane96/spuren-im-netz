@@ -1,11 +1,11 @@
 .phoneContainer {
   display: flex;
   flex-direction: column;
-  height: 77vh;
   border: 8px solid black;
   border-radius: 32px;
   background-color: white;
-  /* min-width: 252px; */
+  position: relative;
+  height: 475px;
 }
 
 .phoneContainer .headerContainer {
@@ -30,7 +30,8 @@
 }
 
 .phoneContainer .section {
-  height: 76vh;
+  border-radius: 24px;
+  height: 469px;
   overflow-x: hidden;
 }
 
@@ -39,18 +40,18 @@ section::-webkit-scrollbar {
 }
 
 .section {
-  scrollbar-width: none; /* Verstecke die Scrollbar in Firefox */
-  -ms-overflow-style: none; /* Verstecke die Scrollbar in IE/Edge */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
-/* Falls benötigt: Stile für die inneren Inhalte, um den Inhalt scrollbar zu machen */
 .section-content {
-  overflow-y: scroll; /* Stelle sicher, dass der Inhalt scrollbar bleibt */
-  max-height: 74vh; /* oder die gewünschte Höhe */
+  overflow-y: scroll;
+  max-height: 475px;
 }
 
 .bottombar {
-  margin-top: auto;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 224px;
 }

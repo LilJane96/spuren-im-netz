@@ -21,7 +21,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 77vh;
+  height: 467px;
   border-radius: 20px;
   margin: -50px;
 }
@@ -122,9 +122,7 @@
   border-radius: 15px;
 }
 
-.UserProfileEndUnitContainer .BottombarContainer {
-  position: absolute;
-  bottom: 50px;
+.BottombarContainer .bottombar {
 }
 
 .ImageScrollContainer {
