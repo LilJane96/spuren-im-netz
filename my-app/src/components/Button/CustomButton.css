@@ -181,3 +181,61 @@ button.QuaternaryButton {
   box-shadow: 0px 4px 6px #d2d2d2;
   z-index: 999;
 }
+
+button.QuinaryButton {
+  padding: 40px 265px;
+  border-radius: 1.3em;
+  font-weight: 700;
+  font-size: 22px;
+  color: white;
+  display: flex;
+  align-items: center;
+  vertical-align: top;
+  justify-content: center;
+  text-transform: uppercase;
+  background: var(--button-bg-color);
+  transform-style: preserve-3d;
+  transition: 0.15s cubic-bezier(0, 0, 0.6, 1);
+  white-space: nowrap;
+}
+button.QuinaryButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--button-before);
+  transform: translate3d(0, 0.5em, -1em);
+  transition: 0.15s cubic-bezier(0, 0, 0.6, 1);
+}
+
+button.QuinaryButton:disabled {
+  background: var(--button-bg-color-disabled);
+  color: #ffffff99;
+}
+button.QuinaryButton:disabled::before {
+  background: var(--button-before-disabled);
+}
+button.QuinaryButton:disabled:hover {
+  transform: none;
+}
+
+button.QuinaryButton:disabled:active {
+  transform: none;
+}
+
+button.QuinaryButton:hover {
+  transform: translate(0, 0.25em);
+}
+
+button.QuinaryButton:hover::before {
+  transform: translate3d(0, 0.5em, -1em);
+}
+
+button.QuinaryButton:active {
+  transform: translate(0, 0.75em);
+}

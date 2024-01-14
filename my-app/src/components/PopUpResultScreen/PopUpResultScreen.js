@@ -13,7 +13,7 @@ export default function PopUpResultScreen({ open, unit }) {
 
     const [openBox, setOpenBox] = useState(false);
     const [imageSrc, setImageSrc] = useState(ClosedResultBox);
-    const [imageSrcWidth, setImageSrcWidth] = useState("25%")
+    const [imageSrcWidth, setImageSrcWidth] = useState("30%")
     const [showText, setShowText] = useState(true);
     const [buttonStatus, setButtonStatus] = useState(true);
 
@@ -36,7 +36,7 @@ export default function PopUpResultScreen({ open, unit }) {
         setImageSrc(getOpenBoxImage(unit));
         setButtonStatus(false);
         setShowText(false)
-        setImageSrcWidth("70%")
+        setImageSrcWidth("50%")
     };
 
     return (
@@ -73,8 +73,8 @@ export default function PopUpResultScreen({ open, unit }) {
                     </div>
                 </div>
                 <img  align={"center"} onClick={handleBoxOpen}  src={imageSrc} alt="ClosedBox" style={{
-                    width: imageSrcWidth, cursor: 'pointer', margin: '45px', marginTop: showText ? "20px" : "10px",
-                    marginBottom: showText ? "10px" : "45px" }}/>
+                    width: imageSrcWidth, cursor: 'pointer', margin: '45px', marginTop: showText ? "20px" : "-25px",
+                    marginBottom: showText ? "10px" : "5px" }}/>
                 {showText && (
                     <DialogContentText style={{justifyContent: "center" , marginTop: 20, marginBottom: 10}} variant={"h6"} >
                         Klicke auf die Schatztruhe, um deine Belohnung einzusammeln!
@@ -82,11 +82,11 @@ export default function PopUpResultScreen({ open, unit }) {
                 )}
                 {!showText && (
                     <DialogContentText variant={"h5"} >
-                        Super du hast eine Belohnung erhalten!
+                        Super! Du hast eine Belohnung erhalten!
                     </DialogContentText>
                 )}
                 <DialogActions style={{justifyContent: "center" , marginTop: 20, marginBottom: 10}} >
-                    <Link href={`/result/${unit}/step1`}><CustomButton disabled={buttonStatus} name="Schau dir deine Ergebnisse an!" type="primary" style={{ width: '200px' }}></CustomButton></Link>
+                    <Link href={`/result/${unit}/step1`}><CustomButton disabled={buttonStatus} name="Schau dir deine Ergebnisse an!" type="quinary" style={{ width: '200px' }}></CustomButton></Link>
                 </DialogActions>
             </DialogContent>
                 </div>
