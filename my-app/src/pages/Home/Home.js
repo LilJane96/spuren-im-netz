@@ -26,9 +26,13 @@ function Home() {
       <div className="barHomePage">
         <img src={BarHomePage} alt="Bar" />
       </div>
+        <div className="titleAndSubtitleHome">
+            <h1 className="spuren">Spuren im Netz</h1>
+            <h4 className="h4HomePage">
+                Herzlich Willkommen zu Spuren im Netz!
+            </h4>
+        </div>
       <div className="paragraphsHome">
-        <h1 className="spuren">Spuren im Netz</h1>
-        <h4 className="h4HomePage">Herzlich Willkommen zu Spuren im Netz!</h4>
         <p>Helfe Pixel beim Lösen seiner Fälle!</p>
         <p>Werde ein Internet-Detektiv!</p>
         <p>Sei sicher im Internet unterwegs!</p>

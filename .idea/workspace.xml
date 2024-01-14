@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac1a0cd9-18f7-49cb-a7b5-8e02d10bfadc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Button/CustomButton.css" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Button/CustomButton.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Button/CustomButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Button/CustomButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/PopUpResultScreen/PopUpResultScreen.css" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/PopUpResultScreen/PopUpResultScreen.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/PopUpResultScreen/PopUpResultScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/PopUpResultScreen/PopUpResultScreen.js" afterDir="false" />
-    </list>
+    <list default="true" id="ac1a0cd9-18f7-49cb-a7b5-8e02d10bfadc" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -172,7 +166,7 @@
       <workItem from="1703501995151" duration="4605000" />
       <workItem from="1704195537074" duration="1068000" />
       <workItem from="1705062056893" duration="1567000" />
-      <workItem from="1705217982828" duration="3470000" />
+      <workItem from="1705217982828" duration="3788000" />
     </task>
     <servers />
   </component>
