@@ -6,12 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="ac1a0cd9-18f7-49cb-a7b5-8e02d10bfadc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/PopUpResultScreen/PopUpResultScreen.css" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/PopUpResultScreen/PopUpResultScreen.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/PopUpResultScreen/PopUpResultScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/PopUpResultScreen/PopUpResultScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/Units/Unit.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/Units/Unit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/PhoneSimulator/MyProfil/MyProfil.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/PhoneSimulator/MyProfil/MyProfil.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/GoodFoxProfile/GoodFoxProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/GoodFoxProfile/GoodFoxProfile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/components/PhoneSimulator/UserProfile/UserProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/PhoneSimulator/UserProfile/UserProfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/images/ProfileImages/Bike.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/PopUpResultScreen/PopUpResultScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/PopUpResultScreen/PopUpResultScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/images/ClosedResultBox.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/images/OpenResultUnit1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/images/OpenResultUnit2.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,8 +79,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Julian\WebstormProjects\spuren-im-netz\my-app\src\images\ProfileImages" />
       <recent name="C:\Users\Julian\WebstormProjects\spuren-im-netz\my-app\src\images" />
+      <recent name="C:\Users\Julian\WebstormProjects\spuren-im-netz\my-app\src\images\ProfileImages" />
       <recent name="C:\Users\julia\Documents\StudiumMM7_6.Semester\spuren-im-netz_2\my-app\src\images" />
       <recent name="C:\Users\Julian\WebstormProjects\spuren-im-netz\my-app\public\images" />
     </key>
@@ -173,6 +173,8 @@
       <workItem from="1703007357471" duration="2895000" />
       <workItem from="1703501995151" duration="4605000" />
       <workItem from="1704195537074" duration="1068000" />
+      <workItem from="1705062056893" duration="1567000" />
+      <workItem from="1705217982828" duration="988000" />
     </task>
     <servers />
   </component>

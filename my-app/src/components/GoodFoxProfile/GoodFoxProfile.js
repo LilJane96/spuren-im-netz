@@ -9,7 +9,6 @@ import HomeGoodFox from "../../images/HomeGoodFox.jpg";
 import TablesGoodFox from "../../images/TablesGoodFox.jpg";
 import PuzzleGoodFox from "../../images/PuzzleGoodFox.jpg";
 import ForestWalkGoodFox from "../../images/ForestWalkGoodFox.jpg";
-import ImageOne from "../../images/OpenResultUnit2.jpg";
 import ImageTwo from "../../images/image2.jpg";
 import ImageThree from "../../images/image3.jpg";
 import ImageFour from "../../images/image4.jpg";

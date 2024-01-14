@@ -1,8 +1,8 @@
 import {Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Link} from "@mui/material";
 import "./PopUpResultScreen.css"
 import OpenResultUnit1 from "../../images/OpenResultUnit1.png";
-import CloseResultBox from "../../images/ClosedResultBox.png";
-import OpenResultUnit2 from "../../images/OpenResultUnit2.jpg";
+import ClosedResultBox from "../../images/ClosedResultBox.png";
+import OpenResultUnit2 from "../../images/OpenResultUnit2.png";
 import React, {useState} from "react";
 import CustomButton from "../Button/CustomButton";
 import ResultPopUpStar1 from "../../images/ResultPopUpStar1.png"
@@ -12,7 +12,7 @@ import ResultPopUpStar3 from "../../images/ResultPopUpStar3.png"
 export default function PopUpResultScreen({ open, unit }) {
 
     const [openBox, setOpenBox] = useState(false);
-    const [imageSrc, setImageSrc] = useState(CloseResultBox);
+    const [imageSrc, setImageSrc] = useState(ClosedResultBox);
     const [imageSrcWidth, setImageSrcWidth] = useState("25%")
     const [showText, setShowText] = useState(true);
     const [buttonStatus, setButtonStatus] = useState(true);
@@ -36,7 +36,7 @@ export default function PopUpResultScreen({ open, unit }) {
         setImageSrc(getOpenBoxImage(unit));
         setButtonStatus(false);
         setShowText(false)
-        setImageSrcWidth("56%")
+        setImageSrcWidth("70%")
     };
 
     return (
@@ -73,7 +73,7 @@ export default function PopUpResultScreen({ open, unit }) {
                     </div>
                 </div>
                 <img  align={"center"} onClick={handleBoxOpen}  src={imageSrc} alt="ClosedBox" style={{
-                    width: imageSrcWidth, cursor: 'pointer', margin: '45px', marginTop: showText ? "20px" : "0px",
+                    width: imageSrcWidth, cursor: 'pointer', margin: '45px', marginTop: showText ? "20px" : "10px",
                     marginBottom: showText ? "10px" : "45px" }}/>
                 {showText && (
                     <DialogContentText style={{justifyContent: "center" , marginTop: 20, marginBottom: 10}} variant={"h6"} >
@@ -82,7 +82,7 @@ export default function PopUpResultScreen({ open, unit }) {
                 )}
                 {!showText && (
                     <DialogContentText variant={"h5"} >
-                        Du hast eine Lupe erhalten!
+                        Super du hast eine Belohnung erhalten!
                     </DialogContentText>
                 )}
                 <DialogActions style={{justifyContent: "center" , marginTop: 20, marginBottom: 10}} >

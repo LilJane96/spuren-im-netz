@@ -6,7 +6,6 @@ import Breakfast from "../../../images/ProfileImages/Breakfast.png";
 import Vacation from "../../../images/ProfileImages/Vacation.jpg";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import Profilepicture from "../../../images/SearchPearsonImages/Annonym.png";
-import ImageOne from "../../../images/OpenResultUnit2.jpg";
 import ImageTwo from "../../../images/image2.jpg";
 import Ring from "../../../images/ProfileImages/Ring.jpg";
 import Grill from "../../../images/ProfileImages/Grill.jpg";
