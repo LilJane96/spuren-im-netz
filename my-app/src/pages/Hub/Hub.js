@@ -35,16 +35,21 @@ function Hub() {
   };
 
   return (
-    <>
-      {/* <Onboarding /> */}
-      <div className="hub">
-        <img
-          className="fox"
-          src={FoxPicture}
-          alt="Fox"
-          onClick={handleOpenFoxProfile}
-        />
-        <img className="backpack" src={Backpack} alt="Backpack" />
+    <div className="hub">
+      <div className="HeaderContainer">
+        <div className="foxProfileContainer">
+          <img
+            className="fox"
+            src={FoxPicture}
+            alt="Fox"
+            onClick={handleOpenFoxProfile}
+          />
+        </div>
+        <div>
+          <img className="backpack" src={Backpack} alt="Backpack" />
+        </div>
+      </div>
+      <div className="MapContainer">
         <img className="map" src={PhoneMap} alt="Map" />
         <div className="pins">
           <img
@@ -56,7 +61,7 @@ function Hub() {
           {units.unit1?.done ? (
             <img
               onClick={() => handleOpenUnit("unit2")}
-              className="pinTwoInactive"
+              className="pinTwoActive"
               src={Pin2Active}
               alt="Unit 2"
             />
@@ -64,17 +69,17 @@ function Hub() {
             <img className="pinTwoInactive" src={Pin2Inactive} alt="Unit 2" />
           )}
         </div>
-        <div>
-          <PopUpChooseName open={open}></PopUpChooseName>
-        </div>
-        <div>
-          <GoodFoxProfile
-            open={openFoxProfile}
-            onClose={() => setOpenFoxProfile(false)}
-          />
-        </div>
       </div>
-    </>
+      <div>
+        <PopUpChooseName open={open}></PopUpChooseName>
+      </div>
+      <div>
+        <GoodFoxProfile
+          open={openFoxProfile}
+          onClose={() => setOpenFoxProfile(false)}
+        />
+      </div>
+    </div>
   );
 }
 

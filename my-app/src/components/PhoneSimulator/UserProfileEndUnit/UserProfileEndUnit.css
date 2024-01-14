@@ -125,11 +125,11 @@
 .BottombarContainer .bottombar {
 }
 
-.ImageScrollContainer {
+.UserProfileEndUnitContainer .ImageScrollContainer {
   margin: 10px 0;
 }
 
-.ImageScrollContainer .backBtn {
+.UserProfileEndUnitContainer .ImageScrollContainer .backBtn {
   z-index: 999;
   position: absolute;
   left: 518px;

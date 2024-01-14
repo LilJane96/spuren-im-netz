@@ -1,6 +1,6 @@
 .FinalFrameTwoContainer {
   display: flex;
-  height: 79vh;
+  height: 100vh;
   margin: -50px 40px;
   justify-content: flex-end;
   align-items: flex-end;
@@ -8,8 +8,14 @@
 
 .FinalFrameTwoContainer .SpeechbubbleContainer {
   position: absolute;
-  left: 550px;
-  top: 16px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-58%, -130%);
+}
+
+.FinalFrameTwoContainer .button {
+  align-self: flex-end;
+  margin-bottom: 20px;
 }
 
 .FinalFrameTwoContainer .SpeechbubbleContainer .circle {

@@ -1,50 +1,63 @@
 .hub {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  height: 100vh;
+  justify-content: space-between;
 }
 
-.fox {
-  position: absolute;
-  left: 45px;
-  top: 45px;
+.hub .HeaderContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: calc(100% - 50px);
+  margin: 25px 20px 0;
+}
+
+.hub .MapContainer {
+  margin: -170px 0;
+}
+
+.hub .foxProfileContainer {
+  z-index: 999;
+}
+
+.hub .fox {
+  cursor: pointer;
+  align-self: flex-start;
   border: 6px solid #4e4e4e;
   border-radius: 60px;
-  cursor: pointer;
-  z-index: 3;
+  left: 45px;
 }
 
-.backpack {
+.hub .backpack {
   cursor: pointer;
-  position: absolute;
-  right: 45px;
-  top: 45px;
-  z-index: 3;
+  align-self: flex-end;
 }
 
-.map {
-  position: absolute;
-  right: 0;
-  top: 30px;
+.hub .map {
+  position: relative;
+  max-width: 100%; /* Füge diese Zeile hinzu, um die maximale Breite auf 100% zu setzen */
+  height: auto; /* Füge diese Zeile hinzu, um das Seitenverhältnis beizubehalten */
 }
 
-.pins {
-  cursor: pointer;
-}
-.pinOne {
-  cursor: pointer;
+.hub .pins {
   position: absolute;
-  top: 110px;
-  left: 530px;
 }
 
-.pinTwoInactive {
-  position: absolute;
-  top: 305px;
-  left: 670px;
-}
-
-.pinTwo {
+.hub .pinOne {
   cursor: pointer;
   position: absolute;
-  top: 210px;
-  left: 755px;
+  transform: translate(540%, -421%);
+}
+
+.hub .pinTwoActive {
+  cursor: pointer;
+  position: absolute;
+  transform: translate(803%, -336%);
+}
+
+.hub .pinTwoInactive {
+  position: absolute;
+  transform: translate(440%, -710%);
 }

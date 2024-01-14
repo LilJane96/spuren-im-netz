@@ -36,7 +36,7 @@ export default function FinalFrameOne() {
         <Speachbubble text="Something like: Oh no turns out the stranger is the bad fox. He is busted and is running back to his crib. I have to go catch him.. etc " />
       </div>
 
-      <div>
+      <div className="button">
         <CustomButton type="primary" name="Weiter" onClick={handleNextStep} />
       </div>
     </div>

@@ -38,11 +38,11 @@
 }
 
 .GoodFoxProfileContainer .sectionContainer {
-  flex: 1;
+  flex: 1 1;
   display: flex;
   flex-direction: column;
   width: 264px;
-  height: 494px;
+  height: 510px;
 }
 
 .GoodFoxProfileContainer .ImageScrollContainer .backBtn {

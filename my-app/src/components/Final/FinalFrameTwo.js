@@ -47,7 +47,7 @@ export default function FinalFrameTwo() {
         </div>
       </div>
 
-      <div>
+      <div className="button">
         <CustomButton type="primary" name="Weiter" onClick={handleNextStep} />
       </div>
     </div>

@@ -8,8 +8,9 @@
 
 .FinalFrameThreeContainer .SpeechbubbleContainer {
   position: absolute;
-  left: 324px;
-  top: 47px;
+  left: 50%;
+  top: 48%;
+  transform: translate(-43%, -186%);
 }
 
 .FinalFrameThreeContainer .SpeechbubbleContainer .circle {
