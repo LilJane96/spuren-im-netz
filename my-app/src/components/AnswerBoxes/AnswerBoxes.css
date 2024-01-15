@@ -1,31 +1,43 @@
 .AnswerBoxesComponent {
-  margin: 20px 0;
   width: 323px;
-  height: 100%;
-  padding: 20px 35px;
-  background-color: white;
-  box-shadow: 0px 4px 4px var(--box-shadow);
+  height: 79px;
   border-radius: 15px;
+  background: #fff;
+  margin: 20px 0;
+  box-shadow: 0px 4px 4px 0px var(--box-shadow);
+  display: flex;
   display: flex;
   justify-content: center;
-  color: black;
+  align-items: center;
+
+  color: #000;
+  text-align: center;
   font-size: 20px;
+  font-style: normal;
   font-weight: 700;
   line-height: 40px;
-  word-wrap: break-word;
+  padding: 0px 20px;
 }
 
 .AnswerBoxesComponent.imageContent {
   margin: 6px 0px;
-  width: 123px;
-  height: 131px;
+  width: 153px;
+  height: 171px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.AnswerBoxesComponent.selected {
+  width: 373px;
+  height: 91px;
+}
 
 .AnswerBoxesComponent.green {
   background-color: #a0f959;
+}
+
+.AnswerBoxesComponent.red {
+  background-color: red;
 }
 .AnswerBoxesComponent.green:hover {
   background-color: #a0f959;

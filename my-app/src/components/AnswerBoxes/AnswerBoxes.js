@@ -1,12 +1,18 @@
 import React, { useState } from "react";
 import "./AnswerBoxes.css";
 
-export default function AnswerBoxes({ type, text, imageUrl, onClick, isCorrect, imgAnswer }) {
+const AnswerBoxes = ({
+  type,
+  text,
+  imageUrl,
+  onClick,
+  isCorrect,
+  imgAnswer,
+}) => {
   const [clicked, setClicked] = useState(false);
 
   const handleClick = () => {
-      setClicked(true);
-
+    setClicked(true);
     onClick(text, isCorrect);
   };
 
@@ -19,15 +25,21 @@ export default function AnswerBoxes({ type, text, imageUrl, onClick, isCorrect, 
       return <p className="textContainer text">{text}</p>;
     } else if (type === "image") {
       return (
-        <div style={{display: "flex", alignItems: "center", flexDirection: "column"}}>
-         <img
-          className="textContainer image"
-          src={process.env.PUBLIC_URL + `/${imageUrl}`}
-          alt="Bildbeschreibung"
-        />
-        <p style={{margin: "0"}}>{imgAnswer}</p>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            flexDirection: "column",
+          }}>
+          <img
+            className={`textContainer image ${
+              type === "image" ? "imageContent" : ""
+            }`}
+            src={process.env.PUBLIC_URL + `/${imageUrl}`}
+            alt="Bildbeschreibung"
+          />
+          <p style={{ margin: "0" }}>{imgAnswer}</p>
         </div>
-        
       );
     }
 
@@ -36,14 +48,15 @@ export default function AnswerBoxes({ type, text, imageUrl, onClick, isCorrect, 
 
   return (
     <div
-    className={`AnswerBoxesComponent ${type === "image" ? "imageContent" : ""} ${
-      clicked ? (isCorrect ? "green" : "red") : ""
-    }`}
+      className={`AnswerBoxesComponent ${
+        type === "image" ? "imageContent" : ""
+      } ${clicked ? (isCorrect ? "green" : "red") : ""}`}
       onClick={handleClick}
       onBlur={handleBlur}
-      tabIndex={0}
-    >
+      tabIndex={0}>
       {renderContent()}
     </div>
   );
-}
+};
+
+export default AnswerBoxes;
