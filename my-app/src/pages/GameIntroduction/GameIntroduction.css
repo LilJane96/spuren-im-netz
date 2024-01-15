@@ -9,8 +9,13 @@
 
 .GameIntroductionContainer .IntroductionText {
   display: flex;
-  align-items: flex-start;
-  margin: 35px 50px;
+  margin: 20px 50px;
+}
+
+.GameIntroductionContainer .EndUnit {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 50px 0;
 }
 
 .GameIntroductionContainer .IntroductionText .textBubble {
@@ -30,6 +35,8 @@
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+
+  z-index: 999;
 }
 
 .GameIntroductionContainer .IntroductionText .EndUnit {
@@ -43,5 +50,6 @@
   display: flex;
   justify-content: space-between;
   margin: 0 50px;
-  padding: 35px 20px; /* Optional: Füge Padding für den Abstand zu den Seiten hinzu */
+  padding: 35px 20px;
+  z-index: 999;
 }

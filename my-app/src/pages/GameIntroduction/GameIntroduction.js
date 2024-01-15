@@ -3,6 +3,7 @@ import IntroductionArray from "../../utilis/Introduction";
 import "./GameIntroduction.css";
 import CustomButton from "../../components/Button/CustomButton";
 import { useNavigate, useParams } from "react-router-dom";
+import GoodFoxProfile from "../../components/GoodFoxProfile/GoodFoxProfile";
 
 export default function GameIntroduction() {
   const [currentStep, setCurrentStep] = useState(0);
@@ -41,7 +42,7 @@ export default function GameIntroduction() {
   };
 
   const handleGoBack = () => {
-    if (currentStep >= introductionData.steps.length - 1) {
+    if (currentStep > 0) {
       setCurrentStep(currentStep - 1);
     }
   };
@@ -60,20 +61,35 @@ export default function GameIntroduction() {
         <div
           key={obj.step}
           style={{ display: index === currentStep ? "block" : "none" }}>
+          <div className="EndUnit">
+            <CustomButton type="quaternary" onClick={handleEndUnit} />
+          </div>
           <div
             className="IntroductionText"
             style={{
               justifyContent:
                 unitId === "GameIntroduction" ? "flex-end" : "space-between",
+              justifyContent: obj.speechbubblePosition || "center",
             }}>
+            {obj.component && <GoodFoxProfile open={true} />}{" "}
             {obj.text ? (
               <p
                 className="textBubble"
                 style={{
-                  width: unitId === "GameIntroduction" ? "600px" : "740px",
+                  width:
+                    obj.speechbubbleSize === "big"
+                      ? "620px"
+                      : obj.speechbubbleSize === "middle"
+                      ? "553px"
+                      : obj.speechbubbleSize === "small"
+                      ? "428px"
+                      : "620px",
                   padding:
                     unitId === "GameIntroduction" ? "40px 18px" : "25px 18px",
-                  margin: unitId === "GameIntroduction" ? "0" : "0 auto",
+                  margin:
+                    unitId === "GameIntroduction"
+                      ? obj.speechbubbleMargin || "0"
+                      : "0 auto",
                 }}>
                 {obj.text}
               </p>
@@ -82,9 +98,19 @@ export default function GameIntroduction() {
                 className="placeholder"
                 style={{ height: "130px", width: "775px" }}></div>
             )}
-            <div className="EndUnit">
-              <CustomButton type="quaternary" onClick={handleEndUnit} />
-            </div>
+          </div>
+          <div
+            className="SpeechBubble"
+            style={{
+              alignSelf: obj.speechbubblePosition || "center",
+              width:
+                obj.speechbubbleSize === "big"
+                  ? "300px"
+                  : obj.speechbubbleSize === "middle"
+                  ? "200px"
+                  : "150px",
+            }}>
+            {/* You can add additional styling for the speech bubble */}
           </div>
         </div>
       ))}
