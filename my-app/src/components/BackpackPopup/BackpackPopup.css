@@ -1,0 +1,53 @@
+.BackpackPopupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #02020296;
+
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(11px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 998;
+}
+
+.CloseBackpack {
+  z-index: 999;
+  position: absolute;
+  margin: 20px 0px;
+}
+
+.BackpackPopupOverlay .BackpackPopup {
+  width: 285.099px;
+  height: 37.404px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0px 4px 4px 0px #d4bbdc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px;
+}
+
+.BackpackPopupOverlay .BackpackContainer {
+  position: relative;
+}
+
+.BackpackPopupOverlay .BackpackContentContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 33%);
+  display: flex;
+  gap: 30px;
+}
+
+.BackpackPopupOverlay .BackpackContentContainer img {
+  width: 104px;
+  height: 104px;
+}

@@ -11,10 +11,12 @@ import PopUpChooseName from "../../components/PopUpChooseName/PopUpChooseName";
 import GoodFoxProfile from "../../components/GoodFoxProfile/GoodFoxProfile";
 import { useNavigate } from "react-router-dom";
 import CustomButton from "../../components/Button/CustomButton";
+import BackpackPopup from "../../components/BackpackPopup/BackpackPopup";
 
 function Hub() {
   const [open, setOpen] = useState(false);
   const [openFoxProfile, setOpenFoxProfile] = useState(false);
+  const [openBackpack, setOpenBackpack] = useState(false);
   const [units, setUnits] = useState({});
   const [sidebarCollapsed, setSidebarCollapsed] = useState(true);
   const navigate = useNavigate();
@@ -30,6 +32,10 @@ function Hub() {
 
   const handleOpenFoxProfile = () => {
     setOpenFoxProfile(true);
+  };
+
+  const handleOpenBackpack = () => {
+    setOpenBackpack(true);
   };
 
   const handleOpenUnit = (obj) => {
@@ -52,10 +58,23 @@ function Hub() {
           />
         </div>
         <div className="upperRightOptions">
-          <img className="backpack" src={Backpack} alt="Backpack" />
-          {!sidebarCollapsed && <Sidebar toggleSidebarVisibility={toggleSidebarVisibility} />}
+          <img
+            className="backpack"
+            src={Backpack}
+            alt="Backpack"
+            onClick={handleOpenBackpack}
+          />
+          {openBackpack && (
+            <BackpackPopup
+              open={openBackpack}
+              onClose={() => setOpenBackpack(false)}
+            />
+          )}
+          {!sidebarCollapsed && (
+            <Sidebar toggleSidebarVisibility={toggleSidebarVisibility} />
+          )}
           {sidebarCollapsed && (
-          <CustomButton type="senary" onClick={toggleSidebarVisibility}/>
+            <CustomButton type="senary" onClick={toggleSidebarVisibility} />
           )}
         </div>
       </div>
