@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Hub.css";
-import Onboarding from "../../components/Onboarding/Onboarding";
+import Sidebar from "../../components/Sidebar/Sidebar";
 import PhoneMap from "../../images/PhoneMap.png";
 import Pin1Active from "../../images/Pins/Pin1Active.png";
 import Pin2Active from "../../images/Pins/Pin2Active.png";
@@ -10,11 +10,13 @@ import FoxPicture from "../../images/foxPicture.png";
 import PopUpChooseName from "../../components/PopUpChooseName/PopUpChooseName";
 import GoodFoxProfile from "../../components/GoodFoxProfile/GoodFoxProfile";
 import { useNavigate } from "react-router-dom";
+import CustomButton from "../../components/Button/CustomButton";
 
 function Hub() {
   const [open, setOpen] = useState(false);
   const [openFoxProfile, setOpenFoxProfile] = useState(false);
   const [units, setUnits] = useState({});
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(true);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -34,6 +36,10 @@ function Hub() {
     navigate("/introduction/unit2");
   };
 
+  const toggleSidebarVisibility = () => {
+    setSidebarCollapsed(!sidebarCollapsed);
+  };
+
   return (
     <div className="hub">
       <div className="HeaderContainer">
@@ -45,8 +51,12 @@ function Hub() {
             onClick={handleOpenFoxProfile}
           />
         </div>
-        <div>
+        <div className="upperRightOptions">
           <img className="backpack" src={Backpack} alt="Backpack" />
+          {!sidebarCollapsed && <Sidebar toggleSidebarVisibility={toggleSidebarVisibility} />}
+          {sidebarCollapsed && (
+          <CustomButton type="senary" onClick={toggleSidebarVisibility}/>
+          )}
         </div>
       </div>
       <div className="MapContainer">
