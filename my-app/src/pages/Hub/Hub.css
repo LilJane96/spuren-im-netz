@@ -37,7 +37,8 @@
 
 .hub .upperRightOptions {
   display: flex;
-  flex-direction: row;
+  flex-direction: row; 
+  gap: 45px;
   z-index: 999;
 }
 

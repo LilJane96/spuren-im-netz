@@ -1,37 +1,43 @@
-.main {
-    position: relative;
-    display: flex;
-    align-items: flex-start;
-}
-  
-.sidebar {
-    width: 300px;
+.sidebar .overlay{
+    width: 100%;
     height: 100%;
-    background-color: #dedede;
-    color: #000;
+    background-color: #000;
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    right: 500px;
+    z-index: 1;
+}
+
+.sidebar .menu {
+    width: 500px;
+    height: 100%;
+    background-color: var(--box-shadow);
+    color: var(--sidebar-text-color);
     position: absolute;
     top: 0;
     right: 0;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+    overflow-y: auto;
 }
 
-.collapsed {
-    width: 0;
-    opacity: 0;
-    pointer-events: none;
-}
-
-.head{
+.sidebar .head{
     display: flex;
     flex-direction: row;
+    justify-content: flex-end;
     margin-top: 25px;
-    margin-left: 65px;
+    margin-right: 50px;
+    margin-bottom: 25px;
+    gap: 85px;
 }
 
-.rules {
+.sidebar .rules {
     font-size: large;
+    margin-left: 40px;
+    margin-right: 40px;
+    line-height: 1.5;
 }
 
-li{
-    line-height: 2;
-}
