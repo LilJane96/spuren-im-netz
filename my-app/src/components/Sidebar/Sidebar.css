@@ -1,0 +1,37 @@
+.main {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+}
+  
+.sidebar {
+    width: 300px;
+    height: 100%;
+    background-color: #dedede;
+    color: #000;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.collapsed {
+    width: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.head{
+    display: flex;
+    flex-direction: row;
+    margin-top: 25px;
+    margin-left: 65px;
+}
+
+.rules {
+    font-size: large;
+}
+
+li{
+    line-height: 2;
+}

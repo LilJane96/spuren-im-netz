@@ -35,6 +35,12 @@
   align-self: flex-end;
 }
 
+.hub .upperRightOptions {
+  display: flex;
+  flex-direction: row;
+  z-index: 999;
+}
+
 .hub .map {
   position: relative;
   max-width: 100%; /* Füge diese Zeile hinzu, um die maximale Breite auf 100% zu setzen */
