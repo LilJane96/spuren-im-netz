@@ -27,7 +27,7 @@ export default function BackpackPopup({ open, onClose }) {
           </div>
           <div className="BackpackPopupOverlay">
             <div className="BackpackPopup">
-              <p>BackpackPopup Inhalt</p>
+              <p>Dein Rucksack!</p>
             </div>
             <div>
               <img src={Backpack} alt="Rucksack" />
