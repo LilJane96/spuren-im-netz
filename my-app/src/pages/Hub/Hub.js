@@ -76,7 +76,6 @@ function Hub() {
           {sidebarCollapsed && (
             <CustomButton type="senary" onClick={toggleSidebarVisibility} />
           )}
-          <img className="backpack" src={Backpack} alt="Backpack" />
         </div>
       </div>
       <div className="MapContainer">
