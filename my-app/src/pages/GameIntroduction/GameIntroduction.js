@@ -51,6 +51,12 @@ export default function GameIntroduction() {
     navigate(introductionData.backTo);
   };
 
+  console.log(
+    "currentStep",
+    currentStep,
+    "introductionData.steps.length",
+    introductionData.steps.length
+  );
   return (
     <div
       className="GameIntroductionContainer"
@@ -126,11 +132,19 @@ export default function GameIntroduction() {
             disabled
           />
         )}
-        <CustomButton
-          name="Weiter"
-          type="primary"
-          onClick={handleContinueClick}
-        />
+        {currentStep < introductionData.steps.length - 1 ? (
+          <CustomButton
+            name="Weiter"
+            type="primary"
+            onClick={handleContinueClick}
+          />
+        ) : (
+          <CustomButton
+            name="Spiel starten"
+            type="primary"
+            onClick={handleContinueClick}
+          />
+        )}
       </div>
     </div>
   );

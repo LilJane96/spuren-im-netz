@@ -1,43 +1,42 @@
-.sidebar .overlay{
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-    opacity: 0.3;
-    position: absolute;
-    top: 0;
-    right: 500px;
-    z-index: 1;
+.sidebar .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.3;
+  position: absolute;
+  top: 0;
+  right: 500px;
+  z-index: 1;
 }
 
 .sidebar .menu {
-    width: 500px;
-    height: 100%;
-    background-color: var(--box-shadow);
-    color: var(--sidebar-text-color);
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    align-content: flex-end;
-    overflow-y: auto;
+  width: 500px;
+  height: 100%;
+  background-color: var(--background);
+  color: var(--sidebar-text-color);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+  overflow-y: auto;
 }
 
-.sidebar .head{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    margin-top: 25px;
-    margin-right: 50px;
-    margin-bottom: 25px;
-    gap: 85px;
+.sidebar .head {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: 25px;
+  margin-right: 50px;
+  margin-bottom: 25px;
+  gap: 85px;
 }
 
 .sidebar .rules {
-    font-size: large;
-    margin-left: 40px;
-    margin-right: 40px;
-    line-height: 1.5;
+  font-size: large;
+  margin-left: 40px;
+  margin-right: 40px;
+  line-height: 1.5;
 }
-
