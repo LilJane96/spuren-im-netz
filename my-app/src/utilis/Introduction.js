@@ -31,7 +31,7 @@ export default function IntroductionArray() {
         {
           step: "stepFour",
           backgroundImage: "/images/IntroductionImageMap.png",
-          text: "Schau dir diese tolle Karte an, wo alles Spannende passiert! Und weißt du was? Dein Rucksack ist gleich hier rechts, immer bereit für dich zum Entdecken und Benutzen! Aber zuerst möchte ich dir etwas zeigen! Klicke einfach auf 'weiter'.",
+          text: "Schau dir diese tolle Karte an, wo alles Spannende passiert! Und weißt du was? Dein Rucksack ist gleich hier rechts, immer bereit für dich zum Entdecken und Benutzen! Aber zuerst möchte ich dir etwas zeigen! Klicke einfach auf 'Weiter'.",
 
           speechbubblePosition: "flex-end",
           speechbubbleSize: "middle",
@@ -40,7 +40,7 @@ export default function IntroductionArray() {
         {
           step: "stepFive",
           component: "<GoodFoxProfile />",
-          text: "Das ist mein Profil! Du kannst nach oben und unten scrollen und auf die Bilder klicken, um mehr Details zu sehen.",
+          text: "Das ist mein Profil! Du kannst nach oben und unten scrollen und auf die Bilder klicken, um mehr Details zu sehen. Sobald du mein Profil erkundet hast, klicke auf 'Weiter'",
           speechbubblePosition: "flex-start",
           speechbubbleSize: "small",
           speechbubbleMargin: "0",
@@ -56,12 +56,12 @@ export default function IntroductionArray() {
         {
           step: "stepOne",
           backgroundImage: "/images/FoxHome.png",
-          text: "Eines Tages kam ich nach einem langen und anstrengenden Arbeitstag mit vielen laufenden Fällen nach Hause, zog meine bequemen Klamotten an und machte mich auf den Weg in mein Wohnzimmer, um einige Dinge auf meinem Telefon zu überprüfen.",
+          text: "Puuuh, das war ein lange Tag. So viele Fälle auf einmal :( Jetzt muss ich mich erstmal ausruhen und frische Sachen anziehen. Oh, was ist den das?? Ich habe eine Nachricht auf meinem Handy erhalten!",
         },
         {
           step: "stepOne",
           backgroundImage: "/images/FoxHomeTwo.png",
-          text: "Ich war überrascht, als ich sah, dass ich eine neue Nachrichtenanfrage von jemandem namens Felix erhalten hatte. Ich glaube nicht, dass ich jemanden mit diesem Namen kenne.",
+          text: "Felix hat mir eine Nachrichtenanfrage geschickt? Ich kenne doch gar keinen Felix, komisch. Könnt ihr mir weiterhelfen?",
         },
         {
           step: "stepOne",

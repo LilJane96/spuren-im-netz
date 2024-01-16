@@ -10,11 +10,11 @@ export default function UnitsArray() {
         {
           step: [
             {
-              question: "Username",
+              question: "Profilname",
               speachbubble: [
                 {
                   type: "paragraph",
-                  content: "Zuerst müssen wir einen guten Namen aussuchen.",
+                  content: "Bevor du mir helfen kannst, müssen wir einen guten Namen für dein neues Konto aussuchen.",
                 },
                 {
                   type: "bold",
@@ -22,10 +22,10 @@ export default function UnitsArray() {
                 },
               ],
               phoneSimulatorStep: 1,
-              title: "Erstelle einen Account",
+              title: "Konto erstellen",
               answerboxes: [
                 { answer: userName, right: false },
-                { answer: "Fußballstar oder MegaMaler", right: true },
+                { answer: "Puzzlestar oder MegaMalerin", right: true },
                 { answer: "Name meiner Oma ", right: false },
               ],
               rightAnswer: "Super! Das ist ein sehr guter Name.",
@@ -47,7 +47,7 @@ export default function UnitsArray() {
                 {
                   type: "paragraph",
                   content:
-                    "Wenn wir ein Konto auf 'SocialMediaName' erstellen wollen, müssen wir uns noch ein gutes Passwort ausdenken.",
+                    "Wenn wir ein Konto erstellen wollen, müssen wir uns noch ein gutes Passwort ausdenken.",
                 },
                 {
                   type: "bold",
@@ -55,7 +55,7 @@ export default function UnitsArray() {
                 },
               ],
               phoneSimulatorStep: 2,
-              title: "Erstelle einen Account",
+              title: "Konto erstellen",
               answerboxes: [
                 { type: "text", answer: "Password", right: false },
                 { type: "text", answer: "kYh5&0!mlta", right: true },
@@ -71,7 +71,7 @@ export default function UnitsArray() {
         {
           step: [
             {
-              question: "Privatsphäre",
+              question: "Öffentlich oder Privat",
               speachbubble: [
                 {
                   type: "paragraph",
@@ -84,11 +84,11 @@ export default function UnitsArray() {
                 {
                   type: "bold",
                   content:
-                    "Soll dein Detektivprofil für alle sichtbar sein oder nur für gute Freunde? Wähle aus!",
+                    "Soll dein Konto für alle sichtbar sein oder nur für gute Freunde? Wähle aus!",
                 },
               ],
               phoneSimulatorStep: 3,
-              title: "Erstelle einen Account",
+              title: "Kontoeinstellungen",
               answerboxes: [
                 { answer: "Privat", right: true },
                 { answer: "Öffentlich", right: false },
@@ -96,7 +96,7 @@ export default function UnitsArray() {
               rightAnswer: "Super! Das ist eine gute Entscheidung.",
               wrongAnswer: "Schade, versuche es nochmal!",
               reason:
-                "Dein Profil auf “öffentlich” zu stellen ist nicht gut, da sonst jeder alles von deinen Bildern und Posts sehen kann. Öffentliche Profile sind z.B. für Unternehmen, die sich ein Profil erstellen, um Werbung auf ihrem Profil für ihre Produkte zu machen.",
+                "Dein Konto auf “öffentlich” zu stellen ist nicht gut, da sonst jeder alles von deinen Bildern und Posts sehen kann. Öffentliche Konten sind z.B. für Unternehmen, die sich ein Profil erstellen, um Werbung auf ihrem Profil für ihre Produkte zu machen.",
             },
           ],
         },
@@ -108,7 +108,7 @@ export default function UnitsArray() {
                 {
                   type: "bold",
                   content:
-                    "Klasse! Jetzt hast du dein ganz eigenes Detektivprofil.",
+                    "Klasse! Jetzt hast du dein ganz eigenes Konto. So ein Konto nennt man auch Profil.",
                 },
                 {
                   type: "paragraph",
@@ -121,7 +121,7 @@ export default function UnitsArray() {
                 },
               ],
               phoneSimulatorStep: 4,
-              title: "Erstelle einen Account",
+              title: "Profileinstellungen",
               answerboxes: [
                 {
                   type: "image",
@@ -163,7 +163,7 @@ export default function UnitsArray() {
                 {
                   type: "bold",
                   content:
-                    "Das sieht doch super aus! Wie ein echter Meisterdetektiv! ",
+                    "Das sieht doch super aus! Wie ein echter Detektiv oder Detektivin! ",
                 },
                 {
                   type: "paragraph",
@@ -177,7 +177,7 @@ export default function UnitsArray() {
                 },
               ],
               phoneSimulatorStep: 5,
-              title: "Erstelle einen Account",
+              title: "Profileinstellungen",
               answerboxes: [
                 {
                   type: "text",
@@ -223,12 +223,12 @@ export default function UnitsArray() {
         {
           step: [
             {
-              question: "Message",
+              question: "Nachricht",
               speachbubble: [
                 {
                   type: "paragraph",
                   content:
-                    "Hast du verstanden, was ich nun machen muss? Soll ich die Nachricht aktzeptieren oder lieber ablehnen?",
+                    "Hast du verstanden, was ich nun machen muss? Soll ich die Nachricht akzeptieren oder lieber ablehnen?",
                 },
                 {
                   type: "bold",
@@ -251,7 +251,7 @@ export default function UnitsArray() {
         {
           step: [
             {
-              question: "Search",
+              question: "Profilname",
               speachbubble: [
                 {
                   type: "paragraph",
@@ -278,7 +278,7 @@ export default function UnitsArray() {
         {
           step: [
             {
-              question: "User profile",
+              question: "Profilstandort",
               speachbubble: [
                 {
                   type: "paragraph",
@@ -307,7 +307,7 @@ export default function UnitsArray() {
         {
           step: [
             {
-              question: "User Profile",
+              question: "Profilalter",
               speachbubble: [
                 {
                   type: "paragraph",
@@ -326,7 +326,7 @@ export default function UnitsArray() {
                 { type: "text", answer: "12", right: false },
                 { type: "text", answer: "19", right: false },
               ],
-              rightAnswer: "Super! Die Person ist 39 alt. Klasse gemacht!!",
+              rightAnswer: "Super! Die Person ist 39 Jahre alt. Klasse gemacht!!",
               wrongAnswer:
                 "Guter Versuch! Aber leider stimmt das nicht. Probiere es nochmal!",
             },
@@ -335,7 +335,7 @@ export default function UnitsArray() {
         {
           step: [
             {
-              question: "User profile",
+              question: "Profilberuf",
               speachbubble: [
                 {
                   type: "paragraph",
@@ -351,7 +351,7 @@ export default function UnitsArray() {
               title: "Profil",
               answerboxes: [
                 { type: "text", answer: "Dieb", right: true },
-                { type: "text", answer: "Lehrer", right: false },
+                { type: "text", answer: "Lehrerin", right: false },
                 { type: "text", answer: "Schauspieler", right: false },
               ],
               rightAnswer: "Super! Das ist die richtige Antwort",

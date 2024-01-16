@@ -27,7 +27,7 @@ export default function MyProfil({ answer }) {
         <div className="flexContainer">
           <div className="textContainer">
             <p className="count">0</p>
-            <p className="text">Posts</p>
+            <p className="text">Beiträge</p>
           </div>
           <div className="textContainer">
             <p className="count">0</p>

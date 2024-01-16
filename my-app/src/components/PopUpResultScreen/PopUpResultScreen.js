@@ -57,7 +57,7 @@ export default function PopUpResultScreen({ open, unit }) {
             }} >
                 <div className="dialog-logo-outside "/>
                 {showText && (
-                    <DialogTitle textAlign={"center"} variant={"h5"}>Sehr gut 🌟 Du hast echt das Zeug zu einem Meisterdetektiv zu werden!
+                    <DialogTitle textAlign={"center"} variant={"h5"}>Sehr gut 🌟 Du hast die Aufgaben super gelöst!
                 </DialogTitle>
                     )}
                 {!showText && (

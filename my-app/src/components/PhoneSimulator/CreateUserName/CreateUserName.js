@@ -10,7 +10,7 @@ export default function CreateUserName({ answer }) {
     <div className="CreateAccountContainer">
       <div className="frameContainer">
         <div className="titleContainer">
-          <h3>Username erstellen</h3>
+          <h3>Name für dein Konto</h3>
         </div>
         <div>
           <div style={{ margin: "15px 0" }}>

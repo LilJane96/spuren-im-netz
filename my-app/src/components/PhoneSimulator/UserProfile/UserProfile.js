@@ -25,7 +25,7 @@ const images = [
   },
   { id: 2, img: Bike, text: "Mein neues Fahrrad. Stand hier einfach nur rum, so ein nettes Geschenk." },
   { id: 3, img: DVD, text: "Verkaufe hier gut erhaltene DVDs. Wie neu! 5 Euro das Stück" },
-  { id: 4, img: Vacation, text: "Urlaub ist sehr schön!" },
+  { id: 4, img: Vacation, text: "Urlaub ist sehr schön! Ein guter Ort, um meinen 39. Geburtstag zu feiern." },
   { id: 5, img: Playstation, text: "Habt ihr auch schon die neue PS5? Mein Nachbar hat sie einfach nicht mehr gebraucht, haha :D" },
   { id: 6, img: Ring, text: "Glitzert so schön. Noch einer davon und dann ab in den Urlauuub :) :) :)" },
   { id: 7, img: Grill, text: "Meint ihr das lohnt sich? Hm, muss ich nochmal einen Kollegen fragen." },
@@ -75,7 +75,7 @@ export default function UserProfile({ answer }) {
           <div className="flexContainer">
             <div className="textContainer">
               <p className="count">26</p>
-              <p className="text">Posts</p>
+              <p className="text">Beiträge</p>
             </div>
             <div className="textContainer">
               <p className="count">128</p>

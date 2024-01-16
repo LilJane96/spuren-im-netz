@@ -3,12 +3,15 @@ import House from "../../images/ProfileImages/House.png";
 import Puzzle from "../../images/ProfileImages/Puzzle.png";
 import Soccer from "../../images/ProfileImages/Soccer.png";
 import Cube from "../../images/ProfileImages/Cube.png";
+import PuzzleWorldMapGoodFox from "../../images/PuzzleWorldMapGoodFox.jpg";
+import SunsetGoodFoxProfile from "../../images/SunsetGoodFox.jpg";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import FoxProfilePic from "../../images/ProfileImages/FoxProfilePic.png";
 import HomeGoodFox from "../../images/HomeGoodFox.jpg";
 import TablesGoodFox from "../../images/TablesGoodFox.jpg";
 import PuzzleGoodFox from "../../images/PuzzleGoodFox.jpg";
 import ForestWalkGoodFox from "../../images/ForestWalkGoodFox.jpg";
+import OfficeGoodFoxProfile from "../../images/OfficeGoodFox.jpg";
 import ImageTwo from "../../images/image2.jpg";
 import ImageThree from "../../images/image3.jpg";
 import ImageFour from "../../images/image4.jpg";
@@ -28,9 +31,9 @@ const images = [
   { id: 3, img: TablesGoodFox, text: "Meine guten Freunde Elias und Niklas beim Tischkicker spielen." },
   { id: 4, img: HomeGoodFox, text: "Lange Straße 15 in Berlin, Herr Müller. So ein schönes Haus!" },
   { id: 5, img: ForestWalkGoodFox, text: "Schaut mal Leute, ich habe heute diese Menschen an meinem Haus vorbeilaufen gesehen und direkt ein Foto gemacht :D" },
-  { id: 6, img: ImageTwo, text: "ImageTwo Image" },
-  { id: 7, img: ImageThree, text: "ImageThree Image" },
-  { id: 8, img: ImageFour, text: "ImageFour Image" },
+  { id: 6, img: PuzzleWorldMapGoodFox, text: "Puuh, endlich geschafft! Hat aber Spaß gemacht!" },
+  { id: 7, img: SunsetGoodFoxProfile, text: "Wooooooooow" },
+  { id: 8, img: OfficeGoodFoxProfile, text: "Ab ins Büro, hier warten noch einige Fälle auf mich." },
 ];
 
 export default function GoodFoxProfile({ open, onClose }) {
