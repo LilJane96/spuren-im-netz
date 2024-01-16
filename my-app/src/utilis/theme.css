@@ -15,6 +15,7 @@
   --button-before: rgba(159, 47, 197, 1);
   --button-before-disabled: rgba(159, 47, 197, 0.5);
   --stepper-color: #bf56e3;
+  --sidebar-text-color: #000;
 }
 
 [data-theme="green"] {
@@ -28,6 +29,7 @@
   --button-before: rgba(159, 47, 197, 1);
   --button-before-disabled: rgba(159, 47, 197, 0.5);
   --stepper-color: #bf56e3;
+  --sidebar-text-color: #fff;
 }
 
 [data-theme="red"] {
@@ -41,6 +43,7 @@
   --button-before: rgba(159, 47, 197, 1);
   --button-before-disabled: rgba(159, 47, 197, 0.5);
   --stepper-color: #bf56e3;
+  --sidebar-text-color: #fff;
 }
 
 [data-theme="blue"] {
@@ -55,6 +58,7 @@
   --button-before: #2a6d8f;
   --button-before-disabled: #2a6d8fd1;
   --stepper-color: #bf56e3;
+  --sidebar-text-color: #000;
 }
 
 [data-theme="orange"] {
@@ -68,6 +72,7 @@
   --button-before: rgba(159, 47, 197, 1);
   --button-before-disabled: rgba(159, 47, 197, 0.5);
   --stepper-color: #bf56e3;
+  --sidebar-text-color: #000;
 }
 
 [data-theme="yellow"] {
@@ -81,6 +86,7 @@
   --button-before: rgba(159, 47, 197, 1);
   --button-before-disabled: rgba(159, 47, 197, 0.7);
   --stepper-color: #bf56e3;
+  --sidebar-text-color: #000;
 }
 
 [data-theme="pink"] {
@@ -94,6 +100,7 @@
   --button-before: rgba(159, 47, 197, 1);
   --button-before-disabled: rgba(159, 47, 197, 0.5);
   --stepper-color: #bf56e3;
+  --sidebar-text-color: #000;
 }
 
 [data-theme="purple"] {
@@ -107,4 +114,5 @@
   --button-before: rgba(159, 47, 197, 1);
   --button-before-disabled: rgba(159, 47, 197, 0.5);
   --stepper-color: #bf56e3;
+  --sidebar-text-color: #fff;
 }

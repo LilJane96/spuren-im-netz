@@ -242,8 +242,8 @@ button.QuinaryButton:active {
 
 button.SenaryButton {
   background: white url(../../images/ExclamationButton.svg) center/contain no-repeat;
-  width: 58px;
-  height: 58px;
+  width: 95px;
+  height: 95px;
   padding: 0;
   margin: 0 0 0 30px;
   border-radius: 20px;
