@@ -65,7 +65,7 @@ export default function IntroductionArray() {
         },
         {
           step: "stepOne",
-          backgroundImage: "/images/FoxHomeThree.png",
+          backgroundImage: "/images/FoxHomeThree.svg",
         },
       ],
       backTo: "/hub",
