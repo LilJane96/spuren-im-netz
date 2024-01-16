@@ -100,7 +100,7 @@ export default function GoodFoxProfile({ open, onClose }) {
                           <div className="flexContainer">
                             <div className="textContainer">
                               <p className="count">26</p>
-                              <p className="text">Posts</p>
+                              <p className="text">Beiträge</p>
                             </div>
                             <div className="textContainer">
                               <p className="count">128</p>
