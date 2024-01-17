@@ -56,12 +56,12 @@ export default function IntroductionArray() {
         {
           step: "stepOne",
           backgroundImage: "/images/FoxHome.png",
-          text: "Puuuh, das war ein lange Tag. So viele Fälle auf einmal :( Jetzt muss ich mich erstmal ausruhen und frische Sachen anziehen. Oh, was ist den das?? Ich habe eine Nachricht auf meinem Handy erhalten!",
+          text: "Puuuh, das war ein langer Tag. So viele Fälle auf einmal :( Jetzt muss ich mich erstmal ausruhen und frische Sachen anziehen. Oh, was ist denn das?? Ich habe eine Nachricht auf meinem Handy erhalten!",
         },
         {
           step: "stepOne",
           backgroundImage: "/images/FoxHomeTwo.png",
-          text: "Felix hat mir eine Nachrichtenanfrage geschickt? Ich kenne doch gar keinen Felix, komisch. Könnt ihr mir weiterhelfen?",
+          text: "Felix hat mir eine Nachrichtenanfrage geschickt? Ich kenne doch gar keinen Felix, komisch. Kannst du mir weiterhelfen?",
         },
         {
           step: "stepOne",

@@ -58,7 +58,7 @@ export default function UnitsArray() {
               phoneSimulatorStep: 2,
               title: "Konto erstellen",
               answerboxes: [
-                { type: "text", answer: "Password", right: false },
+                { type: "text", answer: "Passwort", right: false },
                 { type: "text", answer: "kYh5&0!mlta", right: true },
                 { type: "text", answer: "meinName123", right: false },
               ],
@@ -97,7 +97,7 @@ export default function UnitsArray() {
               rightAnswer: "Super! Das ist eine gute Entscheidung.",
               wrongAnswer: "Schade, versuche es nochmal!",
               reason:
-                "Dein Konto auf “öffentlich” zu stellen ist nicht gut, da sonst jeder alles von deinen Bildern und Posts sehen kann. Öffentliche Konten sind z.B. für Unternehmen, die sich ein Profil erstellen, um Werbung auf ihrem Profil für ihre Produkte zu machen.",
+                "Dein Konto auf “öffentlich” zu stellen ist nicht gut, da sonst alle deine Bilder und Beiträge sehen können. Öffentliche Konten sind z.B. für Unternehmen, die sich ein Profil erstellen, um Werbung auf ihrem Profil für ihre Produkte zu machen.",
             },
           ],
         },
@@ -114,7 +114,7 @@ export default function UnitsArray() {
                 {
                   type: "paragraph",
                   content:
-                    "Auf meinem Profil hast du ja schon viele Bilder gesehen von meinen zahlreichen Fällen die ich schon gelöst habe. Lass uns gemeinsam auch für dein Profil ein Bild hochladen.",
+                    "Auf meinem Profil hast du ja schon viele Bilder gesehen und dir genauer anschauen können. Lass uns gemeinsam auch für dein Profil ein Bild hochladen.",
                 },
                 {
                   type: "bold",
@@ -152,7 +152,7 @@ export default function UnitsArray() {
               rightAnswer: "Ausgezeichnet!",
               wrongAnswer: "Schade, versuche es nochmal!",
               reason:
-                "Wenn du ein Bild hochlädst, solltest du immer gut überlegen, was darauf zu sehen ist. Andere Menschen möchten vielleicht gar nicht, dass du ein Foto von Ihnen hochlädst. Dies ist auch verboten, man sollten die Personen immer zuerst fragen.",
+                "Wenn du ein Bild hochlädst, solltest du immer gut überlegen, was darauf zu sehen ist. Andere Menschen möchten vielleicht gar nicht, dass du ein Foto von ihnen hochlädst. Dies ist auch verboten, man sollten die Personen immer zuerst fragen.",
             },
           ],
         },
@@ -164,7 +164,7 @@ export default function UnitsArray() {
                 {
                   type: "bold",
                   content:
-                    "Das sieht doch super aus! Wie ein echter Detektiv oder Detektivin! ",
+                    "Das sieht doch super aus! Wie ein echter Detektiv oder Detektivin!",
                 },
                 {
                   type: "paragraph",
@@ -195,14 +195,14 @@ export default function UnitsArray() {
                   answer: (
                     <span>
                       Fußballliebhaber ⚽ <br />
-                      Künstler 🎨
+                      Künstlerin 🎨
                     </span>
                   ),
                   right: true,
                 },
                 {
                   type: "text",
-                  answer: "Alter und Adresse von meinen Freunden",
+                  answer: "Alter und Adresse von meiner besten Freundin",
                   right: false,
                 },
               ],
@@ -301,7 +301,7 @@ export default function UnitsArray() {
               rightAnswer:
                 "Ausgezeichnet! Die Person stammt aus Standort. Das ist ganz schön merkwürdig, ich kenne niemanden aus dieser Stadt. Nun sind wir schon einen wichtigen Schritt weiter.",
               wrongAnswer:
-                "Probiere es nochmal! Die Person stammt von einem anderen Ort",
+                "Probiere es nochmal! Die Person stammt aus einem anderen Ort.",
             },
           ],
         },
@@ -359,7 +359,7 @@ export default function UnitsArray() {
               rightAnswer: "Super! Das ist die richtige Antwort",
               wrongAnswer: "Schade, versuche es nochmal!",
               reason:
-                "Auf vielen Profilen kann man über eine Person Informationen sammeln. Dazu muss man nur mal die Posts anschauen.",
+                "Auf vielen Profilen kann man über eine Person Informationen sammeln. Dazu muss man nur mal die Beiträge der Person anschauen.",
             },
           ],
         },
