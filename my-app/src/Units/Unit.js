@@ -14,7 +14,8 @@ export default function UnitsArray() {
               speachbubble: [
                 {
                   type: "paragraph",
-                  content: "Bevor du mir helfen kannst, müssen wir einen guten Namen für dein neues Konto aussuchen.",
+                  content:
+                    "Bevor du mir helfen kannst, müssen wir einen guten Namen für dein neues Konto aussuchen.",
                 },
                 {
                   type: "bold",
@@ -24,8 +25,8 @@ export default function UnitsArray() {
               phoneSimulatorStep: 1,
               title: "Konto erstellen",
               answerboxes: [
-                { answer: userName, right: false },
-                { answer: "Puzzlestar oder MegaMalerin", right: true },
+                { answer: userName, right: true },
+                { answer: "Puzzlestar oder MegaMalerin", right: false },
                 { answer: "Name meiner Oma ", right: false },
               ],
               rightAnswer: "Super! Das ist ein sehr guter Name.",
@@ -326,7 +327,8 @@ export default function UnitsArray() {
                 { type: "text", answer: "12", right: false },
                 { type: "text", answer: "19", right: false },
               ],
-              rightAnswer: "Super! Die Person ist 39 Jahre alt. Klasse gemacht!!",
+              rightAnswer:
+                "Super! Die Person ist 39 Jahre alt. Klasse gemacht!!",
               wrongAnswer:
                 "Guter Versuch! Aber leider stimmt das nicht. Probiere es nochmal!",
             },
