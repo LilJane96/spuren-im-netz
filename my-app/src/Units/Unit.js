@@ -26,7 +26,7 @@ export default function UnitsArray() {
               title: "Konto erstellen",
               answerboxes: [
                 { answer: userName, right: true },
-                { answer: "Puzzlestar oder MegaMalerin", right: false },
+                { answer: "Puzzlestar oder MegaMalerin", right: true },
                 { answer: "Name meiner Oma ", right: false },
               ],
               rightAnswer: "Super! Das ist ein sehr guter Name.",

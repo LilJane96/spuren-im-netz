@@ -1,13 +1,11 @@
-import CustomButton from "../../Button/CustomButton";
 import { useParams } from "react-router-dom";
 import "./MyProfil.css";
-import Bottombar from "../../Bottombar/Bottombar";
 
 export default function MyProfil({ answer }) {
   const { unitId } = useParams();
   const units = JSON.parse(localStorage.getItem("UnitsArray")) || {};
   const username = units[unitId].answers.map(
-    (obj) => obj.question === "Username" && obj.answer
+    (obj) => obj.question === "Profilname" && obj.answer
   );
   const profilePicture = units[unitId].answers
     .filter((obj) => obj.question === "Profilbild" && obj.answer)

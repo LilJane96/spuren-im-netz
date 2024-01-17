@@ -30,6 +30,7 @@ export default function FinalFrameOne() {
   const handleNextStep = () => {
     navigate("/finishedGame/step3");
   };
+
   return (
     <div className="FinalFrameOneContainer">
       <div className="SpeechbubbleContainer">
