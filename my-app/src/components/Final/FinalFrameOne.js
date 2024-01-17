@@ -33,7 +33,7 @@ export default function FinalFrameOne() {
   return (
     <div className="FinalFrameOneContainer">
       <div className="SpeechbubbleContainer">
-        <Speachbubble text="Something like: Oh no turns out the stranger is the bad fox. He is busted and is running back to his crib. I have to go catch him.. etc " />
+        <Speachbubble text="Oh nein! Die Person, die ich für einen Fremden hielt ist tatsächlich der Dieb, nach dem ich gesucht habe. Oh je! Jetzt wurde er erwischt und rennt zurück zu seinem Versteck. Ich muss ihm folgen und ihn aufhalten!" />
       </div>
 
       <div className="button">

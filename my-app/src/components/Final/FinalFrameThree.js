@@ -36,9 +36,7 @@ export default function FinalFrameThree() {
           <div className="bubble speech">
             <div className="circle"></div>
             <p style={{ fontWeight: "light" }}>
-              Something like: Oh no turns out the stranger is the bad fox. He is
-              busted and is running back to his crib. I have to go catch him..
-              etc
+              Vielen Dank, dass du mir geholfen hast! Ich habe ihn endlich nach mehreren Wochen erwischt. Das hätte ich ohne deine Hilfe nicht geschafft!
             </p>
           </div>
         </div>
