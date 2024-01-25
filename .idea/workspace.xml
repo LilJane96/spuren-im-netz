@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac1a0cd9-18f7-49cb-a7b5-8e02d10bfadc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/Units/Unit.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/Units/Unit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Sidebar/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Sidebar/Sidebar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/PhoneSimulator/UserProfile/UserProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/PhoneSimulator/UserProfile/UserProfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/PhoneSimulator/UserProfileEndUnit/UserProfileEndUnit.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/PhoneSimulator/UserProfileEndUnit/UserProfileEndUnit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/images/ProfileImages/Backpack.png" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/images/ProfileImages/ProfilBadFox/Backpack.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/images/ProfileImages/BadFoxProfilePicture.png" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/images/ProfileImages/ProfilBadFox/BadFoxProfilePicture.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/images/ProfileImages/Bike.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/images/ProfileImages/ProfilBadFox/Bike.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my-app/src/utilis/Introduction.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/utilis/Introduction.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

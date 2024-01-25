@@ -15,7 +15,7 @@ export default function IntroductionArray() {
         {
           step: "stepTwo",
           backgroundImage: "/images/VillainsBoard.png",
-          text: "Ich bin schon seit vielen Jahren als Detektiv tätig und habe zahlreiche Fälle gelöst! Hier links kannst du einige meiner Erfolge sehen. Aber in letzter Zeit gibt es einen Fall, der mich beschäftigt, und ich bräuchte deine Hilfe, um einen gefährlichen Dieb zu finden!",
+          text: "Ich bin schon seit vielen Jahren als Detektiv tätig und habe zahlreiche Fälle gelöst! Hier links kannst du einige meiner Erfolge sehen. Aber in letzter Zeit gibt es einen Fall, den ich ohne Hilfe nicht lösen kann!",
           speechbubblePosition: "flex-end",
           speechbubbleSize: "middle",
           speechbubbleMargin: "0",

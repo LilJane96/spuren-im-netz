@@ -1,6 +1,5 @@
 import * as React from "react";
 import "./PopUpChooseName.css";
-import TextField from "@mui/material/TextField";
 import {
   Dialog,
   DialogActions,
@@ -12,7 +11,6 @@ import {
 } from "@mui/material";
 import CustomButton from "../Button/CustomButton";
 import List from "@mui/material/List";
-import ListItemText from "@mui/material/ListItemText";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
