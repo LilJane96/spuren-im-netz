@@ -7,7 +7,7 @@ export default function IntroductionArray() {
         {
           step: "stepOne",
           backgroundImage: "/images/IntroductionImageOne.png",
-          text: "Willkommen bei 'Spuren-im-Netz'! Hier taucht ihr in ein aufregendes Abenteuer ein, erkundet die faszinierende Welt des Internets und werdet zu meinen Helfern. Gemeinsam lösen wir eine Vielzahl von spannenden Fällen und entdecken dabei die Geheimnisse der digitalen Welt.",
+          text: "Willkommen bei 'Spuren-im-Netz'! Hier taucht ihr in ein aufregendes Abenteuer ein, erkundet die faszinierende Welt des Internets und werdet zu meinen Helfern. ",
           speechbubblePosition: "center",
           speechbubbleSize: "big",
           speechbubbleMargin: "-68px",
