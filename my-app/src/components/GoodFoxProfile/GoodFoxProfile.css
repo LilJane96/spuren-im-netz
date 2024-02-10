@@ -105,3 +105,17 @@
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
+.ImageContainer {
+  cursor: pointer;
+
+}
+.ImageContainer img {
+  cursor: pointer;
+  border: 2px solid #3498db; /* Rahmen hinzufügen */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Schatten hinzufügen */
+  transition: border-color 0.3s, box-shadow 0.3s; /* Übergangseffekte hinzufügen */
+}
+.ImageContainer img:hover {
+  border-color: #2980b9; /* Rahmenfarbe ändern beim Überfahren */
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.5); /* Schatten vergrößern beim Überfahren */
+}

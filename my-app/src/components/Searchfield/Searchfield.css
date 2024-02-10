@@ -21,5 +21,6 @@
     border-radius: 5px;
     font-size: 14px;
     color: #474747;
+      pointer-events: none;
   }
   
