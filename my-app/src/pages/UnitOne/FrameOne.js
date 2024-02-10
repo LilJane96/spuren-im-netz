@@ -256,7 +256,7 @@ export default function FrameOne() {
                   ) : selectedAnswer === "" ||
                     !units[unitId]?.answers[currentTaskIndex]?.isCorrect ? (
                     <CustomButton
-                      name="Unit beenden"
+                      name="Level beenden"
                       type="primary"
                       disabled={true}
                     />
@@ -266,7 +266,7 @@ export default function FrameOne() {
                         open={openBox}
                         unit={unitId}></PopUpResultScreen>
                       <CustomButton
-                        name="Unit beenden"
+                        name="Level beenden"
                         type="primary"
                         onClick={handleGoToResult}
                       />
