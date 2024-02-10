@@ -18,6 +18,9 @@ export default function Sidebar({toggleSidebarVisibility }) {
                     <li>Wenn du an einer Stelle nicht weiter kommst, frage bitte deinen Lehrer oder deine Lehrerin nach Hilfe!</li>
                 </ul>
                 <ColorContainer headingsize={"h6"}/>
+                <div className="disclaimer">
+                <p>Disclaimer: Diese Applikation wurde für die Auflösung 1366x617 konzipiert und programmiert.</p>
+                </div>
             </div>
         </div>
     );

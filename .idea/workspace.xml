@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ac1a0cd9-18f7-49cb-a7b5-8e02d10bfadc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Speachbubble/Speachbubble.css" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Speachbubble/Speachbubble.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/pages/Home/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/pages/Home/Home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Sidebar/Sidebar.css" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Sidebar/Sidebar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Sidebar/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Sidebar/Sidebar.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="48-change-png-images-to-svg" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -173,6 +173,9 @@
       <workItem from="1705062056893" duration="1567000" />
       <workItem from="1705217982828" duration="3788000" />
       <workItem from="1705506902301" duration="1411000" />
+      <workItem from="1706860923829" duration="842000" />
+      <workItem from="1707404380403" duration="43000" />
+      <workItem from="1707562501082" duration="340000" />
     </task>
     <servers />
   </component>

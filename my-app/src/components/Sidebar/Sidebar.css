@@ -35,8 +35,14 @@
 }
 
 .sidebar .rules {
-  font-size: 24px;
+  font-size: 22px;
   margin-left: 40px;
   margin-right: 40px;
   line-height: 1.5;
+}
+
+.sidebar .disclaimer {
+  font-size: 14px;
+  margin-left: 40px;
+  margin-right: 40px;
 }
