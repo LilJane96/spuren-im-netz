@@ -56,15 +56,7 @@ export default function PopUpResultScreen({ open, unit }) {
                 gap: '1'
             }} >
                 <div className="dialog-logo-outside "/>
-                {showText && (
-                    <DialogTitle textAlign={"center"} variant={"h5"}>Sehr gut 🌟 Du hast die Aufgaben super gelöst!
-                </DialogTitle>
-                    )}
-                {!showText && (
-                <DialogContentText variant={"h4"} >
-                    Klasse gemacht!
-                </DialogContentText>
-            )}
+
                 <div className="starContainer">
                     <img src={ResultPopUpStar1} alt={""} className="leftStar" />
                     <div className="rightStars">
@@ -73,19 +65,19 @@ export default function PopUpResultScreen({ open, unit }) {
                     </div>
                 </div>
                 <img  align={"center"} onClick={handleBoxOpen}  src={imageSrc} alt="ClosedBox" style={{
-                    width: imageSrcWidth, cursor: 'pointer', margin: '45px', marginTop: showText ? "20px" : "-25px",
-                    marginBottom: showText ? "10px" : "5px" }}/>
+                    width: imageSrcWidth, cursor: 'pointer', margin: '45px', marginTop: showText ? "100px" : "0px",
+                    marginBottom: showText ? "10px" : "10px" }}/>
                 {showText && (
                     <DialogContentText style={{justifyContent: "center" , marginTop: 20, marginBottom: 10}} variant={"h6"} >
                         Klicke auf die Schatztruhe, um deine Belohnung einzusammeln!
                     </DialogContentText>
                 )}
                 {!showText && (
-                    <DialogContentText variant={"h5"} >
+                    <DialogContentText variant={"h6"} >
                         Super! Du hast eine Belohnung erhalten!
                     </DialogContentText>
                 )}
-                <DialogActions style={{justifyContent: "center" , marginTop: 20, marginBottom: 10}} >
+                <DialogActions style={{justifyContent: "center" , marginTop: 20, marginBottom: 5}} >
                     <Link href={`/result/${unit}/step1`}><CustomButton disabled={buttonStatus} name="Schau dir deine Ergebnisse an!" type="quinary" style={{ width: '200px' }}></CustomButton></Link>
                 </DialogActions>
             </DialogContent>
