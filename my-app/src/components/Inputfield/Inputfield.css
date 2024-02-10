@@ -5,4 +5,5 @@
   border: 1px solid;
   border-radius: 17px;
   font-weight: bold;
+  pointer-events: none;
 }
