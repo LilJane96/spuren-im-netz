@@ -36,12 +36,11 @@ export default function FinalFrameThree() {
           <div className="bubble speech">
             <div className="circle"></div>
             <p style={{ fontWeight: "light" }}>
-              Vielen Dank, dass du mir geholfen hast! Ich habe ihn endlich nach mehreren Wochen erwischt. Das hätte ich ohne deine Hilfe nicht geschafft!
+              Vielen Dank, dass du mir geholfen hast! Ich habe ihn endlich nach mehreren Wochen erwischt. Das hätte ich ohne deine Hilfe nicht geschafft! Klicker auf weiter und hole dir deine Belohnung ab!
             </p>
           </div>
         </div>
       </div>
-
       <div>
         <CustomButton type="primary" name="Weiter" onClick={handleNextStep} />
       </div>

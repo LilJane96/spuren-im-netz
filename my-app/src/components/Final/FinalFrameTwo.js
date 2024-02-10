@@ -38,7 +38,7 @@ export default function FinalFrameTwo() {
         <div className="overlay">
           <div className="bubble speech">
             <div className="circle"></div>
-            <p style={{ fontWeight: "light" }}>
+            <p style={{fontWeight: "light" }}>
               Oh nein, er rennt in den Wald, schnell hinterher! Ich muss mich beeilen... Ich bin ihm auch schon ganz nah!
             </p>
           </div>
