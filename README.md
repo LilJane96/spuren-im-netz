@@ -26,3 +26,5 @@ This project includes a web application that can be accessed at https://spuren-i
 
 ### Demovideo
 [`Demovideo`](https://cloud.mi.hdm-stuttgart.de/s/d3SAQCbcdbiX8k2)
+
+### Final commit for 23/24 Wintersemester
