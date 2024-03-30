@@ -5,30 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac1a0cd9-18f7-49cb-a7b5-8e02d10bfadc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/my-app/src/images/ResultPopUpStar2.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/PopUpResultScreen/PopUpResultScreen.css" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/PopUpResultScreen/PopUpResultScreen.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/PopUpResultScreen/PopUpResultScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/PopUpResultScreen/PopUpResultScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/Speachbubble/Speachbubble.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Speachbubble/Speachbubble.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/components/TitleBackground/TitleBackground.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/TitleBackground/TitleBackground.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/images/Backpack.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/images/BarHomePage.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/images/ClosedResultBox.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/images/EvilFox.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/images/EvilFoxStanding.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/images/GoodFoxResultReward.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/images/GoodFoxStanding.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/images/IphoneHomePage.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/images/ResultPopUpStar1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/images/ResultPopUpStar2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/images/ResultPopUpStar3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/images/Star.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/images/StarActive.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/images/TitleBackgrounBottom.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/images/TitleBackgrounTop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/images/foxPicture.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/pages/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/pages/Home/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my-app/src/pages/Hub/Hub.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/pages/Hub/Hub.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/GoodFoxProfile/GoodFoxProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/GoodFoxProfile/GoodFoxProfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/images/ProfileImages/FoxProfilePic.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,11 +80,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Julian\WebstormProjects\spuren-im-netz\my-app\public\images" />
+      <recent name="C:\Users\Julian\WebstormProjects\spuren-im-netz\my-app\src\images\GameIntroduction" />
+      <recent name="C:\Users\Julian\WebstormProjects\spuren-im-netz\my-app\src\images\WelcomeImage" />
       <recent name="C:\Users\Julian\WebstormProjects\spuren-im-netz\my-app\src\images" />
       <recent name="C:\Users\Julian\WebstormProjects\spuren-im-netz\my-app\public" />
-      <recent name="C:\Users\Julian\WebstormProjects\spuren-im-netz\my-app\public\images" />
-      <recent name="C:\Users\Julian\WebstormProjects\spuren-im-netz\documents" />
-      <recent name="C:\Users\julia\Documents\StudiumMM7_6.Semester\spuren-im-netz\my-app\src\images\ProfileImages\ProfilGoodFox" />
     </key>
   </component>
   <component name="RunManager" selected="npm.start">
@@ -205,7 +184,7 @@
       <workItem from="1707568702911" duration="111000" />
       <workItem from="1707851560148" duration="6000" />
       <workItem from="1710755427973" duration="751000" />
-      <workItem from="1711802703915" duration="1245000" />
+      <workItem from="1711802703915" duration="2626000" />
     </task>
     <servers />
   </component>
