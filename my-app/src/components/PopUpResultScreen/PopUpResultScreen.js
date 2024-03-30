@@ -1,13 +1,13 @@
 import {Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Link} from "@mui/material";
 import "./PopUpResultScreen.css"
-import OpenResultUnit1 from "../../images/OpenResultUnit1.png";
-import ClosedResultBox from "../../images/ClosedResultBox.png";
-import OpenResultUnit2 from "../../images/OpenResultUnit2.png";
+import OpenResultUnit1 from "../../images/OpenResultUnit1.svg";
+import ClosedResultBox from "../../images/ClosedResultBox.svg";
+import OpenResultUnit2 from "../../images/OpenResultUnit2.svg";
 import React, {useState} from "react";
 import CustomButton from "../Button/CustomButton";
-import ResultPopUpStar1 from "../../images/ResultPopUpStar1.png"
-import ResultPopUpStar2 from "../../images/ResultPopUpStar2.png"
-import ResultPopUpStar3 from "../../images/ResultPopUpStar3.png"
+import ResultPopUpStar1 from "../../images/ResultPopUpStar1.svg"
+import ResultPopUpStar2 from "../../images/ResultPopUpStar2.svg"
+import ResultPopUpStar3 from "../../images/ResultPopUpStar3.svg"
 
 export default function PopUpResultScreen({ open, unit }) {
 

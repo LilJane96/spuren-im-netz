@@ -5,7 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac1a0cd9-18f7-49cb-a7b5-8e02d10bfadc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/my-app/src/images/ResultPopUpStar2.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/PopUpResultScreen/PopUpResultScreen.css" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/PopUpResultScreen/PopUpResultScreen.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/PopUpResultScreen/PopUpResultScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/PopUpResultScreen/PopUpResultScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/Speachbubble/Speachbubble.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/Speachbubble/Speachbubble.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/components/TitleBackground/TitleBackground.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/components/TitleBackground/TitleBackground.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/images/Backpack.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/images/BarHomePage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/images/ClosedResultBox.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/images/EvilFox.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/images/EvilFoxStanding.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/images/GoodFoxResultReward.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/images/GoodFoxStanding.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/images/IphoneHomePage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/images/ResultPopUpStar1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/images/ResultPopUpStar2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/images/ResultPopUpStar3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/images/Star.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/images/StarActive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/images/TitleBackgrounBottom.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/images/TitleBackgrounTop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/images/foxPicture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/pages/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/pages/Home/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-app/src/pages/Hub/Hub.js" beforeDir="false" afterPath="$PROJECT_DIR$/my-app/src/pages/Hub/Hub.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,35 +72,40 @@
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2YO4iDb1YIAAYNs5cik6hr1YLML" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "49-change-png-images-to-svg-for-new-semester",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/Julian/Documents/SpurenimNetz/spurenimnetz",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Julian\WebstormProjects\spuren-im-netz\my-app\src\images" />
+      <recent name="C:\Users\Julian\WebstormProjects\spuren-im-netz\my-app\public" />
+      <recent name="C:\Users\Julian\WebstormProjects\spuren-im-netz\my-app\public\images" />
       <recent name="C:\Users\Julian\WebstormProjects\spuren-im-netz\documents" />
       <recent name="C:\Users\julia\Documents\StudiumMM7_6.Semester\spuren-im-netz\my-app\src\images\ProfileImages\ProfilGoodFox" />
-      <recent name="C:\Users\julia\Documents\StudiumMM7_6.Semester\spuren-im-netz\my-app\src\images\ProfileImages\ProfilBadFox" />
-      <recent name="C:\Users\julia\Documents\StudiumMM7_6.Semester\spuren-im-netz\my-app\src\images" />
-      <recent name="C:\Users\Julian\WebstormProjects\spuren-im-netz\my-app\src\images" />
     </key>
   </component>
   <component name="RunManager" selected="npm.start">
@@ -173,7 +201,11 @@
       <workItem from="1705506902301" duration="1411000" />
       <workItem from="1706860923829" duration="842000" />
       <workItem from="1707404380403" duration="43000" />
-      <workItem from="1707562501082" duration="4543000" />
+      <workItem from="1707562501082" duration="5622000" />
+      <workItem from="1707568702911" duration="111000" />
+      <workItem from="1707851560148" duration="6000" />
+      <workItem from="1710755427973" duration="751000" />
+      <workItem from="1711802703915" duration="1245000" />
     </task>
     <servers />
   </component>

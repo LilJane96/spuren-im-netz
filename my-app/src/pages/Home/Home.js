@@ -1,6 +1,6 @@
 import React from "react";
-import WelcomeImage from "../../images/WelcomeImage/WelcomeImage.png";
-import BarHomePage from "../../images/BarHomePage.png";
+import WelcomeImage from "../../images/WelcomeImage/WelcomeImage.svg";
+import BarHomePage from "../../images/BarHomePage.svg";
 import CustomButton from "../../components/Button/CustomButton";
 import "./Home.css";
 import { Link } from "@mui/material";
