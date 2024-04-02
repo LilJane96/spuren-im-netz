@@ -3,7 +3,7 @@ import House from "../../images/ProfileImages/ProfilGoodFox/House.png";
 import PuzzleWorldMapGoodFox from "../../images/ProfileImages/ProfilGoodFox/PuzzleWorldMapGoodFox.jpg";
 import SunsetGoodFoxProfile from "../../images/ProfileImages/ProfilGoodFox/SunsetGoodFox.jpg";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import FoxProfilePic from "../../images/ProfileImages/FoxProfilePic.png";
+import FoxProfilePic from "../../images/foxPicture.svg";
 import HomeGoodFox from "../../images/ProfileImages/ProfilGoodFox/HomeGoodFox.jpg";
 import TablesGoodFox from "../../images/ProfileImages/ProfilGoodFox/TablesGoodFox.jpg";
 import PuzzleGoodFox from "../../images/ProfileImages/ProfilGoodFox/PuzzleGoodFox.jpg";
