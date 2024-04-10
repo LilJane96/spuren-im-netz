@@ -1,0 +1,22 @@
+name: CI/CD Pipeline
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Build Docker image
+      run: cd my-app && docker build -t spuren-im-netz .
+
+    - name: Run Docker container
+      run: docker run -d -p 3000:3000 spuren-im-netz
+
+    - name: Alive check
+      run: |
+        sleep 5
+        curl http://localhost:3000

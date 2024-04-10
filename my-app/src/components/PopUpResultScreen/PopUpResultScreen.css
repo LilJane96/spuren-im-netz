@@ -27,7 +27,7 @@
     position: absolute;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    background-image: url("../../images/GoodFoxResultReward.png");
+    background-image: url("../../images/GoodFoxResultReward.svg");
 }
 .starContainer {
     display: flex;
