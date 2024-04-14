@@ -10,7 +10,6 @@
   align-items: center;
   height: 100vh;
   margin: 0 50px;
-  overflow-y: scroll;
 }
 
 .TitleAndSubtitleHome h1,
@@ -132,6 +131,7 @@
   justify-content: center;
   flex-direction: column;
   height: 100%;
+  width: 40%;
   gap: 20px;
 }
 
@@ -190,7 +190,7 @@
   width: 50%;
 }
 
-.subConatiner {
+.subContainer {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -198,7 +198,7 @@
   width: 100%;
 }
 
-.subConatiner div {
+.subContainer div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -206,8 +206,8 @@
   width: 30%;
 }
 
-.subConatiner img {
-  width: 200px;
-  height: 200px;
+.subContainer img {
+  width: 180px;
+  height: 180px;
   margin: 0;
 }

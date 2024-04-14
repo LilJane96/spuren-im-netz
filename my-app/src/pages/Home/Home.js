@@ -36,7 +36,7 @@ function Home() {
             <img src={BarHomePage} alt="Bar" />
           </div>
           <div className="TextContainer">
-            <p>Helfe Pixel beim Lösen seiner Fälle!</p>
+            <p>Hilf Pixel beim Lösen seiner Fälle!</p>
             <p>Werde ein Internet-Detektiv!</p>
             <p>Sei sicher im Internet unterwegs!</p>
           </div>
@@ -64,7 +64,7 @@ function Home() {
         </div>
         <div className="row2Middle">
           <div className="simpleCard">
-            <p>"Spuren im Netz" ist eine Bildungsapplikation, die im Wintersemester  2023/2024 an der Hochschule der Medien entwickelt wurde und nun im  Sommersemester 2024 weiterentwickelt wird. Diese Anwendung zielt darauf  ab, Kindern im Grundschulalter spielerisch die essenziellen Fertigkeiten  im Umgang mit sozialen Medien zu vermitteln. Gleichzeitig unterstützt  sie Lehrkräfte dabei, ihren Unterricht effektiv zu gestalten und den  Schülern einen sicheren Umgang mit digitalen Medien zu vermitteln.</p>
+            <p>"Spuren im Netz" ist eine Bildungsapplikation, die im Wintersemester 2023/2024 an der Hochschule der Medien entwickelt wurde und nun im Sommersemester 2024 weiterentwickelt wird. Diese Anwendung zielt darauf ab, Kindern im Grundschulalter spielerisch die wesentlichen Fertigkeiten im Umgang mit sozialen Medien zu vermitteln. Gleichzeitig unterstützt  sie Lehrkräfte dabei, ihren Unterricht effektiv zu gestalten und den Schüler/innen einen sicheren Umgang mit digitalen Medien zu vermitteln.</p>
           </div>
         </div>
         <div className="row2Right">
@@ -94,7 +94,7 @@ function Home() {
         <div className="simpleContainer">
           <div className="simpleCard2">
             <img className="logo" src={Backpack} alt="Rucksack" />
-            <p>Fülle dein Rucksack mit deinen Belohnungen!</p>
+            <p>Fülle deinen Rucksack mit deinen Belohnungen!</p>
           </div>
           <div className="simpleCard2">
             <img className="logo" src={MagnifyingGlass} alt="Lupe" />
@@ -110,8 +110,8 @@ function Home() {
     <div className="row5">
      <img src={SideFox} alt="Fuchs" />
       <div className="card">
-        <h4>Falls wir eure Interesse geweckt haben!</h4>
-        <div className="subConatiner">
+        <h4>Falls wir euer Interesse geweckt haben!</h4>
+        <div className="subContainer">
           <div>
             <h4>Liljana Stefanelli</h4>
             <img src={QRLiljana} alt="Liljana Stefanelli" />
