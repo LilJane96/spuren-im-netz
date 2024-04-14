@@ -98,7 +98,7 @@ function Home() {
           </div>
           <div className="simpleCard2">
             <img className="logo" src={MagnifyingGlass} alt="Lupe" />
-            <p>Untersuche die Welt von Social Media und ihre Abenteuer!</p>
+            <p>Erkunde die Welt der sozialen Medien und ihre Geheimnisse!</p>
           </div>
         </div>
         <img src={ThiefFox} alt="Dieb" />
