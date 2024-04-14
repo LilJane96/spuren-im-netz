@@ -1,3 +1,9 @@
+
+* {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+}
+
 .HomeContainer {
   display: flex;
   justify-content: space-around;
@@ -147,6 +153,12 @@
   justify-content: center;
   background-color: rgba(156, 156, 156, 0.3);
   padding: 40px 0px;
+}
+
+.row4 div {
+  height: 100%;
+  width: 80%;
+  border: 5px solid black;
 }
 
 .row5 {

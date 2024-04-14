@@ -1,5 +1,4 @@
 import React from "react";
-import WelcomeImage from "../../images/WelcomeImage/WelcomeImage.svg";
 import BarHomePage from "../../images/BarHomePage.svg";
 import WavingFox from "../../images/Foxes/wavingFox.svg";
 import SideFox from "../../images/Foxes/sideFox.svg";
@@ -12,16 +11,18 @@ import CustomButton from "../../components/Button/CustomButton";
 import "./Home.css";
 import { Link } from "@mui/material";
 import Slideshow from '../../components/Slideshow/Slideshow';
-import ImageOne from '../../images/Final/FinalViewOne.png';
-import ImageTwo from '../../images/Final/FinalViewTwo.png';
-import ImageThree from '../../images/Final/FinalViewThree.png';
 import QRLiljana from "../../images/QRCodes/liljana.svg";
 import QRJulian from "../../images/QRCodes/julian.svg";
 import FoxProfile from "../../components/FoxProfile/UserProfile";
+import Screenshot1 from "../../images/Screenshots/Screenshot1.png";
+import Screenshot2 from "../../images/Screenshots/Screenshot2.png";
+import Screenshot3 from "../../images/Screenshots/Screenshot3.png";
+import Screenshot4 from "../../images/Screenshots/Screenshot4.png";
+import Screenshot5 from "../../images/Screenshots/Screenshot5.png";
 
 
 function Home() {
-  const images = [ImageOne, ImageTwo, ImageThree];
+  const images = [Screenshot1, Screenshot2, Screenshot3, Screenshot4, Screenshot5];
   return (
     <main>
     <div className="HomeContainer">
@@ -104,7 +105,7 @@ function Home() {
       </div>
     </div>
     <div className="row4">
-      <Slideshow images={images} duration={3000} />;
+        <Slideshow images={images} duration={3000} />
     </div>
     <div className="row5">
      <img src={SideFox} alt="Fuchs" />
