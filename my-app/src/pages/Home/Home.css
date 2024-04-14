@@ -4,6 +4,7 @@
   align-items: center;
   height: 100vh;
   margin: 0 50px;
+  overflow-y: scroll;
 }
 
 .TitleAndSubtitleHome h1,
@@ -13,9 +14,19 @@
 
 .containerHome {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
+
+#fox1 {
+  margin-right: -40px;
+}
+
+#fox2 {
+  margin-left: -55px;
+  z-index: 1;
+}
+
 
 .TextContainer {
   margin: 30px 10px;
@@ -30,4 +41,161 @@
 .button {
   align-self: flex-end;
   margin-top: 20px;
+}
+
+.row2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(156, 156, 156, 0.3);
+  padding: 40px 0px;
+}
+
+.row2Left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 20%;
+}
+
+.row2Middle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 60%;
+  height: 100%;
+}
+
+.row2Right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 20%;
+}
+
+.simpleCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  background-color: white;
+  padding: 3%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  text-align: justify;
+  height: 100%;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+.row3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 40px 0px;
+  width: 100%;
+}
+
+.row3Upper {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 100%;
+  padding-left: 40px;
+  gap: 40px;
+}
+
+.row3Lower {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  width: 100%;
+  padding-right: 40px;
+  gap: 40px;
+}
+
+.simpleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  gap: 20px;
+}
+
+.simpleCard2 {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  border-radius: 15px;
+  background: linear-gradient(to right, #DB94F3, #BF56E3);
+  padding: 3%;
+  box-shadow: 0 8px 0 0 #9F2FC5;
+  width: 100%;
+  gap: 20px;
+}
+
+.row4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(156, 156, 156, 0.3);
+  padding: 40px 0px;
+}
+
+.row5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0px;
+  width: 100%;
+  gap: -20px;
+}
+
+.row5 img {
+  margin-right: -25px;
+  margin-top: -20px;
+  z-index: 1;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  text-align: justify;
+  height: 100%;
+  padding: 20px 40px 20px 40px;
+  width: 50%;
+}
+
+.subConatiner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.subConatiner div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 30%;
+}
+
+.subConatiner img {
+  width: 200px;
+  height: 200px;
+  margin: 0;
 }
