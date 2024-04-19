@@ -3,7 +3,7 @@ import IntroductionArray from "../../utilis/Introduction";
 import "./GameIntroduction.css";
 import CustomButton from "../../components/Button/CustomButton";
 import { useNavigate, useParams } from "react-router-dom";
-import GoodFoxProfile from "../../components/GoodFoxProfile/GoodFoxProfile";
+import PhoneSimulator from "../../components/PhoneSimulator/PhoneSimulator";
 
 export default function GameIntroduction() {
   const [currentStep, setCurrentStep] = useState(0);
@@ -77,7 +77,8 @@ export default function GameIntroduction() {
                 unitId === "GameIntroduction" ? "flex-end" : "space-between",
               justifyContent: obj.speechbubblePosition || "center",
             }}>
-            {obj.component && <GoodFoxProfile open={true} />}{" "}
+            {obj.component && <PhoneSimulator content={12} />}
+
             {obj.text ? (
               <p
                 className="textBubble"

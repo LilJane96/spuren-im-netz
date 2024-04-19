@@ -69,3 +69,27 @@
   position: absolute;
   transform: translate(440%, -710%);
 }
+
+.hub .closeProfile {
+  flex: 1;
+  margin: 50px 0;
+}
+
+.hub .ProfileViewContainer {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(11px);
+  background: rgb(114 114 114 / 20%);
+  z-index: 999;
+}
+
+.hub .ProfileView {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
