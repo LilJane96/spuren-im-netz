@@ -69,3 +69,16 @@
   position: absolute;
   transform: translate(440%, -710%);
 }
+
+.hub .bottomContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 50px);
+  margin: 25px 20px 0;
+}
+
+.hub .restartButton {
+  z-index: 999;
+  margin: -175px 5px 25px;
+}

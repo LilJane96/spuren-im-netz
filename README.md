@@ -11,7 +11,14 @@ npm install
 ```bash
 npm start
 ```
-
+3. To build the Dockerfile run
+```bash
+docker build -t spuren-im-netz .    
+```
+4. To serve the Dockerfile run
+```bash
+docker run -p 3000:3000 spuren-im-netz
+```
 ## Further resources
 This project includes a web application that can be accessed at https://spuren-im-netz.web.app/
 

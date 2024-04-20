@@ -6,6 +6,11 @@ import "./Home.css";
 import { Link } from "@mui/material";
 
 function Home() {
+
+  const handleStartClick = () => {
+    localStorage.clear(); // Lösche den Local Storage
+  };
+
   return (
     <div className="HomeContainer">
       <div className="WelcomeContainer">
@@ -25,7 +30,7 @@ function Home() {
         </div>
         <div>
           <Link href="/introduction/GameIntroduction">
-            <CustomButton name="Start" type="primary"></CustomButton>
+            <CustomButton name="Start" type="primary" onClick={handleStartClick()}></CustomButton>
           </Link>
         </div>
       </div>
