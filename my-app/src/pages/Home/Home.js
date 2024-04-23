@@ -23,6 +23,10 @@ import Screenshot5 from "../../images/Screenshots/Screenshot5.svg";
 
 function Home() {
   const images = [Screenshot1, Screenshot2, Screenshot3, Screenshot4, Screenshot5];
+  const handleStartClick = () => {
+    localStorage.clear(); // Lösche den Local Storage
+  };
+
   return (
     <main>
     <div className="HomeContainer">
@@ -44,6 +48,8 @@ function Home() {
         <div>
           <Link href="/introduction/GameIntroduction">
             <CustomButton name="Spiel starten" type="primary"></CustomButton>
+            <CustomButton name="Start" type="primary" onClick={handleStartClick()}></CustomButton>
+
           </Link>
         </div>
       </div>

@@ -12,6 +12,7 @@ import GoodFoxProfile from "../../components/GoodFoxProfile/GoodFoxProfile";
 import { useNavigate } from "react-router-dom";
 import CustomButton from "../../components/Button/CustomButton";
 import BackpackPopup from "../../components/BackpackPopup/BackpackPopup";
+import {Link} from "@mui/material";
 
 function Hub() {
   const [open, setOpen] = useState(false);
@@ -107,6 +108,12 @@ function Hub() {
           open={openFoxProfile}
           onClose={() => setOpenFoxProfile(false)}
         />
+      </div>
+      <div className="bottomContainer">
+        <div className="restartButton">
+          <Link href="/">
+          <CustomButton name="Spiel neu starten" type="primary"></CustomButton>
+        </Link></div>
       </div>
     </div>
   );
