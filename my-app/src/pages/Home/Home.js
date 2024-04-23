@@ -110,7 +110,7 @@ function Home() {
     </div>
 
     <div className="row4">
-      <h1 style={{textAlign: "center"}}>Das erwartet dich in der Zukunft!</h1>
+      <h1 style={{textAlign: "center"}}>Das erwartet euch in der Zukunft!</h1>
         <Slideshow images={images} duration={3000} />
     </div>
     <div className="row5">
