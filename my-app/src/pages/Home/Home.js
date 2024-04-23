@@ -47,9 +47,7 @@ function Home() {
         </div>
         <div>
           <Link href="/introduction/GameIntroduction">
-            <CustomButton name="Spiel starten" type="primary"></CustomButton>
-            <CustomButton name="Start" type="primary" onClick={handleStartClick()}></CustomButton>
-
+            <CustomButton name="Spiel starten" type="primary" onClick={handleStartClick()}></CustomButton>
           </Link>
         </div>
       </div>
