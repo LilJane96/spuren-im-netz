@@ -14,11 +14,11 @@ import Slideshow from '../../components/Slideshow/Slideshow';
 import QRLiljana from "../../images/QRCodes/liljana.svg";
 import QRJulian from "../../images/QRCodes/julian.svg";
 import FoxProfile from "../../components/FoxProfile/UserProfile";
-import Screenshot1 from "../../images/Screenshots/Screenshot1.png";
-import Screenshot2 from "../../images/Screenshots/Screenshot2.png";
-import Screenshot3 from "../../images/Screenshots/Screenshot3.png";
-import Screenshot4 from "../../images/Screenshots/Screenshot4.png";
-import Screenshot5 from "../../images/Screenshots/Screenshot5.png";
+import Screenshot1 from "../../images/Screenshots/Screenshot1.svg";
+import Screenshot2 from "../../images/Screenshots/Screenshot2.svg";
+import Screenshot3 from "../../images/Screenshots/Screenshot3.svg";
+import Screenshot4 from "../../images/Screenshots/Screenshot4.svg";
+import Screenshot5 from "../../images/Screenshots/Screenshot5.svg";
 
 
 function Home() {
@@ -104,7 +104,9 @@ function Home() {
         <img src={ThiefFox} alt="Dieb" />
       </div>
     </div>
+
     <div className="row4">
+      <h1 style={{textAlign: "center"}}>Das erwartet dich in der Zukunft!</h1>
         <Slideshow images={images} duration={3000} />
     </div>
     <div className="row5">

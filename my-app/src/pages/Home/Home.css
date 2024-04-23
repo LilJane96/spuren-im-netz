@@ -150,6 +150,7 @@
 .row4 {
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
   background-color: rgba(156, 156, 156, 0.3);
   padding: 40px 0px;
@@ -158,7 +159,8 @@
 .row4 div {
   height: 100%;
   width: 80%;
-  border: 5px solid black;
+  box-shadow: 0 4px 4px 0 var(--box-shadow);
+  border-radius: 15px;
 }
 
 .row5 {
