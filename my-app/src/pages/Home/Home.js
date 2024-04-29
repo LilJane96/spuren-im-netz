@@ -47,9 +47,7 @@ function Home() {
         </div>
         <div>
           <Link href="/introduction/GameIntroduction">
-            <CustomButton name="Spiel starten" type="primary"></CustomButton>
-            <CustomButton name="Start" type="primary" onClick={handleStartClick()}></CustomButton>
-
+            <CustomButton name="Spiel starten" type="primary" onClick={handleStartClick()}></CustomButton>
           </Link>
         </div>
       </div>
@@ -112,7 +110,7 @@ function Home() {
     </div>
 
     <div className="row4">
-      <h1 style={{textAlign: "center"}}>Das erwartet dich in der Zukunft!</h1>
+      <h1 style={{textAlign: "center"}}>Das erwartet euch in der Zukunft!</h1>
         <Slideshow images={images} duration={3000} />
     </div>
     <div className="row5">
