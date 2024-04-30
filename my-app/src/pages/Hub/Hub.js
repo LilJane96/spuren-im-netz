@@ -113,7 +113,9 @@ function Hub() {
           </div>
           <div className="ProfileView">
             <div>
-              <PhoneSimulator content={12} />
+              <PhoneSimulator 
+              title={"Profil"}
+              content={12} />
             </div>
           </div>
         </div>
