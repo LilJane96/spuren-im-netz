@@ -151,7 +151,6 @@ export default function FrameOne() {
   const handleEndUnit = () => {
     navigate(`/hub`);
   };
-  console.log("UNIT", unitId);
 
   const handleGoToResult = () => {
     units[unitId].topic = currentUnitData.topic;
