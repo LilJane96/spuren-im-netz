@@ -34,8 +34,6 @@ export default function PhoneSimulator({
     return pagesWithBottombar.includes(parseInt(content, 10));
   };
 
-  console.log("USERPROFILEDATA", UserProfileData());
-
   const renderSimulatorPage = () => {
     const contentNumber = parseInt(content, 10);
     switch (contentNumber) {

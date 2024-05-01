@@ -6,7 +6,6 @@ import ImageGallery from "../../ImageGallery/ImageGallery";
 import "./UserProfile.css";
 
 export default function UserProfile({ profileData, answer }) {
-  console.log("ProfileData TEST", profileData[0]);
   const [selectedImage, setSelectedImage] = useState(null);
 
   const handleImageClick = (imageId) => {

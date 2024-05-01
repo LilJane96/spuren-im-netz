@@ -3,7 +3,6 @@ export default function UserProfileData() {
   let username = "";
   let profilePicture = "";
   let bio = "";
-  console.log("units", units);
   if (units["unit1"]) {
     username = units["unit1"].answers.map(
       (obj) => obj.question === "Profilname" && obj.answer
@@ -15,7 +14,6 @@ export default function UserProfileData() {
     bio = units["unit1"].answers.map(
       (obj) => obj.question === "Informationen" && obj.answer
     );
-    console.log("BIO", bio);
   }
 
   return [
