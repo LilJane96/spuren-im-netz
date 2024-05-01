@@ -70,15 +70,27 @@
   transform: translate(440%, -710%);
 }
 
-.hub .bottomContainer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: calc(100% - 50px);
-  margin: 25px 20px 0;
+.hub .closeProfile {
+  flex: 1;
+  margin: 50px 0;
 }
 
-.hub .restartButton {
+.hub .ProfileViewContainer {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(11px);
+  background: rgb(114 114 114 / 20%);
   z-index: 999;
-  margin: -175px 5px 25px;
+}
+
+.hub .ProfileView {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

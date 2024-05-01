@@ -8,11 +8,12 @@ import Pin2Inactive from "../../images/Pins/Pin2Inactive.png";
 import Backpack from "../../images/Backpack.svg";
 import FoxPicture from "../../images/foxPicture.svg";
 import PopUpChooseName from "../../components/PopUpChooseName/PopUpChooseName";
-import GoodFoxProfile from "../../components/GoodFoxProfile/GoodFoxProfile";
 import { useNavigate } from "react-router-dom";
 import CustomButton from "../../components/Button/CustomButton";
 import BackpackPopup from "../../components/BackpackPopup/BackpackPopup";
-import {Link} from "@mui/material";
+import PhoneSimulator from "../../components/PhoneSimulator/PhoneSimulator";
+import zIndex from "@mui/material/styles/zIndex";
+import { Link } from "@mui/material";
 
 function Hub() {
   const [open, setOpen] = useState(false);
@@ -103,17 +104,29 @@ function Hub() {
       <div>
         <PopUpChooseName open={open}></PopUpChooseName>
       </div>
-      <div>
-        <GoodFoxProfile
-          open={openFoxProfile}
-          onClose={() => setOpenFoxProfile(false)}
-        />
-      </div>
+      {openFoxProfile && (
+        <div className="ProfileViewContainer">
+          <div className="closeProfile">
+            <CustomButton
+              type="quaternary"
+              onClick={() => setOpenFoxProfile(false)}
+            />
+          </div>
+          <div className="ProfileView">
+            <div>
+              <PhoneSimulator title={"Profil"} content={12} />
+            </div>
+          </div>
+        </div>
+      )}
       <div className="bottomContainer">
         <div className="restartButton">
           <Link href="/">
-          <CustomButton name="Spiel neu starten" type="primary"></CustomButton>
-        </Link></div>
+            <CustomButton
+              name="Spiel neu starten"
+              type="primary"></CustomButton>
+          </Link>
+        </div>
       </div>
     </div>
   );

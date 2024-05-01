@@ -1,4 +1,4 @@
-.phoneContainer {
+.PhoneContainer {
   display: flex;
   flex-direction: column;
   border: 8px solid black;
@@ -6,9 +6,10 @@
   background-color: white;
   position: relative;
   height: 475px;
+  width: 244px;
 }
 
-.phoneContainer .headerContainer {
+.PhoneContainer .headerContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,9 +20,10 @@
   position: absolute;
   width: 244px;
   height: 51px;
+  z-index: 1;
 }
 
-.phoneContainer .sectionContainer {
+.PhoneContainer .sectionContainer {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -29,7 +31,7 @@
   height: 475px;
 }
 
-.phoneContainer .section {
+.PhoneContainer .section {
   border-radius: 24px;
   height: 469px;
   overflow-x: hidden;

@@ -9,7 +9,6 @@ export default function ResultView() {
   const { unitId } = useParams();
   const units = JSON.parse(localStorage.getItem("UnitsArray")) || {};
 
-  console.log("units[unitId].topic", units[unitId]);
   const topic = units[unitId].topic;
 
   if (!units[unitId]) {
