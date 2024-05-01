@@ -1,4 +1,4 @@
-import foxPicture from "../../images/foxPicture.png";
+import foxPicture from "../../images/foxPicture.svg";
 import "./Speachbubble.css";
 
 export default function Speachbubble({ text, reason }) {

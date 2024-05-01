@@ -1,6 +1,6 @@
 import React from 'react'
-import Top from "../../images/TitleBackgrounTop.png";
-import Bottom from "../../images/TitleBackgrounBottom.png";
+import Top from "../../images/TitleBackgroundTop.svg";
+import Bottom from "../../images/TitleBackgroundBottom.svg";
 import "./TitleBackground.css"
 
 export default function TitleBackground({text}) {

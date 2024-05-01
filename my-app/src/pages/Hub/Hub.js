@@ -5,14 +5,15 @@ import PhoneMap from "../../images/PhoneMap.png";
 import Pin1Active from "../../images/Pins/Pin1Active.png";
 import Pin2Active from "../../images/Pins/Pin2Active.png";
 import Pin2Inactive from "../../images/Pins/Pin2Inactive.png";
-import Backpack from "../../images/Backpack.png";
-import FoxPicture from "../../images/foxPicture.png";
+import Backpack from "../../images/Backpack.svg";
+import FoxPicture from "../../images/foxPicture.svg";
 import PopUpChooseName from "../../components/PopUpChooseName/PopUpChooseName";
 import { useNavigate } from "react-router-dom";
 import CustomButton from "../../components/Button/CustomButton";
 import BackpackPopup from "../../components/BackpackPopup/BackpackPopup";
 import PhoneSimulator from "../../components/PhoneSimulator/PhoneSimulator";
 import zIndex from "@mui/material/styles/zIndex";
+import { Link } from "@mui/material";
 
 function Hub() {
   const [open, setOpen] = useState(false);
@@ -113,13 +114,20 @@ function Hub() {
           </div>
           <div className="ProfileView">
             <div>
-              <PhoneSimulator 
-              title={"Profil"}
-              content={12} />
+              <PhoneSimulator title={"Profil"} content={12} />
             </div>
           </div>
         </div>
       )}
+      <div className="bottomContainer">
+        <div className="restartButton">
+          <Link href="/">
+            <CustomButton
+              name="Spiel neu starten"
+              type="primary"></CustomButton>
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }
