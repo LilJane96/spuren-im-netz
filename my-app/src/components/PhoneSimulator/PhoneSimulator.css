@@ -20,6 +20,7 @@
   position: absolute;
   width: 244px;
   height: 51px;
+  z-index: 1;
 }
 
 .PhoneContainer .sectionContainer {
