@@ -21,7 +21,7 @@ export default function ResultView({ unitId, currentStep }) {
           return (
             <ResultContentSteps
               unitId={unitId.replace(/\D/g, "") - 1}
-              stepId={currentStep - 2}
+              stepId={currentStep - 1}
             />
           );
         } else {

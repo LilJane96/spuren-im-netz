@@ -16,7 +16,18 @@
   gap: 25px 55px;
 }
 
-.StepAnswerContainer .Answer span {
+.AnswerImage {
+  display: block;
+  width: 210px;
+  height: 125px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.AnswerText {
+  display: block;
+  padding: 10px;
+  border-radius: 12px;
   width: 483px;
   height: 73px;
   border-radius: 15px;
@@ -32,18 +43,4 @@
   font-weight: 700;
   line-height: 40px;
   padding: 0px 20px;
-}
-
-.AnswerImage {
-  display: block;
-  width: 210px;
-  height: 125px;
-  border-radius: 10px;
-  object-fit: cover;
-}
-
-.AnswerText {
-  display: block;
-  padding: 10px;
-  border-radius: 12px;
 }
