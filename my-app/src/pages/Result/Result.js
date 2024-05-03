@@ -4,21 +4,26 @@ import ResultNextPageButton from "../../components/ResultNextPageButton/ResultNe
 import "./Result.css";
 import ResultStepper from "../../components/ResultStepper/ResultStepper";
 import CustomButton from "../../components/Button/CustomButton";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 export default function Result() {
   const totalTasks = 5;
   const [currentStep, setCurrentStep] = useState(1);
   const navigate = useNavigate();
+  const pathname = useParams();
+  console.log("pathname", pathname);
 
   const handleNextPage = () => {
-    setCurrentStep((prevStep) => Math.min(prevStep + 1, totalTasks));
+    const nextStep = Math.min(currentStep + 1, totalTasks);
+    setCurrentStep(nextStep);
+    navigate(`/result/${pathname.unitId}/step${nextStep}`);
   };
 
   const handlePreviousPage = () => {
-    setCurrentStep((prevStep) => Math.max(prevStep - 1, 1));
+    const prevStep = Math.max(currentStep - 1, 1);
+    setCurrentStep(prevStep);
+    navigate(`/result/${pathname.unitId}/step${prevStep}`);
   };
-
   const handleEndUnit = () => {
     navigate(`/hub`);
   };
@@ -29,18 +34,20 @@ export default function Result() {
         <CustomButton type="quaternary" onClick={handleEndUnit} />
       </div>
       <div className="ResultView">
-        {/* {currentStep === 1 ? (
-          <ResultNextPageButton back={true} disabled />
-        ) : (
-          <ResultNextPageButton back={true} onClick={handlePreviousPage} />
-        )} */}
-        <div>
-          <ResultView />
+        <div className="Container">
+          {currentStep === 1 ? (
+            <ResultNextPageButton back={true} disabled />
+          ) : (
+            <ResultNextPageButton back={true} onClick={handlePreviousPage} />
+          )}
+          <div>
+            <ResultView currentStep={currentStep} unitId={pathname.unitId} />
+          </div>
+          <ResultNextPageButton onClick={handleNextPage} />
         </div>
-        {/* <ResultNextPageButton onClick={handleNextPage} /> */}
+        <ResultStepper totalSteps={totalTasks + 1} currentStep={currentStep} />
       </div>
-      {/* <div className="ResultStepper">
-        <ResultStepper totalSteps={totalTasks} currentStep={currentStep} />
+      <div className="ResultStepper">
         <div className="ButtonContainer">
           <div className="Button">
             {currentStep === 1 ? (
@@ -63,7 +70,7 @@ export default function Result() {
               type="primary"></CustomButton>
           </div>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 }
