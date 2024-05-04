@@ -1,19 +1,19 @@
 /* ResultStepper.css */
 
 .ResultStepperContainer {
-    display: flex;
-  }
-  
-  .ResultStepperCircle {
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    width: 21px;
-    height: 21px;
-    border-radius: 50%;
-    background-color: #A74FD1;
-    margin-right: 10px;
-  }
-  
-  .ResultStepperCircle.active {
-    background-color: #fff; 
-  }
-  
+  display: flex;
+  justify-content: center;
+}
+
+.ResultStepperCircle {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background-color: #a74fd1;
+  margin-right: 10px;
+}
+
+.ResultStepperCircle.active {
+  background-color: #fff;
+}

@@ -16,6 +16,7 @@
   --button-before-disabled: rgba(159, 47, 197, 0.5);
   --stepper-color: #bf56e3;
   --sidebar-text-color: #000;
+  --result-border-color: #f36b21;
 }
 
 [data-theme="green"] {
@@ -30,6 +31,7 @@
   --button-before-disabled: rgba(159, 47, 197, 0.5);
   --stepper-color: #bf56e3;
   --sidebar-text-color: #fff;
+  --result-border-color: #f36b21;
 }
 
 [data-theme="red"] {
@@ -44,6 +46,7 @@
   --button-before-disabled: rgba(159, 47, 197, 0.5);
   --stepper-color: #bf56e3;
   --sidebar-text-color: #fff;
+  --result-border-color: #f36b21;
 }
 
 [data-theme="blue"] {
@@ -59,6 +62,7 @@
   --button-before-disabled: #2a6d8fd1;
   --stepper-color: #bf56e3;
   --sidebar-text-color: #000;
+  --result-border-color: #f36b21;
 }
 
 [data-theme="orange"] {
@@ -73,6 +77,7 @@
   --button-before-disabled: rgba(159, 47, 197, 0.5);
   --stepper-color: #bf56e3;
   --sidebar-text-color: #000;
+  --result-border-color: #f36b21;
 }
 
 [data-theme="yellow"] {
@@ -87,6 +92,7 @@
   --button-before-disabled: rgba(159, 47, 197, 0.7);
   --stepper-color: #bf56e3;
   --sidebar-text-color: #000;
+  --result-border-color: #f36b21;
 }
 
 [data-theme="pink"] {
@@ -101,6 +107,7 @@
   --button-before-disabled: rgba(159, 47, 197, 0.5);
   --stepper-color: #bf56e3;
   --sidebar-text-color: #000;
+  --result-border-color: #f36b21;
 }
 
 [data-theme="purple"] {
@@ -115,4 +122,5 @@
   --button-before-disabled: rgba(159, 47, 197, 0.5);
   --stepper-color: #bf56e3;
   --sidebar-text-color: #fff;
+  --result-border-color: #f36b21;
 }
