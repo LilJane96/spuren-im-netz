@@ -5,7 +5,6 @@ import "./Result.css";
 import ResultStepper from "../../components/ResultStepper/ResultStepper";
 import CustomButton from "../../components/Button/CustomButton";
 import { useNavigate, useParams } from "react-router-dom";
-import UnitsArray from "../../Units/Unit";
 
 export default function Result() {
   const [currentStep, setCurrentStep] = useState(1);
@@ -63,13 +62,13 @@ export default function Result() {
               <CustomButton
                 onClick={handlePreviousPage}
                 name="Zurück"
-                type="tertiary"
+                type="secondary"
                 disabled></CustomButton>
             ) : (
               <CustomButton
                 onClick={handlePreviousPage}
                 name="Zurück"
-                type="tertiary"></CustomButton>
+                type="secondary"></CustomButton>
             )}
           </div>
           <div className="Button">

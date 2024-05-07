@@ -115,12 +115,12 @@ export default function GameIntroduction() {
 
       <div className="ButtonContainer">
         {currentStep > 0 ? (
-          <CustomButton onClick={handleGoBack} name="Zurück" type="tertiary" />
+          <CustomButton onClick={handleGoBack} name="Zurück" type="secondary" />
         ) : (
           <CustomButton
             onClick={handleGoBack}
             name="Zurück"
-            type="tertiary"
+            type="secondary"
             disabled
           />
         )}
