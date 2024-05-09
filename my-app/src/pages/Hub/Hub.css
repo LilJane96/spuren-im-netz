@@ -27,7 +27,9 @@
   margin-left: 10px;
   border: 6px solid #4e4e4e;
   border-radius: 60px;
-
+  width: 4.45em;
+  height: 4.45em;
+  object-fit: cover;
 }
 .hub .fox {
   cursor: pointer;

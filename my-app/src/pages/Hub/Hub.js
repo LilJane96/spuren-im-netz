@@ -22,7 +22,9 @@ function Hub() {
   const [openBackpack, setOpenBackpack] = useState(false);
   const [units, setUnits] = useState({});
   const [sidebarCollapsed, setSidebarCollapsed] = useState(true);
+  const [profileImage, setProfileImage] = useState(ProfilIcon);
   const navigate = useNavigate();
+
 
   useEffect(() => {
     const storedUnits = JSON.parse(localStorage.getItem("UnitsArray")) || {};
@@ -38,6 +40,9 @@ function Hub() {
   };
   const handleOpenUserProfile = () => {
     setOpenUserProfile(true);
+    if(units.unit1?.done) {
+      setProfileImage(units.unit1.answers.find((obj) => obj.question === "Profilbild")?.answer);
+    }
   };
 
   const handleOpenBackpack = () => {
@@ -67,7 +72,7 @@ function Hub() {
         <div className="UserProfileContainer">
           <img
               className="UserProfile"
-              src={ProfilIcon}
+              src={profileImage}
               alt="UserProfile"
               onClick={handleOpenUserProfile}
           />
