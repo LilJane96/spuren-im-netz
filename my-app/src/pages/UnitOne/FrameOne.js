@@ -230,12 +230,12 @@ export default function FrameOne() {
                     <CustomButton
                       onClick={handleGoBack}
                       name="Zurück"
-                      type="tertiary"></CustomButton>
+                      type="secondary"></CustomButton>
                   ) : (
                     <CustomButton
                       onClick={handleGoBack}
                       name="Zurück"
-                      type="tertiary"
+                      type="secondary"
                       disabled></CustomButton>
                   )}
                   {currentTaskIndex < totalTasks - 1 ? (

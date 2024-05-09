@@ -6,14 +6,14 @@
 }
 
 .ResultStepperCircle {
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0px 4px 4px #ffd873);
   width: 21px;
   height: 21px;
   border-radius: 50%;
-  background-color: #a74fd1;
+  background-color: #fff;
   margin-right: 10px;
 }
 
 .ResultStepperCircle.active {
-  background-color: #fff;
+  background-color: #e54e17;
 }

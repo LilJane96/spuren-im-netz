@@ -1,36 +1,26 @@
 .TitleBackgroundContainer {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 25px; 
-    top: -83px;
-  }
-  
-  .TitleBackgroundContainer img {
-    position: absolute;
-    top: 0;
-  }
-  
-  .TitleBackgroundContainer .Top {
-    position: absolute;
-    top: -3px;
-    width: 394px;
-    height: 98.5px;
-    z-index: 1;
-    margin-top: 12.25px;
-  }
-  
-  .TitleBackgroundContainer .Text {
-    z-index: 2;
-    font-weight: bold;
-    color: white;
-    font-size: 19px;
-    width: 236px;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    top: 32px;
-  }
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+  top: -83px;
+}
 
+.TitleBackgroundContainer img {
+  position: absolute;
+  top: 0;
+}
+
+.TitleBackgroundContainer .Text {
+  z-index: 2;
+  font-weight: bold;
+  color: white;
+  font-size: 19px;
+  width: 236px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 32px;
+}

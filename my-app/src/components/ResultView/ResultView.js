@@ -9,8 +9,6 @@ export default function ResultView({ unitId, currentStep }) {
   const units = JSON.parse(localStorage.getItem("UnitsArray")) || {};
   const topic = units[unitId].topic;
   const totalTasks = units[unitId].answers.length;
-  console.log("totalTasks", totalTasks);
-  console.log("currentStep", currentStep);
 
   const renderResultPage = () => {
     switch (currentStep) {

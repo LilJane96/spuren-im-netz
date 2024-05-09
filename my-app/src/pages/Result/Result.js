@@ -62,13 +62,13 @@ export default function Result() {
               <CustomButton
                 onClick={handlePreviousPage}
                 name="Zurück"
-                type="tertiary"
+                type="secondary"
                 disabled></CustomButton>
             ) : (
               <CustomButton
                 onClick={handlePreviousPage}
                 name="Zurück"
-                type="tertiary"></CustomButton>
+                type="secondary"></CustomButton>
             )}
           </div>
           <div className="Button">
