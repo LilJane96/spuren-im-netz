@@ -7,17 +7,18 @@ import Pin2Active from "../../images/Pins/Pin2Active.png";
 import Pin2Inactive from "../../images/Pins/Pin2Inactive.png";
 import Backpack from "../../images/Backpack.svg";
 import FoxPicture from "../../images/foxPicture.svg";
+import ProfilIcon from "../../images/EmptyProfileIcon.svg";
 import PopUpChooseName from "../../components/PopUpChooseName/PopUpChooseName";
 import { useNavigate } from "react-router-dom";
 import CustomButton from "../../components/Button/CustomButton";
 import BackpackPopup from "../../components/BackpackPopup/BackpackPopup";
 import PhoneSimulator from "../../components/PhoneSimulator/PhoneSimulator";
-import zIndex from "@mui/material/styles/zIndex";
 import { Link } from "@mui/material";
 
 function Hub() {
   const [open, setOpen] = useState(false);
   const [openFoxProfile, setOpenFoxProfile] = useState(false);
+  const [openUserProfile, setOpenUserProfile] = useState(false);
   const [openBackpack, setOpenBackpack] = useState(false);
   const [units, setUnits] = useState({});
   const [sidebarCollapsed, setSidebarCollapsed] = useState(true);
@@ -35,6 +36,9 @@ function Hub() {
   const handleOpenFoxProfile = () => {
     setOpenFoxProfile(true);
   };
+  const handleOpenUserProfile = () => {
+    setOpenUserProfile(true);
+  };
 
   const handleOpenBackpack = () => {
     setOpenBackpack(true);
@@ -51,6 +55,7 @@ function Hub() {
   return (
     <div className="hub">
       <div className="HeaderContainer">
+        <div className="upperLeftOptions">
         <div className="foxProfileContainer">
           <img
             className="fox"
@@ -58,6 +63,15 @@ function Hub() {
             alt="Fox"
             onClick={handleOpenFoxProfile}
           />
+        </div>
+        <div className="UserProfileContainer">
+          <img
+              className="UserProfile"
+              src={ProfilIcon}
+              alt="UserProfile"
+              onClick={handleOpenUserProfile}
+          />
+        </div>
         </div>
         <div className="upperRightOptions">
           <img
@@ -104,6 +118,21 @@ function Hub() {
       <div>
         <PopUpChooseName open={open}></PopUpChooseName>
       </div>
+      {openUserProfile && (
+          <div className="ProfileViewContainer">
+            <div className="closeProfile">
+              <CustomButton
+                  type="quaternary"
+                  onClick={() => setOpenUserProfile(false)}
+              />
+            </div>
+            <div className="ProfileView">
+              <div>
+                <PhoneSimulator title={"Profil"} content={13} />
+              </div>
+            </div>
+          </div>
+      )}
       {openFoxProfile && (
         <div className="ProfileViewContainer">
           <div className="closeProfile">
