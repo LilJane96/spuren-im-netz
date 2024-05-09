@@ -26,6 +26,15 @@
   align-items: center;
 }
 
+.frameContainer .PhoneBox {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+
 .frameContainer .buttonContainer {
   display: flex;
   justify-content: space-between;

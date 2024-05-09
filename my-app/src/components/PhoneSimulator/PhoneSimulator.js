@@ -89,7 +89,7 @@ export default function PhoneSimulator({
         {title}
       </div>
 
-      <section className="section">
+      <section className="section" style={{ height: shouldRenderBottombar() ? '80%' : '90%' }}>
         <div className="middle-panel">{renderSimulatorPage()}</div>
       </section>
 

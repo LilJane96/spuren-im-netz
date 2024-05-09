@@ -10,7 +10,11 @@
   overflow: hidden;
 }
 
-.headerContainer {
+.PhoneContainer .middle-panel {
+  height: 100%;
+}
+
+.PhoneContainer .headerContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,8 +28,7 @@
   font-size: math;
 }
 
-.section {
-  height: 80%;
+.PhoneContainer .section {
   overflow-x: hidden;
 }
 
@@ -33,12 +36,12 @@ section::-webkit-scrollbar {
   width: 0; /* Verstecke die Scrollbar in Webkit (Chrome, Safari) */
 }
 
-.section {
+.PhoneContainer .section {
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
 
-.bottombar {
+.PhoneContainer .bottombar {
   position: absolute;
   bottom: 0;
   left: 0;

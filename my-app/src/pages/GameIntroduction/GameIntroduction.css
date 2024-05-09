@@ -40,6 +40,10 @@
   z-index: 999;
 }
 
+.GameIntroductionContainer .Phone {
+  height: 60vh;
+}
+
 .GameIntroductionContainer .IntroductionText .EndUnit {
   margin: 0;
 }
