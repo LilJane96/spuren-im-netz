@@ -28,8 +28,14 @@ function Hub() {
   useEffect(() => {
     const storedUnits = JSON.parse(localStorage.getItem("UnitsArray")) || {};
     setUnits(storedUnits);
-  }, []);
+    setUserProfilePicture()
+  }, [units.unit1]);
 
+  const setUserProfilePicture = ()  => {
+    if (units.unit1?.done) {
+      const profilePic = units.unit1.answers.find((obj) => obj.question === "Profilbild")?.answer;
+      setProfileImage(profilePic);
+    }};
   const handleOpenPopup = () => {
     setOpen(true);
   };
@@ -39,13 +45,6 @@ function Hub() {
   const handleOpenFoxProfile = () => {
     setOpenFoxProfile(true);
   };
-  useEffect(() => {
-    // Setze das Profilbild, wenn Unit1 abgeschlossen ist
-    if (units.unit1?.done) {
-      const profilePic = units.unit1.answers.find((obj) => obj.question === "Profilbild")?.answer;
-      setProfileImage(profilePic);
-    }
-  }, [units.unit1]);
   const handleOpenBackpack = () => {
     setOpenBackpack(true);
   };
