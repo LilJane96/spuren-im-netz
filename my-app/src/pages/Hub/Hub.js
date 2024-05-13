@@ -24,25 +24,35 @@ function Hub() {
   const [profileImage, setProfileImage] = useState("");
   const navigate = useNavigate();
 
-
   useEffect(() => {
-    const storedUnits = JSON.parse(localStorage.getItem("UnitsArray")) || {};
-    setUnits(storedUnits);
-    const setUserProfilePicture = ()  => {
-      if (units.unit1?.done) {
-        const profilePic = units.unit1.answers.find((obj) => obj.question === "Profilbild")?.answer;
-        setProfileImage(profilePic);
-      }};
-    setUserProfilePicture()
-  }, [units.unit1]);
+    const getStoredUnits = () => {
+      try {
+        const storedUnits =
+          JSON.parse(localStorage.getItem("UnitsArray")) || {};
+        setUnits(storedUnits);
+      } catch (err) {
+        console.log("Error fetching local data");
+      }
+    };
 
+    const setUserProfilePicture = () => {
+      if (units.unit1?.done) {
+        const profilePic = units.unit1.answers.find(
+          (obj) => obj.question === "Profilbild"
+        )?.answer;
+        setProfileImage(profilePic);
+      }
+    };
+    getStoredUnits();
+    setUserProfilePicture();
+  }, [units.unit1?.done]);
 
   const handleOpenPopup = () => {
     setOpen(true);
   };
   const handleOpenUserProfile = () => {
     setOpenUserProfile(true);
-    };
+  };
   const handleOpenFoxProfile = () => {
     setOpenFoxProfile(true);
   };
@@ -59,27 +69,26 @@ function Hub() {
     <div className="hub">
       <div className="HeaderContainer">
         <div className="upperLeftOptions">
-        <div className="foxProfileContainer">
-          <img
-            className="fox"
-            src={FoxPicture}
-            alt="Fox"
-            onClick={handleOpenFoxProfile}
-          />
-        </div>
-        <div className="UserProfileContainer">
-          {units.unit1?.done ? (
-              <img
-              className="UserProfile"
-              src={profileImage}
-              alt="UserProfile"
-              onClick={handleOpenUserProfile}
-          />) : (
+          <div className="foxProfileContainer">
             <img
-                alt={""}
+              className="fox"
+              src={FoxPicture}
+              alt="Fox"
+              onClick={handleOpenFoxProfile}
             />
-          )}
-        </div>
+          </div>
+          <div className="UserProfileContainer">
+            {units.unit1?.done ? (
+              <img
+                className="UserProfile"
+                src={profileImage}
+                alt="UserProfile"
+                onClick={handleOpenUserProfile}
+              />
+            ) : (
+              <img alt={""} />
+            )}
+          </div>
         </div>
         <div className="upperRightOptions">
           <img
@@ -127,19 +136,19 @@ function Hub() {
         <PopUpChooseName open={open}></PopUpChooseName>
       </div>
       {openUserProfile && (
-          <div className="ProfileViewContainer">
-            <div className="closeProfile">
-              <CustomButton
-                  type="quaternary"
-                  onClick={() => setOpenUserProfile(false)}
-              />
-            </div>
-            <div className="ProfileView">
-              <div>
-                <PhoneSimulator title={"Profil"} content={13} />
-              </div>
+        <div className="ProfileViewContainer">
+          <div className="closeProfile">
+            <CustomButton
+              type="quaternary"
+              onClick={() => setOpenUserProfile(false)}
+            />
+          </div>
+          <div className="ProfileView">
+            <div>
+              <PhoneSimulator title={"Profil"} content={13} />
             </div>
           </div>
+        </div>
       )}
       {openFoxProfile && (
         <div className="ProfileViewContainer">
