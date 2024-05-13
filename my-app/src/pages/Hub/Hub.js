@@ -28,14 +28,15 @@ function Hub() {
   useEffect(() => {
     const storedUnits = JSON.parse(localStorage.getItem("UnitsArray")) || {};
     setUnits(storedUnits);
+    const setUserProfilePicture = ()  => {
+      if (units.unit1?.done) {
+        const profilePic = units.unit1.answers.find((obj) => obj.question === "Profilbild")?.answer;
+        setProfileImage(profilePic);
+      }};
     setUserProfilePicture()
   }, [units.unit1]);
 
-  const setUserProfilePicture = ()  => {
-    if (units.unit1?.done) {
-      const profilePic = units.unit1.answers.find((obj) => obj.question === "Profilbild")?.answer;
-      setProfileImage(profilePic);
-    }};
+
   const handleOpenPopup = () => {
     setOpen(true);
   };
@@ -48,15 +49,12 @@ function Hub() {
   const handleOpenBackpack = () => {
     setOpenBackpack(true);
   };
-
   const handleOpenUnit = (obj) => {
     navigate("/introduction/unit2");
   };
-
   const toggleSidebarVisibility = () => {
     setSidebarCollapsed(!sidebarCollapsed);
   };
-
   return (
     <div className="hub">
       <div className="HeaderContainer">
@@ -75,9 +73,10 @@ function Hub() {
               className="UserProfile"
               src={profileImage}
               alt="UserProfile"
-                onClick={handleOpenUserProfile}
+              onClick={handleOpenUserProfile}
           />) : (
             <img
+                alt={""}
             />
           )}
         </div>
