@@ -1,4 +1,4 @@
-import {useState} from "react";
+import { useState } from "react";
 import House from "../../images/ProfileImages/ProfilGoodFox/House.png";
 import PuzzleGoodFox from "../../images/ProfileImages/ProfilGoodFox/PuzzleGoodFox.jpg";
 import TablesGoodFox from "../../images/ProfileImages/ProfilGoodFox/TablesGoodFox.jpg";
@@ -31,7 +31,12 @@ export default function UserProfileData() {
       postsCount: 0,
       followersCount: 0,
       friendsCount: 0,
-      bio: bio.type,
+      bio: (
+        <span>
+          Fußballliebhaber ⚽ <br />
+          Künstlerin 🎨
+        </span>
+      ),
       images: [],
     },
   ];
