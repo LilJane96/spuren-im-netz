@@ -68,7 +68,6 @@ export default function UserProfile({ profileData, answer }) {
               )}
             </p>
           </div>
-
           <div className="Line" />
           <div style={{ marginLeft: "6px" }}>
             <ul className="ImageContainer">

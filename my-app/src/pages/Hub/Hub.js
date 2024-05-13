@@ -7,7 +7,6 @@ import Pin2Active from "../../images/Pins/Pin2Active.png";
 import Pin2Inactive from "../../images/Pins/Pin2Inactive.png";
 import Backpack from "../../images/Backpack.svg";
 import FoxPicture from "../../images/foxPicture.svg";
-import ProfilIcon from "../../images/EmptyProfileIcon.svg";
 import PopUpChooseName from "../../components/PopUpChooseName/PopUpChooseName";
 import { useNavigate } from "react-router-dom";
 import CustomButton from "../../components/Button/CustomButton";
@@ -22,7 +21,7 @@ function Hub() {
   const [openBackpack, setOpenBackpack] = useState(false);
   const [units, setUnits] = useState({});
   const [sidebarCollapsed, setSidebarCollapsed] = useState(true);
-  const [profileImage, setProfileImage] = useState(ProfilIcon);
+  const [profileImage, setProfileImage] = useState("");
   const navigate = useNavigate();
 
 
@@ -34,17 +33,19 @@ function Hub() {
   const handleOpenPopup = () => {
     setOpen(true);
   };
-
+  const handleOpenUserProfile = () => {
+    setOpenUserProfile(true);
+    };
   const handleOpenFoxProfile = () => {
     setOpenFoxProfile(true);
   };
-  const handleOpenUserProfile = () => {
-    setOpenUserProfile(true);
-    if(units.unit1?.done) {
-      setProfileImage(units.unit1.answers.find((obj) => obj.question === "Profilbild")?.answer);
+  useEffect(() => {
+    // Setze das Profilbild, wenn Unit1 abgeschlossen ist
+    if (units.unit1?.done) {
+      const profilePic = units.unit1.answers.find((obj) => obj.question === "Profilbild")?.answer;
+      setProfileImage(profilePic);
     }
-  };
-
+  }, [units.unit1]);
   const handleOpenBackpack = () => {
     setOpenBackpack(true);
   };
@@ -70,12 +71,16 @@ function Hub() {
           />
         </div>
         <div className="UserProfileContainer">
-          <img
+          {units.unit1?.done ? (
+              <img
               className="UserProfile"
               src={profileImage}
               alt="UserProfile"
-              onClick={handleOpenUserProfile}
-          />
+                onClick={handleOpenUserProfile}
+          />) : (
+            <img
+            />
+          )}
         </div>
         </div>
         <div className="upperRightOptions">
