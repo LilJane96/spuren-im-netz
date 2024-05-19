@@ -13,13 +13,13 @@ export default function CreateUserName({ answer }) {
           <h3>Name für dein Konto</h3>
         </div>
         <div>
-          <div style={{ margin: "15px 0" }}>
+          <div className="InputContainer" style={{ margin: "15px 0" }}>
             <Inputfield
+              style={{ width: "100%" }}
               placeholder="Benutzername"
               value={answer}
               onChange={(e) => setSelectedAnswer(e.target.value)}></Inputfield>
           </div>
-          <div style={{ margin: "15px 0" }}></div>
         </div>
       </div>
     </div>

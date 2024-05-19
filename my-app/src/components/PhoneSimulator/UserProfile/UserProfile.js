@@ -1,5 +1,4 @@
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import Profilepicture from "../../../images/SearchPearsonImages/Annonym.png";
 import Bottombar from "../../Bottombar/Bottombar";
 import { useState } from "react";
 import ImageGallery from "../../ImageGallery/ImageGallery";
@@ -70,15 +69,13 @@ export default function UserProfile({ profileData, answer }) {
           </div>
 
           <div className="Line" />
-          <div style={{ marginLeft: "6px" }}>
-            <ul className="ImageContainer">
+            <div className="ImageContainer">
               {profileData[0].images.map((obj) => (
                 <li key={obj.id} onClick={() => handleImageClick(obj.id)}>
                   <img src={obj.img} alt={obj.text} />
                 </li>
               ))}
-            </ul>
-          </div>
+            </div>
           <div className="BottombarContainer">
             <Bottombar />
           </div>

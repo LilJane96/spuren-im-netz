@@ -1,39 +1,34 @@
 .PhoneContainer {
   display: flex;
   flex-direction: column;
-  border: 8px solid black;
-  border-radius: 32px;
+  border: 0.5vw solid black; /* Adjust as needed */
+  border-radius: 2vw; /* Adjust as needed */
   background-color: white;
   position: relative;
-  height: 475px;
-  width: 244px;
+  height: 100%;
+  aspect-ratio: 10/19;
+  overflow: hidden;
+}
+
+.PhoneContainer .middle-panel {
+  height: 100%;
 }
 
 .PhoneContainer .headerContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #3c68a9;
+  background-color: #3c68a9;
   color: white;
-  border-top-left-radius: 24px;
-  border-top-right-radius: 24px;
-  position: absolute;
-  width: 244px;
-  height: 51px;
+  width: 100%;
+  height: 10%;
   z-index: 1;
-}
-
-.PhoneContainer .sectionContainer {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  width: 244px;
-  height: 475px;
+  font-weight: bold;
+  font-size: 50%;
+  font-size: math;
 }
 
 .PhoneContainer .section {
-  border-radius: 24px;
-  height: 469px;
   overflow-x: hidden;
 }
 
@@ -41,19 +36,15 @@ section::-webkit-scrollbar {
   width: 0; /* Verstecke die Scrollbar in Webkit (Chrome, Safari) */
 }
 
-.section {
+.PhoneContainer .section {
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
 
-.section-content {
-  overflow-y: scroll;
-  max-height: 475px;
-}
-
-.bottombar {
+.PhoneContainer .bottombar {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 224px;
+  height: 10%;
+  width: 100%;
 }

@@ -27,7 +27,7 @@ export default function FinishGame() {
 
   return (
     <div className="FinishGameContainer">
-      <div className="PhoneSimulator">
+      <div className="PhoneBox">
         {currentStep === "step1" && <PhoneSimulator content={11} />}
       </div>
       <div className="FinalFrameOne">
