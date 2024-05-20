@@ -14,6 +14,7 @@ import BackpackPopup from "../../components/BackpackPopup/BackpackPopup";
 import PhoneSimulator from "../../components/PhoneSimulator/PhoneSimulator";
 import zIndex from "@mui/material/styles/zIndex";
 import { Link } from "@mui/material";
+import StopPopup from "../../components/StopPopup/StopPopup";
 
 function Hub() {
   const [open, setOpen] = useState(false);

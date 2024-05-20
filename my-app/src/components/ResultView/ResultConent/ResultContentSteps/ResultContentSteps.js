@@ -7,20 +7,12 @@ import "./ResultContentSteps.css";
 export default function ResultContentSteps({ unitId, stepId }) {
   const path = useParams();
   const prevStepId = stepId <= 5 ? stepId - 1 : stepId;
-  console.log("prevStepId", prevStepId);
-
-  console.log("stepId", stepId);
-  console.log("path", path);
-  console.log("UnitsArray", UnitsArray());
-  console.log("unitId", unitId);
   const unit = UnitsArray();
   const answerObj = unit[unitId].task[prevStepId].step[0].answerboxes.map(
     (obj) => obj
   );
   const topic = unit[unitId].task[prevStepId].step[0].title;
   const hasImages = answerObj.some((obj) => obj.type === "image");
-  console.log("Unit", unit);
-  console.log("answerObj", answerObj);
 
   return (
     <div className="StepAnswerContainer">
