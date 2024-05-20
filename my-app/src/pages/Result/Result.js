@@ -50,8 +50,8 @@ export default function Result() {
   return (
     <div className="ResultContainer">
       <div className="EndUnit">
-        {currentStep === totalTasks ? (
-          initialTime ? (
+        {currentStep === totalTasks &&
+          (initialTime ? (
             <Stopwatch
               initialTime={initialTime}
               onTimeUp={() => {}}
@@ -59,14 +59,7 @@ export default function Result() {
             />
           ) : (
             <CustomButton type="quaternary" onClick={handleEndUnit} />
-          )
-        ) : (
-          <Stopwatch
-            initialTime={initialTime}
-            onTimeUp={() => {}}
-            onClick={handleOpenPopup}
-          />
-        )}
+          ))}
       </div>
       <div className="ResultView">
         <div className="Container">
