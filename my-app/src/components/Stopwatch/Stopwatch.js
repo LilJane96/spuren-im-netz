@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "./Stopwatch.css";
+import { calculateRemainingTime } from "../../utilis/timer";
 
-const Stopwatch = ({ initialTime, onTimeUp, onClick }) => {
+const Stopwatch = ({ onTimeUp, onClick }) => {
+  const initialTime = calculateRemainingTime(600);
   const [timeLeft, setTimeLeft] = useState(initialTime);
 
   useEffect(() => {
@@ -13,15 +15,12 @@ const Stopwatch = ({ initialTime, onTimeUp, onClick }) => {
       localStorage.setItem("timerStart", timerStart.toString());
     }
 
-    const elapsed = Math.floor((now - timerStart) / 1000);
-    const timeRemaining = initialTime - elapsed;
-
-    if (timeRemaining <= 0) {
+    if (initialTime <= 0) {
       onTimeUp();
       return;
     }
 
-    setTimeLeft(timeRemaining);
+    setTimeLeft(initialTime);
 
     const interval = setInterval(() => {
       setTimeLeft((prev) => {
@@ -35,7 +34,6 @@ const Stopwatch = ({ initialTime, onTimeUp, onClick }) => {
       });
     }, 1000);
 
-    // Clear interval when component unmounts
     return () => clearInterval(interval);
   }, [initialTime, onTimeUp]);
 
@@ -43,7 +41,6 @@ const Stopwatch = ({ initialTime, onTimeUp, onClick }) => {
   const seconds = timeLeft % 60;
 
   const minuteDeg = minutes === 0 ? 0 : ((minutes % 60) / 60) * 360 - 57;
-
   const secondDeg = (seconds / 60) * 360;
 
   return (
@@ -68,7 +65,7 @@ const Stopwatch = ({ initialTime, onTimeUp, onClick }) => {
       </div>
 
       <div className="stopwatch-display">
-        {minutes}:{seconds}
+        {minutes}:{seconds < 10 ? `0${seconds}` : seconds}
       </div>
     </div>
   );

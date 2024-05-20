@@ -7,24 +7,24 @@ import CustomButton from "../../components/Button/CustomButton";
 import { useNavigate, useParams } from "react-router-dom";
 import Ampel from "../../components/StopPopup/StopPopup";
 import Stopwatch from "../../components/Stopwatch/Stopwatch";
+import { calculateRemainingTime } from "../../utilis/timer";
 
 export default function Result() {
   const [currentStep, setCurrentStep] = useState(1);
   const navigate = useNavigate();
-
+  const [popupOpen, setPopupOpen] = useState(false);
   const { unitId, stepId } = useParams();
   const units = JSON.parse(localStorage.getItem("UnitsArray")) || {};
   const totalTasks = units[unitId].answers.length + 1;
-  const timerStart = parseInt(localStorage.getItem("timerStart")) || 0;
-  const initialTime = Math.max(
-    0,
-    600 - Math.floor((Date.now() - timerStart) / 1000)
-  );
-  const [open, setOpen] = useState(false);
+  const initialTime = calculateRemainingTime(600);
 
   useEffect(() => {
     const stepFromUrl = parseInt(stepId.replace("step", ""), 10) || 1;
     setCurrentStep(stepFromUrl);
+
+    if (stepFromUrl === 1 && !localStorage.getItem("timerStart")) {
+      localStorage.setItem("timerStart", Date.now().toString());
+    }
   }, [stepId]);
 
   const handleNextPage = () => {
@@ -44,14 +44,14 @@ export default function Result() {
   };
 
   const handleOpenPopup = () => {
-    setOpen(true);
+    setPopupOpen(true);
   };
 
   return (
     <div className="ResultContainer">
       <div className="EndUnit">
         {currentStep === totalTasks ? (
-          timerStart ? (
+          initialTime ? (
             <Stopwatch
               initialTime={initialTime}
               onTimeUp={() => {}}
@@ -115,9 +115,15 @@ export default function Result() {
               <CustomButton name="Weiter" type="primary" disabled />
             )}
           </div>
-          <div>{open && <Ampel />}</div>
         </div>
       </div>
+      {popupOpen && (
+        <Ampel
+          initialTime={initialTime}
+          open={popupOpen}
+          onClose={() => setPopupOpen(false)}
+        />
+      )}
     </div>
   );
 }

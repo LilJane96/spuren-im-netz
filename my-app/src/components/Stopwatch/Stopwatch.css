@@ -3,7 +3,8 @@
   flex-direction: column;
   align-items: center;
 }
-.outer_face {
+
+.ClockContainer .outer_face {
   position: relative;
   width: 3rem;
   height: 3rem;
@@ -14,7 +15,7 @@
   border: 5px solid var(--primary-color);
 }
 
-.outer_face::before,
+.ClockContainer .outer_face::before,
 .outer_face::after,
 .outer_face .marker {
   content: "";
@@ -28,44 +29,44 @@
   top: 0;
 }
 
-.outer_face::after {
+.ClockContainer .outer_face::after {
   transform: rotate(90deg);
 }
 
-.outer_face .marker {
+.ClockContainer .outer_face .marker {
   background: gray;
   width: 3px;
   margin-left: -2px;
 }
 
-.outer_face .marker.oneseven {
+.ClockContainer .outer_face .marker.oneseven {
   transform: rotate(30deg);
 }
 
-.outer_face .marker.twoeight {
+.ClockContainer .outer_face .marker.twoeight {
   transform: rotate(60deg);
 }
 
-.outer_face .marker.fourten {
+.ClockContainer .outer_face .marker.fourten {
   transform: rotate(120deg);
 }
 
-.outer_face .marker.fiveeleven {
+.ClockContainer .outer_face .marker.fiveeleven {
   transform: rotate(150deg);
 }
 
-.inner_face {
+.ClockContainer .inner_face {
   position: relative;
   width: 88%;
   height: 88%;
   background: white;
   border-radius: 1000px;
-  z-index: 1000;
+  z-index: 100;
   left: 6%;
   top: 6%;
 }
 
-.inner_face::before {
+.ClockContainer .inner_face::before {
   content: "";
   width: 10px;
   height: 10px;
@@ -79,7 +80,7 @@
   box-shadow: 0 0 30px blue;
 }
 
-.inner_face::after {
+.ClockContainer .inner_face::after {
   position: absolute;
   width: 100%;
   font: normal 0.8em Arial;
@@ -88,7 +89,7 @@
   top: 85%;
 }
 
-.hand,
+.ClockContainer .hand,
 .hand {
   position: absolute;
   width: 4px;
@@ -102,14 +103,14 @@
   box-shadow: 0 0 3px gray;
 }
 
-.hand.minute {
+.ClockContainer .hand.minute {
   height: 45%;
   top: 5%;
   width: 2px;
   margin-left: 0px;
 }
 
-.hand.second {
+.ClockContainer .hand.second {
   height: 50%;
   width: 2px;
   margin-left: -0.5px;
@@ -117,7 +118,7 @@
   background: red;
 }
 
-.stopwatch_element {
+.ClockContainer .stopwatch_element {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -126,19 +127,19 @@
   z-index: -1;
 }
 
-.stopwatch_element.stopwatch_element_1 {
+.ClockContainer .stopwatch_element.stopwatch_element_1 {
   top: -15px;
   left: 50%;
   transform: translateX(-50%);
 }
 
-.stopwatch_element.stopwatch_element_2 {
+.ClockContainer .stopwatch_element.stopwatch_element_2 {
   top: -3px;
   left: 12%;
   transform: translateX(-50%);
 }
 
-.stopwatch_element.stopwatch_element_3 {
+.ClockContainer .stopwatch_element.stopwatch_element_3 {
   top: -4px;
   left: 46%;
   transform: translateX(50%);

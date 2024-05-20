@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react";
 import "./StopPopup.css";
 import CustomButton from "../Button/CustomButton";
 import Stopwatch from "../Stopwatch/Stopwatch";
+import { calculateRemainingTime } from "../../utilis/timer";
 
-const Ampel = () => {
+const Ampel = ({ open, onClose }) => {
   const [isRedActive, setIsRedActive] = useState(true);
-  const [popupVisible, setPopupVisible] = useState(true);
+  const [popupVisible, setPopupVisible] = useState(open);
+  const initialTime = calculateRemainingTime(600);
 
   const handleTimeUp = () => {
     setIsRedActive(false);
@@ -13,7 +15,12 @@ const Ampel = () => {
 
   const handleClosePopup = () => {
     setPopupVisible(false);
+    onClose();
   };
+
+  useEffect(() => {
+    setPopupVisible(open);
+  }, [open]);
 
   return (
     <>
@@ -45,7 +52,11 @@ const Ampel = () => {
                 />
               </div>
               <div className="Stopwatch">
-                <Stopwatch initialTime={600} onTimeUp={handleTimeUp} />
+                <Stopwatch
+                  initialTime={initialTime}
+                  onTimeUp={handleTimeUp}
+                  open={() => {}}
+                />
               </div>
             </div>
           </div>
