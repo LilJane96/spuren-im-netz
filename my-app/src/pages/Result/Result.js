@@ -11,6 +11,7 @@ import { calculateRemainingTime } from "../../utilis/timer";
 
 export default function Result() {
   const [currentStep, setCurrentStep] = useState(1);
+  const [timeUp, setTimeUp] = useState(false);
   const navigate = useNavigate();
   const [popupOpen, setPopupOpen] = useState(false);
   const { unitId, stepId } = useParams();
@@ -48,19 +49,26 @@ export default function Result() {
     setPopupOpen(true);
   };
 
+  const handleTimeUp = () => {
+    setTimeUp(true);
+  };
+
   return (
     <div className="ResultContainer">
       <div className="EndUnit">
-        {currentStep === totalTasks &&
-          (initialTime ? (
-            <Stopwatch
-              initialTime={initialTime}
-              onTimeUp={() => {}}
-              onClick={handleOpenPopup}
-            />
-          ) : (
-            <CustomButton type="quaternary" onClick={handleEndUnit} />
-          ))}
+        {currentStep === totalTasks && (
+          <>
+            {timeUp ? (
+              <CustomButton type="quaternary" onClick={handleEndUnit} />
+            ) : (
+              <Stopwatch
+                initialTime={initialTime}
+                onTimeUp={handleTimeUp}
+                onClick={handleOpenPopup}
+              />
+            )}
+          </>
+        )}
       </div>
       <div className="ResultView">
         <div className="Container">
