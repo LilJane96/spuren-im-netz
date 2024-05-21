@@ -41,6 +41,7 @@ export default function Result() {
 
   const handleEndUnit = () => {
     navigate(`/hub`);
+    localStorage.removeItem("timerStart");
   };
 
   const handleOpenPopup = () => {
