@@ -1,5 +1,4 @@
-import { ScrollContainer } from "react-nice-scroll";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import CreatePassword from "./CreatePassword/CreatePassword";
 import CreateUserName from "./CreateUserName/CreateUserName";
 import Privacy from "./Privacy/Privacy";
@@ -21,6 +20,14 @@ export default function PhoneSimulator({
   nextPage,
 }) {
   const [currentPage, setCurrentPage] = useState(0);
+  const headerRef = useRef(null);
+
+  useEffect(() => {
+    if (headerRef.current) {
+      const fontSize = headerRef.current.offsetHeight * 0.4; // 50% of the container's height
+      headerRef.current.style.fontSize = fontSize + 'px';
+    }
+  }, []);
 
   const handleNextPage = () => {
     setCurrentPage(currentPage + 1);
@@ -77,19 +84,17 @@ export default function PhoneSimulator({
 
   return (
     <div className="PhoneContainer">
-      <ScrollContainer>
-        <div className="sectionContainer">
-          <section className="section">
-            <div className="headerContainer">
-              <h3>{title}</h3>
-            </div>
-            <div className="social-media-learning-app">
-              <div className="middle-panel">{renderSimulatorPage()}</div>
-              {shouldRenderBottombar() && <Bottombar />}
-            </div>
-          </section>
-        </div>
-      </ScrollContainer>
+      
+      <div className="headerContainer" ref={headerRef}>
+        {title}
+      </div>
+
+      <section className="section" style={{ height: shouldRenderBottombar() ? '80%' : '90%' }}>
+        <div className="middle-panel">{renderSimulatorPage()}</div>
+      </section>
+
+      {shouldRenderBottombar() && <Bottombar />}
+
     </div>
   );
 }

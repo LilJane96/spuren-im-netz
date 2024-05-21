@@ -64,7 +64,7 @@ function Home() {
         <div className="containerHome">
           <img id="fox1" src={WavingFox} alt="Fuchs" />
           {/* <FoxProfile /> */}
-          <PhoneSimulator content={12} />
+          <PhoneSimulator content={12} title="Profil"/>
           <img id="fox2" src={ThiefFox} alt="Dieb" />
         </div>
       </div>

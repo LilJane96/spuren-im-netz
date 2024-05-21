@@ -186,12 +186,14 @@ export default function FrameOne() {
                         />
                       )
                   )}
+                  <div className="PhoneBox">
                   <PhoneSimulator
                     title={tasks.step.map((obj) => obj.title)}
                     content={tasks.step.map((obj) => obj.phoneSimulatorStep)}
                     selectedAnswer={selectedAnswer}
                     nextPage={currentStep}
                   />
+                  </div>
                   <div className="boxContainer">
                     <div
                       className={`answerContainer ${

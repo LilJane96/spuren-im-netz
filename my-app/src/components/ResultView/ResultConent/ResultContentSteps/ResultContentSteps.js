@@ -1,5 +1,4 @@
 import React from "react";
-import AnswerBoxes from "../../../AnswerBoxes/AnswerBoxes";
 import { useParams } from "react-router-dom";
 import UnitsArray from "../../../../Units/Unit";
 import "./ResultContentSteps.css";

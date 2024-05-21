@@ -20,15 +20,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 50%;
 }
 
 .HomeContainer #fox1 {
   margin-right: -40px;
+  height: 100%;
 }
 
 .HomeContainer #fox2 {
   margin-left: -55px;
   z-index: 1;
+  height: 100%;
+  pointer-events: none;
 }
 
 .HomeContainer .TextContainer {

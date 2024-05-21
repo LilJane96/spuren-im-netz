@@ -71,7 +71,7 @@ export default function GameIntroduction() {
               justifyContent: obj.speechbubblePosition || "center",
               alignItems: obj.elementPostion ? obj.elementPostion : "",
             }}>
-            <div>{obj.component && <PhoneSimulator content={12} />}</div>
+            <div className="Phone">{obj.component && <PhoneSimulator title={"Profil"} content={12}/>}</div>
             {obj.text ? (
               <p
                 className="textBubble"

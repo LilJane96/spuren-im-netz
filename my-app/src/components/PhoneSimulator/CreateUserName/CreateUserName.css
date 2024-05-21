@@ -1,3 +1,14 @@
 .CreateAccountContainer .titleContainer {
   margin: 10px 0 0;
 }
+
+.CreateAccountContainer {
+  width: 100%;
+}
+
+.CreateAccountContainer div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
