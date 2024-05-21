@@ -143,10 +143,8 @@ function Hub() {
               onClick={() => setOpenUserProfile(false)}
             />
           </div>
-          <div className="ProfileView">
-            <div>
+          <div className="UserProfileView">
               <PhoneSimulator title={"Profil"} content={13} />
-            </div>
           </div>
         </div>
       )}
