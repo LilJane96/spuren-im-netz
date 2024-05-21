@@ -159,9 +159,7 @@ function Hub() {
             />
           </div>
           <div className="ProfileView">
-            <div>
               <PhoneSimulator title={"Profil"} content={12} />
-            </div>
           </div>
         </div>
       )}

@@ -20,7 +20,6 @@ export default function CreatePassword({ answer }) {
               value={answer}
               onChange={(e) => setSelectedAnswer(e.target.value)}></Inputfield>
           </div>
-          <div style={{ margin: "15px 0" }}></div>
         </div>
       </div>
     </div>

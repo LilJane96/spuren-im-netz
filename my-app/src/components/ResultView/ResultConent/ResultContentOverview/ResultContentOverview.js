@@ -41,7 +41,7 @@ export default function ResultContentOverview({ unitId }) {
                 <div className="Heart">
                   {obj.wrongAttempts === 0 ? (
                     <div style={{ margin: "7px 0 0 0" }}>
-                      <img
+                      <img alt="heart"
                         src={HeartFilled}
                         style={{ width: "33px", height: "29px" }}
                       />{" "}
