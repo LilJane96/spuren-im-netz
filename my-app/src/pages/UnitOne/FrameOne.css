@@ -15,7 +15,7 @@
 .boxContainer {
   display: flex;
   flex-direction: column;
-  align-items: end;
+  align-items: flex-end;
   margin: 0 50px;
   width: 232px;
 }
@@ -25,6 +25,15 @@
   justify-content: center;
   align-items: center;
 }
+
+.frameContainer .PhoneBox {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
 
 .frameContainer .buttonContainer {
   display: flex;

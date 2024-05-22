@@ -25,19 +25,19 @@ return (
         </div>
         <div className="TextContainer">
             <p className="PrivacyText">
-            Wenn du ein öffentliches Konto hast, kannst<br />
-            du Inhalte mit einer breiten Öffentlichkeit<br />
-            teilen, dein Netzwerk erweitern und deine<br />
+            Wenn du ein öffentliches Konto hast, kannst
+            du Inhalte mit einer breiten Öffentlichkeit
+            teilen, dein Netzwerk erweitern und deine
             Sichtbarkeit erhöhen.
             </p>
            
             <p className="PrivacyText">
-            Wenn du ein privates Konto hast, genießt<br />
-            du mehr Schutz deiner Privatsphäre,<br />
-            behältst die Kontrolle darüber, wer dir<br />
-            folgen kann, und reduzierst das Risiko<br/>
-            unerwünschter Aufmerksamkeit und<br/>
-            Belästigung. Entscheide je nach deinen<br/>
+            Wenn du ein privates Konto hast, genießt
+            du mehr Schutz deiner Privatsphäre,
+            behältst die Kontrolle darüber, wer dir
+            folgen kann, und reduzierst das Risiko
+            unerwünschter Aufmerksamkeit und
+            Belästigung. Entscheide je nach deinen
             Zielen und Präferenzen.
             </p>
 

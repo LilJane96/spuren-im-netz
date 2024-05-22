@@ -1,0 +1,147 @@
+.ClockContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.ClockContainer .outer_face {
+  position: relative;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 200px;
+  background: white;
+  /* box-shadow: inset 0 0 2px gray; */
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  border: 5px solid var(--primary-color);
+}
+
+.ClockContainer .outer_face::before,
+.outer_face::after,
+.outer_face .marker {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 100%;
+  background: black;
+  z-index: 0;
+  left: 50%;
+  margin-left: -1px;
+  top: 0;
+}
+
+.ClockContainer .outer_face::after {
+  transform: rotate(90deg);
+}
+
+.ClockContainer .outer_face .marker {
+  background: gray;
+  width: 3px;
+  margin-left: -2px;
+}
+
+.ClockContainer .outer_face .marker.oneseven {
+  transform: rotate(30deg);
+}
+
+.ClockContainer .outer_face .marker.twoeight {
+  transform: rotate(60deg);
+}
+
+.ClockContainer .outer_face .marker.fourten {
+  transform: rotate(120deg);
+}
+
+.ClockContainer .outer_face .marker.fiveeleven {
+  transform: rotate(150deg);
+}
+
+.ClockContainer .inner_face {
+  position: relative;
+  width: 88%;
+  height: 88%;
+  background: white;
+  border-radius: 1000px;
+  z-index: 100;
+  left: 6%;
+  top: 6%;
+}
+
+.ClockContainer .inner_face::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 18px;
+  margin-left: -4.5px;
+  margin-top: -5px;
+  background: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  box-shadow: 0 0 30px blue;
+}
+
+.ClockContainer .inner_face::after {
+  position: absolute;
+  width: 100%;
+  font: normal 0.8em Arial;
+  color: gray;
+  text-align: center;
+  top: 85%;
+}
+
+.ClockContainer .hand,
+.hand {
+  position: absolute;
+  width: 4px;
+  height: 30%;
+  top: 20%;
+  left: 50%;
+  margin-left: -2px;
+  background: black;
+  transform-origin: bottom;
+  z-index: -1;
+  box-shadow: 0 0 3px gray;
+}
+
+.ClockContainer .hand.minute {
+  height: 45%;
+  top: 5%;
+  width: 2px;
+  margin-left: 0px;
+}
+
+.ClockContainer .hand.second {
+  height: 50%;
+  width: 2px;
+  margin-left: -0.5px;
+  top: 0;
+  background: red;
+}
+
+.ClockContainer .stopwatch_element {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #535353;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.ClockContainer .stopwatch_element.stopwatch_element_1 {
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ClockContainer .stopwatch_element.stopwatch_element_2 {
+  top: -3px;
+  left: 12%;
+  transform: translateX(-50%);
+}
+
+.ClockContainer .stopwatch_element.stopwatch_element_3 {
+  top: -4px;
+  left: 46%;
+  transform: translateX(50%);
+}

@@ -40,8 +40,9 @@ export default function IntroductionArray() {
         {
           step: "stepFive",
           component: "<GoodFoxProfile />",
+          elementPostion: "center",
           text: "Das ist mein Profil! Du kannst nach oben und unten scrollen und auf die Bilder klicken, um mehr Details zu sehen. Sobald du mein Profil erkundet hast, klicke auf 'Weiter'",
-          speechbubblePosition: "flex-start",
+          speechbubblePosition: "space-evenly",
           speechbubbleSize: "small",
           speechbubbleMargin: "0",
         },

@@ -1,10 +1,12 @@
 .FinishGameContainer {
 }
 
-.FinishGameContainer .PhoneSimulator {
+.FinishGameContainer .PhoneBox {
   position: fixed;
-  top: 13%;
-  left: 40%;
+  top: 50%;
+  left: 50%;
+  height: 60vh;
+  transform: translate(-50%, -50%);
 }
 
 .FinishGameContainer .phoneContainer {

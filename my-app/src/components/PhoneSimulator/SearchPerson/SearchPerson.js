@@ -15,8 +15,6 @@ const persons = [
 ];
 
 export default function SearchPerson({ answer }) {
-  console.log("answer", answer);
-
   return (
     <div className="SearchPersonContainer">
       <div className="SearchbarContainer">
@@ -25,7 +23,6 @@ export default function SearchPerson({ answer }) {
       <ul className="PersonsList">
         {persons.map((obj) => (
           <li key={obj.name} className={answer === obj.name ? "selected" : ""}>
-            {console.log(answer, obj.name)}
             <div className="left-content">
               <img src={obj.img} className="ProfilePicture" alt="Profilbild" />
               <p className="name">{obj.name}</p>

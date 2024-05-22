@@ -1,4 +1,3 @@
-
 * {
   font-family: "Quicksand", sans-serif;
   font-weight: 600;
@@ -12,43 +11,46 @@
   margin: 0 50px;
 }
 
-.TitleAndSubtitleHome h1,
+.HomeContainer .TitleAndSubtitleHome h1,
 .TitleAndSubtitleHome h4 {
   margin: 0;
 }
 
-.containerHome {
+.HomeContainer .containerHome {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 50%;
 }
 
-#fox1 {
+.HomeContainer #fox1 {
   margin-right: -40px;
+  height: 100%;
 }
 
-#fox2 {
+.HomeContainer #fox2 {
   margin-left: -55px;
   z-index: 1;
+  height: 100%;
+  pointer-events: none;
 }
 
-
-.TextContainer {
+.HomeContainer .TextContainer {
   margin: 30px 10px;
   font-size: 18px;
 }
 
-.paragraphsHome {
+.HomeContainer .paragraphsHome {
   display: flex;
   align-items: center;
 }
 
-.button {
+.HomeContainer .button {
   align-self: flex-end;
   margin-top: 20px;
 }
 
-.row2 {
+.HomeMain .row2 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -56,7 +58,7 @@
   padding: 40px 0px;
 }
 
-.row2Left {
+.HomeMain .row2Left {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -64,7 +66,7 @@
   width: 20%;
 }
 
-.row2Middle {
+.HomeMain .row2Middle {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -73,7 +75,7 @@
   height: 100%;
 }
 
-.row2Right {
+.HomeMain .row2Right {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -81,7 +83,7 @@
   width: 20%;
 }
 
-.simpleCard {
+.HomeMain .simpleCard {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -93,12 +95,12 @@
   height: 100%;
 }
 
-.logo {
+.HomeMain .logo {
   width: 100px;
   height: 100px;
 }
 
-.row3 {
+.HomeMain .row3 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -107,7 +109,7 @@
   width: 100%;
 }
 
-.row3Upper {
+.HomeMain .row3Upper {
   display: flex;
   align-items: center;
   justify-content: left;
@@ -116,7 +118,7 @@
   gap: 40px;
 }
 
-.row3Lower {
+.HomeMain .row3Lower {
   display: flex;
   align-items: center;
   justify-content: right;
@@ -125,7 +127,7 @@
   gap: 40px;
 }
 
-.simpleContainer {
+.HomeMain .simpleContainer {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -135,19 +137,19 @@
   gap: 20px;
 }
 
-.simpleCard2 {
+.HomeMain .simpleCard2 {
   display: flex;
   align-items: center;
   justify-content: left;
   border-radius: 15px;
-  background: linear-gradient(to right, #DB94F3, #BF56E3);
+  background: linear-gradient(to right, #db94f3, #bf56e3);
   padding: 3%;
-  box-shadow: 0 8px 0 0 #9F2FC5;
+  box-shadow: 0 8px 0 0 #9f2fc5;
   width: 100%;
   gap: 20px;
 }
 
-.row4 {
+.HomeMain .row4 {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -156,14 +158,14 @@
   padding: 40px 0px;
 }
 
-.row4 div {
+.HomeMain .row4 div {
   height: 100%;
   width: 80%;
   box-shadow: 0 4px 4px 0 var(--box-shadow);
   border-radius: 15px;
 }
 
-.row5 {
+.HomeMain .row5 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -172,13 +174,13 @@
   gap: -20px;
 }
 
-.row5 img {
+.HomeMain .row5 img {
   margin-right: -25px;
   margin-top: -20px;
   z-index: 1;
 }
 
-.card {
+.HomeMain .card {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -192,7 +194,7 @@
   width: 50%;
 }
 
-.subContainer {
+.HomeMain .subContainer {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -200,7 +202,7 @@
   width: 100%;
 }
 
-.subContainer div {
+.HomeMain .subContainer div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -208,7 +210,7 @@
   width: 30%;
 }
 
-.subContainer img {
+.HomeMain .subContainer img {
   width: 180px;
   height: 180px;
   margin: 0;

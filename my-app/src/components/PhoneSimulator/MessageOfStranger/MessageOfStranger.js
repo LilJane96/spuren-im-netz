@@ -13,7 +13,8 @@ export default function MessageOfStranger({ answer }) {
         <p className="text">Felix</p>
       </div>
       <div className="MessageSpeachbubbleContainer">
-        <MessageSpeachbubble text="Hey, wie geht es dir? Ich bin Felix. Möchtest du vielleicht Freunde werden?" />
+        <img src={AnnonymProfile} alt="Profilbild" className="ProfilePicture" />
+        <p className="speachBubble">Hey, wie geht es dir? Ich bin Felix. Möchtest du vielleicht Freunde werden?</p>
       </div>
       <div className="AcceptMessageViewContainer">
         <p className="firstText">

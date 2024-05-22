@@ -1,5 +1,7 @@
 button {
-  display: flex;
+  width: 212px;
+  height: 64px;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
@@ -7,19 +9,24 @@ button {
   border: 0;
   vertical-align: middle;
   text-decoration: none;
-  font-size: inherit;
-  font-family: inherit;
-  width: 141px;
-  height: 58px;
+  text-align: center;
+  font-family: Quicksand, sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 
+button:disabled {
+  cursor: not-allowed;
+}
 button.PrimaryButton:disabled {
-  background: var(--button-bg-color-disabled);
+  background: var(--button-primary-bg-color-disabled);
   color: #ffffff99;
 }
 
 button.PrimaryButton:disabled::before {
-  background: var(--button-before-disabled);
+  background: var(--button-primary-before-disabled);
 }
 
 button.PrimaryButton {
@@ -28,7 +35,7 @@ button.PrimaryButton {
   font-weight: 700;
   color: white;
   text-transform: uppercase;
-  background: var(--button-bg-color);
+  background: var(--button-primary-bg-color);
   transform-style: preserve-3d;
   transition: 0.15s cubic-bezier(0, 0, 0.6, 1);
 }
@@ -42,7 +49,7 @@ button.PrimaryButton::before {
   width: 100%;
   height: 100%;
   border-radius: inherit;
-  background: var(--button-before);
+  background: var(--button-primary-before);
   transform: translate3d(0, 0.5em, -1em);
   transition: 0.15s cubic-bezier(0, 0, 0.6, 1);
 }
@@ -67,7 +74,60 @@ button.PrimaryButton:active {
 }
 
 /*Secondary Button*/
+button.SecondaryButton:disabled {
+  background: var(--button-sec-back-disabled);
+  color: var(--button-txt-color);
+}
+
+button.SecondaryButton:disabled::before {
+  background: var(--button-sec-before-back-disabled);
+}
+
 button.SecondaryButton {
+  padding: 14px 51px;
+  border-radius: 1.3em;
+  color: var(--button-txt-color);
+  text-transform: uppercase;
+  background: var(--button-sec-bg-back);
+  transform-style: preserve-3d;
+  transition: 0.15s cubic-bezier(0, 0, 0.6, 1);
+}
+button.SecondaryButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--button-sec-before-back);
+  transform: translate3d(0, 0.5em, -1em);
+  transition: 0.15s cubic-bezier(0, 0, 0.6, 1);
+}
+
+button.SecondaryButton:hover {
+  transform: translate(0, 0.25em);
+}
+
+button.SecondaryButton:hover::before {
+  transform: translate3d(0, 0.5em, -1em);
+}
+button.SecondaryButton:active {
+  transform: translate(0, 0.75em);
+}
+
+button.SecondaryButton:disabled:hover {
+  transform: none;
+}
+
+button.SecondaryButton:disabled:active {
+  transform: none;
+}
+
+/*Tertiary Button*/
+button.TertiaryButton {
   width: 170px;
   height: 32px;
   padding: 0px;
@@ -82,7 +142,7 @@ button.SecondaryButton {
   font-size: 12px;
 }
 
-button.SecondaryButton::before {
+button.TertiaryButton::before {
   content: "";
   position: absolute;
   top: 0;
@@ -97,79 +157,21 @@ button.SecondaryButton::before {
   transition: 0.15s cubic-bezier(0, 0, 0.6, 1);
 }
 
-button.SecondaryButton:hover {
-  background: #b5e6ff;
-  transform: translate(0, 0.25em);
-}
-
-button.SecondaryButton:hover::before {
-  transform: translate3d(0, 0.5em, -1em);
-}
-
-button.SecondaryButton:active {
-  background: #b5e6ff;
-  transform: translate(0, 0.75em);
-}
-
-/* button.SecondaryButton:active::before {
-    box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
-    transform: translate3d(0, 0, -1em);
-  } */
-
-/*Tertiary Button*/
-button.TertiaryButton:disabled {
-  background: linear-gradient(90deg, #ffffff 0%, #e4e4e4 100%) 46%;
-  color: #555555;
-}
-
-button.TertiaryButton:disabled::before {
-  background: var(--button-before-back-disabled);
-}
-
-button.TertiaryButton {
-  padding: 14px 51px;
-  border-radius: 1.3em;
-  font-weight: 700;
-  color: black;
-  text-transform: uppercase;
-  background: linear-gradient(90deg, #ffffff 0%, #ffffff 100%);
-  transform-style: preserve-3d;
-  transition: 0.15s cubic-bezier(0, 0, 0.6, 1);
-}
-button.TertiaryButton::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: inherit;
-  background: var(--button-before-back);
-  transform: translate3d(0, 0.5em, -1em);
-  transition: 0.15s cubic-bezier(0, 0, 0.6, 1);
-}
-
 button.TertiaryButton:hover {
+  background: #b5e6ff;
   transform: translate(0, 0.25em);
 }
 
 button.TertiaryButton:hover::before {
   transform: translate3d(0, 0.5em, -1em);
 }
+
 button.TertiaryButton:active {
+  background: #b5e6ff;
   transform: translate(0, 0.75em);
 }
 
-button.TertiaryButton:disabled:hover {
-  transform: none;
-}
-
-button.TertiaryButton:disabled:active {
-  transform: none;
-}
-
+/*Quaternary Button*/
 button.QuaternaryButton {
   background: white url(../../images/CrossButton.svg) center/contain no-repeat;
   background-size: 50%;
@@ -188,12 +190,12 @@ button.QuinaryButton {
   font-weight: 700;
   font-size: 22px;
   color: white;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   vertical-align: top;
   justify-content: center;
   text-transform: uppercase;
-  background: var(--button-bg-color);
+  background: var(--button-primary-bg-color);
   transform-style: preserve-3d;
   transition: 0.15s cubic-bezier(0, 0, 0.6, 1);
   white-space: nowrap;
@@ -208,17 +210,17 @@ button.QuinaryButton::before {
   width: 100%;
   height: 100%;
   border-radius: inherit;
-  background: var(--button-before);
+  background: var(--button-primary-before);
   transform: translate3d(0, 0.5em, -1em);
   transition: 0.15s cubic-bezier(0, 0, 0.6, 1);
 }
 
 button.QuinaryButton:disabled {
-  background: var(--button-bg-color-disabled);
+  background: var(--button-primary-bg-color-disabled);
   color: #ffffff99;
 }
 button.QuinaryButton:disabled::before {
-  background: var(--button-before-disabled);
+  background: var(--button-primary-before-disabled);
 }
 button.QuinaryButton:disabled:hover {
   transform: none;
@@ -241,11 +243,12 @@ button.QuinaryButton:active {
 }
 
 button.SenaryButton {
-  background: white url(../../images/ExclamationButton.svg) center/contain no-repeat;
-  width: 95px;
-  height: 95px;
+  background: white url(../../images/ExclamationButton.svg) center/contain
+    no-repeat;
+  background-size: 14%;
+  width: 65px;
+  height: 58px;
   padding: 0;
-  margin: 0 0 0 30px;
   border-radius: 20px;
   box-shadow: 0px 4px 6px #d2d2d2;
   z-index: 999;

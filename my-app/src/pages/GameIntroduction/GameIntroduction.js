@@ -3,14 +3,13 @@ import IntroductionArray from "../../utilis/Introduction";
 import "./GameIntroduction.css";
 import CustomButton from "../../components/Button/CustomButton";
 import { useNavigate, useParams } from "react-router-dom";
-import GoodFoxProfile from "../../components/GoodFoxProfile/GoodFoxProfile";
+import PhoneSimulator from "../../components/PhoneSimulator/PhoneSimulator";
 
 export default function GameIntroduction() {
   const [currentStep, setCurrentStep] = useState(0);
   const [backgroundImage, setBackgroundImage] = useState("");
   const navigate = useNavigate();
   const { unitId } = useParams();
-  console.log("unitId", unitId);
 
   // Call the IntroductionArray function to get the array based on unitId
   const introductionData = IntroductionArray().find(
@@ -30,7 +29,7 @@ export default function GameIntroduction() {
     !introductionData.steps ||
     introductionData.steps.length === 0
   ) {
-    return null; // Render nothing if data is not available
+    return null;
   }
 
   const handleContinueClick = () => {
@@ -51,12 +50,6 @@ export default function GameIntroduction() {
     navigate(introductionData.backTo);
   };
 
-  console.log(
-    "currentStep",
-    currentStep,
-    "introductionData.steps.length",
-    introductionData.steps.length
-  );
   return (
     <div
       className="GameIntroductionContainer"
@@ -76,8 +69,9 @@ export default function GameIntroduction() {
               justifyContent:
                 unitId === "GameIntroduction" ? "flex-end" : "space-between",
               justifyContent: obj.speechbubblePosition || "center",
+              alignItems: obj.elementPostion ? obj.elementPostion : "",
             }}>
-            {obj.component && <GoodFoxProfile open={true} />}{" "}
+            <div className="Phone">{obj.component && <PhoneSimulator title={"Profil"} content={12}/>}</div>
             {obj.text ? (
               <p
                 className="textBubble"
@@ -115,20 +109,18 @@ export default function GameIntroduction() {
                   : obj.speechbubbleSize === "middle"
                   ? "200px"
                   : "150px",
-            }}>
-            {/* You can add additional styling for the speech bubble */}
-          </div>
+            }}></div>
         </div>
       ))}
 
       <div className="ButtonContainer">
         {currentStep > 0 ? (
-          <CustomButton onClick={handleGoBack} name="Zurück" type="tertiary" />
+          <CustomButton onClick={handleGoBack} name="Zurück" type="secondary" />
         ) : (
           <CustomButton
             onClick={handleGoBack}
             name="Zurück"
-            type="tertiary"
+            type="secondary"
             disabled
           />
         )}

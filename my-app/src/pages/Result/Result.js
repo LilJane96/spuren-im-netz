@@ -1,69 +1,131 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ResultView from "../../components/ResultView/ResultView";
 import ResultNextPageButton from "../../components/ResultNextPageButton/ResultNextPageButton";
 import "./Result.css";
 import ResultStepper from "../../components/ResultStepper/ResultStepper";
 import CustomButton from "../../components/Button/CustomButton";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import Ampel from "../../components/StopPopup/StopPopup";
+import Stopwatch from "../../components/Stopwatch/Stopwatch";
+import { calculateRemainingTime } from "../../utilis/timer";
 
 export default function Result() {
-  const totalTasks = 5;
   const [currentStep, setCurrentStep] = useState(1);
+  const [timeUp, setTimeUp] = useState(false);
   const navigate = useNavigate();
+  const [popupOpen, setPopupOpen] = useState(false);
+  const { unitId, stepId } = useParams();
+  const units = JSON.parse(localStorage.getItem("UnitsArray")) || {};
+  const totalTasks = units[unitId].answers.length + 1;
+  const initialTime = calculateRemainingTime(600);
+
+  useEffect(() => {
+    const stepFromUrl = parseInt(stepId.replace("step", ""), 10) || 1;
+    setCurrentStep(stepFromUrl);
+
+    if (stepFromUrl === 1 && !localStorage.getItem("timerStart")) {
+      localStorage.setItem("timerStart", Date.now().toString());
+    }
+  }, [stepId]);
 
   const handleNextPage = () => {
-    setCurrentStep((prevStep) => Math.min(prevStep + 1, totalTasks));
+    const nextStep = Math.min(currentStep + 1, totalTasks);
+    setCurrentStep(nextStep);
+    navigate(`/result/${unitId}/step${nextStep}`);
   };
 
   const handlePreviousPage = () => {
-    setCurrentStep((prevStep) => Math.max(prevStep - 1, 1));
+    const prevStep = Math.max(currentStep - 1, 1);
+    setCurrentStep(prevStep);
+    navigate(`/result/${unitId}/step${prevStep}`);
   };
 
   const handleEndUnit = () => {
     navigate(`/hub`);
+    localStorage.removeItem("timerStart");
+  };
+
+  const handleOpenPopup = () => {
+    setPopupOpen(true);
+  };
+
+  const handleTimeUp = () => {
+    setTimeUp(true);
   };
 
   return (
     <div className="ResultContainer">
       <div className="EndUnit">
-        <CustomButton type="quaternary" onClick={handleEndUnit} />
+        {currentStep === totalTasks && (
+          <>
+            {timeUp ? (
+              <CustomButton type="quaternary" onClick={handleEndUnit} />
+            ) : (
+              <Stopwatch
+                initialTime={initialTime}
+                onTimeUp={handleTimeUp}
+                onClick={handleOpenPopup}
+              />
+            )}
+          </>
+        )}
       </div>
       <div className="ResultView">
-        {/* {currentStep === 1 ? (
-          <ResultNextPageButton back={true} disabled />
-        ) : (
-          <ResultNextPageButton back={true} onClick={handlePreviousPage} />
-        )} */}
-        <div>
-          <ResultView />
+        <div className="Container">
+          {currentStep === 1 ? (
+            <ResultNextPageButton back={true} disabled />
+          ) : (
+            <ResultNextPageButton back={true} onClick={handlePreviousPage} />
+          )}
+          <div>
+            <ResultView currentStep={currentStep} unitId={unitId} />
+          </div>
+          {currentStep < totalTasks ? (
+            <ResultNextPageButton onClick={handleNextPage} />
+          ) : (
+            <ResultNextPageButton disabled />
+          )}
         </div>
-        {/* <ResultNextPageButton onClick={handleNextPage} /> */}
-      </div>
-      {/* <div className="ResultStepper">
         <ResultStepper totalSteps={totalTasks} currentStep={currentStep} />
+      </div>
+      <div className="ResultStepper">
         <div className="ButtonContainer">
           <div className="Button">
             {currentStep === 1 ? (
               <CustomButton
                 onClick={handlePreviousPage}
                 name="Zurück"
-                type="tertiary"
-                disabled></CustomButton>
+                type="secondary"
+                disabled
+              />
             ) : (
               <CustomButton
                 onClick={handlePreviousPage}
                 name="Zurück"
-                type="tertiary"></CustomButton>
+                type="secondary"
+              />
             )}
           </div>
           <div className="Button">
-            <CustomButton
-              onClick={handleNextPage}
-              name="Weiter"
-              type="primary"></CustomButton>
+            {currentStep < totalTasks ? (
+              <CustomButton
+                onClick={handleNextPage}
+                name="Weiter"
+                type="primary"
+              />
+            ) : (
+              <CustomButton name="Weiter" type="primary" disabled />
+            )}
           </div>
         </div>
-      </div> */}
+      </div>
+      {popupOpen && (
+        <Ampel
+          initialTime={initialTime}
+          open={popupOpen}
+          onClose={() => setPopupOpen(false)}
+        />
+      )}
     </div>
   );
 }

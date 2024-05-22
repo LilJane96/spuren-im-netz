@@ -23,6 +23,7 @@ export default function FrameOne() {
   const navigate = useNavigate();
   const [openBox, setOpenBox] = useState(false);
 
+  console.log("STEP FRAMEONE", stepId);
   useEffect(() => {
     const stepFromUrl = parseInt(stepId.replace("step", ""), 10) || 1;
     setCurrentStep(stepFromUrl);
@@ -151,7 +152,6 @@ export default function FrameOne() {
   const handleEndUnit = () => {
     navigate(`/hub`);
   };
-  console.log("UNIT", unitId);
 
   const handleGoToResult = () => {
     units[unitId].topic = currentUnitData.topic;
@@ -186,12 +186,14 @@ export default function FrameOne() {
                         />
                       )
                   )}
+                  <div className="PhoneBox">
                   <PhoneSimulator
                     title={tasks.step.map((obj) => obj.title)}
                     content={tasks.step.map((obj) => obj.phoneSimulatorStep)}
                     selectedAnswer={selectedAnswer}
                     nextPage={currentStep}
                   />
+                  </div>
                   <div className="boxContainer">
                     <div
                       className={`answerContainer ${
@@ -231,12 +233,12 @@ export default function FrameOne() {
                     <CustomButton
                       onClick={handleGoBack}
                       name="Zurück"
-                      type="tertiary"></CustomButton>
+                      type="secondary"></CustomButton>
                   ) : (
                     <CustomButton
                       onClick={handleGoBack}
                       name="Zurück"
-                      type="tertiary"
+                      type="secondary"
                       disabled></CustomButton>
                   )}
                   {currentTaskIndex < totalTasks - 1 ? (

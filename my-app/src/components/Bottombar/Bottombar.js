@@ -9,16 +9,16 @@ const Bottombar = () => {
   return (
     <div className="bottombar">
       <div>
-        <HomeRoundedIcon />
+        <HomeRoundedIcon className="icon"/>
       </div>
       <div>
-        <SearchRoundedIcon />
+        <SearchRoundedIcon className="icon"/>
       </div>
       <div>
-        <AddRoundedIcon />
+        <AddRoundedIcon className="icon"/>
       </div>
       <div>
-        <AccountCircleRoundedIcon />
+        <AccountCircleRoundedIcon className="icon"/>
       </div>
     </div>
   );

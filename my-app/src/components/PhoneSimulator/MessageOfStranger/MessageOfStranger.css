@@ -3,6 +3,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.MessageContainer div {
+  width: 100%;
 }
 
 .MessageContainer .ButtonContainer {
@@ -11,30 +17,46 @@
 }
 
 .MessageContainer .ProfilePicture {
-  width: 30px;
-}
-
-.MessageContainer .MessageSpeachbubbleContainer {
-  height: 152px;
+  width: 25%;
 }
 
 .MessageContainer .ImageContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 62px 0 10px 0;
+  height: 20%;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 
 .MessageContainer .ImageContainer p {
-  margin: 3px 0 0 0;
   font-weight: bold;
+}
+
+.MessageContainer .MessageSpeachbubbleContainer {
+  height: 30%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.MessageContainer .MessageSpeachbubbleContainer img {
+  width: 10%;
+}
+
+.MessageContainer .MessageSpeachbubbleContainer p {
+  width: 70%;
+  border-radius: 25px;
+  background-color: #1778f7;
+  color: white;
+  padding: 5%;
 }
 
 .MessageContainer .AcceptMessageViewContainer {
   box-shadow: 0px -4px 4px 0px rgba(218, 218, 218, 0.25);
   text-align: center;
-  margin: -10px 0;
-  padding: 1px;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 
 .MessageContainer .firstText {

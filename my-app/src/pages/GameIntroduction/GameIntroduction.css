@@ -10,6 +10,7 @@
 .GameIntroductionContainer .IntroductionText {
   display: flex;
   margin: 20px 50px;
+  height: 72vh;
 }
 
 .GameIntroductionContainer .EndUnit {
@@ -37,6 +38,10 @@
   line-height: normal;
 
   z-index: 999;
+}
+
+.GameIntroductionContainer .Phone {
+  height: 60vh;
 }
 
 .GameIntroductionContainer .IntroductionText .EndUnit {

@@ -1,4 +1,5 @@
 :root {
+  --primary-color: #f36b21;
   --background-default: #ffffff; /* Standard-Hintergrundfarbe */
   --background-blue: #003148; /* Hintergrundfarbe für 'blue' */
   /* Füge hier weitere Farbvariablen für andere Themes hinzu, wenn benötigt */
@@ -8,111 +9,217 @@
   --background: #fff174;
   --background-img: url("../images/BackgroundImages/BackgroundImageYellow.png");
   --box-shadow: #c9bc48;
-  --button-bg-color: linear-gradient(90deg, #db94f3 0%, #c687d1 100%);
-  --button-bg-color-disabled: linear-gradient(90deg, #db94f3 0%, #c687d1 46%);
-  --button-before-back-disabled: rgba(235, 219, 77, 0.5);
-  --button-before-back: rgba(235, 219, 77, 1);
-  --button-before: rgba(159, 47, 197, 1);
-  --button-before-disabled: rgba(159, 47, 197, 0.5);
-  --stepper-color: #bf56e3;
+  --button-txt-color: #f0fffa;
+  --button-primary-bg-color: linear-gradient(90deg, #ff9902 0%, #f36b21 100%);
+  --button-primary-before: #e54e17;
+
+  --button-primary-bg-color-disabled: linear-gradient(
+    90deg,
+    #ffc671 0%,
+    #f5a275 46%
+  );
+  --button-primary-before-disabled: #ef9e81;
+
+  /*SECONDARY*/
+  --button-sec-bg-back: linear-gradient(90deg, #ffd873 0%, #ffd873 100%);
+  --button-sec-before-back: rgba(254, 189, 1, 1);
+  --button-sec-before-back-disabled: rgba(254, 189, 1, 1);
+  --button-sec-back-disabled: linear-gradient(90deg, #ffd873 0%, #ffd873 46%);
+
+  --stepper-color: #f36b21;
   --sidebar-text-color: #000;
+  --result-border-color: #f36b21;
 }
 
 [data-theme="green"] {
   --background: #47b35e;
   --background-img: url("../images/BackgroundImages/BackgroundImageGreen.png");
   --box-shadow: #227534;
-  --button-bg-color: linear-gradient(90deg, #db94f3 0%, #c687d1 100%);
-  --button-bg-color-disabled: linear-gradient(90deg, #db94f3 0%, #c687d1 46%);
-  --button-before-back-disabled: #50915e;
+  --button-txt-color: #f0fffa;
+
+  --button-primary-bg-color: linear-gradient(90deg, #aff394 0%, #9dd187 100%);
   --button-before-back: #3d914f;
-  --button-before: rgba(159, 47, 197, 1);
-  --button-before-disabled: rgba(159, 47, 197, 0.5);
-  --stepper-color: #bf56e3;
+
+  --button-primary-bg-color-disabled: linear-gradient(
+    90deg,
+    #adf394 0%,
+    #8cd187 46%
+  );
+  --button-primary-before-back-disabled: #50915e;
+  --button-primary-before: rgb(72, 197, 47);
+  --button-primary-before-disabled: rgba(47, 197, 50, 0.5);
+  --stepper-color: #f36b21;
   --sidebar-text-color: #fff;
+  --result-border-color: #f36b21;
+
+  /*SECONDARY*/
+  --button-sec-bg-back: linear-gradient(90deg, #75ad84 0%, #63af77 100%);
+  --button-sec-before-back: #50915e;
+  --button-sec-before-back-disabled: #50915e;
+  --button-sec-back-disabled: linear-gradient(90deg, #75ad84 0%, #63af77 46%);
+
+  --stepper-color: #f36b21;
+  --sidebar-text-color: #000;
+  --result-border-color: #f36b21;
 }
 
 [data-theme="red"] {
   --background: #811f1e;
   --background-img: url("../images/BackgroundImages/BackgroundImageRed.png");
   --box-shadow: #531a1a;
-  --button-bg-color: linear-gradient(90deg, #db94f3 0%, #c687d1 100%);
-  --button-bg-color-disabled: linear-gradient(90deg, #db94f3 0%, #c687d1 46%);
-  --button-before-back-disabled: #460909;
-  --button-before-back: #460909;
-  --button-before: rgba(159, 47, 197, 1);
-  --button-before-disabled: rgba(159, 47, 197, 0.5);
-  --stepper-color: #bf56e3;
+  --button-txt-color: #f0fffa;
+
+  --button-primary-bg-color: linear-gradient(90deg, #f39494 0%, #d18787 100%);
+  --button-primary-bg-color-disabled: linear-gradient(
+    90deg,
+    #f39494 0%,
+    #d18787 46%
+  );
+
+  --button-primary-before: rgb(197, 47, 47);
+  --button-primary-before-disabled: rgba(197, 47, 47, 0.5);
+  --stepper-color: #f36b21;
   --sidebar-text-color: #fff;
+  --result-border-color: #f36b21;
+
+  /*SECONDARY*/
+  --button-sec-before-back: #984040;
+  --button-sec-before-back-disabled: #984040;
+  --button-sec-bg-back: linear-gradient(90deg, #f39494 0%, #d18787 100%);
+  --button-sec-back-disabled: linear-gradient(90deg, #f39494 0%, #d18787 46%);
+
+  --stepper-color: #f36b21;
+  --sidebar-text-color: #000;
+  --result-border-color: #f36b21;
 }
 
 [data-theme="blue"] {
   --background: #e3f6ff;
   --background-img: url("../images/BackgroundImages/BackgroundImageBlue.png");
-  --box-shadow: #d3bcdc;
-  --button-bg-color: linear-gradient(90deg, #9fddfd 0%, #00a6fb 100%);
-  --button-bg-color-disabled: linear-gradient(90deg, #9fddfd 0%, #00a6fb 46%);
-  --button-before-back-disabled: #debfe9;
-  --button-before: #2a6d8f;
-  --button-before-back: #d3bcdc;
-  --button-before: #2a6d8f;
-  --button-before-disabled: #2a6d8fd1;
-  --stepper-color: #bf56e3;
+  --button-txt-color: #f0fffa;
+  --box-shadow: #add7ea;
+  --button-txt-color: #f0fffa;
+  --button-primary-bg-color: linear-gradient(90deg, #ff9902 0%, #f36b21 100%);
+  --button-primary-before: #e54e17;
+
+  --button-primary-bg-color-disabled: linear-gradient(
+    90deg,
+    #ffc671 0%,
+    #f5a275 46%
+  );
+  --button-primary-before-disabled: #ef9e81;
+
+  /*SECONDARY*/
+  --button-sec-bg-back: linear-gradient(90deg, #ffd873 0%, #ffd873 100%);
+  --button-sec-before-back: rgba(254, 189, 1, 1);
+  --button-sec-before-back-disabled: rgba(254, 189, 1, 1);
+  --button-sec-back-disabled: linear-gradient(90deg, #ffd873 0%, #ffd873 46%);
+
+  --stepper-color: #f36b21;
   --sidebar-text-color: #000;
+  --result-border-color: #f36b21;
 }
 
 [data-theme="orange"] {
   --background: #fec682;
   --background-img: url("../images/BackgroundImages/BackgroundImageOrange.png");
   --box-shadow: #e9932e;
-  --button-bg-color: linear-gradient(90deg, #db94f3 0%, #c687d1 100%);
-  --button-bg-color-disabled: linear-gradient(90deg, #db94f3 0%, #c687d1 46%);
-  --button-before-back-disabled: #de9034;
-  --button-before-back: #de9034;
-  --button-before: rgba(159, 47, 197, 1);
-  --button-before-disabled: rgba(159, 47, 197, 0.5);
-  --stepper-color: #bf56e3;
+  --button-txt-color: #f0fffa;
+  --button-primary-bg-color: linear-gradient(90deg, #ff9902 0%, #f36b21 100%);
+  --button-primary-before: #e54e17;
+
+  --button-primary-bg-color-disabled: linear-gradient(
+    90deg,
+    #ffc671 0%,
+    #f5a275 46%
+  );
+  --button-primary-before-disabled: #ef9e81;
+
+  /*SECONDARY*/
+  --button-sec-bg-back: linear-gradient(90deg, #ffd873 0%, #ffd873 100%);
+  --button-sec-before-back: rgba(254, 189, 1, 1);
+  --button-sec-before-back-disabled: rgba(254, 189, 1, 1);
+  --button-sec-back-disabled: linear-gradient(90deg, #ffd873 0%, #ffd873 46%);
+
+  --stepper-color: #f36b21;
   --sidebar-text-color: #000;
+  --result-border-color: #f36b21;
 }
 
 [data-theme="yellow"] {
   --background: #fff174;
   --background-img: url("../images/BackgroundImages/BackgroundImageYellow.png");
   --box-shadow: #c9bc48;
-  --button-bg-color: linear-gradient(90deg, #db94f3 0%, #c687d1 100%);
-  --button-bg-color-disabled: linear-gradient(90deg, #db94f3 0%, #c687d1 46%);
-  --button-before-back-disabled: rgba(235, 219, 77, 0.5);
-  --button-before-back: rgba(235, 219, 77, 1);
-  --button-before: rgba(159, 47, 197, 1);
-  --button-before-disabled: rgba(159, 47, 197, 0.7);
-  --stepper-color: #bf56e3;
+  --button-txt-color: #f0fffa;
+  --button-primary-bg-color: linear-gradient(90deg, #ff9902 0%, #f36b21 100%);
+  --button-primary-before: #e54e17;
+
+  --button-primary-bg-color-disabled: linear-gradient(
+    90deg,
+    #ffc671 0%,
+    #f5a275 46%
+  );
+  --button-primary-before-disabled: #ef9e81;
+
+  /*SECONDARY*/
+  --button-sec-bg-back: linear-gradient(90deg, #ffd873 0%, #ffd873 100%);
+  --button-sec-before-back: rgba(254, 189, 1, 1);
+  --button-sec-before-back-disabled: rgba(254, 189, 1, 1);
+  --button-sec-back-disabled: linear-gradient(90deg, #ffd873 0%, #ffd873 46%);
+
+  --stepper-color: #f36b21;
   --sidebar-text-color: #000;
+  --result-border-color: #f36b21;
 }
 
 [data-theme="pink"] {
   --background: #fec9d9;
   --background-img: url("../images/BackgroundImages/BackgroundImagePink.png");
   --box-shadow: #e298c5;
-  --button-bg-color: linear-gradient(90deg, #db94f3 0%, #c687d1 100%);
-  --button-bg-color-disabled: linear-gradient(90deg, #db94f3 0%, #c687d1 46%);
-  --button-before-back-disabled: #e48bc0;
-  --button-before-back: #e48bc0;
-  --button-before: rgba(159, 47, 197, 1);
-  --button-before-disabled: rgba(159, 47, 197, 0.5);
-  --stepper-color: #bf56e3;
+  --button-txt-color: #f0fffa;
+  --button-primary-bg-color: linear-gradient(90deg, #ff9902 0%, #f36b21 100%);
+  --button-primary-before: #e54e17;
+
+  --button-primary-bg-color-disabled: linear-gradient(
+    90deg,
+    #ffc671 0%,
+    #f5a275 46%
+  );
+  --button-primary-before-disabled: #ef9e81;
+
+  /*SECONDARY*/
+  --button-sec-bg-back: linear-gradient(90deg, #ffd873 0%, #ffd873 100%);
+  --button-sec-before-back: rgba(254, 189, 1, 1);
+  --button-sec-before-back-disabled: rgba(254, 189, 1, 1);
+  --button-sec-back-disabled: linear-gradient(90deg, #ffd873 0%, #ffd873 46%);
+
+  --stepper-color: #f36b21;
   --sidebar-text-color: #000;
+  --result-border-color: #f36b21;
 }
 
 [data-theme="purple"] {
   --background: #4e53d6;
   --background-img: url("../images/BackgroundImages/BackgroundImagePurple.png");
   --box-shadow: #1c1f70;
-  --button-bg-color: linear-gradient(90deg, #db94f3 0%, #c687d1 100%);
-  --button-bg-color-disabled: linear-gradient(90deg, #db94f3 0%, #c687d1 46%);
-  --button-before-back-disabled: #1c1f70;
-  --button-before-back: #1c1f70;
-  --button-before: rgba(159, 47, 197, 1);
-  --button-before-disabled: rgba(159, 47, 197, 0.5);
-  --stepper-color: #bf56e3;
-  --sidebar-text-color: #fff;
+  --button-txt-color: #f0fffa;
+  --button-primary-bg-color: linear-gradient(90deg, #ff9902 0%, #f36b21 100%);
+  --button-primary-before: #e54e17;
+
+  --button-primary-bg-color-disabled: linear-gradient(
+    90deg,
+    #ffc671 0%,
+    #f5a275 46%
+  );
+  --button-primary-before-disabled: #ef9e81;
+
+  /*SECONDARY*/
+  --button-sec-bg-back: linear-gradient(90deg, #ffd873 0%, #ffd873 100%);
+  --button-sec-before-back: rgba(254, 189, 1, 1);
+  --button-sec-before-back-disabled: rgba(254, 189, 1, 1);
+  --button-sec-back-disabled: linear-gradient(90deg, #ffd873 0%, #ffd873 46%);
+
+  --stepper-color: #f36b21;
+  --sidebar-text-color: #000;
+  --result-border-color: #f36b21;
 }
