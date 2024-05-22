@@ -19,8 +19,8 @@ export default function UserProfile({ profileData, answer }) {
     <>
       {selectedImage ? (
         <div className="ImageScrollContainer">
-          <div>
-            <ArrowBackIcon className="backBtn" onClick={handleCloseLightbox} />
+          <div className="backBtn">
+            <ArrowBackIcon onClick={handleCloseLightbox} />
           </div>
           <div>
             <ImageGallery

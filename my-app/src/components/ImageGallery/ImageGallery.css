@@ -4,8 +4,9 @@
 }
 
 .ImageBlock {
-  width: 240px;
-  margin: 0 12px;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .ImageBlock span {
@@ -31,7 +32,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 55px 0 0 0;
 }
 
 .GalleryImage {
@@ -41,8 +41,8 @@
 }
 
 .GalleryImage img {
-  width: 230px;
-  height: 230px;
+  width: 100%;
+  aspect-ratio: 1/1;
   border-radius: 10px;
 }
 
@@ -53,7 +53,7 @@
 }
 
 .GalleryImage p {
-  width: 227px;
+  width: 100%;
   margin: 3px 0 14px 0;
 }
 
@@ -62,8 +62,8 @@
 }
 
 .ImageBlock img {
-  width: 240px;
-  height: 240px;
+  width: 100%;
+  aspect-ratio: 1/1;
   border-radius: 10px;
   object-fit: cover;
 }
