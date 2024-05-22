@@ -23,7 +23,7 @@
 }
 
 .ResultViewContainer .Description .Text p {
-  color: #a74fd1;
+  color: var(--primary-color);
   text-align: center;
   font-size: 20px;
   font-style: normal;
@@ -53,18 +53,18 @@
 }
 
 .ResultViewContainer .colorBox.one {
-  border: 3px solid #82e731;
-  background: #a0f959;
+  border: 3px solid #06865b;
+  background: #00d58d;
 }
 
 .ResultViewContainer .colorBox.two {
-  border: 3px solid #eed600;
-  background: #fff069;
+  border: 3px solid #febd01;
+  background: #ffd873;
 }
 
 .ResultViewContainer .colorBox.three {
-  border: 3px solid #fd6b1b;
-  background: #ff955b;
+  border: 3px solid #e54e17;
+  background: #ff7449;
 }
 
 .ResultViewContainer .Description ul {
@@ -94,20 +94,20 @@
 
 .ResultRowContainer .List.one {
   border-radius: 10px;
-  border: 3px solid #82e731;
-  background: #a0f959;
+  border: 3px solid #06865b;
+  background: #00d58d;
 }
 
 .ResultRowContainer .List.two {
   border-radius: 10px;
-  border: 3px solid #eed600;
-  background: #fff069;
+  border: 3px solid #febd01;
+  background: #ffd873;
 }
 
 .ResultRowContainer .List.three {
   border-radius: 10px;
-  border: 3px solid #fd6b1b;
-  background: #ff955b;
+  border: 3px solid #e54e17;
+  background: #ff7449;
 }
 
 .ResultRowContainer .List p {
@@ -148,7 +148,7 @@
 }
 
 .ResultRowContainer .List.one .Heart {
-  border: 3px solid #82e731;
+  border: 3px solid #06865b;
 
   && .customHeartIcon {
     color: #82e731;
@@ -156,17 +156,17 @@
 }
 
 .ResultRowContainer .List.two .Heart {
-  border: 3px solid #eed600;
+  border: 3px solid #febd01;
 
   && .customHeartIcon {
-    color: #eed600;
+    color: #febd01;
   }
 }
 
 .ResultRowContainer .List.three .Heart {
-  border: 3px solid #fd6b1b;
+  border: 3px solid #e54e17;
 
   && .customHeartIcon {
-    color: #fd6b1b;
+    color: #e54e17;
   }
 }

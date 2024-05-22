@@ -23,6 +23,7 @@ export default function FrameOne() {
   const navigate = useNavigate();
   const [openBox, setOpenBox] = useState(false);
 
+  console.log("STEP FRAMEONE", stepId);
   useEffect(() => {
     const stepFromUrl = parseInt(stepId.replace("step", ""), 10) || 1;
     setCurrentStep(stepFromUrl);

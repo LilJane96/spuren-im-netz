@@ -15,7 +15,7 @@ function Directions() {
           <Route path="/" element={<Home />} />
           <Route path="/introduction/:unitId" element={<GameIntroduction />} />
           <Route path="/hub" element={<Hub />} />
-          <Route path="frameone/:unitId/:stepId" element={<FrameOne />} />
+          <Route path="/frameone/:unitId/:stepId" element={<FrameOne />} />
           <Route path="/result/:unitId/:stepId" element={<Result />} />
           <Route path="/finishedGame/:stepId" element={<FinishGame />} />
           <Route

@@ -1,7 +1,7 @@
 button {
   width: 212px;
   height: 64px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
@@ -190,7 +190,7 @@ button.QuinaryButton {
   font-weight: 700;
   font-size: 22px;
   color: white;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   vertical-align: top;
   justify-content: center;
