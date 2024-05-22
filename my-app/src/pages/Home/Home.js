@@ -33,7 +33,7 @@ function Home() {
   };
 
   return (
-    <main>
+    <main class="HomeMain">
       <div className="HomeContainer">
         <div className="WelcomeContainer">
           <div className="TitleAndSubtitleHome">
