@@ -1,14 +1,5 @@
-import { useEffect, useState } from "react";
-
 export default function UnitOne() {
-  const [userName, setUsername] = useState("");
-
-  useEffect(() => {
-    const name = localStorage.getItem("userName");
-    if (name) {
-      setUsername(name);
-    }
-  }, []);
+  const userName = localStorage.getItem("userName");
 
   const unitOne = {
     id: 1,

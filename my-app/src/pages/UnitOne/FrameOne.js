@@ -11,9 +11,9 @@ import PopUpResultScreen from "../../components/PopUpResultScreen/PopUpResultScr
 import UnitOne from "../../Units/UnitOne";
 import UnitTwo from "../../Units/UnitTwo";
 
-const unitsArray = [UnitOne(), UnitTwo()];
-
 export default function FrameOne() {
+  const unitsArray = [UnitOne(), UnitTwo()];
+  
   const [selectedAnswer, setSelectedAnswer] = useState("");
   const [reasonText, setReasonText] = useState("");
   const [currentTaskIndex, setCurrentTaskIndex] = useState(0);
