@@ -13,7 +13,7 @@ import UnitTwo from "../../Units/UnitTwo";
 
 export default function FrameOne() {
   const unitsArray = [UnitOne(), UnitTwo()];
-  
+
   const [selectedAnswer, setSelectedAnswer] = useState("");
   const [reasonText, setReasonText] = useState("");
   const [currentTaskIndex, setCurrentTaskIndex] = useState(0);
@@ -114,6 +114,7 @@ export default function FrameOne() {
       (units[unitId].taskAttempts[currentTaskIndex] || 0) +
       newItem.wrongAttempts;
 
+    console.log("units", units);
     // Saving the updated array in local storage
     localStorage.setItem("UnitsArray", JSON.stringify(units));
 
@@ -123,6 +124,7 @@ export default function FrameOne() {
       setSpeachbubbleText(wrongAnswer);
     }
   };
+  console.log("SELECTED ANSWER", selectedAnswer);
 
   const handleNextTask = () => {
     setTimeout(() => {

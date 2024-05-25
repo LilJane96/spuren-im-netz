@@ -181,22 +181,12 @@ export default function UnitOne() {
             answerboxes: [
               {
                 type: "text",
-                answer: (
-                  <span>
-                    13 <br />
-                    📍Hermann Butzer Schule
-                  </span>
-                ),
+                answer: "13 \n📍Hermann Butzer Schule",
                 right: false,
               },
               {
                 type: "text",
-                answer: (
-                  <span>
-                    Fußballliebhaber ⚽ <br />
-                    Künstlerin 🎨
-                  </span>
-                ),
+                answer: "Fußballliebhaber ⚽ \nKünstlerin 🎨",
                 right: true,
               },
               {
