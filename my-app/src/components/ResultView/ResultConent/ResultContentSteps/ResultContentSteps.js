@@ -1,12 +1,15 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import UnitsArray from "../../../../Units/Unit";
 import "./ResultContentSteps.css";
+import UnitOne from "../../../../Units/UnitOne";
+import UnitTwo from "../../../../Units/UnitTwo";
+
+const unitsArray = [UnitOne(), UnitTwo()];
 
 export default function ResultContentSteps({ unitId, stepId }) {
   const path = useParams();
   const prevStepId = stepId <= 5 ? stepId - 1 : stepId;
-  const unit = UnitsArray();
+  const unit = unitsArray;
   const answerObj = unit[unitId].task[prevStepId].step[0].answerboxes.map(
     (obj) => obj
   );

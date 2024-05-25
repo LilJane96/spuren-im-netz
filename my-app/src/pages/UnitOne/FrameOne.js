@@ -3,14 +3,17 @@ import Speachbubble from "../../components/Speachbubble/Speachbubble";
 import PhoneSimulator from "../../components/PhoneSimulator/PhoneSimulator";
 import AnswerBoxes from "../../components/AnswerBoxes/AnswerBoxes";
 import Stepper from "../../components/Stepper/Stepper";
-import UnitsArray from "../../Units/Unit";
 import CustomButton from "../../components/Button/CustomButton";
 import { useNavigate, useParams } from "react-router-dom";
 import { Link } from "@mui/material";
 import "./FrameOne.css";
 import PopUpResultScreen from "../../components/PopUpResultScreen/PopUpResultScreen";
+import UnitOne from "../../Units/UnitOne";
+import UnitTwo from "../../Units/UnitTwo";
 
 export default function FrameOne() {
+  const unitsArray = [UnitOne(), UnitTwo()];
+
   const [selectedAnswer, setSelectedAnswer] = useState("");
   const [reasonText, setReasonText] = useState("");
   const [currentTaskIndex, setCurrentTaskIndex] = useState(0);
@@ -23,7 +26,6 @@ export default function FrameOne() {
   const navigate = useNavigate();
   const [openBox, setOpenBox] = useState(false);
 
-  console.log("STEP FRAMEONE", stepId);
   useEffect(() => {
     const stepFromUrl = parseInt(stepId.replace("step", ""), 10) || 1;
     setCurrentStep(stepFromUrl);
@@ -35,7 +37,7 @@ export default function FrameOne() {
   }, [currentStep]);
 
   useEffect(() => {
-    const unitData = UnitsArray().find((unit) => unit.name === unitId);
+    const unitData = unitsArray.find((unit) => unit.name === unitId);
     setCurrentUnitData(unitData);
   }, [unitId]);
 
@@ -112,6 +114,7 @@ export default function FrameOne() {
       (units[unitId].taskAttempts[currentTaskIndex] || 0) +
       newItem.wrongAttempts;
 
+    console.log("units", units);
     // Saving the updated array in local storage
     localStorage.setItem("UnitsArray", JSON.stringify(units));
 
@@ -121,6 +124,7 @@ export default function FrameOne() {
       setSpeachbubbleText(wrongAnswer);
     }
   };
+  console.log("SELECTED ANSWER", selectedAnswer);
 
   const handleNextTask = () => {
     setTimeout(() => {
@@ -187,12 +191,12 @@ export default function FrameOne() {
                       )
                   )}
                   <div className="PhoneBox">
-                  <PhoneSimulator
-                    title={tasks.step.map((obj) => obj.title)}
-                    content={tasks.step.map((obj) => obj.phoneSimulatorStep)}
-                    selectedAnswer={selectedAnswer}
-                    nextPage={currentStep}
-                  />
+                    <PhoneSimulator
+                      title={tasks.step.map((obj) => obj.title)}
+                      content={tasks.step.map((obj) => obj.phoneSimulatorStep)}
+                      selectedAnswer={selectedAnswer}
+                      nextPage={currentStep}
+                    />
                   </div>
                   <div className="boxContainer">
                     <div

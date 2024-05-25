@@ -70,7 +70,7 @@ export default function IntroductionArray() {
         },
       ],
       backTo: "/hub",
-      navigate: "/frameone/unit2/step1;",
+      navigate: "/frameone/unit2/step1",
     },
   ];
 }
