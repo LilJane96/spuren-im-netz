@@ -16,6 +16,8 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getSelectedColor } from "../../utilis/colorUtils";
 import "./PopUpChooseName.css";
+import ColorContainer from "../ColorContainer/ColorContainer";
+import Inputfield from "../Inputfield/Inputfield";
 
 const PopUpChooseName = ({ open }) => {
   const [selectedColor, setSelectedColor] = useState(getSelectedColor());
@@ -35,6 +37,7 @@ const PopUpChooseName = ({ open }) => {
   }, [inputValue]);
 
   const handleInputChange = (event) => {
+    console.log("event", event);
     setInputValue(event.target.value);
   };
 
@@ -69,91 +72,17 @@ const PopUpChooseName = ({ open }) => {
               Wie heißt du?
             </DialogTitle>
             <div className="NameInputFieldContainer">
-              <input
-                className="NameInputField"
-                value={inputValue}
+              <Inputfield
                 placeholder="Name"
-                onChange={handleInputChange}></input>
+                value={inputValue}
+                onChange={handleInputChange}
+                width="523px"
+                height="30px"
+                readOnly={false}
+                type="text"></Inputfield>
             </div>
           </div>
-          <div className="ColorContainer">
-            <DialogTitle
-              className="dialogTitleH4"
-              variant={"h4"}
-              style={{ padding: "30px 0 10px" }}>
-              {" "}
-              Wähle deine Lieblingsfarbe!
-            </DialogTitle>
-            <DialogContent className="dialogContent">
-              <DialogContentText textAlign={"center"}>
-                <List sx={{ display: "flex", justifyContent: "center" }}>
-                  <ListItemButton
-                    onClick={() => handleIconClick("green")}
-                    style={{ padding: 0 }}>
-                    <ListItemIcon>
-                      <FiberManualRecordIcon
-                        style={{ color: "#23FA00", fontSize: 56 }}
-                      />
-                    </ListItemIcon>
-                  </ListItemButton>
-                  <ListItemButton
-                    onClick={() => handleIconClick("red")}
-                    style={{ padding: 0 }}>
-                    <ListItemIcon>
-                      <FiberManualRecordIcon
-                        style={{ color: "#FA0000", fontSize: 56 }}
-                      />
-                    </ListItemIcon>
-                  </ListItemButton>
-                  <ListItemButton
-                    onClick={() => handleIconClick("blue")}
-                    style={{ padding: 0 }}>
-                    <ListItemIcon>
-                      <FiberManualRecordIcon
-                        style={{ color: "#00A6FB", fontSize: 56 }}
-                      />
-                    </ListItemIcon>
-                  </ListItemButton>
-                  <ListItemButton
-                    onClick={() => handleIconClick("orange")}
-                    style={{ padding: 0 }}>
-                    <ListItemIcon>
-                      <FiberManualRecordIcon
-                        style={{ color: "#FF6100", fontSize: 56 }}
-                      />
-                    </ListItemIcon>
-                  </ListItemButton>
-                  <ListItemButton
-                    onClick={() => handleIconClick("yellow")}
-                    style={{ padding: 0 }}>
-                    <ListItemIcon>
-                      <FiberManualRecordIcon
-                        style={{ color: "#FAD200", fontSize: 56 }}
-                      />
-                    </ListItemIcon>
-                  </ListItemButton>
-                  <ListItemButton
-                    onClick={() => handleIconClick("pink")}
-                    style={{ padding: 0 }}>
-                    <ListItemIcon>
-                      <FiberManualRecordIcon
-                        style={{ color: "#E900FA", fontSize: 56 }}
-                      />
-                    </ListItemIcon>
-                  </ListItemButton>
-                  <ListItemButton
-                    onClick={() => handleIconClick("purple")}
-                    style={{ padding: 0 }}>
-                    <ListItemIcon>
-                      <FiberManualRecordIcon
-                        style={{ color: "#5F00FA", fontSize: 56 }}
-                      />
-                    </ListItemIcon>
-                  </ListItemButton>
-                </List>
-              </DialogContentText>
-            </DialogContent>
-          </div>
+          <ColorContainer headingsize={"h6"} />
         </div>
         <DialogActions style={{ justifyContent: "center", marginBottom: 15 }}>
           {inputValue.length > 0 && selectedColor.length > 0 ? (

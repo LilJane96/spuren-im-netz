@@ -32,7 +32,7 @@
 }
 
 .AnswerBoxesComponent.green {
-  background-color: #a0f959;
+  background-color: var(--answerbox-right);
 }
 
 .AnswerBoxesComponent.red {
@@ -46,7 +46,7 @@
   background-color: #ff8653;
 }
 .AnswerBoxesComponent.red:hover {
-  background-color: #ff8653;
+  background-color: var(--answerbox-wrong);
 }
 
 .AnswerBoxesComponent:hover {
