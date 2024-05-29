@@ -7,9 +7,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   background-image: var(--background-img);
   background-color: var(--background);
-  background-size: repeat;
   font-family: sans-serif;
 }
 

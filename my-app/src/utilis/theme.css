@@ -6,10 +6,10 @@
 }
 
 [data-theme="default"] {
-  --primary-bg-color: #ffd873;
+  --primary-bg-color: #ffeeae;
 
   --background: #fff174;
-  --background-img: url("../images/BackgroundImages/BackgroundImageYellow.png");
+  --background-img: url("../images/BackgroundImages/BackgroundImageYellow.svg");
   --box-shadow: #c9bc48;
   --button-txt-color: #f0fffa;
   --button-primary-bg-color: linear-gradient(90deg, #ff9902 0%, #f36b21 100%);
@@ -47,8 +47,8 @@
 
 [data-theme="blue"] {
   --primary-bg-color: #73c4ff;
-  --background: #e3f6ff;
-  --background-img: url("../images/BackgroundImages/BackgroundImageBlue.png");
+  --background: #aeddff;
+  --background-img: url("../images/BackgroundImages/BackgroundImageBlue.svg");
   --button-txt-color: #f0fffa;
   --box-shadow: #73c4ff;
   --button-txt-color: #f0fffa;
@@ -88,9 +88,9 @@
 }
 
 [data-theme="yellow"] {
-  --primary-bg-color: #ffd873;
+  --primary-bg-color: #ffeeae;
   --background: #fff174;
-  --background-img: url("../images/BackgroundImages/BackgroundImageYellow.png");
+  --background-img: url("../images/BackgroundImages/BackgroundImageYellow.svg");
   --box-shadow: #c9bc48;
   --button-txt-color: #f0fffa;
   --button-primary-bg-color: linear-gradient(90deg, #ff9902 0%, #f36b21 100%);

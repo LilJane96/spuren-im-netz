@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import backgroundImage from "../../images/Final/FinalViewTwo.png";
+import backgroundImage from "../../images/Final/FinalViewTwo.svg";
 import "./FinalFrameTwo.css";
 import CustomButton from "../Button/CustomButton";
 import { useNavigate } from "react-router-dom";
@@ -38,8 +38,9 @@ export default function FinalFrameTwo() {
         <div className="overlay">
           <div className="bubble speech">
             <div className="circle"></div>
-            <p style={{fontWeight: "light" }}>
-              Oh nein, er rennt in den Wald, schnell hinterher! Ich muss mich beeilen... Ich bin ihm auch schon ganz nah!
+            <p style={{ fontWeight: "light" }}>
+              Oh nein, er rennt in den Wald, schnell hinterher! Ich muss mich
+              beeilen... Ich bin ihm auch schon ganz nah!
             </p>
           </div>
         </div>
