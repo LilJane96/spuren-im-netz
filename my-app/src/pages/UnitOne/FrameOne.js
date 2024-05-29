@@ -10,9 +10,10 @@ import "./FrameOne.css";
 import PopUpResultScreen from "../../components/PopUpResultScreen/PopUpResultScreen";
 import UnitOne from "../../Units/UnitOne";
 import UnitTwo from "../../Units/UnitTwo";
+import UnitThree from "../../Units/UnitThree";
 
 export default function FrameOne() {
-  const unitsArray = [UnitOne(), UnitTwo()];
+  const unitsArray = [UnitOne(), UnitTwo(), UnitThree()];
 
   const [selectedAnswer, setSelectedAnswer] = useState("");
   const [reasonText, setReasonText] = useState("");
