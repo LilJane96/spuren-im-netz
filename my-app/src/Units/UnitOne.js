@@ -25,8 +25,8 @@ export default function UnitOne() {
             title: "Konto erstellen",
             answerboxes: [
               { answer: userName, right: true },
-              { answer: "Puzzlestar oder MegaMalerin", right: true },
-              { answer: "Name meiner Oma ", right: false },
+              { answer: "Puzzlestar", right: true },
+              { answer: "Name von meinem Opa ", right: false },
             ],
             rightAnswer: "Super! Das ist ein sehr guter Name.",
             wrongAnswer:
@@ -181,7 +181,7 @@ export default function UnitOne() {
             answerboxes: [
               {
                 type: "text",
-                answer: "13 \n📍Hermann Butzer Schule",
+                answer: "13 \n📍Köstlinschule",
                 right: false,
               },
               {

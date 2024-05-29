@@ -50,84 +50,84 @@ function Hub() {
   };
 
   return (
-    <div className="hub">
-      <div className="HeaderContainer">
-        <div className="foxProfileContainer">
-          <img
-            className="fox"
-            src={FoxPicture}
-            alt="Fox"
-            onClick={handleOpenFoxProfile}
-          />
-        </div>
-        <div className="upperRightOptions">
-          <img
-            className="backpack"
-            src={Backpack}
-            alt="Backpack"
-            onClick={handleOpenBackpack}
-          />
-          {openBackpack && (
-            <BackpackPopup
-              open={openBackpack}
-              onClose={() => setOpenBackpack(false)}
-            />
-          )}
-          {!sidebarCollapsed && (
-            <Sidebar toggleSidebarVisibility={toggleSidebarVisibility} />
-          )}
-          {sidebarCollapsed && (
-            <CustomButton type="senary" onClick={toggleSidebarVisibility} />
-          )}
-        </div>
-      </div>
-      <div className="MapContainer">
-        <img className="map" src={PhoneMap} alt="Map" />
-        <div className="pins">
-          <img
-            onClick={handleOpenPopup}
-            className="pinOne"
-            src={Pin1Active}
-            alt="Unit 1"
-          />
-          {units.unit1?.done ? (
+      <div className="hub">
+        <div className="HeaderContainer">
+          <div className="foxProfileContainer">
             <img
-              onClick={() => handleOpenUnit("unit2")}
-              className="pinTwoActive"
-              src={Pin2Active}
-              alt="Unit 2"
-            />
-          ) : (
-            <img className="pinTwoInactive" src={Pin2Inactive} alt="Unit 2" />
-          )}
-        </div>
-      </div>
-      <div>
-        <PopUpChooseName open={open}></PopUpChooseName>
-      </div>
-      {openFoxProfile && (
-        <div className="ProfileViewContainer">
-          <div className="closeProfile">
-            <CustomButton
-              type="quaternary"
-              onClick={() => setOpenFoxProfile(false)}
+                className="fox"
+                src={FoxPicture}
+                alt="Fox"
+                onClick={handleOpenFoxProfile}
             />
           </div>
-          <div className="ProfileView">
-              <PhoneSimulator title={"Profil"} content={12} />
+          <div className="upperRightOptions">
+            <img
+                className="backpack"
+                src={Backpack}
+                alt="Backpack"
+                onClick={handleOpenBackpack}
+            />
+            {openBackpack && (
+                <BackpackPopup
+                    open={openBackpack}
+                    onClose={() => setOpenBackpack(false)}
+                />
+            )}
+            {!sidebarCollapsed && (
+                <Sidebar toggleSidebarVisibility={toggleSidebarVisibility} />
+            )}
+            {sidebarCollapsed && (
+                <CustomButton type="senary" onClick={toggleSidebarVisibility} />
+            )}
           </div>
         </div>
-      )}
-      <div className="bottomContainer">
-        <div className="restartButton">
-          <Link href="/">
-            <CustomButton
-              name="Spiel neu starten"
-              type="primary"></CustomButton>
-          </Link>
+        <div className="MapContainer">
+          <img className="map" src={PhoneMap} alt="Map" />
+          <div className="pins">
+            <img
+                onClick={handleOpenPopup}
+                className="pinOne"
+                src={Pin1Active}
+                alt="Unit 1"
+            />
+            {units.unit1?.done ? (
+                <img
+                    onClick={() => handleOpenUnit("unit2")}
+                    className="pinTwoActive"
+                    src={Pin2Active}
+                    alt="Unit 2"
+                />
+            ) : (
+                <img className="pinTwoInactive" src={Pin2Inactive} alt="Unit 2" />
+            )}
+          </div>
+        </div>
+        <div>
+          <PopUpChooseName open={open}></PopUpChooseName>
+        </div>
+        {openFoxProfile && (
+            <div className="ProfileViewContainer">
+              <div className="closeProfile">
+                <CustomButton
+                    type="quaternary"
+                    onClick={() => setOpenFoxProfile(false)}
+                />
+              </div>
+              <div className="ProfileView">
+                <PhoneSimulator title={"Profil"} content={12} />
+              </div>
+            </div>
+        )}
+        <div className="bottomContainer">
+          <div className="restartButton">
+            <Link href="/">
+              <CustomButton
+                  name="Spiel neu starten"
+                  type="primary"></CustomButton>
+            </Link>
+          </div>
         </div>
       </div>
-    </div>
   );
 }
 

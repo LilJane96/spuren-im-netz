@@ -78,11 +78,11 @@ export default function UnitTwo() {
             title: "Profil",
             answerboxes: [
               { answer: "Stuttgart", right: false },
-              { answer: "Standort", right: true },
+              { answer: "Reutlingen", right: true },
               { answer: "Berlin", right: false },
             ],
             rightAnswer:
-              "Ausgezeichnet! Die Person stammt aus Standort. Das ist ganz schön merkwürdig, ich kenne niemanden aus dieser Stadt. Nun sind wir schon einen wichtigen Schritt weiter.",
+              "Ausgezeichnet! Die Person stammt aus Reutlingen. Das ist ganz schön merkwürdig, ich kenne niemanden aus dieser Stadt. Nun sind wir schon einen wichtigen Schritt weiter.",
             wrongAnswer:
               "Probiere es nochmal! Die Person stammt aus einem anderen Ort.",
           },
@@ -96,7 +96,7 @@ export default function UnitTwo() {
               {
                 type: "paragraph",
                 content:
-                  "“Standort”. Diese Stadt kenne ich gar nicht. Vielleicht ist einer meiner Fuchsfreunde umgezogen? Kannst du mir helfen herauszufinden, wie alt diese Person ist? Dann kann ich bestimmt genauer sagen, ob ich die Person kenne.",
+                  "“Reutlingen”. Diese Stadt kenne ich gar nicht. Vielleicht ist einer meiner Fuchsfreunde umgezogen? Kannst du mir helfen herauszufinden, wie alt diese Person ist? Dann kann ich bestimmt genauer sagen, ob ich die Person kenne.",
               },
               {
                 type: "bold",
