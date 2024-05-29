@@ -33,7 +33,7 @@ function Home() {
   };
 
   return (
-    <main class="HomeMain">
+    <div className="HomeMain">
       <div className="HomeContainer">
         <div className="WelcomeContainer">
           <div className="TitleAndSubtitleHome">
@@ -63,8 +63,7 @@ function Home() {
         </div>
         <div className="containerHome">
           <img id="fox1" src={WavingFox} alt="Fuchs" />
-          {/* <FoxProfile /> */}
-          <PhoneSimulator content={12} title="Profil"/>
+          <PhoneSimulator content={12} title="Profil" />
           <img id="fox2" src={ThiefFox} alt="Dieb" />
         </div>
       </div>
@@ -164,7 +163,7 @@ function Home() {
           </div>
         </div>
       </div>
-    </main>
+    </div>
   );
 }
 
