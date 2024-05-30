@@ -19,7 +19,7 @@ export default function BadFoxProfileData() {
       friendsCount: 28,
       bio: (
         <span>
-          📍 Standort <br />
+          📍 Reutlingen <br />
           39
         </span>
       ),
