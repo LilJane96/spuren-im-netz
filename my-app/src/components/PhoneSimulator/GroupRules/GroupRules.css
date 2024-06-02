@@ -1,0 +1,51 @@
+.GroupRules {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.GroupRules .Headline {
+  font-weight: bold;
+  font-size: x-large;
+  margin: 5%;
+}
+
+.GroupRules .Subtitle {
+  margin-top: 0;
+  width: 90%;
+  text-align: center;
+}
+
+.GroupRules .RulesContainer {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.GroupRules .Rule {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: lightgray;
+  margin-top: 1%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.GroupRules .Rule img {
+  scale: 1.5;
+}
+
+.GroupRules .Rule:first-child {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.GroupRules .Rule:last-child {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}

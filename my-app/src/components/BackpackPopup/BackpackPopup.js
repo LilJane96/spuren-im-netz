@@ -13,6 +13,7 @@ export default function BackpackPopup({ open, onClose }) {
 
   const isUnit1Done = unitDone?.unit1?.done || false;
   const isUnit2Done = unitDone?.unit2?.done || false;
+  const isUnit3Done = unitDone?.unit3?.done || false;
 
   const handleCloseBackpack = () => {
     onClose();

@@ -1,0 +1,23 @@
+  .FinalFrameOneContainer {
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+  margin: -50px 40px;
+}
+
+.FinalFrameOneContainer .SpeechbubbleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 50%;
+}
+
+.FinalFrameOneContainer .SpeechbubbleContainer .Speachbubble {
+  max-width: 80%;
+}
+
+.FinalFrameOneContainer .button {
+  align-self: flex-end;
+  margin-bottom: 20px;
+}
