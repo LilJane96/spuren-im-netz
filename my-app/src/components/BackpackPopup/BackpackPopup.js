@@ -1,9 +1,8 @@
 import React from "react";
 import Backpack from "../../images/HubImages/Backpack/Backpack.svg";
-import HeadInactive from "../../images/HubImages/Backpack/HeadInactive.svg";
-import HeadActive from "../../images/HubImages/Backpack/HeadActive.svg";
-import MagnifyingGlassActive from "../../images/HubImages/Backpack/MagnifyingGlassActive.svg";
-import MagnifyingGlass from "../../images/HubImages/Backpack/MagnifyingGlass.svg";
+import BackpackUnit1 from "../../images/HubImages/Backpack/BackpackUnit1.svg";
+import BackpackUnit2 from "../../images/HubImages/Backpack/BackpackUnit2.svg";
+import BackpackUnit3 from "../../images/HubImages/Backpack/BackpackUnit3.svg";
 
 import "./BackpackPopup.css";
 import CustomButton from "../Button/CustomButton";
@@ -19,35 +18,39 @@ export default function BackpackPopup({ open, onClose }) {
     onClose();
   };
 
+  const getBackpackImage = () => {
+    const completedUnits = [isUnit1Done, isUnit2Done, isUnit3Done].filter(Boolean).length;
+
+    switch (completedUnits) {
+      case 0:
+        return Backpack;
+      case 1:
+        return BackpackUnit1;
+      case 2:
+        return BackpackUnit2;
+      case 3:
+        return BackpackUnit3;
+      default:
+        return Backpack;
+    }
+  };
   return (
-    <>
-      {open && (
-        <>
-          <div className="CloseBackpack">
-            <CustomButton type="quaternary" onClick={handleCloseBackpack} />
-          </div>
-          <div className="BackpackPopupOverlay">
-            <div className="BackpackPopup">
-              <p>Dein Rucksack!</p>
-            </div>
-            <div>
-              <img src={Backpack} alt="Rucksack" />
-              <div className="BackpackContentContainer">
-                {isUnit1Done ? (
-                  <img src={HeadActive} alt="Hut" />
-                ) : (
-                  <img src={HeadInactive} alt="Hut" />
-                )}
-                {isUnit2Done ? (
-                  <img src={MagnifyingGlassActive} alt="Lupe" />
-                ) : (
-                  <img src={MagnifyingGlass} alt="Lupe" />
-                )}
+      <>
+        {open && (
+            <>
+              <div className="CloseBackpack">
+                <CustomButton type="quaternary" onClick={handleCloseBackpack} />
               </div>
-            </div>
-          </div>
-        </>
-      )}
-    </>
+              <div className="BackpackPopupOverlay">
+                <div className="BackpackPopup">
+                  <p>Dein Rucksack!</p>
+                </div>
+                <div>
+                  <img src={getBackpackImage()} alt="Backpack"/>
+                </div>
+              </div>
+            </>
+        )}
+      </>
   );
 }
