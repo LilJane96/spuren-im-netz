@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import backgroundImage from "../../images/Final/FinalViewTwo.svg";
+import backgroundImage from "../../images/Final/FinalViewTwo.png";
 import "./FinalFrameTwo.css";
 import CustomButton from "../Button/CustomButton";
 import { useNavigate } from "react-router-dom";
