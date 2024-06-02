@@ -10,6 +10,7 @@ import "./PopUpResultScreen.css";
 import OpenResultUnit1 from "../../images/OpenResultUnit1.svg";
 import ClosedResultBox from "../../images/ClosedResultBox.svg";
 import OpenResultUnit2 from "../../images/OpenResultUnit2.svg";
+import OpenResultUnit3 from "../../images/OpenResultUnit3.svg";
 import React, { useState } from "react";
 import CustomButton from "../Button/CustomButton";
 
@@ -27,6 +28,8 @@ export default function PopUpResultScreen({ open, unit }) {
                 return OpenResultUnit1;
             case "unit2":
                 return OpenResultUnit2;
+            case "unit3":
+                return OpenResultUnit3;
             default:
                 return OpenResultUnit1;
         }

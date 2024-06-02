@@ -3,8 +3,9 @@ import { useParams } from "react-router-dom";
 import "./ResultContentSteps.css";
 import UnitOne from "../../../../Units/UnitOne";
 import UnitTwo from "../../../../Units/UnitTwo";
+import UnitThree from "../../../../Units/UnitThree";
 
-const unitsArray = [UnitOne(), UnitTwo()];
+const unitsArray = [UnitOne(), UnitTwo(), UnitThree()];
 
 export default function ResultContentSteps({ unitId, stepId }) {
   const path = useParams();

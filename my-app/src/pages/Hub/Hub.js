@@ -41,8 +41,8 @@ function Hub() {
     setOpenBackpack(true);
   };
 
-  const handleOpenUnit = (obj) => {
-    navigate("/introduction/unit2");
+  const handleOpenUnit = (unit) => {
+    navigate("/introduction/" + unit);
   };
 
   const toggleSidebarVisibility = () => {
@@ -100,6 +100,11 @@ function Hub() {
           ) : (
             <img className="pinTwoInactive" src={Pin2Inactive} alt="Unit 2" />
           )}
+          <img
+            onClick={() => handleOpenUnit("unit3")}
+            src={Pin1Active}
+            alt="Unit 3"
+          />
         </div>
       </div>
       <div>

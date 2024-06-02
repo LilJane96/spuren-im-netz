@@ -164,8 +164,10 @@ export default function FrameOne() {
     localStorage.setItem("UnitsArray", JSON.stringify(units));
     if (unitId === "unit1") {
       setOpenBox(true);
-    } else {
+    } else if (unitId === "unit2") {
       navigate(`/finishedGame/step1`);
+    } else if (unitId === "unit3") {
+      navigate(`/finishedGame/step5`);
     }
   };
 
