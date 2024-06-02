@@ -10,9 +10,10 @@ import "./FrameOne.css";
 import PopUpResultScreen from "../../components/PopUpResultScreen/PopUpResultScreen";
 import UnitOne from "../../Units/UnitOne";
 import UnitTwo from "../../Units/UnitTwo";
+import UnitThree from "../../Units/UnitThree";
 
 export default function FrameOne() {
-  const unitsArray = [UnitOne(), UnitTwo()];
+  const unitsArray = [UnitOne(), UnitTwo(), UnitThree()];
 
   const [selectedAnswer, setSelectedAnswer] = useState("");
   const [reasonText, setReasonText] = useState("");
@@ -163,8 +164,10 @@ export default function FrameOne() {
     localStorage.setItem("UnitsArray", JSON.stringify(units));
     if (unitId === "unit1") {
       setOpenBox(true);
-    } else {
+    } else if (unitId === "unit2") {
       navigate(`/finishedGame/step1`);
+    } else if (unitId === "unit3") {
+      navigate(`/finishedGame/step5`);
     }
   };
 

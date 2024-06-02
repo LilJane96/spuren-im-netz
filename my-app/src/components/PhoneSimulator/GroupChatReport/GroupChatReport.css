@@ -1,0 +1,123 @@
+.GroupChatReport {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.GroupChatReport div {
+  width: 100%;
+}
+
+.GroupChatReport * {
+  opacity: 0.7;
+}
+
+/* UPPER SECTION*/
+
+.GroupChatReport .Headline {
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  box-shadow: 0px 4px 4px 0px rgba(218, 218, 218, 0.25);
+  background-color: white;
+  opacity: 1;
+  position: relative;
+}
+
+.GroupChatReport .Headline img {
+  opacity: 1;
+  position: absolute;
+  right: 2%;
+}
+
+/* MIDDLE SECTION*/
+
+.GroupChatReport .MessagesContainer {
+  height: 75%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.GroupChatReport .MessagesWrapper {
+  overflow-y: auto;
+}
+
+.GroupChatReport .MessageSpeachbubbleContainer {
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 2%;
+}
+
+.GroupChatReport .MessageSpeachbubbleContainer .ProfilePicture {
+  width: 10%;
+}
+
+.GroupChatReport .MessageSpeachbubbleContainer .BigPicture {
+  width: 100%;
+}
+
+.GroupChatReport .MessageSpeachbubbleContainer .speachBubble {
+  background-color: rgb(34, 34, 48);
+  color: white;
+  padding: 5%;
+  border-radius: 25px;
+  width: 90%;
+  margin-bottom: 1%;
+}
+
+.GroupChatReport .MessageSpeachbubbleContainer .speachBubble p {
+  margin: 0;
+  padding: 0;
+}
+
+.GroupChatReport .MessageSpeachbubbleContainer .speachBubble #name1 {
+  color: red;
+}
+
+.GroupChatReport .MessageSpeachbubbleContainer .speachBubble #name2 {
+  color: purple;
+}
+
+.GroupChatReport .MessageSpeachbubbleContainer .speachBubble #name3 {
+  color: green;
+}
+
+/* LOWER SECTION*/
+
+.GroupChatReport .SendMessage {
+  height: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px -4px 4px 0px rgba(218, 218, 218, 0.25);
+}
+
+.GroupChatReport .InputMock {
+  width: 65%;
+  border-radius: 25px;
+  padding: 4%;
+  margin-left: 5%;
+  background-color: lightgray;
+  color: grey;
+}
+
+.GroupChatReport .SendImageContainer {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.GroupChatReport .SendImage {
+  width: 40%;
+  background-color: blue;
+  border-radius: 25%;
+  padding: 5%;
+}
