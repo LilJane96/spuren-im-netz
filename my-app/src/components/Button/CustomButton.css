@@ -173,7 +173,7 @@ button.TertiaryButton:active {
 
 /*Quaternary Button*/
 button.QuaternaryButton {
-  background: white url(../../images/CrossButton.svg) center/contain no-repeat;
+  background: white var(--cross-btn) center/contain no-repeat;
   background-size: 50%;
   width: 58px;
   height: 58px;
@@ -185,7 +185,7 @@ button.QuaternaryButton {
 }
 
 button.QuinaryButton {
-  padding: 40px 265px;
+  padding: 0 265px;
   border-radius: 1.3em;
   font-weight: 700;
   font-size: 22px;

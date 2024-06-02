@@ -18,7 +18,8 @@ export default function CreatePassword({ answer }) {
               type="password"
               placeholder="Passwort"
               value={answer}
-              onChange={(e) => setSelectedAnswer(e.target.value)}></Inputfield>
+              onChange={(e) => setSelectedAnswer(e.target.value)}
+              pointerEvents="none"></Inputfield>
           </div>
         </div>
       </div>

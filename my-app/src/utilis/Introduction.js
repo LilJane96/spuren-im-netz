@@ -6,7 +6,7 @@ export default function IntroductionArray() {
       steps: [
         {
           step: "stepOne",
-          backgroundImage: "/images/IntroductionImageOne.png",
+          backgroundImage: "/images/IntroductionImageOne.svg",
           text: "Willkommen bei 'Spuren-im-Netz'! Hier taucht ihr in ein aufregendes Abenteuer ein, erkundet die faszinierende Welt des Internets und werdet zu meinen Helfern. ",
           speechbubblePosition: "center",
           speechbubbleSize: "big",
@@ -14,7 +14,7 @@ export default function IntroductionArray() {
         },
         {
           step: "stepTwo",
-          backgroundImage: "/images/VillainsBoard.png",
+          backgroundImage: "/images/VillainsBoard.svg",
           text: "Ich bin schon seit vielen Jahren als Detektiv tätig und habe zahlreiche Fälle gelöst! Hier links kannst du einige meiner Erfolge sehen. Aber in letzter Zeit gibt es einen Fall, den ich ohne Hilfe nicht lösen kann!",
           speechbubblePosition: "flex-end",
           speechbubbleSize: "middle",
@@ -30,7 +30,7 @@ export default function IntroductionArray() {
         },
         {
           step: "stepFour",
-          backgroundImage: "/images/IntroductionImageMap.png",
+          backgroundImage: "/images/IntroductionImageMap.svg",
           text: "Schau dir diese tolle Karte an, wo alles Spannende passiert! Und weißt du was? Dein Rucksack ist gleich hier rechts, immer bereit für dich zum Entdecken und Benutzen! Aber zuerst möchte ich dir etwas zeigen! Klicke einfach auf 'Weiter'.",
 
           speechbubblePosition: "flex-end",
@@ -56,12 +56,12 @@ export default function IntroductionArray() {
       steps: [
         {
           step: "stepOne",
-          backgroundImage: "/images/FoxHome.png",
+          backgroundImage: "/images/FoxHome.svg",
           text: "Puuuh, das war ein langer Tag. So viele Fälle auf einmal :( Jetzt muss ich mich erstmal ausruhen und frische Sachen anziehen. Oh, was ist denn das?? Ich habe eine Nachricht auf meinem Handy erhalten!",
         },
         {
           step: "stepOne",
-          backgroundImage: "/images/FoxHomeTwo.png",
+          backgroundImage: "/images/FoxHomeTwo.svg",
           text: "Felix hat mir eine Nachrichtenanfrage geschickt? Ich kenne doch gar keinen Felix, komisch. Kannst du mir weiterhelfen?",
         },
         {

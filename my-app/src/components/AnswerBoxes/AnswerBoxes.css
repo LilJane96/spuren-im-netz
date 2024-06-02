@@ -36,14 +36,19 @@
 }
 
 .AnswerBoxesComponent.red {
-  background-color: red;
+  background-color: var(--answerbox-wrong);
 }
-.AnswerBoxesComponent.green:hover {
+
+.AnswerBoxesComponent.green {
   background-color: #a0f959;
 }
 
+.AnswerBoxesComponent.green:hover {
+  background-color: var(--answerbox-right);
+}
+
 .AnswerBoxesComponent.red {
-  background-color: #ff8653;
+  background-color: var(--answerbox-wrong);
 }
 .AnswerBoxesComponent.red:hover {
   background-color: var(--answerbox-wrong);

@@ -1,7 +1,7 @@
 .PhoneContainer {
   display: flex;
   flex-direction: column;
-  border: 0.5vw solid black; /* Adjust as needed */
+  border: 0.8vw solid black; /* Adjust as needed */
   border-radius: 2vw; /* Adjust as needed */
   background-color: white;
   position: relative;
