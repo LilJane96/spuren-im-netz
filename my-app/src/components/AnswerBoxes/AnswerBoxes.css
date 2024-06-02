@@ -38,6 +38,11 @@
 .AnswerBoxesComponent.red {
   background-color: var(--answerbox-wrong);
 }
+
+.AnswerBoxesComponent.green {
+  background-color: #a0f959;
+}
+
 .AnswerBoxesComponent.green:hover {
   background-color: var(--answerbox-right);
 }
