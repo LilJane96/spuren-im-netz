@@ -91,6 +91,7 @@ export default function IntroductionArray() {
           backgroundImage: "/images/Unit3-3.png",
           text: "Niemand hat es bemerkt! Super! Jetzt kann ich weiter in den sozialen Medien meiner “Arbeit” nachgehen. Pixel wird sich wundern!",
           speechbubblePosition: "flex-start",
+          speechbubbleSize: "small",
         },
         {
           step: "stepFour",
