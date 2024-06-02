@@ -84,11 +84,13 @@ export default function IntroductionArray() {
           step: "stepTwo",
           backgroundImage: "/images/Unit3-2.png",
           text: "Sehr gut, ein Fan von mir hat mir einen Schraubenzieher durch das Gitter geworfen! Jetzt kann ich endlich ausbrechen!!!",
+          speechbubblePosition: "flex-start",
         },
         {
           step: "stepThree",
           backgroundImage: "/images/Unit3-3.png",
-          text: "Niemand hat es bemerkt! Super! Jetzt kann ich weiter in den sozialen Medien meiner “Arbeit” nachgehen. Pixel wird sich wundern!"
+          text: "Niemand hat es bemerkt! Super! Jetzt kann ich weiter in den sozialen Medien meiner “Arbeit” nachgehen. Pixel wird sich wundern!",
+          speechbubblePosition: "flex-start",
         },
         {
           step: "stepFour",

@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   height: 100vh;
-  margin: -50px 40px;
+  margin-right: 40px;
 }
 
 .FinalFrameFourContainer .SpeechbubbleContainer {
@@ -11,10 +11,8 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-}
-
-.FinalFrameFourContainer .SpeechbubbleContainer .Speachbubble {
-  max-width: 80%;
+  height: 100%;
+  margin: 0;
 }
 
 .FinalFrameFourContainer .button {

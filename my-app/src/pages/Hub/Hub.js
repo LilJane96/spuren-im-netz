@@ -10,8 +10,11 @@ import BoardBackground from "../../images/Hub/Background.png";
 import Pin1Unlocked from "../../images/Hub/Level1Unlocked.png";
 import Pin2Unlocked from "../../images/Hub/Level2Unlocked.png";
 import Pin3Unlocked from "../../images/Hub/Level3Unlocked.png";
+import Pin4Unlocked from "../../images/Hub/Level4Unlocked.png";
+import String from "../../images/Hub/String.png";
 import Pin2Locked from "../../images/Hub/Level2Locked.png";
 import Pin3Locked from "../../images/Hub/Level3Locked.png";
+import Pin4Locked from "../../images/Hub/Level4Locked.png";
 import FoxPicture from "../../images/foxPicture.svg";
 import PopUpChooseName from "../../components/PopUpChooseName/PopUpChooseName";
 import { useNavigate } from "react-router-dom";
@@ -147,24 +150,28 @@ function Hub() {
       </div> */}
       <div className="BoardContainer">
           <div className="BoardWrapper" style={{position: 'relative'}}>
-              <img className="Board" src={BoardBackground} alt="Rucksack" />
+              <img className="Board" src={BoardBackground}/>
+              <img className="Pin" style={{position: 'absolute', top: '10%', left: '20%',  width: '60%', zIndex: '5', pointerEvents: "none"}} src={String} />
               <img className="Pin" style={{position: 'absolute', top: '10%', left: '1%',  width: '30%', zIndex: '2'}} src={Pin1Unlocked} alt="Pin1" 
                 onClick={handleOpenPopup}
               />
               {units.unit1?.done ? (
-              <img className="Pin" style={{position: 'absolute', top: '15%', left: '35%',  width: '55%'}} src={Pin2Unlocked} alt="Pin2" 
+              <img className="Pin" style={{position: 'absolute', top: '13%', left: '32%',  width: '55%'}} src={Pin2Unlocked} alt="Pin2" 
                 onClick={() => handleOpenUnit("unit2")}
               />
               ) : (
-                <img className="Pin" style={{position: 'absolute', top: '15%', left: '35%',  width: '55%'}} src={Pin2Locked} alt="Pin2" />
+                <img className="Pin" style={{position: 'absolute', top: '13%', left: '32%',  width: '55%'}} src={Pin2Locked} alt="Pin2" />
               )}
               {units.unit2?.done ? (
-              <img className="Pin" style={{position: 'absolute', top: '50%', left: '15%',  width: '35%'}} src={Pin3Unlocked} alt="Pin3" 
+              <img className="Pin" style={{position: 'absolute', top: '57%', left: '10%',  width: '35%'}} src={Pin3Unlocked} alt="Pin3" 
                 onClick={() => handleOpenUnit("unit3")}
               />
               ) : (
-                <img className="Pin" style={{position: 'absolute', top: '50%', left: '15%',  width: '35%'}} src={Pin3Locked} alt="Pin3" />
+                <img className="Pin" style={{position: 'absolute', top: '57%', left: '10%',  width: '35%'}} src={Pin3Locked} alt="Pin3" />
               )}
+
+              <img className="Pin" style={{position: 'absolute', top: '55%', left: '70%',  width: '20%'}} src={Pin4Locked} alt="Pin4" />
+
           </div>
       </div>
       <div>
@@ -196,16 +203,6 @@ function Hub() {
           </div>
         </div>
       )}
-      <div className="bottomContainer">
-        <div className="restartButton">
-          <Link href="/">
-            <CustomButton
-              name="Spiel neu starten"
-              type="primary"
-            ></CustomButton>
-          </Link>
-        </div>
-      </div>
     </div>
   );
 }
