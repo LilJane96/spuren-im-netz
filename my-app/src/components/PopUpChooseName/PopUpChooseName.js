@@ -1,17 +1,7 @@
 import * as React from "react";
 import "./PopUpChooseName.css";
-import {
-  Dialog,
-  DialogActions,
-  DialogContent,
-  DialogContentText,
-  DialogTitle,
-  ListItemButton,
-  ListItemIcon,
-} from "@mui/material";
+import { Dialog, DialogActions, DialogTitle } from "@mui/material";
 import CustomButton from "../Button/CustomButton";
-import List from "@mui/material/List";
-import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getSelectedColor } from "../../utilis/colorUtils";
@@ -41,11 +31,6 @@ const PopUpChooseName = ({ open }) => {
     setInputValue(event.target.value);
   };
 
-  const handleIconClick = (color) => {
-    setSelectedColor(color);
-    document.documentElement.setAttribute("data-theme", color);
-  };
-
   const handleContinueClick = () => {
     localStorage.setItem("userName", inputValue);
     localStorage.setItem("selectedColor", selectedColor);
@@ -56,7 +41,12 @@ const PopUpChooseName = ({ open }) => {
     <div className="PopUpChooseName">
       <Dialog
         sx={{
-          "& .MuiDialog-paper": { width: 608, height: 612, borderRadius: 5 },
+          "& .MuiDialog-paper": {
+            width: 608,
+            height: 612,
+            borderRadius: 5,
+            justifyContent: "space-around",
+          },
         }}
         open={open}
         maxWidth={"md"}>
@@ -88,12 +78,12 @@ const PopUpChooseName = ({ open }) => {
           {inputValue.length > 0 && selectedColor.length > 0 ? (
             <CustomButton
               name="Weiter"
-              type="primary"
+              type="quinary"
               onClick={handleContinueClick}></CustomButton>
           ) : (
             <CustomButton
               name="Weiter"
-              type="primary"
+              type="quinary"
               disabled={true}></CustomButton>
           )}
         </DialogActions>

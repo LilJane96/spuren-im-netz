@@ -30,7 +30,7 @@ export default function ResultView({ unitId, currentStep }) {
 
   return (
     <div className="ResultViewContainer">
-      <div>
+      <div className="TitleBackground">
         <TitleBackground text={`${topic} bestanden`} />
       </div>
       <div>{renderResultPage()}</div>

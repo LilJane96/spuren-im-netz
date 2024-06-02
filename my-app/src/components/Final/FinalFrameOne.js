@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import backgroundImage from "../../images/Final/FinalViewOne.png";
+import backgroundImage from "../../images/Final/FinalViewOne.svg";
 import "./FinalFrameOne.css";
 import Speachbubble from "../Speachbubble/Speachbubble";
 import CustomButton from "../Button/CustomButton";

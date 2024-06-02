@@ -4,7 +4,7 @@ import DVD from "../../images/ProfileImages/ProfilBadFox/DVD.jpeg";
 import Playstation from "../../images/ProfileImages/ProfilBadFox/Playstation.jpeg";
 import Vacation from "../../images/ProfileImages/ProfilBadFox/Vacation.jpg";
 import Profilepicture from "../../images/ProfileImages/ProfilpictureFirst.png";
-import BadFoxProfilePicture from "../../images/ProfileImages/ProfilBadFox/BadFoxProfilePicture.png";
+import BadFoxProfilePicture from "../../images/ProfileImages/ProfilBadFox/BadFoxProfilePicture.svg";
 import Ring from "../../images/ProfileImages/ProfilBadFox/Ring.jpg";
 import Grill from "../../images/ProfileImages/ProfilBadFox/Grill.jpg";
 import HausPlaystation from "../../images/ProfileImages/ProfilBadFox/HausPlaystation.jpg";
