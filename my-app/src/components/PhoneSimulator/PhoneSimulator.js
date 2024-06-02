@@ -4,6 +4,11 @@ import CreateUserName from "./CreateUserName/CreateUserName";
 import Privacy from "./Privacy/Privacy";
 import UploadPicture from "./UploadPicture/UploadPicture";
 import MessageOfStranger from "./MessageOfStranger/MessageOfStranger";
+import GroupChat from "./GroupChat/GroupChat";
+import GroupChatSingle from "./GroupChat/GroupChatSingle";
+import GroupChatPicture from "./GroupChat/GroupChatPicture";
+import GroupChatReport from "./GroupChatReport/GroupChatReport";
+import GroupRules from "./GroupRules/GroupRules";
 import SearchPerson from "./SearchPerson/SearchPerson";
 import UserProfile from "./UserProfile/UserProfile";
 import "./PhoneSimulator.css";
@@ -77,6 +82,16 @@ export default function PhoneSimulator({
         return <UserProfile profileData={GoodFoxProfileData()} />;
       case 13:
         return <UserProfile profileData={UserProfileData()} />;
+      case 14:
+        return <GroupChat answer={selectedAnswer} />;
+      case 15:
+        return <GroupChatSingle answer={selectedAnswer} />;
+      case 16:
+        return <GroupChatPicture answer={selectedAnswer} />;
+      case 17:
+        return <GroupChatReport answer={selectedAnswer} />;
+      case 18:
+        return <GroupRules answer={selectedAnswer} />;
       default:
         return null;
     }

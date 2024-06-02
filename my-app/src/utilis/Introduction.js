@@ -70,7 +70,35 @@ export default function IntroductionArray() {
         },
       ],
       backTo: "/hub",
-      navigate: "/frameone/unit2/step1;",
+      navigate: "/frameone/unit2/step1",
+    },
+    {
+      id: 3,
+      name: "unit3",
+      steps: [
+        {
+          step: "stepOne",
+          backgroundImage: "/images/Unit3-1.png",
+          text: "Während Pixel sich seinem nächsten Fall widmet, hat Felix ganz andere Pläne. Er will aus dem Fuchsbau wieder ausbrechen!",
+        },
+        {
+          step: "stepTwo",
+          backgroundImage: "/images/FoxHomeTwo.png",
+          text: "Sehr gut, ein Fan von mir hat mir einen Schraubenzieher durch das Gitter geworfen! Jetzt kann ich endlich ausbrechen!!!",
+        },
+        {
+          step: "stepThree",
+          backgroundImage: "/images/Unit3-3.png",
+          text: "Niemand hat es bemerkt! Super! Jetzt kann ich weiter in den sozialen Medien meiner “Arbeit” nachgehen. Pixel wird sich wundern!"
+        },
+        {
+          step: "stepFour",
+          backgroundImage: "/images/Unit3-4.png",
+          text: "Oh nein, ich wurde zu einem Gruppenchat hinzugefügt. Felix ist doch im Fuchsbau, wer war das dann? Das ist mir noch nie passiert! Was sind das für Leute? Kannst du mir weiterhelfen?",
+        },
+      ],
+      backTo: "/hub",
+      navigate: "/frameone/unit3/step1",
     },
   ];
 }

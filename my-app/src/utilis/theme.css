@@ -29,68 +29,9 @@
   --stepper-color: #f36b21;
   --sidebar-text-color: #000;
   --result-border-color: #f36b21;
-}
 
-[data-theme="green"] {
-  --background: #47b35e;
-  --background-img: url("../images/BackgroundImages/BackgroundImageGreen.png");
-  --box-shadow: #227534;
-  --button-txt-color: #f0fffa;
-
-  --button-primary-bg-color: linear-gradient(90deg, #aff394 0%, #9dd187 100%);
-  --button-before-back: #3d914f;
-
-  --button-primary-bg-color-disabled: linear-gradient(
-    90deg,
-    #adf394 0%,
-    #8cd187 46%
-  );
-  --button-primary-before-back-disabled: #50915e;
-  --button-primary-before: rgb(72, 197, 47);
-  --button-primary-before-disabled: rgba(47, 197, 50, 0.5);
-  --stepper-color: #f36b21;
-  --sidebar-text-color: #fff;
-  --result-border-color: #f36b21;
-
-  /*SECONDARY*/
-  --button-sec-bg-back: linear-gradient(90deg, #75ad84 0%, #63af77 100%);
-  --button-sec-before-back: #50915e;
-  --button-sec-before-back-disabled: #50915e;
-  --button-sec-back-disabled: linear-gradient(90deg, #75ad84 0%, #63af77 46%);
-
-  --stepper-color: #f36b21;
-  --sidebar-text-color: #000;
-  --result-border-color: #f36b21;
-}
-
-[data-theme="red"] {
-  --background: #811f1e;
-  --background-img: url("../images/BackgroundImages/BackgroundImageRed.png");
-  --box-shadow: #531a1a;
-  --button-txt-color: #f0fffa;
-
-  --button-primary-bg-color: linear-gradient(90deg, #f39494 0%, #d18787 100%);
-  --button-primary-bg-color-disabled: linear-gradient(
-    90deg,
-    #f39494 0%,
-    #d18787 46%
-  );
-
-  --button-primary-before: rgb(197, 47, 47);
-  --button-primary-before-disabled: rgba(197, 47, 47, 0.5);
-  --stepper-color: #f36b21;
-  --sidebar-text-color: #fff;
-  --result-border-color: #f36b21;
-
-  /*SECONDARY*/
-  --button-sec-before-back: #984040;
-  --button-sec-before-back-disabled: #984040;
-  --button-sec-bg-back: linear-gradient(90deg, #f39494 0%, #d18787 100%);
-  --button-sec-back-disabled: linear-gradient(90deg, #f39494 0%, #d18787 46%);
-
-  --stepper-color: #f36b21;
-  --sidebar-text-color: #000;
-  --result-border-color: #f36b21;
+  --answerbox-right: #ff7449;
+  --answerbox-wrong: #ff8653;
 }
 
 [data-theme="blue"] {
@@ -118,32 +59,9 @@
   --stepper-color: #f36b21;
   --sidebar-text-color: #000;
   --result-border-color: #f36b21;
-}
 
-[data-theme="orange"] {
-  --background: #fec682;
-  --background-img: url("../images/BackgroundImages/BackgroundImageOrange.png");
-  --box-shadow: #e9932e;
-  --button-txt-color: #f0fffa;
-  --button-primary-bg-color: linear-gradient(90deg, #ff9902 0%, #f36b21 100%);
-  --button-primary-before: #e54e17;
-
-  --button-primary-bg-color-disabled: linear-gradient(
-    90deg,
-    #ffc671 0%,
-    #f5a275 46%
-  );
-  --button-primary-before-disabled: #ef9e81;
-
-  /*SECONDARY*/
-  --button-sec-bg-back: linear-gradient(90deg, #ffd873 0%, #ffd873 100%);
-  --button-sec-before-back: rgba(254, 189, 1, 1);
-  --button-sec-before-back-disabled: rgba(254, 189, 1, 1);
-  --button-sec-back-disabled: linear-gradient(90deg, #ffd873 0%, #ffd873 46%);
-
-  --stepper-color: #f36b21;
-  --sidebar-text-color: #000;
-  --result-border-color: #f36b21;
+  --answerbox-right: #00d58d;
+  --answerbox-wrong: #ff7449;
 }
 
 [data-theme="yellow"] {
@@ -170,11 +88,14 @@
   --stepper-color: #f36b21;
   --sidebar-text-color: #000;
   --result-border-color: #f36b21;
+
+  --answerbox-right: #ff7449;
+  --answerbox-wrong: #ff8653;
 }
 
 [data-theme="pink"] {
-  --background: #fec9d9;
-  --background-img: url("../images/BackgroundImages/BackgroundImagePink.png");
+  --background: #ffaed5;
+  --background-img: url("../images/BackgroundImages/BackgroundImagePink.svg");
   --box-shadow: #e298c5;
   --button-txt-color: #f0fffa;
   --button-primary-bg-color: linear-gradient(90deg, #ff9902 0%, #f36b21 100%);
@@ -196,30 +117,7 @@
   --stepper-color: #f36b21;
   --sidebar-text-color: #000;
   --result-border-color: #f36b21;
-}
 
-[data-theme="purple"] {
-  --background: #4e53d6;
-  --background-img: url("../images/BackgroundImages/BackgroundImagePurple.png");
-  --box-shadow: #1c1f70;
-  --button-txt-color: #f0fffa;
-  --button-primary-bg-color: linear-gradient(90deg, #ff9902 0%, #f36b21 100%);
-  --button-primary-before: #e54e17;
-
-  --button-primary-bg-color-disabled: linear-gradient(
-    90deg,
-    #ffc671 0%,
-    #f5a275 46%
-  );
-  --button-primary-before-disabled: #ef9e81;
-
-  /*SECONDARY*/
-  --button-sec-bg-back: linear-gradient(90deg, #ffd873 0%, #ffd873 100%);
-  --button-sec-before-back: rgba(254, 189, 1, 1);
-  --button-sec-before-back-disabled: rgba(254, 189, 1, 1);
-  --button-sec-back-disabled: linear-gradient(90deg, #ffd873 0%, #ffd873 46%);
-
-  --stepper-color: #f36b21;
-  --sidebar-text-color: #000;
-  --result-border-color: #f36b21;
+  --answerbox-right: #a2e360;
+  --answerbox-wrong: #eb4b4b;
 }

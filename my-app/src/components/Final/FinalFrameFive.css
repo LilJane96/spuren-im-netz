@@ -1,0 +1,36 @@
+.FinalFrameTwoContainer {
+  display: flex;
+  height: 100vh;
+  margin: -50px 40px;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.FinalFrameTwoContainer .SpeechbubbleContainer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-58%, -130%);
+}
+
+.FinalFrameTwoContainer .button {
+  align-self: flex-end;
+  margin-bottom: 20px;
+}
+
+.FinalFrameTwoContainer .SpeechbubbleContainer .circle {
+  position: absolute;
+  left: -5px;
+  top: 95px;
+  width: 77px;
+  height: 84px;
+  bottom: -36%;
+  border-radius: 62%;
+  rotate: 0deg;
+  box-shadow: 3.5vmin 0 white, 4vmin -0.5vmin white,
+    4vmin -1.5vmin 0 -0.5vmin white;
+  clip-path: polygon(0% 49%, 150% 48%, 150% 100%, 0% 100%);
+  transform: rotatex(43deg);
+  z-index: 0;
+  font-size: 21px;
+}
