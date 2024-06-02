@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import SendImg from "../../../images/unit3/Send.svg";
 import Report from "../../../images/unit3/Report.svg";
-import BadFoxPicture from "../../../images/ProfileImages/ProfilBadFox/BadFoxProfilePicture.png";
+import BadFoxPicture from "../../../images/ProfileImages/ProfilBadFox/BadFoxProfilePicture.svg";
 import BadFoxWalking from "../../../images/unit3/BadFoxWalking.png";
 import AnnonymProfile from "../../../images/AnnonymProfile.png";
 
