@@ -13,7 +13,7 @@ body {
   height: 100vh;
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-image: var(--background-img);
   background-color: var(--background);
   font-family: sans-serif;

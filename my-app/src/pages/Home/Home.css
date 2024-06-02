@@ -8,12 +8,12 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-
+  background-repeat: repeat;
   background-image: var(--welcome-bg-img);
   background-color: var(--background);
+  overflow-y: auto;
+  background-size: 200%;
 }
 
 .HomeContainer {
@@ -33,7 +33,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 90%;
+  height: 80%;
 }
 
 .HomeContainer .PhoneSimulatorContainer {
@@ -50,8 +50,7 @@
 }
 
 .HomeContainer #fox2 {
-  margin-left: -25px;
-  z-index: 1;
+  margin-left: -30px;
   height: 100%;
   pointer-events: none;
 }
