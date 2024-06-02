@@ -33,16 +33,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50%;
+  height: 90%;
+}
+
+.HomeContainer .PhoneSimulatorContainer {
+  height: 70%;
+}
+
+.HomeContainer .foxContainer {
+  height: 60%;
 }
 
 .HomeContainer #fox1 {
-  margin-right: -40px;
+  margin-right: -30px;
   height: 100%;
 }
 
 .HomeContainer #fox2 {
-  margin-left: -55px;
+  margin-left: -25px;
   z-index: 1;
   height: 100%;
   pointer-events: none;

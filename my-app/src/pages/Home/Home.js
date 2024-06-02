@@ -62,9 +62,15 @@ function Home() {
           </div>
         </div>
         <div className="containerHome">
-          <img id="fox1" src={WavingFox} alt="Fuchs" />
-          <PhoneSimulator content={12} title="Profil" />
-          <img id="fox2" src={ThiefFox} alt="Dieb" />
+          <div className="foxContainer">
+            <img id="fox1" src={WavingFox} alt="Fuchs" />
+          </div>
+          <div className="PhoneSimulatorContainer">
+            <PhoneSimulator content={12} title="Profil" />
+          </div>
+          <div className="foxContainer">
+            <img id="fox2" src={ThiefFox} alt="Dieb" />
+          </div>
         </div>
       </div>
       <div className="row2">
