@@ -30,8 +30,7 @@
 
 div.bubble {
   position: relative;
-  width: 300px;
-  text-align: center;
+  width: 85%;
   line-height: 1.4em;
   margin: 40px auto;
   background-color: #fff;
