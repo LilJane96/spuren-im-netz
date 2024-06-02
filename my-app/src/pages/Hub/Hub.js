@@ -6,6 +6,12 @@ import Pin1Active from "../../images/Pins/Pin1Active.png";
 import Pin2Active from "../../images/Pins/Pin2Active.png";
 import Pin2Inactive from "../../images/Pins/Pin2Inactive.png";
 import Backpack from "../../images/Backpack.svg";
+import BoardBackground from "../../images/Hub/Background.png";
+import Pin1Unlocked from "../../images/Hub/Level1Unlocked.png";
+import Pin2Unlocked from "../../images/Hub/Level2Unlocked.png";
+import Pin3Unlocked from "../../images/Hub/Level3Unlocked.png";
+import Pin2Locked from "../../images/Hub/Level2Locked.png";
+import Pin3Locked from "../../images/Hub/Level3Locked.png";
 import FoxPicture from "../../images/foxPicture.svg";
 import PopUpChooseName from "../../components/PopUpChooseName/PopUpChooseName";
 import { useNavigate } from "react-router-dom";
@@ -113,7 +119,7 @@ function Hub() {
           )}
         </div>
       </div>
-      <div className="MapContainer">
+      {/* <div className="MapContainer">
         <img className="map" src={PhoneMap} alt="Map" />
         <div className="pins">
           <img
@@ -138,6 +144,28 @@ function Hub() {
             alt="Unit 3"
           />
         </div>
+      </div> */}
+      <div className="BoardContainer">
+          <div className="BoardWrapper" style={{position: 'relative'}}>
+              <img className="Board" src={BoardBackground} alt="Rucksack" />
+              <img className="Pin" style={{position: 'absolute', top: '10%', left: '1%',  width: '30%', zIndex: '2'}} src={Pin1Unlocked} alt="Pin1" 
+                onClick={handleOpenPopup}
+              />
+              {units.unit1?.done ? (
+              <img className="Pin" style={{position: 'absolute', top: '15%', left: '35%',  width: '55%'}} src={Pin2Unlocked} alt="Pin2" 
+                onClick={() => handleOpenUnit("unit2")}
+              />
+              ) : (
+                <img className="Pin" style={{position: 'absolute', top: '15%', left: '35%',  width: '55%'}} src={Pin2Locked} alt="Pin2" />
+              )}
+              {units.unit2?.done ? (
+              <img className="Pin" style={{position: 'absolute', top: '50%', left: '15%',  width: '35%'}} src={Pin3Unlocked} alt="Pin3" 
+                onClick={() => handleOpenUnit("unit3")}
+              />
+              ) : (
+                <img className="Pin" style={{position: 'absolute', top: '50%', left: '15%',  width: '35%'}} src={Pin3Locked} alt="Pin3" />
+              )}
+          </div>
       </div>
       <div>
         <PopUpChooseName open={open}></PopUpChooseName>
