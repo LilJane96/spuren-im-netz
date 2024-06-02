@@ -1,4 +1,4 @@
-.FinalFrameThreeContainer {
+.FinalFrameSixContainer {
   display: flex;
   height: 95vh;
   margin: -50px 40px;
@@ -6,16 +6,16 @@
   align-items: flex-end;
 }
 
-.FinalFrameThreeContainer .SpeechbubbleContainer {
+.FinalFrameSixContainer .SpeechbubbleContainer {
   position: absolute;
-  left: 50%;
-  top: 48%;
+  left: 35%;
+  top: 35%;
   transform: translate(-43%, -186%);
 }
 
-.FinalFrameThreeContainer .SpeechbubbleContainer .circle {
+.FinalFrameSixContainer .SpeechbubbleContainer .circle {
   position: absolute;
-  left: 103px;
+  left: 673px;
   top: 112px;
   width: 77px;
   height: 84px;
@@ -29,7 +29,7 @@
   z-index: 0;
 }
 
-.FinalFrameThreeContainer div.bubble {
+.FinalFrameSixContainer div.bubble {
   height: 145px;
   display: flex;
   align-items: center;

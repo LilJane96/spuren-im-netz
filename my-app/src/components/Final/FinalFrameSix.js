@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import backgroundImage from "../../images/Final/FinalViewSix.png";
-import "./FinalFrameThree.css";
+import "./FinalFrameSix.css";
 import CustomButton from "../Button/CustomButton";
 import { useNavigate } from "react-router-dom";
 import PopUpResultScreen from "../PopUpResultScreen/PopUpResultScreen";
 
-export default function FinalFrameThree() {
+export default function FinalFrameSix() {
   const [openBox, setOpenBox] = useState(false);
 
   useEffect(() => {
@@ -30,7 +30,7 @@ export default function FinalFrameThree() {
     setOpenBox(true);
   };
   return (
-    <div className="FinalFrameThreeContainer">
+    <div className="FinalFrameSixContainer">
       <div className="SpeechbubbleContainer">
         <div className="overlay">
           <div className="bubble speech">
