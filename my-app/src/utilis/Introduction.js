@@ -26,7 +26,6 @@ export default function IntroductionArray() {
           text: "Im Moment ist der Rucksack noch leer, aber er wird sich füllen, sobald wir anfangen. Ich hoffe, dir werden die Überraschungen gefallen, die ich für dich vorbereitet habe. Bereit, loszulegen?",
           speechbubblePosition: "center",
           speechbubbleSize: "big",
-          speechbubbleMargin: "-68px",
         },
         {
           step: "stepFour",
