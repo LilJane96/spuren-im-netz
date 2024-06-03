@@ -46,8 +46,7 @@ export default function PopUpResultScreen({ open, unit }) {
                 sx={{
                     "& .MuiDialog-paper": {
                         overflow: "inherit",
-                        width: "100%",
-                        height: 600,
+                        width: "55%",
                     },
                 }}
                 open={open}

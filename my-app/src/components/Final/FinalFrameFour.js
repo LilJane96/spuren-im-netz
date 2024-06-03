@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import backgroundImage from "../../images/Final/FinalViewFour.png";
-import "./FinalFrameOne.css";
+import "./FinalFrameFour.css";
 import Speachbubble from "../Speachbubble/Speachbubble";
 import CustomButton from "../Button/CustomButton";
 import { useNavigate } from "react-router-dom";
@@ -32,7 +32,7 @@ export default function FinalFrameOne() {
   };
 
   return (
-    <div className="FinalFrameOneContainer">
+    <div className="FinalFrameFourContainer">
       <div className="SpeechbubbleContainer">
         <Speachbubble text="Wow, viele der Leute, die auch in der Gruppe waren, melden die Gruppe sodass sie gesperrt wird." />
       </div>

@@ -33,21 +33,3 @@
   justify-content: center;
   margin: 15px;
 }
-
-.BackpackPopupOverlay .BackpackContainer {
-  position: relative;
-}
-
-.BackpackPopupOverlay .BackpackContentContainer {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 33%);
-  display: flex;
-  gap: 30px;
-}
-
-.BackpackPopupOverlay .BackpackContentContainer img {
-  width: 104px;
-  height: 104px;
-}

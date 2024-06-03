@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import backgroundImage from "../../images/Final/FinalViewThree.svg";
+import backgroundImage from "../../images/Final/FinalViewThree.png";
 import "./FinalFrameThree.css";
 import CustomButton from "../Button/CustomButton";
 import PopUpResultScreen from "../PopUpResultScreen/PopUpResultScreen";

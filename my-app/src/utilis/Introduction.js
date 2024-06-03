@@ -6,7 +6,7 @@ export default function IntroductionArray() {
       steps: [
         {
           step: "stepOne",
-          backgroundImage: "/images/IntroductionImageOne.svg",
+          backgroundImage: "/images/Unit1-1.png",
           text: "Willkommen bei 'Spuren-im-Netz'! Hier taucht ihr in ein aufregendes Abenteuer ein, erkundet die faszinierende Welt des Internets und werdet zu meinen Helfern. ",
           speechbubblePosition: "center",
           speechbubbleSize: "big",
@@ -14,7 +14,7 @@ export default function IntroductionArray() {
         },
         {
           step: "stepTwo",
-          backgroundImage: "/images/VillainsBoard.svg",
+          backgroundImage: "/images/Unit1-2.png",
           text: "Ich bin schon seit vielen Jahren als Detektiv tätig und habe zahlreiche Fälle gelöst! Hier links kannst du einige meiner Erfolge sehen. Aber in letzter Zeit gibt es einen Fall, den ich ohne Hilfe nicht lösen kann!",
           speechbubblePosition: "flex-end",
           speechbubbleSize: "middle",
@@ -22,15 +22,14 @@ export default function IntroductionArray() {
         },
         {
           step: "stepThree",
-          backgroundImage: "/images/IntroductionImageThree.svg",
+          backgroundImage: "/images/Unit1-3.png",
           text: "Im Moment ist der Rucksack noch leer, aber er wird sich füllen, sobald wir anfangen. Ich hoffe, dir werden die Überraschungen gefallen, die ich für dich vorbereitet habe. Bereit, loszulegen?",
           speechbubblePosition: "center",
           speechbubbleSize: "big",
-          speechbubbleMargin: "-68px",
         },
         {
           step: "stepFour",
-          backgroundImage: "/images/IntroductionImageMap.svg",
+          backgroundImage: "/images/Unit1-4.png",
           text: "Schau dir diese tolle Karte an, wo alles Spannende passiert! Und weißt du was? Dein Rucksack ist gleich hier rechts, immer bereit für dich zum Entdecken und Benutzen! Aber zuerst möchte ich dir etwas zeigen! Klicke einfach auf 'Weiter'.",
 
           speechbubblePosition: "flex-end",
@@ -83,13 +82,16 @@ export default function IntroductionArray() {
         },
         {
           step: "stepTwo",
-          backgroundImage: "/images/FoxHomeTwo.png",
+          backgroundImage: "/images/Unit3-2.png",
           text: "Sehr gut, ein Fan von mir hat mir einen Schraubenzieher durch das Gitter geworfen! Jetzt kann ich endlich ausbrechen!!!",
+          speechbubblePosition: "flex-start",
         },
         {
           step: "stepThree",
           backgroundImage: "/images/Unit3-3.png",
-          text: "Niemand hat es bemerkt! Super! Jetzt kann ich weiter in den sozialen Medien meiner “Arbeit” nachgehen. Pixel wird sich wundern!"
+          text: "Niemand hat es bemerkt! Super! Jetzt kann ich weiter in den sozialen Medien meiner “Arbeit” nachgehen. Pixel wird sich wundern!",
+          speechbubblePosition: "flex-start",
+          speechbubbleSize: "small",
         },
         {
           step: "stepFour",

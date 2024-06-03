@@ -183,16 +183,18 @@ export default function FrameOne() {
             {currentTaskIndex === index && (
               <div>
                 <div className="frame" key={index}>
-                  {tasks.step.map(
-                    (step, stepIndex) =>
-                      step.speachbubble && (
-                        <Speachbubble
-                          key={stepIndex}
-                          text={speachbubbleText || step.speachbubble}
-                          reason={reasonText}
-                        />
-                      )
-                  )}
+                  <div className="SpeachbubbleBox">
+                    {tasks.step.map(
+                      (step, stepIndex) =>
+                        step.speachbubble && (
+                          <Speachbubble
+                            key={stepIndex}
+                            text={speachbubbleText || step.speachbubble}
+                            reason={reasonText}
+                          />
+                        )
+                    )}
+                  </div>
                   <div className="PhoneBox">
                     <PhoneSimulator
                       title={tasks.step.map((obj) => obj.title)}

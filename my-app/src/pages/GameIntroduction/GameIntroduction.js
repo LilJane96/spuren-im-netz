@@ -86,10 +86,6 @@ export default function GameIntroduction() {
                       : "620px",
                   padding:
                     unitId === "GameIntroduction" ? "40px 18px" : "25px 18px",
-                  margin:
-                    unitId === "GameIntroduction"
-                      ? obj.speechbubbleMargin || "0"
-                      : "0 auto",
                 }}>
                 {obj.text}
               </p>
