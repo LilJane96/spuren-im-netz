@@ -1,7 +1,7 @@
 button {
   width: 212px;
   height: 64px;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;

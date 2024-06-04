@@ -9,7 +9,6 @@ import Backpack from "../../images/Backpack.svg";
 import MagnifyingGlass from "../../images/HubImages/Backpack/MagnifyingGlassActive.svg";
 import CustomButton from "../../components/Button/CustomButton";
 import "./Home.css";
-import { Link } from "@mui/material";
 import Slideshow from "../../components/Slideshow/Slideshow";
 import QRLiljana from "../../images/QRCodes/liljana.svg";
 import QRJulian from "../../images/QRCodes/julian.svg";
@@ -19,6 +18,7 @@ import Screenshot3 from "../../images/Screenshots/Screenshot3.svg";
 import Screenshot4 from "../../images/Screenshots/Screenshot4.svg";
 import Screenshot5 from "../../images/Screenshots/Screenshot5.svg";
 import PhoneSimulator from "../../components/PhoneSimulator/PhoneSimulator";
+import { Link } from "react-router-dom";
 
 function Home() {
   const images = [
@@ -53,7 +53,9 @@ function Home() {
             </div>
           </div>
           <div>
-            <Link href="/introduction/GameIntroduction">
+            <Link
+              href="/introduction/GameIntroduction"
+              style={{ textDecoration: "none" }}>
               <CustomButton
                 name="Spiel starten"
                 type="primary"
@@ -76,7 +78,9 @@ function Home() {
       <div className="row2">
         <div className="row2Left">
           <div className="simpleCard">
-            <Link href="https://www.hdm-stuttgart.de/">
+            <Link
+              href="https://www.hdm-stuttgart.de/"
+              style={{ textDecoration: "none" }}>
               <img className="logo" src="images/logo_hdm.jpg" alt="HdM Logo" />
             </Link>
           </div>
@@ -98,7 +102,9 @@ function Home() {
         </div>
         <div className="row2Right">
           <div className="simpleCard">
-            <Link href="https://www.schule4-0.de/">
+            <Link
+              href="https://www.schule4-0.de/"
+              style={{ textDecoration: "none" }}>
               <img
                 className="logo"
                 src="images/logo_schule40.png"
