@@ -44,17 +44,21 @@
   margin: -35px 70px;
 }
 
-.answerContainer {
+.frameContainer .answerContainer {
   width: 100%;
 }
 
-.fourOrMore {
+.frameContainer .answer {
+  margin: 20px 0;
+}
+
+.frameContainer .fourOrMore {
   display: grid;
   grid-template-columns: auto auto;
   gap: 0 10px;
 }
 
-.smallerThenFour {
+.frameContainer .smallerThenFour {
   display: flex;
   flex-direction: column;
   align-items: center;

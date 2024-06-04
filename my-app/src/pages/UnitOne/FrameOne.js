@@ -214,24 +214,26 @@ export default function FrameOne() {
                         (answer, stepIndex) =>
                           answer.answerboxes &&
                           answer?.answerboxes.map((answerObj, boxIndex) => (
-                            <AnswerBoxes
-                              key={`${stepIndex}-${boxIndex}`}
-                              type={answerObj?.type}
-                              text={answerObj?.answer}
-                              onClick={() =>
-                                handleSubmit(
-                                  answer?.question,
-                                  answerObj?.answer,
-                                  answerObj?.right,
-                                  answer?.rightAnswer,
-                                  answer?.wrongAnswer,
-                                  answer?.reason
-                                )
-                              }
-                              isCorrect={answerObj?.right}
-                              imageUrl={answerObj?.answer}
-                              imgAnswer={answerObj?.imgAnswer}
-                            />
+                            <div className="answer">
+                              <AnswerBoxes
+                                key={`${stepIndex}-${boxIndex}`}
+                                type={answerObj?.type}
+                                text={answerObj?.answer}
+                                onClick={() =>
+                                  handleSubmit(
+                                    answer?.question,
+                                    answerObj?.answer,
+                                    answerObj?.right,
+                                    answer?.rightAnswer,
+                                    answer?.wrongAnswer,
+                                    answer?.reason
+                                  )
+                                }
+                                isCorrect={answerObj?.right}
+                                imageUrl={answerObj?.answer}
+                                imgAnswer={answerObj?.imgAnswer}
+                              />
+                            </div>
                           ))
                       )}
                     </div>

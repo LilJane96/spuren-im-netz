@@ -1,9 +1,8 @@
 .AnswerBoxesComponent {
   width: 17rem;
-  height: 79px;
+  height: 80px;
   border-radius: 15px;
   background: #fff;
-  margin: 20px 0;
   box-shadow: 0px 4px 4px 0px var(--box-shadow);
   display: flex;
   justify-content: center;
@@ -16,23 +15,21 @@
   font-weight: 700;
   line-height: 40px;
   padding: 0px 20px;
+
+  cursor: pointer;
 }
 
 .AnswerBoxesComponent.imageContent {
-  margin: 6px 0px;
   width: 153px;
   height: 171px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.AnswerBoxesComponent.selected {
-  width: 373px;
-  height: 91px;
-}
 
-.AnswerBoxesComponent.green {
+.AnswerBoxesComponent.green.notImage {
   background-color: var(--answerbox-right);
+  width: 19rem;
 }
 
 .AnswerBoxesComponent.red {
@@ -40,7 +37,7 @@
 }
 
 .AnswerBoxesComponent.green {
-  background-color: #a0f959;
+  background-color: var(--answerbox-right);
 }
 
 .AnswerBoxesComponent.green:hover {
@@ -55,7 +52,7 @@
 }
 
 .AnswerBoxesComponent:hover {
-  background-color: #ffdcfa;
+  background-color: #fff4c9;
 }
 
 .AnswerBoxesComponent p.textContainer {

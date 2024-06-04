@@ -32,7 +32,7 @@ export default function IntroductionArray() {
           backgroundImage: "/images/Unit1-4.png",
           text: "Schau dir diese tolle Karte an, wo alles Spannende passiert! Und weißt du was? Dein Rucksack ist gleich hier rechts, immer bereit für dich zum Entdecken und Benutzen! Aber zuerst möchte ich dir etwas zeigen! Klicke einfach auf 'Weiter'.",
 
-          speechbubblePosition: "flex-end",
+          speechbubblePosition: "flex-start",
           speechbubbleSize: "middle",
           speechbubbleMargin: "0",
         },

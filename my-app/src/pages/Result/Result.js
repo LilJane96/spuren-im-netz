@@ -17,7 +17,7 @@ export default function Result() {
   const { unitId, stepId } = useParams();
   const units = JSON.parse(localStorage.getItem("UnitsArray")) || {};
   const totalTasks = units[unitId].answers.length + 1;
-  const initialTime = calculateRemainingTime(600);
+  const initialTime = calculateRemainingTime(300);
 
   useEffect(() => {
     const stepFromUrl = parseInt(stepId.replace("step", ""), 10) || 1;

@@ -49,7 +49,7 @@ const AnswerBoxes = ({
   return (
     <div
       className={`AnswerBoxesComponent ${
-        type === "image" ? "imageContent" : ""
+        type === "image" ? "imageContent" : "notImage"
       } ${clicked ? (isCorrect ? "green" : "red") : ""}`}
       onClick={handleClick}
       onBlur={handleBlur}
