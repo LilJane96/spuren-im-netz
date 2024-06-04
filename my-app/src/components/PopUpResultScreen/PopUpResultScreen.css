@@ -1,42 +1,65 @@
-.contentResultPopUp {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
 .containerDialogResult {
+    display: none; /* Standardmäßig versteckt */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dunkler Hintergrund */
+}
+
+.containerDialogResult.open {
+    display: block; /* Sichtbar, wenn 'open' true ist */
+}
+
+.containerDialogResult .dialogWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.containerDialogResult .dialog {
+    background-color: #fff;
+    padding: 2% 5%;
+    position: relative;
+    width: 42.7%;
+}
+
+.containerDialogResult .dialogText {
+    justify-content: center;
+}
+
+.containerDialogResult .dialogContent {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+    gap: 1;
 }
-.DialogContentText {
-    font-size: medium;
-    font-weight: bold;
-}
-.DialogTitle {
-    font-size: medium;
-}
-.dialog-logo-outside {
-    width: 238px;
-    height: 398px;
-    left: -210px;
-    top: 45px;
-    position: absolute;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-image: url("../../images/PopUpResultImages/GoodFoxResultReward.svg");
-}
-.starContainer {
+
+.containerDialogResult .dialogActions {
     display: flex;
-    align-items: center;
-}
-.imageDiv {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    margin-top: 20px;
+}
+
+.containerDialogResult .imageDiv {
+    width: 100%;
+}
+
+.containerDialogResult .imageDiv img {
+    cursor: pointer;
+    width: 50%;
+}
+
+.containerDialogResult .dialog-logo-outside img {
+    position: absolute;
+    left: 12%;
+    top: 25%;
+    z-index: 3;
+    width: 13%;
 }
