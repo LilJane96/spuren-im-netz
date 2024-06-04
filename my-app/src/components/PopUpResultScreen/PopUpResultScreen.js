@@ -7,10 +7,10 @@ import {
     Link,
 } from "@mui/material";
 import "./PopUpResultScreen.css";
-import OpenResultUnit1 from "../../images/OpenResultUnit1.svg";
-import ClosedResultBox from "../../images/ClosedResultBox.svg";
-import OpenResultUnit2 from "../../images/OpenResultUnit2.svg";
-import OpenResultUnit3 from "../../images/OpenResultUnit3.svg";
+import OpenResultUnit1 from "../../images/PopUpResultImages/OpenResultUnit1.svg";
+import ClosedResultBox from "../../images/PopUpResultImages/ClosedResultBox.svg";
+import OpenResultUnit2 from "../../images/PopUpResultImages/OpenResultUnit2.svg";
+import OpenResultUnit3 from "../../images/PopUpResultImages/OpenResultUnit3.svg";
 import React, { useState } from "react";
 import CustomButton from "../Button/CustomButton";
 

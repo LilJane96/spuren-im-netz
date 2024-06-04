@@ -3,7 +3,7 @@ import BarHomePage from "../../images/BarHomePage.svg";
 import WavingFox from "../../images/Foxes/wavingFox.svg";
 import SideFox from "../../images/Foxes/sideFox.svg";
 import ThiefFox from "../../images/Foxes/thiefFox.svg";
-import Chest from "../../images/ClosedResultBox.svg";
+import Chest from "../../images/PopUpResultImages/ClosedResultBox.svg";
 import Hat from "../../images/HubImages/Backpack/HeadActive.svg";
 import Backpack from "../../images/Backpack.svg";
 import MagnifyingGlass from "../../images/HubImages/Backpack/MagnifyingGlassActive.svg";
