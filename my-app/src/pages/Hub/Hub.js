@@ -1,16 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./Hub.css";
 import Sidebar from "../../components/Sidebar/Sidebar";
-import PhoneMap from "../../images/PhoneMap.png";
-import Pin1Active from "../../images/Pins/Pin1Active.png";
-import Pin2Active from "../../images/Pins/Pin2Active.png";
-import Pin2Inactive from "../../images/Pins/Pin2Inactive.png";
 import Backpack from "../../images/Backpack.svg";
 import BoardBackground from "../../images/Hub/Background.png";
 import Pin1Unlocked from "../../images/Hub/Level1Unlocked.png";
 import Pin2Unlocked from "../../images/Hub/Level2Unlocked.png";
 import Pin3Unlocked from "../../images/Hub/Level3Unlocked.png";
-import Pin4Unlocked from "../../images/Hub/Level4Unlocked.png";
 import String from "../../images/Hub/String.png";
 import Pin2Locked from "../../images/Hub/Level2Locked.png";
 import Pin3Locked from "../../images/Hub/Level3Locked.png";
@@ -21,8 +16,6 @@ import { useNavigate } from "react-router-dom";
 import CustomButton from "../../components/Button/CustomButton";
 import BackpackPopup from "../../components/BackpackPopup/BackpackPopup";
 import PhoneSimulator from "../../components/PhoneSimulator/PhoneSimulator";
-import { Link } from "@mui/material";
-import StopPopup from "../../components/StopPopup/StopPopup";
 
 function Hub() {
   const [open, setOpen] = useState(false);
