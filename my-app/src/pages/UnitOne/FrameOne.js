@@ -273,7 +273,7 @@ export default function FrameOne() {
                       disabled={true}
                     />
                   ) : (
-                    <Link style={{ textDecoration: "none" }}>
+                    <div>
                       <PopUpResultScreen
                         open={openBox}
                         unit={unitId}></PopUpResultScreen>
@@ -282,7 +282,7 @@ export default function FrameOne() {
                         type="primary"
                         onClick={handleGoToResult}
                       />
-                    </Link>
+                    </div>
                   )}
                 </div>
               </div>

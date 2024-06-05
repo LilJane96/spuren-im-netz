@@ -1,65 +1,65 @@
 .containerDialogResult {
-    display: none; /* Standardmäßig versteckt */
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Dunkler Hintergrund */
+  display: none; /* Standardmäßig versteckt */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dunkler Hintergrund */
 }
 
 .containerDialogResult.open {
-    display: block; /* Sichtbar, wenn 'open' true ist */
+  display: block; /* Sichtbar, wenn 'open' true ist */
 }
 
 .containerDialogResult .dialogWrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
 }
 
 .containerDialogResult .dialog {
-    background-color: #fff;
-    padding: 2% 5%;
-    position: relative;
-    width: 41.3%;
+  background-color: #fff;
+  padding: 2% 5%;
+  position: relative;
+  width: 41.3%;
 }
 
 .containerDialogResult .dialogText {
-    justify-content: center;
+  justify-content: center;
 }
 
 .containerDialogResult .dialogContent {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1;
 }
 
 .containerDialogResult .dialogActions {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .containerDialogResult .imageDiv {
-    width: 100%;
+  width: 100%;
 }
 
 .containerDialogResult .imageDiv img {
-    cursor: pointer;
-    width: 50%;
+  cursor: pointer;
+  width: 50%;
 }
 
 .containerDialogResult .dialog-logo-outside img {
-    position: absolute;
-    left: 11%;
-    top: 25%;
-    z-index: 3;
-    width: 15%;
+  position: absolute;
+  left: 11%;
+  top: 25%;
+  z-index: 3;
+  width: 15%;
 }

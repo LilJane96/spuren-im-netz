@@ -54,7 +54,7 @@ function Home() {
           </div>
           <div>
             <Link
-              href="/introduction/GameIntroduction"
+              to="/introduction/GameIntroduction"
               style={{ textDecoration: "none" }}>
               <CustomButton
                 name="Spiel starten"
@@ -78,11 +78,11 @@ function Home() {
       <div className="row2">
         <div className="row2Left">
           <div className="simpleCard">
-            <Link
+            <a
               href="https://www.hdm-stuttgart.de/"
               style={{ textDecoration: "none" }}>
               <img className="logo" src="images/logo_hdm.jpg" alt="HdM Logo" />
-            </Link>
+            </a>
           </div>
           <p>Hochschule der Medien</p>
         </div>
@@ -102,7 +102,7 @@ function Home() {
         </div>
         <div className="row2Right">
           <div className="simpleCard">
-            <Link
+            <a
               href="https://www.schule4-0.de/"
               style={{ textDecoration: "none" }}>
               <img
@@ -110,7 +110,7 @@ function Home() {
                 src="images/logo_schule40.png"
                 alt="HdM Logo"
               />
-            </Link>
+            </a>
           </div>
           <p>Schule 4.0</p>
         </div>

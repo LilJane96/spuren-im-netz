@@ -6,6 +6,7 @@ import OpenResultUnit2 from "../../images/PopUpResultImages/OpenResultUnit2.svg"
 import OpenResultUnit3 from "../../images/PopUpResultImages/OpenResultUnit3.svg";
 import GoodFoxResultReward from "../../images/PopUpResultImages/GoodFoxResultReward.svg";
 import CustomButton from "../Button/CustomButton";
+import { Link } from "react-router-dom";
 
 export default function PopUpResultScreen({ open, unit }) {
   const [openBox, setOpenBox] = useState(false);
@@ -47,8 +48,11 @@ export default function PopUpResultScreen({ open, unit }) {
             {showText && (
               <h2
                 className="dialogText h5"
-                style={{ marginTop: 30, color: "#E54E17", textAlign: "center" }}
-              >
+                style={{
+                  marginTop: 30,
+                  color: "#E54E17",
+                  textAlign: "center",
+                }}>
                 Sehr gut 🌟 Du hast echt das Zeug zu einem Meisterdetektiv zu
                 werden!
               </h2>
@@ -66,28 +70,30 @@ export default function PopUpResultScreen({ open, unit }) {
               {showText && (
                 <h2
                   className="dialogText"
-                  style={{ marginTop: 25, color: "#000000" }}
-                >
+                  style={{ marginTop: 25, color: "#000000" }}>
                   Klicke auf die Schatztruhe, um deine Belohnung einzusammeln!
                 </h2>
               )}
               {!showText && (
-                <h2 className="dialogText" style={{ marginTop: 20, color: "#000000" }}>
+                <h2
+                  className="dialogText"
+                  style={{ marginTop: 20, color: "#000000" }}>
                   Super! Du hast eine Belohnung erhalten!
                 </h2>
               )}
               {!buttonStatus && (
                 <div
                   className="dialogActions"
-                  style={{ marginTop: 20, marginBottom: 5 }}
-                >
-                  <a href={`/result/${unit}/step1`}>
+                  style={{ marginTop: 20, marginBottom: 5 }}>
+                  <Link
+                    to={`/result/${unit}/step1`}
+                    style={{ textDecoration: "none" }}>
                     <CustomButton
                       name="Schau dir deine Ergebnisse an!"
                       type="quinary"
                       style={{ width: "200px" }}
                     />
-                  </a>
+                  </Link>
                 </div>
               )}
             </div>
