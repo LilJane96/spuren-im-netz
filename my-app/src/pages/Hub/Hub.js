@@ -162,8 +162,13 @@ function Hub() {
               ) : (
                 <img className="Pin" style={{position: 'absolute', top: '57%', left: '10%',  width: '35%'}} src={Pin3Locked} alt="Pin3" />
               )}
-
-              <img className="Pin" style={{position: 'absolute', top: '55%', left: '70%',  width: '20%'}} src={Pin4Locked} alt="Pin4" />
+              {units.unit3?.done ? (
+              <img className="Pin" style={{position: 'absolute', top: '55%', left: '70%',  width: '20%'}} src={Pin4Locked} alt="Pin4"
+                onClick={() => handleOpenUnit("unit4")}
+              />
+              ) : (
+                <img className="Pin" style={{position: 'absolute', top: '55%', left: '70%',  width: '20%'}} src={Pin4Locked} alt="Pin4" />
+              )}
 
           </div>
       </div>

@@ -11,6 +11,7 @@ import GroupChatReport from "./GroupChatReport/GroupChatReport";
 import GroupRules from "./GroupRules/GroupRules";
 import SearchPerson from "./SearchPerson/SearchPerson";
 import UserProfile from "./UserProfile/UserProfile";
+import Advertisement from "./Advertisement/Advertisement";
 import "./PhoneSimulator.css";
 import UserProfileEndUnit from "./UserProfileEndUnit/UserProfileEndUnit";
 import Bottombar from "../Bottombar/Bottombar";
@@ -92,6 +93,8 @@ export default function PhoneSimulator({
         return <GroupChatReport answer={selectedAnswer} />;
       case 18:
         return <GroupRules answer={selectedAnswer} />;
+      case 19:
+        return <Advertisement answer={selectedAnswer} />;
       default:
         return null;
     }

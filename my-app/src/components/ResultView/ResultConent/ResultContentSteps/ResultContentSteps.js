@@ -4,8 +4,9 @@ import "./ResultContentSteps.css";
 import UnitOne from "../../../../Units/UnitOne";
 import UnitTwo from "../../../../Units/UnitTwo";
 import UnitThree from "../../../../Units/UnitThree";
+import UnitFour from "../../../../Units/UnitThree";
 
-const unitsArray = [UnitOne(), UnitTwo(), UnitThree()];
+const unitsArray = [UnitOne(), UnitTwo(), UnitThree(), UnitFour()];
 
 export default function ResultContentSteps({ unitId, stepId }) {
   const path = useParams();
