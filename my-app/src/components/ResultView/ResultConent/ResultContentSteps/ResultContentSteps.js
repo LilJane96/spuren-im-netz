@@ -4,7 +4,7 @@ import "./ResultContentSteps.css";
 import UnitOne from "../../../../Units/UnitOne";
 import UnitTwo from "../../../../Units/UnitTwo";
 import UnitThree from "../../../../Units/UnitThree";
-import UnitFour from "../../../../Units/UnitThree";
+import UnitFour from "../../../../Units/UnitFour";
 
 const unitsArray = [UnitOne(), UnitTwo(), UnitThree(), UnitFour()];
 

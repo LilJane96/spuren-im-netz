@@ -6,6 +6,7 @@ import BoardBackground from "../../images/Hub/Background.png";
 import Pin1Unlocked from "../../images/Hub/Level1Unlocked.png";
 import Pin2Unlocked from "../../images/Hub/Level2Unlocked.png";
 import Pin3Unlocked from "../../images/Hub/Level3Unlocked.png";
+import Pin4Unlocked from "../../images/Hub/Level4Unlocked.png";
 import String from "../../images/Hub/String.png";
 import Pin2Locked from "../../images/Hub/Level2Locked.png";
 import Pin3Locked from "../../images/Hub/Level3Locked.png";
@@ -163,7 +164,7 @@ function Hub() {
                 <img className="Pin" style={{position: 'absolute', top: '57%', left: '10%',  width: '35%'}} src={Pin3Locked} alt="Pin3" />
               )}
               {units.unit3?.done ? (
-              <img className="Pin" style={{position: 'absolute', top: '55%', left: '70%',  width: '20%'}} src={Pin4Locked} alt="Pin4"
+              <img className="Pin" style={{position: 'absolute', top: '55%', left: '70%',  width: '20%'}} src={Pin4Unlocked} alt="Pin4"
                 onClick={() => handleOpenUnit("unit4")}
               />
               ) : (

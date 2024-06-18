@@ -8,6 +8,10 @@ import FinalFrameThree from "../../components/Final/FinalFrameThree";
 import FinalFrameFour from "../../components/Final/FinalFrameFour";
 import FinalFrameFive from "../../components/Final/FinalFrameFive";
 import FinalFrameSix from "../../components/Final/FinalFrameSix";
+import FinalFrameSeven from "../../components/Final/FinalFrameSeven";
+import FinalFrameEight from "../../components/Final/FinalFrameEight";
+import FinalFrameNine from "../../components/Final/FinalFrameNine";
+
 
 export default function FinishGame() {
   const { stepId } = useParams(); // Extrahiere den "step"-Parameter aus der URL
@@ -41,11 +45,14 @@ export default function FinishGame() {
       <div>{currentStep === "step5" && <FinalFrameFour />}</div>
       <div>{currentStep === "step6" && <FinalFrameFive />}</div>
       <div>{currentStep === "step7" && <FinalFrameSix />}</div>
+      <div>{currentStep === "step8" && <FinalFrameSeven />}</div>
+      <div>{currentStep === "step9" && <FinalFrameEight />}</div>
+      <div>{currentStep === "step10" && <FinalFrameNine />}</div>
 
       <div className="NavigationButtons">
-        {(!currentStep === "1" && !currentStep === "5") && (
+        {/* {(!(currentStep === "1") && !(currentStep === "5")) && (
           <button onClick={goToPreviousStep}>Vorheriger Schritt</button>
-        )}
+        )} */}
 
         {currentStep < 2 && (
           <button onClick={goToNextStep}>Nächster Schritt</button>
