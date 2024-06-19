@@ -30,21 +30,20 @@ export default function FinalFrameNine() {
     setOpenBox(true);
   };
   return (
-    <div className="FinalFrameNineContainer">
+    <div className="FinalFrameNineContainer" onClick={handleNextStep}>
+
       <div className="SpeechbubbleContainer">
-        <div className="overlay">
-          <div className="bubble speech">
-            <div className="circle"></div>
-            <p style={{ fontWeight: "light" }}>
-              Hier für dich! 
-              Klick es an, um deine 
-              Belohnung zu erhalten
-            </p>
-          </div>
+        <div className="Bubble">
+        Hier für dich!
+        <br></br>
+        Klick es an, um deine Belohnung zu erhalten.
         </div>
       </div>
-      <div>
-        <CustomButton type="primary" name="Weiter" onClick={handleNextStep} />
+
+      <div className="ButtonContainer">
+        <div className="button">
+          <CustomButton type="primary" name="Weiter" onClick={handleNextStep} />
+        </div>
       </div>
       {openBox && (
         <PopUpResultScreen open={openBox} unit="unit4"></PopUpResultScreen>

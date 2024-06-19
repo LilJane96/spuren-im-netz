@@ -33,12 +33,17 @@ export default function FinalFrameSeven() {
 
   return (
     <div className="FinalFrameSevenContainer">
+
       <div className="SpeechbubbleContainer">
-        <Speachbubble text="Danke für deine Hilfe. Ich habe nun doch ein anderes Geschenk gekauft. Die Werbung kam mir komisch vor! Ich hoffe es wird Mara gefallen." />
+        <div className="Bubble">
+        Danke für deine Hilfe. Ich habe nun doch ein anderes Geschenk gekauft. Die Werbung kam mir komisch vor! Ich hoffe es wird Mara gefallen.
+        </div>
       </div>
 
-      <div className="button">
-        <CustomButton type="primary" name="Weiter" onClick={handleNextStep} />
+      <div className="ButtonContainer">
+        <div className="button">
+          <CustomButton type="primary" name="Weiter" onClick={handleNextStep} />
+        </div>
       </div>
     </div>
   );

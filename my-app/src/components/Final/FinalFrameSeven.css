@@ -1,21 +1,31 @@
 .FinalFrameSevenContainer {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   height: 100vh;
-  margin-right: 40px;
 }
 
 .FinalFrameSevenContainer .SpeechbubbleContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
   width: 100%;
   height: 100%;
-  margin: 0;
 }
 
-.FinalFrameSevenContainer .button {
-  align-self: flex-end;
+.FinalFrameSevenContainer .Bubble {
+  margin-top: 10%;
+  margin-right: 5%;
+  border-radius: 25px;
+  background-color: white;
+  padding: 2%;
+  width: 50%;
+  box-shadow: 0px 4px 15px black;
+}
+
+.FinalFrameSevenContainer .ButtonContainer {
+  display: flex;
+  justify-content: flex-end;
   margin-bottom: 20px;
+  margin-right: 40px;
 }

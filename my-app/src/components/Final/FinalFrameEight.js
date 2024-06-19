@@ -35,12 +35,17 @@ export default function FinalFrameEight() {
   };
   return (
     <div className="FinalFrameEightContainer">
+
       <div className="SpeechbubbleContainer">
-        <Speachbubble text="Jetzt habe ich das beste Geschenk für Mara! Nachdem ich nochmal genauer bei anderen Produkten hingeschaut habe, konnte ich ein super Geschenk finden. Für deine Hilfe bekommst du von mir auch ein Geschenk!" />
+        <div className="Bubble">
+        Jetzt habe ich das beste Geschenk für Mara! Nachdem ich nochmal genauer bei anderen Produkten hingeschaut habe, konnte ich ein super Geschenk finden. Für deine Hilfe bekommst du von mir auch ein Geschenk!
+        </div>
       </div>
 
-      <div className="button">
-        <CustomButton type="primary" name="Weiter" onClick={handleNextStep} />
+      <div className="ButtonContainer">
+        <div className="button">
+          <CustomButton type="primary" name="Weiter" onClick={handleNextStep} />
+        </div>
       </div>
     </div>
   );
