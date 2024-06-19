@@ -1,0 +1,32 @@
+.FinalFrameNineContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.FinalFrameNineContainer .SpeechbubbleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.FinalFrameNineContainer .Bubble {
+  margin-right: 5%;
+  border-radius: 25px;
+  background-color: white;
+  padding: 2%;
+  box-shadow: 0px 4px 15px black;
+}
+
+.FinalFrameNineContainer .ButtonContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  margin-right: 40px;
+}
+
+

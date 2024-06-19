@@ -1,0 +1,133 @@
+.Advertisement {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.Advertisement * {
+  margin: 0;
+}
+
+
+/* HEADER */
+
+.Advertisement .Advertiser {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 15%;
+  margin: 2% 0%;
+}
+
+.Advertisement .AdvertiserLogo {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Advertisement .AdvertiserLogo img {
+  width: 60%;
+  aspect-ratio: 1/1;
+}
+
+.Advertisement .AdvertiserInfo {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Advertisement .AdvertiserInfo p {
+  margin: 0;
+}
+
+.Advertisement .CloseAdvertisement {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Advertisement .CloseAdvertisement img {
+  aspect-ratio: 1/1;
+}
+
+/* Ad Content */
+
+.Advertisement .AdvertisementBox {
+  width: 95%;
+}
+
+.Advertisement .AdvertisementContent {
+  width: 95%;
+  border: 1px solid lightgray;
+  border-radius: 15px;
+  padding: 4% 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Advertisement .AdvertisementContent img {
+  width: 100%;
+}
+
+.Advertisement .AdvertisementContent hr {
+  width: 70%;
+  border-color: lightgray;
+  margin: 3%;
+  opacity: 0.5;
+}
+
+/* Comments */
+
+.Advertisement .Comments {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2%;
+}
+
+.Advertisement .Comments hr {
+  width: 70%;
+  border-color: lightgray;
+  margin: 3%;
+  opacity: 0.5;
+}
+
+.Advertisement .Comment {
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5%;
+}
+
+.Advertisement .CommentImg {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.Advertisement .Comment img {
+  width: 70%;
+}
+
+.Advertisement .CommentText {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

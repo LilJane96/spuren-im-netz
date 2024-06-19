@@ -4,6 +4,7 @@ import OpenResultUnit1 from "../../images/PopUpResultImages/OpenResultUnit1.svg"
 import ClosedResultBox from "../../images/PopUpResultImages/ClosedResultBox.svg";
 import OpenResultUnit2 from "../../images/PopUpResultImages/OpenResultUnit2.svg";
 import OpenResultUnit3 from "../../images/PopUpResultImages/OpenResultUnit3.svg";
+import OpenResultUnit4 from "../../images/PopUpResultImages/OpenResultUnit4.svg";
 import GoodFoxResultReward from "../../images/PopUpResultImages/GoodFoxResultReward.svg";
 import CustomButton from "../Button/CustomButton";
 import { Link } from "react-router-dom";
@@ -24,6 +25,8 @@ export default function PopUpResultScreen({ open, unit }) {
         return OpenResultUnit2;
       case "unit3":
         return OpenResultUnit3;
+      case "unit4":
+        return OpenResultUnit4;
       default:
         return OpenResultUnit1;
     }

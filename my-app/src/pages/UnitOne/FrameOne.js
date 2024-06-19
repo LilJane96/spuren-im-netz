@@ -10,9 +10,10 @@ import PopUpResultScreen from "../../components/PopUpResultScreen/PopUpResultScr
 import UnitOne from "../../Units/UnitOne";
 import UnitTwo from "../../Units/UnitTwo";
 import UnitThree from "../../Units/UnitThree";
+import UnitFour from "../../Units/UnitFour";
 
 export default function FrameOne() {
-  const unitsArray = [UnitOne(), UnitTwo(), UnitThree()];
+  const unitsArray = [UnitOne(), UnitTwo(), UnitThree(), UnitFour()];
 
   const [selectedAnswer, setSelectedAnswer] = useState("");
   const [reasonText, setReasonText] = useState("");
@@ -167,6 +168,8 @@ export default function FrameOne() {
       navigate(`/finishedGame/step1`);
     } else if (unitId === "unit3") {
       navigate(`/finishedGame/step5`);
+    } else if (unitId === "unit4") {
+      navigate(`/finishedGame/step8`);
     }
   };
 

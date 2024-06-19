@@ -102,5 +102,40 @@ export default function IntroductionArray() {
       backTo: "/hub",
       navigate: "/frameone/unit3/step1",
     },
+    {
+      id: 4,
+      name: "unit4",
+      steps: [
+        {
+          step: "stepOne",
+          backgroundImage: "/images/Unit4-1.png",
+          text: "Oh, habt ihr das schon gesehen? Felix ist wieder im Fuchsbau gelandet, nachdem er ausgebrochen war. Sehr gut!",
+          speechbubblePosition: "flex-end",
+          speechbubbleSize: "small",
+        },
+        {
+          step: "stepTwo",
+          backgroundImage: "/images/Unit4-2.png",
+          text: "Das ist mir gar nicht aufgefallen, wir haben ja schon den 27. Juli!! Meine beste Freundin Mara hat bald Geburtstag.",
+          speechbubblePosition: "flex-end",
+          speechbubbleSize: "x-small",
+        },
+        {
+          step: "stepThree",
+          backgroundImage: "/images/Unit4-3.png",
+          text: "Ich brauche ein tolles Geschenk, was ihr gut gefällt, bevor ihr Geburtstag ist! Aber ich hab noch keine Idee, was ich ihr schenken kann. Ich schaue mal auf meinem Handy, was ich gutes finden kann.",
+          speechbubblePosition: "flex-end",
+        },
+        {
+          step: "stepFour",
+          backgroundImage: "/images/Unit4-4.png",
+          text: "Oh ja, hier wird mir etwas vorgeschlagen. Ich habe zwar nicht danach gesucht, aber das sieht echt gut aus. Kannst du mir hierbei weiterhelfen?",
+          speechbubblePosition: "flex-end",
+          speechbubbleSize: "small",
+        },
+      ],
+      backTo: "/hub",
+      navigate: "/frameone/unit4/step1",
+    },
   ];
 }
