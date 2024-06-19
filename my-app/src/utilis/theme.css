@@ -6,8 +6,10 @@
 }
 
 [data-theme="default"] {
-  --background: #fff174;
-  --background-img: url("../images/BackgroundImages/BackgroundImageYellow.png");
+  --primary-bg-color: #ffeeae;
+
+  --background: #ffeeae;
+  --background-img: url("../images/BackgroundImages/BackgroundImageYellow.svg");
   --box-shadow: #c9bc48;
   --button-txt-color: #f0fffa;
   --button-primary-bg-color: linear-gradient(90deg, #ff9902 0%, #f36b21 100%);
@@ -20,25 +22,36 @@
   );
   --button-primary-before-disabled: #ef9e81;
 
+  --img-bg-color: #ffd873;
+
   /*SECONDARY*/
   --button-sec-bg-back: linear-gradient(90deg, #ffd873 0%, #ffd873 100%);
   --button-sec-before-back: rgba(254, 189, 1, 1);
   --button-sec-before-back-disabled: rgba(254, 189, 1, 1);
   --button-sec-back-disabled: linear-gradient(90deg, #ffd873 0%, #ffd873 46%);
 
+  --cross-btn: url("../images/CrossButtonYellow.svg");
+
   --stepper-color: #f36b21;
+  --sidebar-bg-color: #ffd873;
   --sidebar-text-color: #000;
   --result-border-color: #f36b21;
 
-  --answerbox-right: #ff7449;
+  --result-header: url("../images/ResultPage/ResultBackgroundYellow.svg");
+
+  --answerbox-right: #65dcb4;
   --answerbox-wrong: #ff8653;
+
+  --bagback-header-bg-color: #e54e17;
+  --welcome-bg-img: url("../images/WelcomePage/PfotenYellow.svg");
 }
 
 [data-theme="blue"] {
-  --background: #e3f6ff;
-  --background-img: url("../images/BackgroundImages/BackgroundImageBlue.png");
+  --primary-bg-color: #73c4ff;
+  --background: #aeddff;
+  --background-img: url("../images/BackgroundImages/BackgroundImageBlue.svg");
   --button-txt-color: #f0fffa;
-  --box-shadow: #add7ea;
+  --box-shadow: #73c4ff;
   --button-txt-color: #f0fffa;
   --button-primary-bg-color: linear-gradient(90deg, #ff9902 0%, #f36b21 100%);
   --button-primary-before: #e54e17;
@@ -50,23 +63,37 @@
   );
   --button-primary-before-disabled: #ef9e81;
 
+  --img-bg-color: #73c4ff;
+
   /*SECONDARY*/
   --button-sec-bg-back: linear-gradient(90deg, #ffd873 0%, #ffd873 100%);
   --button-sec-before-back: rgba(254, 189, 1, 1);
   --button-sec-before-back-disabled: rgba(254, 189, 1, 1);
   --button-sec-back-disabled: linear-gradient(90deg, #ffd873 0%, #ffd873 46%);
 
+  --cross-btn: url("../images/CrossButtonYellow.svg");
+
   --stepper-color: #f36b21;
+  --sidebar-bg-color: #73c4ff;
   --sidebar-text-color: #000;
   --result-border-color: #f36b21;
 
+  --result-header: url("../images/ResultPage/ResultBackgroundYellow.svg");
+
   --answerbox-right: #00d58d;
+  --answerbox-right-border: #06865b;
+
   --answerbox-wrong: #ff7449;
+
+  --bagback-header-bg-color: #f36b21;
+  --welcome-bg-img: url("../images/WelcomePage/PfotenBlue.svg");
 }
 
 [data-theme="yellow"] {
-  --background: #fff174;
-  --background-img: url("../images/BackgroundImages/BackgroundImageYellow.png");
+  --primary-bg-color: #ffeeae;
+
+  --background: #ffeeae;
+  --background-img: url("../images/BackgroundImages/BackgroundImageYellow.svg");
   --box-shadow: #c9bc48;
   --button-txt-color: #f0fffa;
   --button-primary-bg-color: linear-gradient(90deg, #ff9902 0%, #f36b21 100%);
@@ -79,27 +106,41 @@
   );
   --button-primary-before-disabled: #ef9e81;
 
+  --img-bg-color: #ffd873;
+
   /*SECONDARY*/
   --button-sec-bg-back: linear-gradient(90deg, #ffd873 0%, #ffd873 100%);
   --button-sec-before-back: rgba(254, 189, 1, 1);
   --button-sec-before-back-disabled: rgba(254, 189, 1, 1);
   --button-sec-back-disabled: linear-gradient(90deg, #ffd873 0%, #ffd873 46%);
 
+  --cross-btn: url("../images/CrossButtonYellow.svg");
+
   --stepper-color: #f36b21;
+  --sidebar-bg-color: #ffd873;
   --sidebar-text-color: #000;
   --result-border-color: #f36b21;
 
-  --answerbox-right: #ff7449;
+  --result-header: url("../images/ResultPage/ResultBackgroundYellow.svg");
+
+  --answerbox-right: #65dcb4;
   --answerbox-wrong: #ff8653;
+
+  --bagback-header-bg-color: #e54e17;
+  --welcome-bg-img: url("../images/WelcomePage/PfotenYellow.svg");
 }
 
 [data-theme="pink"] {
+  --primary-bg-color: #f87793;
+
   --background: #ffaed5;
   --background-img: url("../images/BackgroundImages/BackgroundImagePink.svg");
-  --box-shadow: #e298c5;
+  --box-shadow: #f87793;
   --button-txt-color: #f0fffa;
-  --button-primary-bg-color: linear-gradient(90deg, #ff9902 0%, #f36b21 100%);
+  --button-primary-bg-color: linear-gradient(90deg, #f36b21 0%, #eb4b4b 100%);
   --button-primary-before: #e54e17;
+
+  --img-bg-color: #f87793;
 
   --button-primary-bg-color-disabled: linear-gradient(
     90deg,
@@ -114,10 +155,18 @@
   --button-sec-before-back-disabled: rgba(254, 189, 1, 1);
   --button-sec-back-disabled: linear-gradient(90deg, #ffd873 0%, #ffd873 46%);
 
+  --cross-btn: url("../images/CrossButtonPink.svg");
+
   --stepper-color: #f36b21;
+  --sidebar-bg-color: #f87793;
   --sidebar-text-color: #000;
   --result-border-color: #f36b21;
 
+  --result-header: url("../images/ResultPage/ResultBackgroundPink.svg");
+
   --answerbox-right: #a2e360;
   --answerbox-wrong: #eb4b4b;
+
+  --bagback-header-bg-color: #8d0f3a;
+  --welcome-bg-img: url("../images/WelcomePage/PfotenPink.svg");
 }

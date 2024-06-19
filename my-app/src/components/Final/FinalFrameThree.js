@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import backgroundImage from "../../images/Final/FinalViewThree.png";
 import "./FinalFrameThree.css";
 import CustomButton from "../Button/CustomButton";
-import { useNavigate } from "react-router-dom";
 import PopUpResultScreen from "../PopUpResultScreen/PopUpResultScreen";
 
 export default function FinalFrameThree() {
@@ -36,7 +35,9 @@ export default function FinalFrameThree() {
           <div className="bubble speech">
             <div className="circle"></div>
             <p style={{ fontWeight: "light" }}>
-              Vielen Dank, dass du mir geholfen hast! Ich habe ihn endlich nach mehreren Wochen erwischt. Das hätte ich ohne deine Hilfe nicht geschafft! Klicke auf weiter und hole dir deine Belohnung ab!
+              Vielen Dank, dass du mir geholfen hast! Ich habe ihn endlich nach
+              mehreren Wochen erwischt. Das hätte ich ohne deine Hilfe nicht
+              geschafft! Klicke auf weiter und hole dir deine Belohnung ab!
             </p>
           </div>
         </div>

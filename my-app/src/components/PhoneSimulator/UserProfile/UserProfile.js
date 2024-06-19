@@ -67,7 +67,6 @@ export default function UserProfile({ profileData, answer }) {
               )}
             </p>
           </div>
-
           <div className="Line" />
             <div className="ImageContainer">
               {profileData[0].images.map((obj) => (

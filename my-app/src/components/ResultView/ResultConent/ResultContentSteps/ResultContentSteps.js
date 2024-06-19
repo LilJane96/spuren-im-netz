@@ -4,8 +4,9 @@ import "./ResultContentSteps.css";
 import UnitOne from "../../../../Units/UnitOne";
 import UnitTwo from "../../../../Units/UnitTwo";
 import UnitThree from "../../../../Units/UnitThree";
+import UnitFour from "../../../../Units/UnitFour";
 
-const unitsArray = [UnitOne(), UnitTwo(), UnitThree()];
+const unitsArray = [UnitOne(), UnitTwo(), UnitThree(), UnitFour()];
 
 export default function ResultContentSteps({ unitId, stepId }) {
   const path = useParams();
@@ -24,10 +25,12 @@ export default function ResultContentSteps({ unitId, stepId }) {
       </div>
       <ul className={hasImages ? "AnswerList has-images" : "AnswerList"}>
         {answerObj.map((obj, index) => {
-          const backgroundColor = obj.right ? "#65DCB4" : "#FF7449";
-          const imgBorderColot = obj.right
-            ? "6px solid #65DCB4"
-            : "6px solid #FF7449";
+          const backgroundColor = obj.right
+            ? "#65DCB4"
+            : "var(--answerbox-wrong)";
+          const imgBorderColor = obj.right
+            ? "6px solid #06865B"
+            : "6px solid var(--answerbox-wrong)";
 
           return (
             <li className="Answer" key={index}>
@@ -37,7 +40,7 @@ export default function ResultContentSteps({ unitId, stepId }) {
                   alt={`Answer ${index}`}
                   className="AnswerImage"
                   style={{
-                    border: imgBorderColot,
+                    border: imgBorderColor,
                   }}
                 />
               ) : (
@@ -45,7 +48,7 @@ export default function ResultContentSteps({ unitId, stepId }) {
                   className="AnswerText"
                   style={{
                     backgroundColor: backgroundColor,
-                    border: "6px solid #FF7449",
+                    border: imgBorderColor,
                   }}>
                   {obj.answer}
                 </span>

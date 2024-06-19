@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import SendImg from "../../../images/unit3/Send.svg";
-import BadFoxPicture from "../../../images/ProfileImages/ProfilBadFox/BadFoxProfilePicture.png";
+import BadFoxPicture from "../../../images/ProfileImages/ProfilBadFox/BadFoxProfilePicture.svg";
 
 export default function MessageOfStranger({ answer }) {
   const [selectedAnswer, setSelectedAnswer] = useState("");

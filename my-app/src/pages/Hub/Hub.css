@@ -5,59 +5,68 @@
   height: 100vh;
   justify-content: space-between;
 }
-
-.hub .HeaderContainer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: calc(100% - 50px);
-  margin: 25px 20px 0;
-}
-
 .hub .MapContainer {
   margin: -130px 0 0;
 }
-
+.hub .HeaderContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(100% - 50px);
+  margin: 25px 20px 0;
+}
 .hub .foxProfileContainer {
   z-index: 999;
 }
-
-.hub .fox {
+.hub .UserProfileContainer {
+  z-index: 999;
+}
+.hub .UserProfile {
   cursor: pointer;
-  align-self: flex-start;
+  margin-left: 10px;
   border: 6px solid #4e4e4e;
   border-radius: 60px;
-  left: 45px;
+  width: 4.45em;
+  height: 4.45em;
+  object-fit: cover;
+}
+.hub .fox {
+  cursor: pointer;
+  margin-left: 10px;
+  border: 6px solid #4e4e4e;
+  border-radius: 60px;
+  align-self: flex-end;
 }
 
+.hub .upperLeftOptions {
+  display: flex;
+  align-items: center;
+}
 .hub .backpack {
   cursor: pointer;
   align-self: flex-end;
 }
-
 .hub .upperRightOptions {
   display: flex;
+  justify-content: flex-end;
   flex-direction: row;
   gap: 45px;
   z-index: 999;
 }
-
 .hub .map {
   position: relative;
-  max-width: 100%; /* Füge diese Zeile hinzu, um die maximale Breite auf 100% zu setzen */
-  height: auto; /* Füge diese Zeile hinzu, um das Seitenverhältnis beizubehalten */
+  max-width: 100%;
+  height: auto;
 }
-
 .hub .pins {
   position: absolute;
 }
-
 .hub .pinOne {
   cursor: pointer;
   position: absolute;
   transform: translate(540%, -421%);
 }
-
 .hub .pinTwoActive {
   cursor: pointer;
   position: absolute;
@@ -73,7 +82,6 @@
   flex: 1;
   margin: 50px 0;
 }
-
 .hub .ProfileViewContainer {
   display: flex;
   justify-content: center;
@@ -86,11 +94,41 @@
   background: rgb(114 114 114 / 20%);
   z-index: 999;
 }
-
 .hub .ProfileView {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   height: 75vh;
+}
+
+.hub .UserProfileView {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 75vh;
+}
+
+.hub .BoardContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.hub .BoardWrapper{
+  width: 75%;
+}
+
+.hub .Board{
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.hub .Pin{
+  position: absolute;
+  cursor: pointer;
 }

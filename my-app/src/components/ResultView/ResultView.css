@@ -16,6 +16,11 @@
   background-clip: content-box, border-box;
 }
 
+.ResultViewContainer .TitleBackground {
+  width: 0;
+  height: 6%;
+}
+
 .ResultViewContainer .Description {
   display: flex;
   align-items: center;

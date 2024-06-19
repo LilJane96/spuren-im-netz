@@ -7,7 +7,7 @@ import { calculateRemainingTime } from "../../utilis/timer";
 const Ampel = ({ open, onClose }) => {
   const [isRedActive, setIsRedActive] = useState(true);
   const [popupVisible, setPopupVisible] = useState(open);
-  const initialTime = calculateRemainingTime(600);
+  const initialTime = calculateRemainingTime(300);
 
   const handleTimeUp = () => {
     setIsRedActive(false);

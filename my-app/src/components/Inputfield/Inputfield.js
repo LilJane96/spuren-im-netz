@@ -9,6 +9,7 @@ export default function Inputfield({
   type,
   width,
   height,
+  pointerEvents,
 }) {
   return (
     <div className="InputfieldContainer">
@@ -19,7 +20,11 @@ export default function Inputfield({
         value={value}
         readOnly={readOnly}
         onChange={onChange}
-        style={{ width: `${width}`, height: `${height}` }}></input>
+        style={{
+          width: `${width}`,
+          height: `${height}`,
+          pointerEvents: `${pointerEvents}`,
+        }}></input>
     </div>
   );
 }

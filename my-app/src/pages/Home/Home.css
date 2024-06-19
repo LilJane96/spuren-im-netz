@@ -3,6 +3,19 @@
   font-weight: 600;
 }
 
+.HomeMain {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-position: center;
+  background-repeat: repeat;
+  background-image: var(--welcome-bg-img);
+  background-color: var(--background);
+  overflow-y: auto;
+  background-size: 200%;
+}
+
 .HomeContainer {
   display: flex;
   justify-content: space-around;
@@ -20,17 +33,26 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50%;
+  height: 80%;
+}
+
+.HomeContainer .PhoneSimulatorContainer {
+  height: 70%;
+  width: 100%;
+}
+
+.HomeContainer .foxContainer {
+  height: 60%;
+  z-index: 1;
 }
 
 .HomeContainer #fox1 {
-  margin-right: -40px;
+  margin-right: -30px;
   height: 100%;
 }
 
 .HomeContainer #fox2 {
-  margin-left: -55px;
-  z-index: 1;
+  margin-left: -33px;
   height: 100%;
   pointer-events: none;
 }
@@ -113,8 +135,8 @@
   display: flex;
   align-items: center;
   justify-content: left;
-  width: 100%;
-  padding-left: 40px;
+  width: 98%;
+  padding-left: 2%;
   gap: 40px;
 }
 
@@ -122,8 +144,8 @@
   display: flex;
   align-items: center;
   justify-content: right;
-  width: 100%;
-  padding-right: 40px;
+  width: 98%;
+  padding-left: 2%;
   gap: 40px;
 }
 

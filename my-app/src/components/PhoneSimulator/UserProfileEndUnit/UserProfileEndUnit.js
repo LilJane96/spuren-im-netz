@@ -4,7 +4,7 @@ import DVD from "../../../images/ProfileImages/ProfilBadFox/DVD.jpeg";
 import Playstation from "../../../images/ProfileImages/ProfilBadFox/Playstation.jpeg";
 import Vacation from "../../../images/ProfileImages/ProfilBadFox/Vacation.jpg";
 import Profilepicture from "../../../images/ProfileImages/ProfilpictureFirst.png";
-import BadFoxProfilePicture from "../../../images/ProfileImages/ProfilBadFox/BadFoxProfilePicture.png";
+import BadFoxProfilePicture from "../../../images/ProfileImages/ProfilBadFox/BadFoxProfilePicture.svg";
 import Ring from "../../../images/ProfileImages/ProfilBadFox/Ring.jpg";
 import Grill from "../../../images/ProfileImages/ProfilBadFox/Grill.jpg";
 import HausPlaystation from "../../../images/ProfileImages/ProfilBadFox/HausPlaystation.jpg";
@@ -73,53 +73,53 @@ export default function UserProfileEndUnit() {
   }, []);
 
   return (
-    <div className="UserProfileEndUnitContainer">
-      <div className="SwitchProfilePictureContainer">
-        <img
-          src={currentImage}
-          alt="Profilbild"
-          className={`SkipProfilePicture ${isFlipping ? "flipAnimation" : ""}`}
-        />
-      </div>
-      <div className="ProfileImageContainer">
-        <img src={Profilepicture} alt="Profilbild" className="ProfilePicture" />
-        <p className="text">Felix</p>
-      </div>
-      <div className="flexContainer">
-        <div className="textContainer">
-          <p className="count">26</p>
-          <p className="text">Posts</p>
+      <div className="UserProfileEndUnitContainer">
+        <div className="SwitchProfilePictureContainer">
+          <img
+              src={currentImage}
+              alt="Profilbild"
+              className={`SkipProfilePicture ${isFlipping ? "flipAnimation" : ""}`}
+          />
         </div>
-        <div className="textContainer">
-          <p className="count">128</p>
-          <p className="text">Follower</p>
+        <div className="ProfileImageContainer">
+          <img src={Profilepicture} alt="Profilbild" className="ProfilePicture" />
+          <p className="text">Felix</p>
         </div>
-        <div className="textContainer">
-          <p className="count">28</p>
-          <p className="text">Freunde</p>
+        <div className="flexContainer">
+          <div className="textContainer">
+            <p className="count">26</p>
+            <p className="text">Posts</p>
+          </div>
+          <div className="textContainer">
+            <p className="count">128</p>
+            <p className="text">Follower</p>
+          </div>
+          <div className="textContainer">
+            <p className="count">28</p>
+            <p className="text">Freunde</p>
+          </div>
         </div>
-      </div>
-      <div>
-        <p className="answerText">
+        <div>
+          <p className="answerText">
           <span>
-            📍 Standort <br />
+            📍 Reutlingen <br />
             39
           </span>
-        </p>
+          </p>
+        </div>
+        <div className="Line" />
+        <div style={{ marginLeft: "6px" }}>
+          <ul className="ImageContainer">
+            {images.map((obj) => (
+                <li key={obj.id}>
+                  <img src={obj.img} alt={obj.text} />
+                </li>
+            ))}
+          </ul>
+        </div>
+        <div className="BottombarContainer">
+          <Bottombar />
+        </div>
       </div>
-      <div className="Line" />
-      <div style={{ marginLeft: "6px" }}>
-        <ul className="ImageContainer">
-          {images.map((obj) => (
-            <li key={obj.id}>
-              <img src={obj.img} alt={obj.text} />
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div className="BottombarContainer">
-        <Bottombar />
-      </div>
-    </div>
   );
 }

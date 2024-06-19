@@ -3,13 +3,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 25px;
-  top: -83px;
-}
-
-.TitleBackgroundContainer img {
-  position: absolute;
-  top: 0;
+  width: 424px;
+  height: 130px;
+  transform: translate(-50%, -60%);
+  background-image: var(--result-header);
+  background-size: cover;
+  background-position: center;
 }
 
 .TitleBackgroundContainer .Text {

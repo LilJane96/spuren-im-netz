@@ -1,7 +1,7 @@
 button {
   width: 212px;
   height: 64px;
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
@@ -173,19 +173,18 @@ button.TertiaryButton:active {
 
 /*Quaternary Button*/
 button.QuaternaryButton {
-  background: white url(../../images/CrossButton.svg) center/contain no-repeat;
+  background: white var(--cross-btn) center/contain no-repeat;
   background-size: 50%;
   width: 58px;
   height: 58px;
   padding: 0;
   margin: 0 0 0 30px;
   border-radius: 20px;
-  box-shadow: 0px 4px 6px #d2d2d2;
   z-index: 999;
 }
 
 button.QuinaryButton {
-  padding: 40px 265px;
+  padding: 0 265px;
   border-radius: 1.3em;
   font-weight: 700;
   font-size: 22px;
@@ -250,6 +249,5 @@ button.SenaryButton {
   height: 58px;
   padding: 0;
   border-radius: 20px;
-  box-shadow: 0px 4px 6px #d2d2d2;
   z-index: 999;
 }

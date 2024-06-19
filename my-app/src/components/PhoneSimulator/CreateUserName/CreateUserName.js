@@ -18,7 +18,8 @@ export default function CreateUserName({ answer }) {
               style={{ width: "100%" }}
               placeholder="Benutzername"
               value={answer}
-              onChange={(e) => setSelectedAnswer(e.target.value)}></Inputfield>
+              onChange={(e) => setSelectedAnswer(e.target.value)}
+              pointerEvents="none"></Inputfield>
           </div>
         </div>
       </div>

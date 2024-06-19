@@ -3,13 +3,12 @@ import BarHomePage from "../../images/BarHomePage.svg";
 import WavingFox from "../../images/Foxes/wavingFox.svg";
 import SideFox from "../../images/Foxes/sideFox.svg";
 import ThiefFox from "../../images/Foxes/thiefFox.svg";
-import Chest from "../../images/ClosedResultBox.svg";
+import Chest from "../../images/PopUpResultImages/ClosedResultBox.svg";
 import Hat from "../../images/HubImages/Backpack/HeadActive.svg";
 import Backpack from "../../images/Backpack.svg";
 import MagnifyingGlass from "../../images/HubImages/Backpack/MagnifyingGlassActive.svg";
 import CustomButton from "../../components/Button/CustomButton";
 import "./Home.css";
-import { Link } from "@mui/material";
 import Slideshow from "../../components/Slideshow/Slideshow";
 import QRLiljana from "../../images/QRCodes/liljana.svg";
 import QRJulian from "../../images/QRCodes/julian.svg";
@@ -19,6 +18,7 @@ import Screenshot3 from "../../images/Screenshots/Screenshot3.svg";
 import Screenshot4 from "../../images/Screenshots/Screenshot4.svg";
 import Screenshot5 from "../../images/Screenshots/Screenshot5.svg";
 import PhoneSimulator from "../../components/PhoneSimulator/PhoneSimulator";
+import { Link } from "react-router-dom";
 
 function Home() {
   const images = [
@@ -33,7 +33,7 @@ function Home() {
   };
 
   return (
-    <main class="HomeMain">
+    <div className="HomeMain">
       <div className="HomeContainer">
         <div className="WelcomeContainer">
           <div className="TitleAndSubtitleHome">
@@ -53,7 +53,9 @@ function Home() {
             </div>
           </div>
           <div>
-            <Link href="/introduction/GameIntroduction">
+            <Link
+              to="/introduction/GameIntroduction"
+              style={{ textDecoration: "none" }}>
               <CustomButton
                 name="Spiel starten"
                 type="primary"
@@ -62,18 +64,25 @@ function Home() {
           </div>
         </div>
         <div className="containerHome">
-          <img id="fox1" src={WavingFox} alt="Fuchs" />
-          {/* <FoxProfile /> */}
-          <PhoneSimulator content={12} title="Profil"/>
-          <img id="fox2" src={ThiefFox} alt="Dieb" />
+          <div className="foxContainer">
+            <img id="fox1" src={WavingFox} alt="Fuchs" />
+          </div>
+          <div className="PhoneSimulatorContainer">
+            <PhoneSimulator content={12} title="Profil" />
+          </div>
+          <div className="foxContainer">
+            <img id="fox2" src={ThiefFox} alt="Dieb" />
+          </div>
         </div>
       </div>
       <div className="row2">
         <div className="row2Left">
           <div className="simpleCard">
-            <Link href="https://www.hdm-stuttgart.de/">
+            <a
+              href="https://www.hdm-stuttgart.de/"
+              style={{ textDecoration: "none" }}>
               <img className="logo" src="images/logo_hdm.jpg" alt="HdM Logo" />
-            </Link>
+            </a>
           </div>
           <p>Hochschule der Medien</p>
         </div>
@@ -93,13 +102,15 @@ function Home() {
         </div>
         <div className="row2Right">
           <div className="simpleCard">
-            <Link href="https://www.schule4-0.de/">
+            <a
+              href="https://www.schule4-0.de/"
+              style={{ textDecoration: "none" }}>
               <img
                 className="logo"
                 src="images/logo_schule40.png"
                 alt="HdM Logo"
               />
-            </Link>
+            </a>
           </div>
           <p>Schule 4.0</p>
         </div>
@@ -164,7 +175,7 @@ function Home() {
           </div>
         </div>
       </div>
-    </main>
+    </div>
   );
 }
 

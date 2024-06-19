@@ -16,8 +16,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  margin: 0 50px;
-  width: 232px;
+  width: 33.33%;
 }
 
 .stepperContainer {
@@ -26,14 +25,17 @@
   align-items: center;
 }
 
+.frameContainer .SpeachbubbleBox {
+  width: 33.33%;
+}
+
 .frameContainer .PhoneBox {
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 70vh;
+  width: 33.33%;
 }
-
 
 .frameContainer .buttonContainer {
   display: flex;
@@ -42,17 +44,21 @@
   margin: -35px 70px;
 }
 
-.answerContainer {
+.frameContainer .answerContainer {
   width: 100%;
 }
 
-.fourOrMore {
+.frameContainer .answer {
+  margin: 20px 0;
+}
+
+.frameContainer .fourOrMore {
   display: grid;
   grid-template-columns: auto auto;
   gap: 0 10px;
 }
 
-.smallerThenFour {
+.frameContainer .smallerThenFour {
   display: flex;
   flex-direction: column;
   align-items: center;
