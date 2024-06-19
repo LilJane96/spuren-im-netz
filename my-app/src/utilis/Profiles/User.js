@@ -33,8 +33,7 @@ export default function UserProfileData() {
       friendsCount: 0,
       bio: (
         <span>
-          Fußballliebhaber ⚽ <br />
-          Künstlerin 🎨
+           
         </span>
       ),
       images: [],
