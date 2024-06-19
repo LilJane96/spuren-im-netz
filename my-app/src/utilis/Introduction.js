@@ -111,13 +111,14 @@ export default function IntroductionArray() {
           backgroundImage: "/images/Unit4-1.png",
           text: "Oh, habt ihr das schon gesehen? Felix ist wieder im Fuchsbau gelandet, nachdem er ausgebrochen war. Sehr gut!",
           speechbubblePosition: "flex-end",
+          speechbubbleSize: "small",
         },
         {
           step: "stepTwo",
           backgroundImage: "/images/Unit4-2.png",
           text: "Das ist mir gar nicht aufgefallen, wir haben ja schon den 27. Juli!! Meine beste Freundin Mara hat bald Geburtstag.",
           speechbubblePosition: "flex-end",
-          speechbubbleSize: "small",
+          speechbubbleSize: "x-small",
         },
         {
           step: "stepThree",
@@ -128,8 +129,9 @@ export default function IntroductionArray() {
         {
           step: "stepFour",
           backgroundImage: "/images/Unit4-4.png",
-          text: "Oh ja, hier wird mir etwas vorgeschlagen. Ich habe zwar nicht danach gesucht, aber das sieht echt gut aus. Die Werbung sieht nur etwas, naja, komisch aus. Kannst du mir hierbei weiterhelfen?",
+          text: "Oh ja, hier wird mir etwas vorgeschlagen. Ich habe zwar nicht danach gesucht, aber das sieht echt gut aus. Kannst du mir hierbei weiterhelfen?",
           speechbubblePosition: "flex-end",
+          speechbubbleSize: "small",
         },
       ],
       backTo: "/hub",

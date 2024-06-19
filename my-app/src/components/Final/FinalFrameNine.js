@@ -33,11 +33,7 @@ export default function FinalFrameNine() {
     <div className="FinalFrameNineContainer" onClick={handleNextStep}>
 
       <div className="SpeechbubbleContainer">
-        <div className="Bubble">
-        Hier für dich!
-        <br></br>
-        Klick es an, um deine Belohnung zu erhalten.
-        </div>
+
       </div>
 
       <div className="ButtonContainer">

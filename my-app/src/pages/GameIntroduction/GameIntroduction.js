@@ -83,6 +83,8 @@ export default function GameIntroduction() {
                       ? "553px"
                       : obj.speechbubbleSize === "small"
                       ? "428px"
+                      : obj.speechbubbleSize === "x-small"
+                      ? "350px"
                       : "620px",
                   padding:
                     unitId === "GameIntroduction" ? "40px 18px" : "25px 18px",

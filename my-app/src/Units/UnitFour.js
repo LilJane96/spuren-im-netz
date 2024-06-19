@@ -20,6 +20,7 @@ export default function UnitFour() {
                 },
               ],
               phoneSimulatorStep: 19,
+              title: "Werbung",
               answerboxes: [
                 { type: "text", answer: "Fernsehsendung", right: false },
                 { type: "text", answer: "Stundenplan", right: false },
@@ -48,6 +49,7 @@ export default function UnitFour() {
                 },
               ],
               phoneSimulatorStep: 19,
+              title: "Firma",
               answerboxes: [
                 { type: "text", answer: "Naike", right: true },
                 { type: "text", answer: "Fortnite", right: false },
@@ -77,6 +79,7 @@ export default function UnitFour() {
                 },
               ],
               phoneSimulatorStep: 19,
+              title: "Bewertungen",
               answerboxes: [
                 { type: "text", answer: "Gute Bewertungen", right: false },
                 { type: "text", answer: "Schlechte Bewertungen", right: true },
@@ -104,6 +107,7 @@ export default function UnitFour() {
                 },
               ],
               phoneSimulatorStep: 19,
+              title: "Produkt",
               answerboxes: [
                 { type: "text", answer: "Ein neues Handy", right: false },
                 { type: "text", answer: "Handyhüllen", right: true },
@@ -131,6 +135,7 @@ export default function UnitFour() {
                 },
               ],
               phoneSimulatorStep: 19,
+              title: "Preis",
               answerboxes: [
                 { type: "text", answer: "1,99 Euro", right: false },
                 { type: "text", answer: "1000 Euro", right: false },
