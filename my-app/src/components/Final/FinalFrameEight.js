@@ -38,7 +38,7 @@ export default function FinalFrameEight() {
 
       <div className="SpeechbubbleContainer">
         <div className="Bubble">
-        Jetzt habe ich das beste Geschenk für Mara! Nachdem ich nochmal genauer bei anderen Produkten hingeschaut habe, konnte ich ein super Geschenk finden. Für deine Hilfe bekommst du von mir auch ein Geschenk!
+        Jetzt habe ich das beste Geschenk für Mara! Da bin ich mir sicher. Ich freue mich schon darauf, das Geschenk Mara zu geben. Das Geschenk ist so gut, dass ich für dich direkt auch eins gekauft habe!
         </div>
       </div>
 

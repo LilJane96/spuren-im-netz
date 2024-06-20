@@ -12,7 +12,7 @@ export default function UnitFour() {
                 {
                   type: "paragraph",
                   content:
-                    "Schau mal, was mir mein Handy angezeigt hat. Leider habe ich sowas nur selten gesehen.",
+                    "Schau mal, was mir mein Handy angezeigt hat. Leider kenne ich mich nicht gut aus und brauche deine Hilfe.",
                 },
                 {
                   type: "bold",
@@ -29,7 +29,7 @@ export default function UnitFour() {
               rightAnswer: "Richtig!",
               wrongAnswer: "Probiere es nochmal! ",
               reason:
-                "In den sozialen Medien erhält man immer wieder Angebote für neue Produkte oder Sachen, die man schon kennt. Diese Angebote nennt man auch Werbung.",
+                "In den sozialen Medien erhält man immer wieder Angebote für neue Produkte oder Sachen. Diese Angebote nennt man auch Werbung.",
             },
           ],
         },
@@ -41,7 +41,7 @@ export default function UnitFour() {
                 {
                   type: "paragraph",
                   content:
-                    "Richtig! Das hier ist eine Werbung. Wieso bekomme ich solch eine Werbung? Das ist merkwürdig. Lass uns mehr über die Werbung herausfinden.",
+                    "Richtig! Das hier ist eine Werbung von einer Firma. Lass uns mehr über die Werbung herausfinden, um zu schauen ob das ein gutes Geschenk für Mara sein könnte.",
                 },
                 {
                   type: "bold",
@@ -58,7 +58,7 @@ export default function UnitFour() {
               rightAnswer: "Super! Das war die richtige Antwort.",
               wrongAnswer: "Probiere es nochmal!",
               reason:
-                "Es gibt viele Firmen, die Werbung für ihre Produkte machen. Meistens kann man diese an einem Logo erkennen. Auf dem Logo steht dann meistens der Name. Ein Logo ist wie ein Bild, mit dem man eine Firma eindeutig erkennen kann.",
+                "Es gibt viele Firmen, die Werbung für ihre Produkte machen. Meistens kann man diese an einem Logo erkennen. Auf dem Logo steht dann sehr oft der Name. Ein Logo ist ein Bild, mit dem man eine Firma eindeutig erkennen kann.",
             },
           ],
         },
@@ -70,12 +70,12 @@ export default function UnitFour() {
                 {
                   type: "paragraph",
                   content:
-                    "Super! Die Werbung kommt von Naike. Ein ganz schön komischer Name für eine Firma. Was gibt es hier noch?",
+                    "Super! Die Werbung kommt von Naike. Ein ganz schön komischer Name für eine Firma. Oh, hier sind auch noch Bewertungen.",
                 },
                 {
                     type: "bold",
                     content:
-                      "Oh, hier sind auch noch Bewertungen. Kannst du mir sagen, ob das gute oder schlechte Bewertungen sind?",
+                      "Kannst du mir sagen, ob das gute oder schlechte Bewertungen sind?",
                 },
               ],
               phoneSimulatorStep: 19,
@@ -99,19 +99,19 @@ export default function UnitFour() {
                 {
                   type: "bold",
                   content:
-                    "Ohje! Diese Kommentare sagen nichts Gutes über dieses Produkt. Ganz viele schlechte Bewertungen",
+                    "Ohje! Diese Kommentare sagen nichts Gutes über dieses Produkt. Ganz viele schlechte Bewertungen. Ob das ein gutes Geschenk sein könnte? ",
                 },
                 {
                   type: "paragraph",
-                  content: "Was ist das eigentlich für ein Produkt? Was kann ich hier kaufen? Kannst du mir helfen?",
+                  content: "Was ist das eigentlich für ein Produkt? Was kann ich hier kaufen?",
                 },
               ],
               phoneSimulatorStep: 19,
               title: "Produkt",
               answerboxes: [
                 { type: "text", answer: "Ein neues Handy", right: false },
-                { type: "text", answer: "Handyhüllen", right: true },
-                { type: "text", answer: "Schuhe", right: false },
+                { type: "text", answer: "Eine Handyhülle", right: true },
+                { type: "text", answer: "Ganz viele Handyhüllen", right: false },
               ],
               rightAnswer: "Prima!",
               wrongAnswer: "Oh nein! Probiere es nochmal!",
@@ -127,11 +127,11 @@ export default function UnitFour() {
               speachbubble: [
                 {
                   type: "paragraph",
-                  content: "Wow danke! Jetzt weiß ich fast alles über diese Werbung. Das ist ja was ganz anderes, als ich zuerst dachte.",
+                  content: "Wow danke! Jetzt weiß ich fast alles über diese Werbung. Eine Sache ist noch wichtig - der Preis.",
                 },
                 {
                     type: "bold",
-                    content: "Eine Sache ist noch wichtig. Wie viel kostet das Produkt?",
+                    content: "Wie viel kostet das Produkt?",
                 },
               ],
               phoneSimulatorStep: 19,

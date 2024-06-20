@@ -123,13 +123,13 @@ export default function IntroductionArray() {
         {
           step: "stepThree",
           backgroundImage: "/images/Unit4-3.png",
-          text: "Ich brauche ein tolles Geschenk, was ihr gut gefällt, bevor ihr Geburtstag ist! Aber ich hab noch keine Idee, was ich ihr schenken kann. Ich schaue mal auf meinem Handy, was ich gutes finden kann.",
+          text: "Ich brauche ein tolles Geschenk für Sie! Aber ich hab noch keine Idee, was ich ihr schenken kann. Ich schaue mal auf meinem Handy nach einem Geschenk für Mara.",
           speechbubblePosition: "flex-end",
         },
         {
           step: "stepFour",
           backgroundImage: "/images/Unit4-4.png",
-          text: "Oh ja, hier wird mir etwas vorgeschlagen. Ich habe zwar nicht danach gesucht, aber das sieht echt gut aus. Kannst du mir hierbei weiterhelfen?",
+          text: "Oh ja, hier wird mir etwas vorgeschlagen. Es sieht nur ein bisschen komisch aus. Kannst du mir helfen herauszufinden, ob das ein gutes Geschenk sein könnte?",
           speechbubblePosition: "flex-end",
           speechbubbleSize: "small",
         },
