@@ -26,6 +26,8 @@ export default function FrameOne() {
   const [currentStep, setCurrentStep] = useState(1);
   const navigate = useNavigate();
   const [openBox, setOpenBox] = useState(false);
+  const [isAnswerWrong, setIsAnswerWrong] = useState(true);
+
 
   useEffect(() => {
     const stepFromUrl = parseInt(stepId.replace("step", ""), 10) || 1;
@@ -84,6 +86,7 @@ export default function FrameOne() {
   ) => {
     setSelectedAnswer(answer);
     setReasonText(reason);
+    setIsAnswerWrong(isCorrect);
 
     if (!isCorrect) {
       setCount((prevCount) => prevCount + 1);
@@ -185,7 +188,7 @@ export default function FrameOne() {
             {currentTaskIndex === index && (
               <div>
                 <div className="frame" key={index}>
-                  <div className="SpeachbubbleBox">
+                  <div className="SpeachbubbleBox"> 
                     {tasks.step.map(
                       (step, stepIndex) =>
                         step.speachbubble && (
@@ -193,6 +196,7 @@ export default function FrameOne() {
                             key={stepIndex}
                             text={speachbubbleText || step.speachbubble}
                             reason={reasonText}
+                            isCorrect={isAnswerWrong}
                           />
                         )
                     )}

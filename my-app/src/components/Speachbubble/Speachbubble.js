@@ -1,7 +1,7 @@
 import foxPicture from "../../images/foxPicture.svg";
 import "./Speachbubble.css";
 
-export default function Speachbubble({ text, reason }) {
+export default function Speachbubble({ text, reason, isCorrect = true }) {
   return (
     <div className="SpeachbubbleContainer">
       <div className="bubble-container container">
@@ -10,7 +10,7 @@ export default function Speachbubble({ text, reason }) {
         </div>
 
         <div className="overlay">
-          <div className="bubble speech">
+          <div className="bubble speech" id={`${!isCorrect ? 'wrong-answer' : ''}`}>
             <div className="circle"></div>
             {Array.isArray(text) ? (
               text.map((paragraph, index) => {
