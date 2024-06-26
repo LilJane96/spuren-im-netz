@@ -1,4 +1,6 @@
 import foxPicture from "../../images/foxPicture.svg";
+import sadFox from "../../images/sadFox.svg";
+
 import "./Speachbubble.css";
 
 export default function Speachbubble({ text, reason, isCorrect = true }) {
@@ -6,7 +8,7 @@ export default function Speachbubble({ text, reason, isCorrect = true }) {
     <div className="SpeachbubbleContainer">
       <div className="bubble-container container">
         <div className="content">
-          <img src={foxPicture} alt="Fox" className="foxImg" />
+          <img src={isCorrect ? foxPicture : sadFox} alt="Fox" className="foxImg" />
         </div>
 
         <div className="overlay">
