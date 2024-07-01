@@ -1,16 +1,18 @@
 import foxPicture from "../../images/foxPicture.svg";
+import sadFox from "../../images/sadFox.svg";
+
 import "./Speachbubble.css";
 
-export default function Speachbubble({ text, reason }) {
+export default function Speachbubble({ text, reason, isCorrect = true }) {
   return (
     <div className="SpeachbubbleContainer">
       <div className="bubble-container container">
         <div className="content">
-          <img src={foxPicture} alt="Fox" className="foxImg" />
+          <img src={isCorrect ? foxPicture : sadFox} alt="Fox" className="foxImg" />
         </div>
 
         <div className="overlay">
-          <div className="bubble speech">
+          <div className="bubble speech" id={`${!isCorrect ? 'wrong-answer' : ''}`}>
             <div className="circle"></div>
             {Array.isArray(text) ? (
               text.map((paragraph, index) => {

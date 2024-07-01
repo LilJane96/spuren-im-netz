@@ -16,3 +16,6 @@ test('game start', async ({ page }) => {
   // Expects page to have the string "Willkommen bei 'Spuren-im-Netz'!".
   await expect(page.getByText(/Willkommen bei 'Spuren-im-Netz'!/)).toHaveCount(1);
 });
+
+
+

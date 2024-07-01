@@ -6,9 +6,9 @@ import UnitTwo from "../../../../Units/UnitTwo";
 import UnitThree from "../../../../Units/UnitThree";
 import UnitFour from "../../../../Units/UnitFour";
 
-const unitsArray = [UnitOne(), UnitTwo(), UnitThree(), UnitFour()];
-
 export default function ResultContentSteps({ unitId, stepId }) {
+  const unitsArray = [UnitOne(), UnitTwo(), UnitThree(), UnitFour()];
+
   const path = useParams();
   const prevStepId = stepId <= 5 ? stepId - 1 : stepId;
   const unit = unitsArray;

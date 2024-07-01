@@ -36,7 +36,7 @@ export default function FinalFrameSeven() {
 
       <div className="SpeechbubbleContainer">
         <div className="Bubble">
-        Danke für deine Hilfe. Ich habe nun doch ein anderes Geschenk gekauft. Die Werbung kam mir komisch vor! Ich hoffe es wird Mara gefallen.
+        Danke für deine Hilfe. Ich habe nun ein tolles Geschenk gefunden, nachdem ich mich nochmal genauer informiert habe. Die Werbung war nicht gut, da hat die Beschreibung gar nicht zu dem Produkt gepasst! Ich hoffe es wird Mara gefallen.
         </div>
       </div>
 
