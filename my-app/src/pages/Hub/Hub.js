@@ -149,21 +149,21 @@ function Hub() {
               <img className="Pin" style={{position: 'absolute', top: '10%', left: '1%',  width: '30%', zIndex: '2'}} src={Pin1Unlocked} alt="Pin1" 
                 onClick={handleOpenPopup}
               />
-              {units.unit1?.done ? (
+              {true ? (
               <img className="Pin" style={{position: 'absolute', top: '13%', left: '32%',  width: '55%'}} src={Pin2Unlocked} alt="Pin2" 
                 onClick={() => handleOpenUnit("unit2")}
               />
               ) : (
                 <img className="Pin" style={{position: 'absolute', top: '13%', left: '32%',  width: '55%'}} src={Pin2Locked} alt="Pin2" />
               )}
-              {units.unit2?.done ? (
+              {true ? (
               <img className="Pin" style={{position: 'absolute', top: '57%', left: '10%',  width: '35%'}} src={Pin3Unlocked} alt="Pin3" 
                 onClick={() => handleOpenUnit("unit3")}
               />
               ) : (
                 <img className="Pin" style={{position: 'absolute', top: '57%', left: '10%',  width: '35%'}} src={Pin3Locked} alt="Pin3" />
               )}
-              {units.unit3?.done ? (
+              {true ? (
               <img className="Pin" style={{position: 'absolute', top: '55%', left: '70%',  width: '20%'}} src={Pin4Unlocked} alt="Pin4"
                 onClick={() => handleOpenUnit("unit4")}
               />

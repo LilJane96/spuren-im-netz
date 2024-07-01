@@ -11,10 +11,10 @@ import CustomButton from "../Button/CustomButton";
 export default function BackpackPopup({ open, onClose }) {
   const unitDone = JSON.parse(localStorage.getItem("UnitsArray")) || {};
 
-  const isUnit1Done = unitDone?.unit1?.done || false;
-  const isUnit2Done = unitDone?.unit2?.done || false;
-  const isUnit3Done = unitDone?.unit3?.done || false;
-  const isUnit4Done = unitDone?.unit4?.done || false;
+  const isUnit1Done = true;
+  const isUnit2Done = true;
+  const isUnit3Done = true;
+  const isUnit4Done = true;
 
   const handleCloseBackpack = () => {
     onClose();

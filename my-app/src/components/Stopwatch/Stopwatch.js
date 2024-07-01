@@ -3,7 +3,7 @@ import "./Stopwatch.css";
 import { calculateRemainingTime } from "../../utilis/timer";
 
 const Stopwatch = ({ onTimeUp, onClick }) => {
-  const initialTime = calculateRemainingTime(60);
+  const initialTime = calculateRemainingTime(1);
   const [timeLeft, setTimeLeft] = useState(initialTime);
 
   useEffect(() => {
