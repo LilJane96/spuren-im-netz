@@ -27,11 +27,14 @@ This project includes a web application that can be accessed at https://spuren-i
 [`Figma Prototype`](https://www.figma.com/proto/4oUgWHqiOGxE8lnCsqiwDV/Schule-4.0?type=design&node-id=918-29799&t=IYXwYxELblZtt9ZW-1&scaling=scale-down&page-id=240%3A1111&starting-point-node-id=918%3A29799&show-proto-sidebar=1&mode=design)
 
 ### Documents
-[`Projectdocumentation`](https://github.com/LilJane96/spuren-im-netz/blob/main/documents/Spuren%20im%20Netz%20-%20Documentation.pdf)
-[`Slides Presentation Day`](https://github.com/LilJane96/spuren-im-netz/blob/main/documents/presentation_german.pdf)
-[`Instructions for teachers (german)`](https://github.com/LilJane96/spuren-im-netz/blob/main/documents/SpurenImNetz_teacher_instructions.docx.pdf)
+[`Projectdocumentation WS 2023`](https://github.com/LilJane96/spuren-im-netz/blob/main/documents/Spuren%20im%20Netz%20-%20Documentation.pdf)
+[`Slides Presentation Day WS 2023`](https://github.com/LilJane96/spuren-im-netz/blob/main/documents/presentation_german.pdf)
+[`Instructions for teachers (german) WS 2023`](https://github.com/LilJane96/spuren-im-netz/blob/main/documents/SpurenImNetz_teacher_instructions.docx.pdf)
+[`Slides Presentation Day SS 2024`](https://github.com/LilJane96/spuren-im-netz/blob/main/documents/Spuren_im_Netz_presentation_2_german.pdf)
+[`Instructions for teachers (german) SS 2024`](https://github.com/LilJane96/spuren-im-netz/blob/main/documents/Spuren_im_Netz_teacher_instructions_german.pdf)
+
 
 ### Demovideo
-[`Demovideo`](https://cloud.mi.hdm-stuttgart.de/s/d3SAQCbcdbiX8k2)
+[`Demovideo WS 2023`](https://cloud.mi.hdm-stuttgart.de/s/d3SAQCbcdbiX8k2)
 
 ### Final commit for 23/24 Wintersemester
