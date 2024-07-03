@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import AnnonymProfile from "../../images/AnnonymProfile.png";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";

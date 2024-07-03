@@ -39,7 +39,7 @@ const Ampel = ({ open, onClose }) => {
             </div>
             <div className="TextContainer second">
               <p>
-                Warte bis alle deine Klassenkameraden fertig sind und bespricht
+                Warte bis alle deine Klassenkameraden fertig sind und besprecht
                 zusammen eure Ergebnisse.
               </p>
             </div>

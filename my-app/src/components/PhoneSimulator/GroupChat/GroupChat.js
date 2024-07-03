@@ -19,7 +19,7 @@ export default function MessageOfStranger({ answer }) {
   return (
     <div className="GroupChat">
       <div className="Headline">
-        Club schlechter Detekitive
+        Club schlechter Detektive
       </div>
 
       <div className="MessagesContainer">
@@ -28,7 +28,7 @@ export default function MessageOfStranger({ answer }) {
           <div className="MessageSpeachbubbleContainer">
             <div className="speachBubble">
               <p id="name1">Böser Fuchs Felix</p>
-              Hey , ich finde Detekitve echt uncool und schlau sind sie auch nicht
+              Hey , ich finde Detektive echt uncool und schlau sind sie auch nicht
             </div>
             <img src={BadFoxPicture} alt="Profilbild" className="ProfilePicture" />
           </div>

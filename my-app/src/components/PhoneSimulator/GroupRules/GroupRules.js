@@ -1,17 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import CheckMark from "../../../images/unit3/Check.svg";
-
 
 import "./GroupRules.css";
 
 export default function MessageOfStranger({ answer }) {
   const [selectedAnswer, setSelectedAnswer] = useState("Alle");
 
-  const answers = ["Alle", "Meine Kontakte", "Meine Kontakte, außer ..."];
+  const answers = ["Alle", "Meine Kontakte", "Meine Kontakte, außer..."];
 
-  const handleRuleClick = (rule) => {
-    setSelectedAnswer(rule);
-  };
+  useEffect(() => {
+    setSelectedAnswer(answer);
+  }, [answer]); 
 
   return (
     <div className="GroupRules">
@@ -21,17 +20,17 @@ export default function MessageOfStranger({ answer }) {
       </p>
 
       <p className="Subtitle">
-        Wer kann mich Gruppen hinzufügen?
+        Wer kann mich zu Gruppen hinzufügen?
       </p>
 
       <div className="RulesContainer">
 
-        {answers.map((answer, index) => (
-          <div className="Rule" key={index} onClick={() => handleRuleClick(answer)}>
-            <p>{answer}</p>
-            {selectedAnswer === answer && <img src={CheckMark} alt="Ausgewählt" className="CheckMark" />}
-          </div>
-        ))}
+      {answers.map((entry, index) => (
+        <div className={`Rule${selectedAnswer === entry ? ' selected' : ''}`} key={index} style={{ opacity: selectedAnswer === entry ? 1 : 0.7 }}>
+          <p>{entry}</p>
+          {selectedAnswer === entry && <img src={CheckMark} alt="Ausgewählt" className="CheckMark" />}
+        </div>
+      ))}
 
       </div>
     </div>
