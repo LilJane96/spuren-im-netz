@@ -21,7 +21,7 @@ export default function MessageOfStranger({ answer }) {
   return (
     <div className="GroupChatReport">
       <div className="Headline">
-        Club schlechter Detekitive
+        Club schlechter Detektive
         <img src={Report} alt="Report"/>
       </div>
 

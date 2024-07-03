@@ -1,7 +1,6 @@
 import { useState } from "react";
 import AnnonymProfile from "../../../images/AnnonymProfile.png";
 import "./MessageOfStranger.css";
-import MessageSpeachbubble from "../../MessageSpeachbubble/MessageSpeachbubble";
 
 export default function MessageOfStranger({ answer }) {
   const [selectedAnswer, setSelectedAnswer] = useState("");

@@ -151,8 +151,8 @@ export default function UnitThree() {
               title: "Einstellungen",
               answerboxes: [
                 { type: "text", answer: "Alle", right: false },
-                { type: "text", answer: "Meine Kontake", right: true },
-                { type: "text", answer: "Meine Kontake, außer...", right: true },
+                { type: "text", answer: "Meine Kontakte", right: true },
+                { type: "text", answer: "Meine Kontakte, außer...", right: true },
               ],
               rightAnswer: "Sehr gut gemacht! Jetzt können mich nur noch meine Freunde zu Gruppen hinzufügen.",
               wrongAnswer: "Schade, versuche es nochmal!",

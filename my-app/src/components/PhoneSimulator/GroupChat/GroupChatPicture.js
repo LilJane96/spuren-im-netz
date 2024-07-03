@@ -17,7 +17,7 @@ export default function MessageOfStranger({ answer }) {
   return (
     <div className="GroupChat">
       <div className="Headline">
-        Club schlechter Detekitive
+        Club schlechter Detektive
       </div>
 
       <div className="MessagesContainer">
