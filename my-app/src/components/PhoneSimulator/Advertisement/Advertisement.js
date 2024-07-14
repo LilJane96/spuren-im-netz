@@ -1,4 +1,3 @@
-import { useState, useRef, useEffect } from "react";
 import Logo from "../../../images/unit4/logo.svg";
 import Cross from "../../../images/unit4/cross.svg";
 import Phones from "../../../images/unit4/phones.svg";
@@ -12,8 +11,6 @@ import Emoji6 from "../../../images/unit4/emoji6.svg";
 import "./Advertisement.css";
 
 export default function Advertisement({ answer }) {
-  const [selectedAnswer, setSelectedAnswer] = useState("");
-
   const comments = [
     {
       name: 'Bernd',

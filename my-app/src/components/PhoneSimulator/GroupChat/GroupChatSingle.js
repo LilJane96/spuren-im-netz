@@ -1,10 +1,8 @@
-import { useState, useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import SendImg from "../../../images/unit3/Send.svg";
 import BadFoxPicture from "../../../images/ProfileImages/ProfilBadFox/BadFoxProfilePicture.svg";
 
 export default function MessageOfStranger({ answer }) {
-  const [selectedAnswer, setSelectedAnswer] = useState("");
-
   const messagesEndRef = useRef(null);
 
   const scrollToBottom = () => {

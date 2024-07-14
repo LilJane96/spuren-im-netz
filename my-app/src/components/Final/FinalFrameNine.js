@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import backgroundImage from "../../images/Final/FinalViewNine.png";
 import "./FinalFrameNine.css";
 import CustomButton from "../Button/CustomButton";
-import { useNavigate } from "react-router-dom";
 import PopUpResultScreen from "../PopUpResultScreen/PopUpResultScreen";
 
 export default function FinalFrameNine() {

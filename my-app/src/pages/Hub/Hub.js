@@ -144,8 +144,8 @@ function Hub() {
       </div> */}
       <div className="BoardContainer">
           <div className="BoardWrapper" style={{position: 'relative'}}>
-              <img className="Board" src={BoardBackground}/>
-              <img className="Pin" style={{position: 'absolute', top: '10%', left: '20%',  width: '60%', zIndex: '5', pointerEvents: "none"}} src={String} />
+              <img className="Board" src={BoardBackground} alt=""/>
+              <img className="Pin" style={{position: 'absolute', top: '10%', left: '20%',  width: '60%', zIndex: '5', pointerEvents: "none"}} src={String} alt=""/>
               <img className="Pin" style={{position: 'absolute', top: '10%', left: '1%',  width: '30%', zIndex: '2'}} src={Pin1Unlocked} alt="Pin1" 
                 onClick={handleOpenPopup}
               />

@@ -70,7 +70,7 @@ export default function UserProfileEndUnit() {
     setTimeout(() => {
       navigate("/finishedGame/step2");
     }, 6500);
-  }, []);
+  });
 
   return (
       <div className="UserProfileEndUnitContainer">

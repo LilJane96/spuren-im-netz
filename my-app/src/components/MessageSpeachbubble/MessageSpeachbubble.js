@@ -1,4 +1,4 @@
-import AnnonymProfile from "../../images/AnnonymProfile.png"
+import AnonymProfile from "../../images/AnonymProfile.png"
 import "./MessageSpeachbubble.css";
 
 export default function MessageSpeachbubble({ text }) {
@@ -15,7 +15,7 @@ export default function MessageSpeachbubble({ text }) {
         {text}
       </div>
       <div className="content">
-        <img src={AnnonymProfile} alt="Profilbild" className="contentImg"/>
+        <img src={AnonymProfile} alt="Profilbild" className="contentImg"/>
       </div>
     </div>
     </div>

@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import backgroundImage from "../../images/Final/FinalViewSeven.png";
 import "./FinalFrameSeven.css";
-import Speachbubble from "../Speachbubble/Speachbubble";
 import CustomButton from "../Button/CustomButton";
 import { useNavigate } from "react-router-dom";
 
