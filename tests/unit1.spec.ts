@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('unit1_test', async ({ page }) => {
+  
   await page.goto('/hub');
   await page.getByRole('img', { name: 'Pin1' }).click();
   await page.getByPlaceholder('Name').fill('Julian');
