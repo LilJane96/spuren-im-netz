@@ -116,8 +116,3 @@ export default function PhoneSimulator({
     </div>
   );
 }
-
-// PhoneSimulator.propTypes = {
-//   selectedAnswer: PropTypes.string.isRequired,
-//   nextPage: PropTypes.func.isRequired
-// };
