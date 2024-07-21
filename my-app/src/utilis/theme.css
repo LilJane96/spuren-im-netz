@@ -1,8 +1,7 @@
 :root {
   --primary-color: #f36b21;
-  --background-default: #ffffff; /* Standard-Hintergrundfarbe */
-  --background-blue: #003148; /* Hintergrundfarbe für 'blue' */
-  /* Füge hier weitere Farbvariablen für andere Themes hinzu, wenn benötigt */
+  --background-default: #ffffff; 
+  --background-blue: #003148; 
 }
 
 [data-theme="default"] {
@@ -42,7 +41,7 @@
   --answerbox-right: #65dcb4;
   --answerbox-wrong: #ff8653;
 
-  --bagback-header-bg-color: #e54e17;
+  --backpack-header-bg-color: #e54e17;
   --welcome-bg-img: url("../images/WelcomePage/PfotenYellow.svg");
 }
 
@@ -85,7 +84,7 @@
 
   --answerbox-wrong: #ff7449;
 
-  --bagback-header-bg-color: #f36b21;
+  --backpack-header-bg-color: #f36b21;
   --welcome-bg-img: url("../images/WelcomePage/PfotenBlue.svg");
 }
 
@@ -126,7 +125,7 @@
   --answerbox-right: #65dcb4;
   --answerbox-wrong: #ff8653;
 
-  --bagback-header-bg-color: #e54e17;
+  --backpack-header-bg-color: #e54e17;
   --welcome-bg-img: url("../images/WelcomePage/PfotenYellow.svg");
 }
 
@@ -167,6 +166,6 @@
   --answerbox-right: #a2e360;
   --answerbox-wrong: #eb4b4b;
 
-  --bagback-header-bg-color: #8d0f3a;
+  --backpack-header-bg-color: #8d0f3a;
   --welcome-bg-img: url("../images/WelcomePage/PfotenPink.svg");
 }

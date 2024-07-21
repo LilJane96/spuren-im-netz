@@ -1,11 +1,9 @@
-import { useState, useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import SendImg from "../../../images/unit3/Send.svg";
 import BadFoxPicture from "../../../images/ProfileImages/ProfilBadFox/BadFoxProfilePicture.svg";
 import BadFoxWalking from "../../../images/unit3/BadFoxWalking.png";
 
 export default function MessageOfStranger({ answer }) {
-  const [selectedAnswer, setSelectedAnswer] = useState("");
-
   const messagesEndRef = useRef(null);
 
   const scrollToBottom = () => {
@@ -17,7 +15,7 @@ export default function MessageOfStranger({ answer }) {
   return (
     <div className="GroupChat">
       <div className="Headline">
-        Club schlechter Detekitive
+        Club schlechter Detektive
       </div>
 
       <div className="MessagesContainer">

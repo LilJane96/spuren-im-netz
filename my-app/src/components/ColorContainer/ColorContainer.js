@@ -1,12 +1,8 @@
 import {
-  DialogActions,
   DialogContent,
   DialogContentText,
   DialogTitle,
-  ListItemButton,
-  ListItemIcon,
 } from "@mui/material";
-import List from "@mui/material/List";
 import { useEffect, useState } from "react";
 import { getSelectedColor } from "../../utilis/colorUtils";
 import "./ColorContainer.css";

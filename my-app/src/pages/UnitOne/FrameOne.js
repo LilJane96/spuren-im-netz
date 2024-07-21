@@ -4,7 +4,7 @@ import PhoneSimulator from "../../components/PhoneSimulator/PhoneSimulator";
 import AnswerBoxes from "../../components/AnswerBoxes/AnswerBoxes";
 import Stepper from "../../components/Stepper/Stepper";
 import CustomButton from "../../components/Button/CustomButton";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import "./FrameOne.css";
 import PopUpResultScreen from "../../components/PopUpResultScreen/PopUpResultScreen";
 import UnitOne from "../../Units/UnitOne";

@@ -1,6 +1,3 @@
-.UserProfileEndUnitContainer {
-}
-
 .UserProfileEndUnitContainer .ProfileImageContainer {
   /* Stile für die Animation */
   .flipAnimation {
@@ -121,10 +118,6 @@
   object-fit: cover;
   border-radius: 15px;
 }
-
-.BottombarContainer .bottombar {
-}
-
 .UserProfileEndUnitContainer .ImageScrollContainer {
   margin: 10px 0;
 }

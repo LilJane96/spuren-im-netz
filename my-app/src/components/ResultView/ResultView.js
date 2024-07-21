@@ -1,9 +1,9 @@
 import React from "react";
-import ResultContentOverview from "./ResultConent/ResultContentOverview/ResultContentOverview";
+import ResultContentOverview from "./ResultContent/ResultContentOverview/ResultContentOverview";
 import TitleBackground from "../TitleBackground/TitleBackground";
 
 import "./ResultView.css";
-import ResultContentSteps from "./ResultConent/ResultContentSteps/ResultContentSteps";
+import ResultContentSteps from "./ResultContent/ResultContentSteps/ResultContentSteps";
 
 export default function ResultView({ unitId, currentStep }) {
   const units = JSON.parse(localStorage.getItem("UnitsArray")) || {};

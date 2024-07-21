@@ -1,15 +1,9 @@
-.FinishGameContainer {
-}
-
 .FinishGameContainer .PhoneBox {
   position: fixed;
   top: 50%;
   left: 50%;
   height: 60vh;
   transform: translate(-50%, -50%);
-}
-
-.FinishGameContainer .phoneContainer {
 }
 
 .FinishGameContainer .BottombarContainer {

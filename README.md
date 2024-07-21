@@ -11,14 +11,26 @@ npm install
 ```bash
 npm start
 ```
-3. To build the Dockerfile run
+
+Alternatively
+
+1. To build the Docker Image run
 ```bash
-docker build -t spuren-im-netz .    
+docker build -t spuren-im-netz .
 ```
-4. To serve the Dockerfile run
+2. To create the Docker Container run
 ```bash
 docker run -p 3000:3000 spuren-im-netz
 ```
+
+### Testing
+
+To run the [`Playwright`](https://playwright.dev/docs/intro) E2E Tests locally call `npm run test` in the home directory.
+
+To run them against the live production environment call `npm run test:prod`
+
+The latest Pipeline result can be found [`here`](https://liljane96.github.io/spuren-im-netz/) (Detailed information is saved for 1 Day)
+
 ## Further resources
 This project includes a web application that can be accessed at https://spuren-im-netz.web.app/
 

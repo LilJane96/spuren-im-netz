@@ -27,7 +27,7 @@
   height: 37.404px;
   flex-shrink: 0;
   border-radius: 12px;
-  background: var(--bagback-header-bg-color);
+  background: var(--backpack-header-bg-color);
   display: flex;
   align-items: center;
   justify-content: center;

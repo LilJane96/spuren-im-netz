@@ -1,7 +1,7 @@
 import SearchBar from "../../Searchfield/Searchfield";
 import Patrick from "../../../images/SearchPearsonImages/PatrickStar.png";
 import Nature from "../../../images/SearchPearsonImages/Nature.png";
-import AnnonymProfile from "../../../images/SearchPearsonImages/Annonym.png";
+import AnonymProfile from "../../../images/SearchPearsonImages/Annonym.png";
 import StrangerBoy from "../../../images/SearchPearsonImages/StrangerBoy.png";
 import AddPerson from "../../../images/SearchPearsonImages/AddPerson.png";
 import "./SearchPerson.css";
@@ -10,7 +10,7 @@ import Bottombar from "../../Bottombar/Bottombar";
 const persons = [
   { name: "FelixMüller", img: Patrick },
   { name: "Felicia29", img: Nature },
-  { name: "Felix", img: AnnonymProfile },
+  { name: "Felix", img: AnonymProfile },
   { name: "TomasFeld_", img: StrangerBoy },
 ];
 

@@ -1,7 +1,11 @@
 {
   "devDependencies": {
     "@playwright/test": "^1.43.1",
-    "@types/node": "^20.12.7"
+    "@types/node": "^20.12.7",
+    "cross-env": "^7.0.3"
   },
-  "scripts": {}
+  "scripts": {
+    "test": "npm i && npx playwright install && npx playwright test",
+    "test:prod": "npm i && cross-env BASE_URL=https://spuren-im-netz.web.app && npx playwright install && npx playwright test"
+  }
 }

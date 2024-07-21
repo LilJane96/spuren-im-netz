@@ -1,19 +1,15 @@
-import { useState } from "react";
-import AnnonymProfile from "../../../images/AnnonymProfile.png";
+import AnonymProfile from "../../../images/AnonymProfile.png";
 import "./MessageOfStranger.css";
-import MessageSpeachbubble from "../../MessageSpeachbubble/MessageSpeachbubble";
 
 export default function MessageOfStranger({ answer }) {
-  const [selectedAnswer, setSelectedAnswer] = useState("");
-
   return (
     <div className="MessageContainer">
       <div className="ImageContainer">
-        <img src={AnnonymProfile} alt="Profilbild" className="ProfilePicture" />
+        <img src={AnonymProfile} alt="Profilbild" className="ProfilePicture" />
         <p className="text">Felix</p>
       </div>
       <div className="MessageSpeachbubbleContainer">
-        <img src={AnnonymProfile} alt="Profilbild" className="ProfilePicture" />
+        <img src={AnonymProfile} alt="Profilbild" className="ProfilePicture" />
         <p className="speachBubble">Hey, wie geht es dir? Ich bin Felix. Möchtest du vielleicht Freunde werden?</p>
       </div>
       <div className="AcceptMessageViewContainer">

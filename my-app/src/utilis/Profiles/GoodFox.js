@@ -1,5 +1,4 @@
-// GoodFoxProfile.js
-import FoxProfilePic from "../../images/ProfileImages/ProfilGoodFox/FoxProfilePic.svg";
+import FoxProfilePic from "../../images/ProfileImages/ProfilGoodFox/FoxProfilePicBG.svg";
 import House from "../../images/ProfileImages/ProfilGoodFox/House.png";
 import PuzzleWorldMapGoodFox from "../../images/ProfileImages/ProfilGoodFox/PuzzleWorldMapGoodFox.jpg";
 import SunsetGoodFoxProfile from "../../images/ProfileImages/ProfilGoodFox/SunsetGoodFox.jpg";
