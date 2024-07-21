@@ -35,8 +35,7 @@ The latest Pipeline result can be found [`here`](https://liljane96.github.io/spu
 This project includes a web application that can be accessed at https://spuren-im-netz.web.app/
 
 ### Figma
-[`Figma Files`](https://www.figma.com/file/4oUgWHqiOGxE8lnCsqiwDV/Schule-4.0?type=design&node-id=240%3A1111&mode=design&t=5FjRcEfwjsvLVROd-1)
-[`Figma Prototype`](https://www.figma.com/proto/4oUgWHqiOGxE8lnCsqiwDV/Schule-4.0?type=design&node-id=918-29799&t=IYXwYxELblZtt9ZW-1&scaling=scale-down&page-id=240%3A1111&starting-point-node-id=918%3A29799&show-proto-sidebar=1&mode=design)
+[`Figma Files`](https://www.figma.com/design/sDNn8ptkxEtSaH0wi8VLVy/MediaNight?node-id=0-1&t=FqVk2GhYEmIQNyqw-1)
 
 ### Documents
 [`Projectdocumentation WS 2023`](https://github.com/LilJane96/spuren-im-netz/blob/main/documents/Spuren%20im%20Netz%20-%20Documentation.pdf)
