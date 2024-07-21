@@ -2,9 +2,6 @@
   display: flex;
 }
 
-.step.active {
-}
-
 .step {
   position: relative;
   margin: 21px 100px;

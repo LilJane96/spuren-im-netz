@@ -116,32 +116,6 @@ function Hub() {
           )}
         </div>
       </div>
-      {/* <div className="MapContainer">
-        <img className="map" src={PhoneMap} alt="Map" />
-        <div className="pins">
-          <img
-            onClick={handleOpenPopup}
-            className="pinOne"
-            src={Pin1Active}
-            alt="Unit 1"
-          />
-          {units.unit1?.done ? (
-            <img
-              onClick={() => handleOpenUnit("unit2")}
-              className="pinTwoActive"
-              src={Pin2Active}
-              alt="Unit 2"
-            />
-          ) : (
-            <img className="pinTwoInactive" src={Pin2Inactive} alt="Unit 2" />
-          )}
-          <img
-            onClick={() => handleOpenUnit("unit3")}
-            src={Pin1Active}
-            alt="Unit 3"
-          />
-        </div>
-      </div> */}
       <div className="BoardContainer">
           <div className="BoardWrapper" style={{position: 'relative'}}>
               <img className="Board" src={BoardBackground} alt=""/>
