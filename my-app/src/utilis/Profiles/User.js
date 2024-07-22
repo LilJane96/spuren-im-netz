@@ -31,11 +31,7 @@ export default function UserProfileData() {
       postsCount: 0,
       followersCount: 0,
       friendsCount: 0,
-      bio: (
-        <span>
-           
-        </span>
-      ),
+      bio: <span>{bio[4]}</span>,
       images: [],
     },
   ];
