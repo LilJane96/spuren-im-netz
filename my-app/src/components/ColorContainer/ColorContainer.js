@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { DialogContent, DialogTitle } from "@mui/material";
+import { getSelectedColor } from "../../utilis/colorUtils";
 import "./ColorContainer.css";
 
 export default function ColorContainer({ headingsize }) {
-  const [selectedColor, setSelectedColor] = useState("");
+  const [selectedColor, setSelectedColor] = useState(getSelectedColor());
 
   useEffect(() => {
     const storedColor = localStorage.getItem("selectedColor");
