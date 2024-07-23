@@ -28,7 +28,6 @@ export default function FrameOne() {
   const [openBox, setOpenBox] = useState(false);
   const [isAnswerWrong, setIsAnswerWrong] = useState(true);
 
-
   useEffect(() => {
     const stepFromUrl = parseInt(stepId.replace("step", ""), 10) || 1;
     setCurrentStep(stepFromUrl);
@@ -118,7 +117,6 @@ export default function FrameOne() {
       (units[unitId].taskAttempts[currentTaskIndex] || 0) +
       newItem.wrongAttempts;
 
-    console.log("units", units);
     // Saving the updated array in local storage
     localStorage.setItem("UnitsArray", JSON.stringify(units));
 
@@ -128,7 +126,6 @@ export default function FrameOne() {
       setSpeachbubbleText(wrongAnswer);
     }
   };
-  console.log("SELECTED ANSWER", selectedAnswer);
 
   const handleNextTask = () => {
     setTimeout(() => {
@@ -188,17 +185,16 @@ export default function FrameOne() {
             {currentTaskIndex === index && (
               <div>
                 <div className="frame" key={index}>
-                  <div className="SpeachbubbleBox"> 
-                    {tasks.step.map(
-                      (step, stepIndex) =>
-                        step.speachbubble && (
-                          <Speachbubble
-                            key={stepIndex}
-                            text={speachbubbleText || step.speachbubble}
-                            reason={reasonText}
-                            isCorrect={isAnswerWrong}
-                          />
-                        )
+                  <div className="SpeachbubbleBox">
+                    {tasks.step.map((step, stepIndex) =>
+                      step.speachbubble ? (
+                        <Speachbubble
+                          key={stepIndex}
+                          text={speachbubbleText || step.speachbubble}
+                          reason={reasonText}
+                          isCorrect={isAnswerWrong}
+                        />
+                      ) : null
                     )}
                   </div>
                   <div className="PhoneBox">
@@ -216,31 +212,32 @@ export default function FrameOne() {
                           ? "fourOrMore"
                           : "smallerThenFour"
                       }`}>
-                      {tasks.step.map(
-                        (answer, stepIndex) =>
-                          answer.answerboxes &&
-                          answer?.answerboxes.map((answerObj, boxIndex) => (
-                            <div className="answer">
-                              <AnswerBoxes
-                                key={`${stepIndex}-${boxIndex}`}
-                                type={answerObj?.type}
-                                text={answerObj?.answer}
-                                onClick={() =>
-                                  handleSubmit(
-                                    answer?.question,
-                                    answerObj?.answer,
-                                    answerObj?.right,
-                                    answer?.rightAnswer,
-                                    answer?.wrongAnswer,
-                                    answer?.reason
-                                  )
-                                }
-                                isCorrect={answerObj?.right}
-                                imageUrl={answerObj?.answer}
-                                imgAnswer={answerObj?.imgAnswer}
-                              />
-                            </div>
-                          ))
+                      {tasks.step.map((answer, stepIndex) =>
+                        answer.answerboxes
+                          ? answer.answerboxes.map((answerObj, boxIndex) => (
+                              <div
+                                className="answer"
+                                key={`${stepIndex}-${boxIndex}`}>
+                                <AnswerBoxes
+                                  type={answerObj?.type}
+                                  text={answerObj?.answer}
+                                  onClick={() =>
+                                    handleSubmit(
+                                      answer?.question,
+                                      answerObj?.answer,
+                                      answerObj?.right,
+                                      answer?.rightAnswer,
+                                      answer?.wrongAnswer,
+                                      answer?.reason
+                                    )
+                                  }
+                                  isCorrect={answerObj?.right}
+                                  imageUrl={answerObj?.answer}
+                                  imgAnswer={answerObj?.imgAnswer}
+                                />
+                              </div>
+                            ))
+                          : null
                       )}
                     </div>
                   </div>
@@ -250,13 +247,15 @@ export default function FrameOne() {
                     <CustomButton
                       onClick={handleGoBack}
                       name="Zurück"
-                      type="secondary"></CustomButton>
+                      type="secondary"
+                    />
                   ) : (
                     <CustomButton
                       onClick={handleGoBack}
                       name="Zurück"
                       type="secondary"
-                      disabled></CustomButton>
+                      disabled
+                    />
                   )}
                   {currentTaskIndex < totalTasks - 1 ? (
                     selectedAnswer === "" ||
@@ -265,25 +264,25 @@ export default function FrameOne() {
                         onClick={handleNextTask}
                         name="Weiter"
                         type="primary"
-                        disabled></CustomButton>
+                        disabled
+                      />
                     ) : (
                       <CustomButton
                         onClick={handleNextTask}
                         name="Weiter"
-                        type="primary"></CustomButton>
+                        type="primary"
+                      />
                     )
                   ) : selectedAnswer === "" ||
                     !units[unitId]?.answers[currentTaskIndex]?.isCorrect ? (
                     <CustomButton
                       name="Level beenden"
                       type="primary"
-                      disabled={true}
+                      disabled
                     />
                   ) : (
                     <div>
-                      <PopUpResultScreen
-                        open={openBox}
-                        unit={unitId}></PopUpResultScreen>
+                      <PopUpResultScreen open={openBox} unit={unitId} />
                       <CustomButton
                         name="Level beenden"
                         type="primary"
