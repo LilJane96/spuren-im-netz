@@ -38,7 +38,7 @@ This project includes a web application that can be accessed at https://spuren-i
 [`Figma Files`](https://www.figma.com/design/sDNn8ptkxEtSaH0wi8VLVy/MediaNight?node-id=0-1&t=FqVk2GhYEmIQNyqw-1)
 
 ### Documents
-[`Projectdocumentation SS2024`](https://github.com/LilJane96/spuren-im-netz/blob/main/documents/Spuren_im_Netz_Abschlussdokumentation.pdf)
+[`Projectdocumentation SS2024`](https://github.com/LilJane96/spuren-im-netz/blob/main/documents/Spuren_im_Netz_Documentation.pdf)
 [`Slides Presentation Day WS 2023`](https://github.com/LilJane96/spuren-im-netz/blob/main/documents/presentation_german.pdf)
 [`Instructions for teachers (german) WS 2023`](https://github.com/LilJane96/spuren-im-netz/blob/main/documents/SpurenImNetz_teacher_instructions.docx.pdf)
 [`Slides Presentation Day SS 2024`](https://github.com/LilJane96/spuren-im-netz/blob/main/documents/Spuren_im_Netz_presentation_2_german.pdf)
