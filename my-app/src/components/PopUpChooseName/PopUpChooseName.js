@@ -14,26 +14,12 @@ const PopUpChooseName = ({ open }) => {
   const [inputValue, setInputValue] = useState("");
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const storedColor = localStorage.getItem("selectedColor");
-    if (storedColor) {
-      setSelectedColor(storedColor);
-      document.documentElement.setAttribute("data-theme", storedColor);
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem("userName", inputValue);
-  }, [inputValue]);
-
   const handleInputChange = (event) => {
-    console.log("event", event);
     setInputValue(event.target.value);
   };
 
   const handleContinueClick = () => {
     localStorage.setItem("userName", inputValue);
-    localStorage.setItem("selectedColor", selectedColor);
     navigate("/frameone/unit1/step1");
   };
 

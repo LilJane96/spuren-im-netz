@@ -1,9 +1,5 @@
-import {
-  DialogContent,
-  DialogContentText,
-  DialogTitle,
-} from "@mui/material";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+import { DialogContent, DialogTitle } from "@mui/material";
 import { getSelectedColor } from "../../utilis/colorUtils";
 import "./ColorContainer.css";
 
@@ -31,46 +27,70 @@ export default function ColorContainer({ headingsize }) {
         className="dialogTitleH4"
         variant={headingsize}
         style={{ padding: "30px 0 10px" }}>
-        {" "}
         Wähle deine Lieblingsfarbe!
       </DialogTitle>
       <DialogContent className="dialogContent">
-        <DialogContentText textAlign={"center"}>
-          <ul>
+        <div style={{ textAlign: "center" }}>
+          <ul style={{ listStyleType: "none", padding: 0 }}>
             <li
               onClick={() => handleIconClick("yellow")}
-              style={{ padding: 0 }}>
+              style={{
+                display: "inline-block",
+                margin: "0 10px",
+                cursor: "pointer",
+              }}>
               <div
                 className="colorCircle"
                 style={{
                   backgroundColor: "#FFEEAE",
                   border: "6px solid #FEBD01",
                   borderRadius: "30px",
+                  width: "40px",
+                  height: "40px",
+                  display: "inline-block",
                 }}
               />
             </li>
-            <li onClick={() => handleIconClick("blue")} style={{ padding: 0 }}>
+            <li
+              onClick={() => handleIconClick("blue")}
+              style={{
+                display: "inline-block",
+                margin: "0 10px",
+                cursor: "pointer",
+              }}>
               <div
                 className="colorCircle"
                 style={{
                   backgroundColor: "#AEDDFF",
                   border: "6px solid #5780F0",
                   borderRadius: "30px",
+                  width: "40px",
+                  height: "40px",
+                  display: "inline-block",
                 }}
               />
             </li>
-            <li onClick={() => handleIconClick("pink")} style={{ padding: 0 }}>
+            <li
+              onClick={() => handleIconClick("pink")}
+              style={{
+                display: "inline-block",
+                margin: "0 10px",
+                cursor: "pointer",
+              }}>
               <div
                 className="colorCircle"
                 style={{
                   backgroundColor: "#F87793",
                   border: "6px solid #C64470",
                   borderRadius: "30px",
+                  width: "40px",
+                  height: "40px",
+                  display: "inline-block",
                 }}
               />
             </li>
           </ul>
-        </DialogContentText>
+        </div>
       </DialogContent>
     </div>
   );

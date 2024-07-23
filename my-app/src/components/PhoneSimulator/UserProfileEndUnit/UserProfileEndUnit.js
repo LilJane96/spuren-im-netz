@@ -56,6 +56,7 @@ export default function UserProfileEndUnit() {
   const [currentImage, setCurrentImage] = useState(Profilepicture);
   const [isFlipping, setIsFlipping] = useState(false);
   const navigate = useNavigate();
+
   useEffect(() => {
     setTimeout(() => {
       setIsFlipping(true);
@@ -70,56 +71,56 @@ export default function UserProfileEndUnit() {
     setTimeout(() => {
       navigate("/finishedGame/step2");
     }, 6500);
-  });
+  }, []);
 
   return (
-      <div className="UserProfileEndUnitContainer">
-        <div className="SwitchProfilePictureContainer">
-          <img
-              src={currentImage}
-              alt="Profilbild"
-              className={`SkipProfilePicture ${isFlipping ? "flipAnimation" : ""}`}
-          />
+    <div className="UserProfileEndUnitContainer">
+      <div className="SwitchProfilePictureContainer">
+        <img
+          src={currentImage}
+          alt="Profilbild"
+          className={`SkipProfilePicture ${isFlipping ? "flipAnimation" : ""}`}
+        />
+      </div>
+      <div className="ProfileImageContainer">
+        <img src={Profilepicture} alt="Profilbild" className="ProfilePicture" />
+        <p className="text">Felix</p>
+      </div>
+      <div className="flexContainer">
+        <div className="textContainer">
+          <p className="count">26</p>
+          <p className="text">Posts</p>
         </div>
-        <div className="ProfileImageContainer">
-          <img src={Profilepicture} alt="Profilbild" className="ProfilePicture" />
-          <p className="text">Felix</p>
+        <div className="textContainer">
+          <p className="count">128</p>
+          <p className="text">Follower</p>
         </div>
-        <div className="flexContainer">
-          <div className="textContainer">
-            <p className="count">26</p>
-            <p className="text">Posts</p>
-          </div>
-          <div className="textContainer">
-            <p className="count">128</p>
-            <p className="text">Follower</p>
-          </div>
-          <div className="textContainer">
-            <p className="count">28</p>
-            <p className="text">Freunde</p>
-          </div>
+        <div className="textContainer">
+          <p className="count">28</p>
+          <p className="text">Freunde</p>
         </div>
-        <div>
-          <p className="answerText">
+      </div>
+      <div>
+        <p className="answerText">
           <span>
             📍 Reutlingen <br />
             39
           </span>
-          </p>
-        </div>
-        <div className="Line" />
-        <div style={{ marginLeft: "6px" }}>
-          <ul className="ImageContainer">
-            {images.map((obj) => (
-                <li key={obj.id}>
-                  <img src={obj.img} alt={obj.text} />
-                </li>
-            ))}
-          </ul>
-        </div>
-        <div className="BottombarContainer">
-          <Bottombar />
-        </div>
+        </p>
       </div>
+      <div className="Line" />
+      <div style={{ marginLeft: "6px" }}>
+        <ul className="ImageContainer">
+          {images.map((obj) => (
+            <li key={obj.id}>
+              <img src={obj.img} alt={obj.text} />
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className="BottombarContainer">
+        <Bottombar />
+      </div>
+    </div>
   );
 }
