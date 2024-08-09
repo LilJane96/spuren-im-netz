@@ -20,7 +20,8 @@
   background-color: white;
   padding: 2%;
   width: 50%;
-  box-shadow: 0px 4px 15px black;
+  box-shadow: 0px 4px 4px var(--box-shadow);;
+  font-size: 21px;
 }
 
 .FinalFrameSevenContainer .ButtonContainer {
