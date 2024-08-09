@@ -137,8 +137,8 @@ export default function UnitOne() {
               },
               {
                 type: "image",
-                answer: "friendsIMG.png",
-                imgAnswer: "Dein/-e  Freund/-in",
+                answer: "strangers.svg",
+                imgAnswer: "Fremde Personen",
                 right: false,
               },
               {
