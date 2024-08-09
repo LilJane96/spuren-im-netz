@@ -131,8 +131,8 @@ export default function UnitOne() {
               },
               {
                 type: "image",
-                answer: "portraitIMG.png",
-                imgAnswer: "Dein Porträt",
+                answer: "pixel.svg",
+                imgAnswer: "Pixel",
                 right: false,
               },
               {

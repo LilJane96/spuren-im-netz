@@ -1,5 +1,5 @@
 import FoxProfilePic from "../../images/ProfileImages/ProfilGoodFox/FoxProfilePicBG.svg";
-import PuzzleWorldMapGoodFox from "../../images/ProfileImages/ProfilGoodFox/PuzzleWorldMapGoodFox.jpg";
+import NightShow from "../../images/ProfileImages/ProfilGoodFox/nightShow.svg";
 import HikingMountain from "../../images/ProfileImages/ProfilGoodFox/hikingMountain.svg";
 import Hikingtour from "../../images/ProfileImages/ProfilGoodFox/friendHiking.svg";
 import FerrisWheel from "../../images/ProfileImages/ProfilGoodFox/ferriswheel.svg";
@@ -39,8 +39,8 @@ export default function GoodFoxProfileData() {
         },
         {
           id: 6,
-          img: PuzzleWorldMapGoodFox,
-          text: "Puuh, endlich geschafft! Hat aber Spaß gemacht!",
+          img: NightShow,
+          text: "Wahsinns Show! Ich bin begeistert! :)",
         },
         { id: 7, img: HikingMountain, text: "Puuuh, endlich geschafft! Wir haben den Gipfel erreicht!" },
         {

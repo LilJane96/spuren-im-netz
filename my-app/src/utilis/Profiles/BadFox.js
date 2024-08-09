@@ -1,6 +1,5 @@
-import Backpack from "../../images/ProfileImages/ProfilBadFox/Backpack.png";
-import Bike from "../../images/ProfileImages/ProfilBadFox/Bike.jpg";
-import DVD from "../../images/ProfileImages/ProfilBadFox/DVD.jpeg";
+import Backpack from "../../images/ProfileImages/ProfilBadFox/backpack.svg";
+import Bike from "../../images/ProfileImages/ProfilBadFox/bicylce.svg";
 import Motorcyle from "../../images/ProfileImages/ProfilBadFox/Bike.png";
 import Vacation from "../../images/ProfileImages/ProfilBadFox/Vacation.svg";
 import Profilepicture from "../../images/ProfileImages/ProfilpictureFirst.png";
@@ -43,7 +42,7 @@ export default function BadFoxProfileData() {
         {
           id: 5,
           img: Motorcyle,
-          text: "Mein Nachbar hat mir sein Mottorad für eine Probefahrt geliehen. Ich glaube, ich behalte es einfach :)",
+          text: "Mein Nachbar hat mir sein Motorrad für eine Probefahrt geliehen. Ich glaube, ich behalte es einfach :)",
         },
         {
           id: 6,
