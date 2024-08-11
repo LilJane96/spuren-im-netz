@@ -1,12 +1,12 @@
 import FoxProfilePic from "../../images/ProfileImages/ProfilGoodFox/FoxProfilePicBG.svg";
-import House from "../../images/ProfileImages/ProfilGoodFox/House.png";
-import PuzzleWorldMapGoodFox from "../../images/ProfileImages/ProfilGoodFox/PuzzleWorldMapGoodFox.jpg";
-import SunsetGoodFoxProfile from "../../images/ProfileImages/ProfilGoodFox/SunsetGoodFox.jpg";
-import HomeGoodFox from "../../images/ProfileImages/ProfilGoodFox/HomeGoodFox.jpg";
-import TablesGoodFox from "../../images/ProfileImages/ProfilGoodFox/TablesGoodFox.jpg";
-import PuzzleGoodFox from "../../images/ProfileImages/ProfilGoodFox/PuzzleGoodFox.jpg";
-import ForestWalkGoodFox from "../../images/ProfileImages/ProfilGoodFox/ForestWalkGoodFox.jpg";
-import OfficeGoodFoxProfile from "../../images/ProfileImages/ProfilGoodFox/OfficeGoodFox.jpg";
+import NightShow from "../../images/ProfileImages/ProfilGoodFox/nightShow.svg";
+import HikingMountain from "../../images/ProfileImages/ProfilGoodFox/hikingMountain.svg";
+import Hikingtour from "../../images/ProfileImages/ProfilGoodFox/friendHiking.svg";
+import FerrisWheel from "../../images/ProfileImages/ProfilGoodFox/ferriswheel.svg";
+import Flowers from "../../images/ProfileImages/ProfilGoodFox/flowers.svg";
+import VacationPixel from "../../images/ProfileImages/ProfilGoodFox/vacationPixel.svg";
+import GiftFriend from "../../images/ProfileImages/ProfilGoodFox/giftFriend.svg";
+import NewHobby from "../../images/ProfileImages/ProfilGoodFox/newHobby.svg";
 
 export default function GoodFoxProfileData() {
   return [
@@ -20,33 +20,33 @@ export default function GoodFoxProfileData() {
   📍 Im Wald 24, Eiche 3
   🇩🇪 Deutschland`,
       images: [
-        { id: 1, img: House, text: "Mein Zuhause!" },
-        { id: 2, img: PuzzleGoodFox, text: "Mein Lieblingshobby!" },
+        { id: 1, img: Flowers, text: "Sooo wunderschöne Blumen :)" },
+        { id: 2, img: FerrisWheel, text: "Gleich gehts los, Riesenrad wollte ich schon immer mal fahren!" },
         {
           id: 3,
-          img: TablesGoodFox,
-          text: "Meine guten Freunde Elias und Niklas beim Tischkicker spielen.",
+          img: VacationPixel,
+          text: "Auch ein Detektiv muss sich mal einen Urlaub gönnen. Ganz liebe Grüße aus dem Urlaub!",
         },
         {
           id: 4,
-          img: HomeGoodFox,
-          text: "Lange Straße 15 in Berlin, Herr Müller. So ein schönes Haus!",
+          img: GiftFriend,
+          text: "Heute hat mein bester Freund Geburtstag! Ich hoffe er freut sich über das Geschenk!",
         },
         {
           id: 5,
-          img: ForestWalkGoodFox,
-          text: "Schaut mal Leute, ich habe heute diese Menschen an meinem Haus vorbeilaufen gesehen und direkt ein Foto gemacht :D",
+          img: NewHobby,
+          text: "Schaut mal Leute, ich habe ein neues Hobby gefunden, sieht gut aus, oder?",
         },
         {
           id: 6,
-          img: PuzzleWorldMapGoodFox,
-          text: "Puuh, endlich geschafft! Hat aber Spaß gemacht!",
+          img: NightShow,
+          text: "Wahsinns Show! Ich bin begeistert! :)",
         },
-        { id: 7, img: SunsetGoodFoxProfile, text: "Wooooooooow" },
+        { id: 7, img: HikingMountain, text: "Puuuh, endlich geschafft! Wir haben den Gipfel erreicht!" },
         {
           id: 8,
-          img: OfficeGoodFoxProfile,
-          text: "Ab ins Büro, hier warten noch einige Fälle auf mich.",
+          img: Hikingtour,
+          text: "Mit meinem besten Freund bin ich unterwegs nach ganz oben!",
         },
       ],
     },

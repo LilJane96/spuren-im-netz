@@ -1,13 +1,14 @@
-import Backpack from "../../../images/ProfileImages/ProfilBadFox/Backpack.png";
-import Bike from "../../../images/ProfileImages/ProfilBadFox/Bike.jpg";
-import DVD from "../../../images/ProfileImages/ProfilBadFox/DVD.jpeg";
-import Playstation from "../../../images/ProfileImages/ProfilBadFox/Playstation.jpeg";
-import Vacation from "../../../images/ProfileImages/ProfilBadFox/Vacation.jpg";
+import Backpack from "../../../images/ProfileImages/ProfilBadFox/backpack.svg";
+import Bike from "../../../images/ProfileImages/ProfilBadFox/Bike.png";
+import Vacation from "../../../images/ProfileImages/ProfilBadFox/Vacation.svg";
 import Profilepicture from "../../../images/ProfileImages/ProfilpictureFirst.png";
 import BadFoxProfilePicture from "../../../images/ProfileImages/ProfilBadFox/BadFoxProfilePicture.svg";
-import Ring from "../../../images/ProfileImages/ProfilBadFox/Ring.jpg";
-import Grill from "../../../images/ProfileImages/ProfilBadFox/Grill.jpg";
-import HausPlaystation from "../../../images/ProfileImages/ProfilBadFox/HausPlaystation.jpg";
+import Crown from "../../../images/ProfileImages/ProfilBadFox/crown.svg";
+import Car from "../../../images/ProfileImages/ProfilBadFox/car.svg";
+import Home from "../../../images/ProfileImages/ProfilBadFox/Home.svg";
+import Motorcyle from "../../../images/ProfileImages/ProfilBadFox/Bike.png";
+import Games from "../../../images/ProfileImages/ProfilBadFox/games.svg";
+
 import Bottombar from "../../Bottombar/Bottombar";
 import { useEffect, useState } from "react";
 import "./UserProfileEndUnit.css";
@@ -26,31 +27,31 @@ const images = [
   },
   {
     id: 3,
-    img: DVD,
-    text: "Verkaufe hier gut erhaltene DVDs. Wie neu! 5 Euro das Stück",
+    img: Games,
+    text: "Verkaufe hier gut erhaltene Spiele. Wie neu! 5 Euro das Stück",
   },
   { id: 4, img: Vacation, text: "Urlaub ist sehr schön!" },
   {
     id: 5,
-    img: Playstation,
-    text: "Habt ihr auch schon die neue PS5? Mein Nachbar hat sie einfach nicht mehr gebraucht, haha :D",
+    img: Motorcyle,
+    text: "Mein Nachbar hat mir sein Mottorad für eine Probefahrt geliehen. Ich glaube, ich behalte es einfach :)",
   },
   {
     id: 6,
-    img: Ring,
-    text: "Glitzert so schön. Noch einer davon und dann ab in den Urlauuub :) :) :)",
+    img: Crown,
+    text: "Glitzert so schön. Noch eine davon und dann ab in den Urlauuub :) :) :)",
   },
   {
     id: 7,
-    img: Grill,
-    text: "Meint ihr das lohnt sich? Hm, muss ich nochmal einen Kollegen fragen.",
+    img: Car,
+    text: "Hab hier gerade ein Auto gefunden, das mir sehr gut gefällt. Würde es gerne haben! Wie sind nochmal die Öffnungszeiten?",
   },
   {
     id: 8,
-    img: HausPlaystation,
-    text: "Hab hier gerade im Wohnzimmer eine schöne Playstation 5 entdeckt, würde soooo gerne auch eine haben!",
+    img: Home,
+    text: "Meint ihr, hier gibt es etwas schönes glitzerndes für mich?",
   },
-];
+]
 
 export default function UserProfileEndUnit() {
   const [currentImage, setCurrentImage] = useState(Profilepicture);

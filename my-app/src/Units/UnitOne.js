@@ -131,14 +131,14 @@ export default function UnitOne() {
               },
               {
                 type: "image",
-                answer: "portraitIMG.png",
-                imgAnswer: "Dein Porträt",
+                answer: "pixel.svg",
+                imgAnswer: "Pixel",
                 right: false,
               },
               {
                 type: "image",
-                answer: "friendsIMG.png",
-                imgAnswer: "Dein/-e  Freund/-in",
+                answer: "strangers.svg",
+                imgAnswer: "Fremde Personen",
                 right: false,
               },
               {
