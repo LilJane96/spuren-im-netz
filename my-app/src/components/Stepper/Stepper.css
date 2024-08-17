@@ -2,12 +2,12 @@
   display: flex;
 }
 
-.step {
+.stepper .step {
   position: relative;
   margin: 21px 100px;
 }
 
-.line {
+.stepper .line {
   position: absolute;
   height: 7px;
   width: 232px;
@@ -18,35 +18,85 @@
   z-index: -1;
 }
 
-.line.active {
+.stepper .icon .heart.active {
+  width: 42px;
+  height: 41px;
+}
+
+.stepper .icon .heart.inactive {
+  width: 42px;
+  height: 37px;
+}
+
+.stepper .icon .goal {
+  width: 59px;
+  height: 44px;
+}
+
+.stepper .line.active {
   background-color: #757575;
 }
 
-.step.active .line {
+.stepper .step.active .line {
   background-color: var(--stepper-color);
 }
 
-.stepGoal {
+.stepper .stepGoal {
   background: none;
   box-shadow: none;
   padding: 0px;
   margin: 18px 0 15px -20px;
 }
 
-.stepGoal .line {
+.stepper .stepGoal .line {
   width: 110px;
 }
 
-.stepGoal.active {
+.stepper .stepGoal.active {
   background: none;
   box-shadow: none;
   padding: 0px;
   margin: 18px 0 15px -20px;
 }
 
-.step.marked {
+.stepper .step.marked {
   background: #757575;
   padding: 10px;
   border-radius: 30px;
   box-shadow: 0px 3px 0px rgba(217, 217, 217, 1);
+}
+
+@media only screen and (max-width: 1000px) and (max-height: 500px) {
+  .stepper {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 19vh;
+  }
+
+  .stepper .step {
+    margin: 21px 50px;
+  }
+  .stepper .line {
+    width: 128px;
+    height: 4px;
+  }
+
+  .stepper .stepGoal .line {
+    width: 136px;
+  }
+
+  .stepper .icon .heart.active {
+    width: 30px;
+    height: 33px;
+  }
+  .stepper .icon .heart.inactive {
+    width: 28px;
+    height: 33px;
+  }
+
+  .stepper .icon .goal {
+    width: 47px;
+    height: 33px;
+  }
 }

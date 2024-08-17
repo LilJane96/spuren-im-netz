@@ -5,7 +5,7 @@
   opacity: 0.3;
   position: absolute;
   top: 0;
-  right: 500px;
+  right: 0;
   z-index: 1;
 }
 
@@ -39,4 +39,24 @@
   margin-left: 40px;
   margin-right: 40px;
   line-height: 1.5;
+}
+
+@media only screen and (max-width: 1000px) and (max-height: 500px) {
+  .sidebar .head {
+    margin-top: 25px;
+    gap: 50px;
+    margin-left: 25px;
+    align-items: center;
+  }
+
+  .sidebar .menu {
+    width: 300px;
+  }
+
+  .sidebar .rules {
+    font-size: 13px;
+    margin-left: 12px;
+    margin-right: 12px;
+    line-height: 1.5;
+  }
 }

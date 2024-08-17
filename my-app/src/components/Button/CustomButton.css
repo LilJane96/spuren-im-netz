@@ -251,3 +251,46 @@ button.SenaryButton {
   border-radius: 20px;
   z-index: 999;
 }
+
+@media only screen and (max-width: 1000px) and (max-height: 500px) {
+  button {
+    width: 160px;
+    height: 48px;
+    font-size: 16px;
+  }
+
+  button.PrimaryButton {
+    padding: 10px 36px;
+    border-radius: 1em;
+  }
+
+  button.SecondaryButton {
+    padding: 10px 36px;
+    border-radius: 1em;
+  }
+
+  button.TertiaryButton {
+    width: 120px;
+    height: 24px;
+    font-size: 10px;
+  }
+
+  button.QuaternaryButton {
+    width: 45px;
+    height: 45px;
+    background-size: 40%;
+    border-radius: 13px;
+  }
+
+  button.QuinaryButton {
+    padding: 0 200px;
+    font-size: 18px;
+  }
+
+  button.SenaryButton {
+    width: 45px;
+    height: 45px;
+    background-size: 12%;
+    border-radius: 13px;
+  }
+}
