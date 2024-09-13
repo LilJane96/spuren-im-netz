@@ -30,12 +30,12 @@
 
 @media only screen and (max-width: 1000px) and (max-height: 500px) {
   .UploadImageContainer .ImageContainer {
-    width: 117px;
-    height: 112px;
+    width: 100px;
+    height: 100px;
   }
 
   .UploadImageContainer .ProfilePicture {
-    width: 117px;
-    height: 112px;
+    width: 100px;
+    height: 100px;
   }
 }

@@ -100,8 +100,8 @@ div.bubble:after {
   }
 
   .bubble.speech p {
-    font-size: 0.9rem;
     margin: 7px 0;
+    line-height: 17px;
   }
 
   .circle {
@@ -110,6 +110,7 @@ div.bubble:after {
   div.bubble {
     margin: 0 auto;
     width: 100%;
+    border-radius: 17px;
   }
 
   .SpeachbubbleContainer .container {

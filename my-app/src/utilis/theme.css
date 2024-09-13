@@ -1,7 +1,7 @@
 :root {
   --primary-color: #f36b21;
-  --background-default: #ffffff; 
-  --background-blue: #003148; 
+  --background-default: #ffffff;
+  --background-blue: #003148;
 }
 
 [data-theme="default"] {
@@ -43,6 +43,8 @@
 
   --backpack-header-bg-color: #e54e17;
   --welcome-bg-img: url("../images/WelcomePage/PfotenYellow.svg");
+
+  --circle-border-color: #febd01;
 }
 
 [data-theme="blue"] {
@@ -86,6 +88,8 @@
 
   --backpack-header-bg-color: #f36b21;
   --welcome-bg-img: url("../images/WelcomePage/PfotenBlue.svg");
+
+  --circle-border-color: #5780f0;
 }
 
 [data-theme="yellow"] {

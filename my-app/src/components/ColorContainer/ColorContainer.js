@@ -40,7 +40,7 @@ export default function ColorContainer({ headingsize }) {
                 cursor: "pointer",
               }}>
               <div
-                className="colorCircle"
+                className="colorCircle yellow"
                 style={{
                   backgroundColor: "#FFEEAE",
                   border: "6px solid #FEBD01",
@@ -59,7 +59,7 @@ export default function ColorContainer({ headingsize }) {
                 cursor: "pointer",
               }}>
               <div
-                className="colorCircle"
+                className="colorCircle blue"
                 style={{
                   backgroundColor: "#AEDDFF",
                   border: "6px solid #5780F0",
@@ -78,7 +78,7 @@ export default function ColorContainer({ headingsize }) {
                 cursor: "pointer",
               }}>
               <div
-                className="colorCircle"
+                className="colorCircle pink"
                 style={{
                   backgroundColor: "#F87793",
                   border: "6px solid #C64470",

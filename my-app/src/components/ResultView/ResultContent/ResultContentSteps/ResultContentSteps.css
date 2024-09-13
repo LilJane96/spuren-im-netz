@@ -44,3 +44,23 @@
   line-height: 40px;
   padding: 0px 20px;
 }
+
+@media only screen and (max-width: 1000px) and (max-height: 500px) {
+  .AnswerText {
+    width: 283px;
+    height: 41px;
+    border-radius: 15px;
+    margin: 12px 0;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .AnswerImage {
+    width: 132px;
+    height: 82px;
+  }
+
+  .AnswerList.has-images {
+    gap: 18px 32px;
+  }
+}

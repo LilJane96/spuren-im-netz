@@ -7,6 +7,7 @@
 
 .Privacy .headlineContainer {
   display: flex;
+  align-items: center;
 }
 
 .Privacy .header {
@@ -37,5 +38,9 @@
   }
   .Privacy .TextContainer {
     margin: 12px;
+  }
+
+  .Privacy .PrivacyContainer {
+    margin: 7px 10px;
   }
 }

@@ -1,12 +1,21 @@
 @media only screen and (max-width: 1000px) and (max-height: 500px) {
   .MuiSwitch-root.MuiSwitch-sizeMedium.css-shikzf-MuiSwitch-root {
-    width: 31px;
+    width: 29px;
     height: 18px;
     margin: 2px;
   }
 
+  .css-j204z7-MuiFormControlLabel-root {
+    margin-right: 11px !important;
+  }
+
   .css-shikzf-MuiSwitch-root .MuiSwitch-thumb {
-    width: 14px;
-    height: 14px;
+    width: 14px !important;
+    height: 14px !important;
+  }
+
+  .css-shikzf-MuiSwitch-root .MuiSwitch-switchBase.Mui-checked {
+    -webkit-transform: translateX(11px);
+    transform: translateX(11px);
   }
 }

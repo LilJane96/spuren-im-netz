@@ -43,14 +43,16 @@
 
 @media only screen and (max-width: 1000px) and (max-height: 500px) {
   .sidebar .head {
-    margin-top: 25px;
+    margin-top: 10px;
     gap: 50px;
     margin-left: 25px;
+    margin-bottom: 0px;
     align-items: center;
   }
 
   .sidebar .menu {
     width: 300px;
+    height: 100vh;
   }
 
   .sidebar .rules {
@@ -58,5 +60,7 @@
     margin-left: 12px;
     margin-right: 12px;
     line-height: 1.5;
+    margin-top: 0px;
+    margin-bottom: 0;
   }
 }

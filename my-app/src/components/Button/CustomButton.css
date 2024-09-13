@@ -254,9 +254,9 @@ button.SenaryButton {
 
 @media only screen and (max-width: 1000px) and (max-height: 500px) {
   button {
-    width: 160px;
-    height: 48px;
-    font-size: 16px;
+    width: 122px;
+    height: 40px;
+    font-size: 15px;
   }
 
   button.PrimaryButton {
@@ -285,6 +285,7 @@ button.SenaryButton {
   button.QuinaryButton {
     padding: 0 200px;
     font-size: 18px;
+    border-radius: 0.8em;
   }
 
   button.SenaryButton {

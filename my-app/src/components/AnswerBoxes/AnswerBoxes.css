@@ -72,7 +72,7 @@
 @media only screen and (max-width: 1000px) and (max-height: 500px) {
   .AnswerBoxesComponent {
     width: 12rem;
-    height: 60px;
+    height: 50px;
   }
 
   .AnswerBoxesComponent.green.notImage {
@@ -80,12 +80,16 @@
   }
 
   .AnswerBoxesComponent.imageContent {
-    width: 87px;
-    height: 127px;
+    width: 75px;
+    height: 92px;
+  }
+
+  .AnswerBoxesComponent.imageContent p {
+    margin: -8px 0 0 0 !important;
   }
 
   .textContainer.image {
-    width: 127px;
-    height: 92px;
+    width: 116px;
+    height: 78px;
   }
 }
