@@ -15,7 +15,7 @@
   }
 
   .css-shikzf-MuiSwitch-root .MuiSwitch-switchBase.Mui-checked {
-    -webkit-transform: translateX(11px);
-    transform: translateX(11px);
+    -webkit-transform: translateX(11px) !important;
+    transform: translateX(11px) !important;
   }
 }

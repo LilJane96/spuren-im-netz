@@ -46,13 +46,26 @@
 }
 
 @media only screen and (max-width: 1000px) and (max-height: 500px) {
+  .AnswerList {
+    padding: 0;
+  }
+
   .AnswerText {
     width: 283px;
     height: 41px;
     border-radius: 15px;
-    margin: 12px 0;
+    margin: 7px 0;
+    padding: 0px;
     font-size: 16px;
     line-height: 20px;
+    font-weight: 600;
+  }
+  .AnswerText.true {
+    border: 3px solid var(--answerbox-right-border) !important;
+  }
+
+  .AnswerText.false {
+    border: 3px solid var(--answerbox-wrong) !important;
   }
 
   .AnswerImage {

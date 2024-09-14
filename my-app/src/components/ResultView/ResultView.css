@@ -189,9 +189,9 @@
   }
 
   .TitleBackgroundContainer .Text {
-    font-size: 12px;
+    font-size: 15px !important;
     width: 190px;
-    top: 23px;
+    top: 19px;
   }
 
   .ResultViewContainer .Description .Text p {

@@ -44,3 +44,19 @@
   padding: 4px 20px;
   font-size: large;
 }
+
+@media only screen and (max-width: 1000px) and (max-height: 500px) {
+  .FinalFrameThreeContainer {
+    margin: 0 40px;
+  }
+
+  .FinalFrameThreeContainer div.bubble {
+    height: 103px;
+    width: 436px;
+    margin: -19px auto;
+  }
+
+  .FinalFrameThreeContainer .SpeechbubbleContainer .circle {
+    top: 62px;
+  }
+}

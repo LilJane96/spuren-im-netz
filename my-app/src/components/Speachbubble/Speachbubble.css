@@ -116,4 +116,8 @@ div.bubble:after {
   .SpeachbubbleContainer .container {
     margin: 12px 20px;
   }
+
+  .SpeachbubbleContainer .content {
+    top: -63px;
+  }
 }

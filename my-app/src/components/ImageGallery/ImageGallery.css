@@ -68,3 +68,9 @@
   border-radius: 10px;
   object-fit: cover;
 }
+
+@media only screen and (max-width: 1000px) and (max-height: 500px) {
+  .ImageGalleryOverlay .ProfileContainer p {
+    margin: 15px 5px;
+  }
+}

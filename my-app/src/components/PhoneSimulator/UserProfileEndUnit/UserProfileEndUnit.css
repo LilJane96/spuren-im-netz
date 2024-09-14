@@ -1,5 +1,4 @@
 .UserProfileEndUnitContainer .ProfileImageContainer {
-  /* Stile für die Animation */
   .flipAnimation {
     transform: rotateY(180deg);
   }
@@ -23,7 +22,6 @@
   margin: -50px;
 }
 
-/* CSS für Hover-Effekt, entfernt das :hover */
 .SwitchProfilePictureContainer .SkipProfilePicture {
   width: 180px;
   height: 180px;
@@ -31,7 +29,6 @@
   transition: transform 1s ease;
 }
 
-/* Fügt eine zusätzliche Klasse für den Hover-Effekt hinzu, wenn isFlipping true ist */
 .SwitchProfilePictureContainer img.flipAnimation {
   transform: rotateY(180deg);
 }
@@ -130,4 +127,15 @@
   color: white;
   margin: 0 15px;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 1000px) and (max-height: 500px) {
+  .SwitchProfilePictureContainer .SkipProfilePicture {
+    width: 80px;
+    height: 80px;
+  }
+
+  .SwitchProfilePictureContainer {
+    height: 50vh;
+  }
 }

@@ -55,7 +55,37 @@
     width: 25px;
   }
 
+  .SearchPersonContainer .ProfilePicture {
+    width: 24px;
+  }
+
   .SearchPersonContainer .PersonsList li {
     height: 28px;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    padding: 7px;
+  }
+
+  .SearchPersonContainer .SearchbarContainer {
+    width: 90%;
+    border-radius: 9px;
+    height: 32px;
+  }
+
+  .SearchPersonContainer .PersonsList {
+    width: 90%;
+  }
+
+  .left-content {
+    margin: 10px 0px;
+  }
+
+  .left-content .name {
+    margin: 10px 3px;
+  }
+
+  .right-content {
+    margin: 0;
   }
 }
