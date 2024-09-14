@@ -44,3 +44,15 @@
   padding: 4px 20px;
   font-size: large;
 }
+
+@media only screen and (max-width: 1000px) and (max-height: 500px) {
+  .FinalFrameSixContainer div.bubble {
+    width: 477px;
+    height: 75px;
+  }
+
+  .FinalFrameSixContainer .SpeechbubbleContainer .circle {
+    left: 322px;
+    top: 38px;
+  }
+}

@@ -13,7 +13,7 @@
 
 /* UPPER SECTION*/
 
-.GroupChat .Headline {
+.GroupChat .Headline p {
   height: 10%;
   display: flex;
   align-items: center;
@@ -95,6 +95,11 @@
   color: grey;
 }
 
+.GroupChat .InputMock p {
+  padding: 0;
+  margin: 0;
+}
+
 .GroupChat .SendImageContainer {
   width: 30%;
   display: flex;
@@ -107,4 +112,23 @@
   background-color: blue;
   border-radius: 25%;
   padding: 5%;
+}
+
+@media only screen and (max-width: 1000px) and (max-height: 500px) {
+  .GroupChat .MessageSpeachbubbleContainer .speachBubble {
+    border-radius: 13px 13px 13px 0;
+  }
+
+  .GroupChat .Headline {
+    display: flex;
+    align-items: center;
+  }
+
+  .GroupChat .InputMock {
+    border-radius: 7px;
+  }
+
+  .GroupChat .InputMock p {
+    font-size: 0.5rem !important;
+  }
 }

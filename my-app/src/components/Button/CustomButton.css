@@ -280,6 +280,7 @@ button.SenaryButton {
     height: 45px;
     background-size: 40%;
     border-radius: 13px;
+    margin: 0;
   }
 
   button.QuinaryButton {

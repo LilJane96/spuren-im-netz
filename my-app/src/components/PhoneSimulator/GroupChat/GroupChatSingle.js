@@ -6,35 +6,41 @@ export default function MessageOfStranger({ answer }) {
   const messagesEndRef = useRef(null);
 
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'instant', block: 'end' });
-  }
+    messagesEndRef.current?.scrollIntoView({
+      behavior: "instant",
+      block: "end",
+    });
+  };
 
   useEffect(scrollToBottom, []);
 
   return (
     <div className="GroupChat">
       <div className="Headline">
-        Club schlechter Detektive
+        <p>Club schlechter Detektive</p>
       </div>
 
       <div className="MessagesContainer">
         <div className="MessagesWrapper">
-
           <div className="MessageSpeachbubbleContainer">
             <div className="speachBubble">
               <p id="name1">Böser Fuchs Felix</p>
               Pixel ist ein super schlechter Detektiv und blöd!
             </div>
-            <img src={BadFoxPicture} alt="Profilbild" className="ProfilePicture" />
+            <img
+              src={BadFoxPicture}
+              alt="Profilbild"
+              className="ProfilePicture"
+            />
           </div>
-        
+
           <div ref={messagesEndRef} />
         </div>
       </div>
 
       <div className="SendMessage">
         <div className="InputMock">
-          Nachricht schreiben...
+          <p>Nachricht schreiben...</p>
         </div>
         <div className="SendImageContainer">
           <img src={SendImg} alt="Nachricht senden" className="SendImage" />

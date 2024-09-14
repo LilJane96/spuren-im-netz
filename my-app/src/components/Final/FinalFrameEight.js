@@ -34,10 +34,14 @@ export default function FinalFrameEight() {
   };
   return (
     <div className="FinalFrameEightContainer">
-
       <div className="SpeechbubbleContainer">
         <div className="Bubble">
-        Jetzt habe ich das beste Geschenk für Mara! Da bin ich mir sicher. Ich freue mich schon darauf, das Geschenk Mara zu geben. Das Geschenk ist so gut, dass ich für dich direkt auch eins gekauft habe!
+          <p>
+            Jetzt habe ich das beste Geschenk für Mara! Da bin ich mir sicher.
+            Ich freue mich schon darauf, das Geschenk Mara zu geben. Das
+            Geschenk ist so gut, dass ich für dich direkt auch eins gekauft
+            habe!
+          </p>
         </div>
       </div>
 
