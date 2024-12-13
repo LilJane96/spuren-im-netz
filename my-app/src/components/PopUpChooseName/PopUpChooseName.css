@@ -2,46 +2,108 @@
   margin: 30px 0 0;
 }
 
-.dialogTitleH3 {
+.PopUpChooseName.true {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.PopUpChooseName.false {
+  display: none;
+}
+
+.PopUpChooseName .dialog {
+  width: 608px;
+  height: 612px;
+  background: white;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.PopUpChooseName .dialogTitleH2 {
   padding: 28px 18px 5px !important;
-
+  font-size: 3rem;
   text-align: center;
 }
-
-.dialogTitleH4 {
-  padding: 28px 18px;
-  text-align: center;
-}
-.dialogContent {
+.PopUpChooseName .NameContainer h3 {
   display: flex;
   justify-content: center;
 }
 
-.iconYellow {
+.PopUpChooseName .dialogTitleH4 {
+  padding: 28px 18px;
+  text-align: center;
+}
+
+.PopUpChooseName .dialogContent {
+  display: flex;
+  justify-content: center;
+}
+
+.PopUpChooseName .iconYellow {
   color: yellow;
   font-size: 100px;
 }
-.iconBlue {
+
+.PopUpChooseName .iconBlue {
   color: blue;
   font-size: 100px;
 }
-.dialogActions {
+
+.PopUpChooseName .dialogActions {
   justify-content: center;
   margin-bottom: 15px;
 }
 
-.NameInputFieldContainer {
+.PopUpChooseName .NameInputFieldContainer {
   display: flex;
   justify-content: center;
 }
 
-.NameInputFieldContainer input:focus-visible {
+.PopUpChooseName .NameInputFieldContainer input:focus-visible {
   outline: 2px solid var(--background);
 }
 
 @media only screen and (max-width: 1000px) and (max-height: 500px) {
-  .NameInputFieldContainer .InputfieldContainer input {
-    width: 470px;
-    height: 20px;
+  .PopUpChooseName .NameInputFieldContainer .InputfieldContainer input {
+    width: 100% !important;
+    height: 20px !important;
+  }
+
+  .PopUpChooseName .dialog {
+    width: 50%;
+    height: 80%;
+  }
+
+  .PopUpChooseName .NameContainer h2 {
+    padding: 10px 0px !important;
+  }
+
+  .PopUpChooseName .NameContainer h3 {
+    font-size: 1rem !important;
+  }
+
+  .InputContainer .ColorContainer {
+    margin: 10px 0 0;
+  }
+
+  .PopUpChooseName .dialogContent {
+    padding: 0;
+  }
+
+  .PopUpChooseName .dialogTitleH2 {
+    padding: 15px 18px 5px !important;
+  }
+
+  .PopUpChooseName .btn-cstm-width {
+    width: 100%;
   }
 }

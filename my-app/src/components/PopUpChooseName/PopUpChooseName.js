@@ -22,31 +22,14 @@ const PopUpChooseName = ({ open }) => {
     localStorage.setItem("userName", inputValue);
     navigate("/frameone/unit1/step1");
   };
-
+  console.log("opne", open);
   return (
-    <div className="PopUpChooseName">
-      <Dialog
-        sx={{
-          "& .MuiDialog-paper": {
-            width: 608,
-            height: 612,
-            borderRadius: 5,
-            justifyContent: "space-around",
-          },
-        }}
-        open={open}
-        maxWidth={"md"}>
-        <DialogTitle className="dialogTitleH3" variant={"h3"}>
-          Bevor wir starten!
-        </DialogTitle>
+    <div className={`PopUpChooseName ${open}`}>
+      <div className="dialog" open={open} maxWidth={"md"}>
+        <h2 className="dialogTitleH2">Bevor wir starten!</h2>
         <div className="InputContainer">
           <div className="NameContainer">
-            <DialogTitle
-              className="dialogTitleH4"
-              variant={"h4"}
-              style={{ padding: "30px 0 10px" }}>
-              Wie heißt du?
-            </DialogTitle>
+            <h3>Wie heißt du?</h3>
             <div className="NameInputFieldContainer">
               <Inputfield
                 placeholder="Name"
@@ -62,18 +45,22 @@ const PopUpChooseName = ({ open }) => {
         </div>
         <DialogActions style={{ justifyContent: "center", marginBottom: 15 }}>
           {inputValue.length > 0 && selectedColor.length > 0 ? (
-            <CustomButton
-              name="Weiter"
-              type="quinary"
-              onClick={handleContinueClick}></CustomButton>
+            <div className="btn-cstm-width">
+              <CustomButton
+                name="Weiter"
+                type="quinary"
+                onClick={handleContinueClick}></CustomButton>
+            </div>
           ) : (
-            <CustomButton
-              name="Weiter"
-              type="quinary"
-              disabled={true}></CustomButton>
+            <div className="btn-cstm-width">
+              <CustomButton
+                name="Weiter"
+                type="quinary"
+                disabled={true}></CustomButton>
+            </div>
           )}
         </DialogActions>
-      </Dialog>
+      </div>
     </div>
   );
 };

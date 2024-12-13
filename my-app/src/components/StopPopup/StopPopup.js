@@ -28,9 +28,9 @@ const Ampel = ({ open, onClose }) => {
         <div className="StopPopupBackground">
           <div className="StopPopupContainer">
             <div className="TextContainer first">
-              <p>
+              <h2>
                 Super gemacht <span>🌟</span> Du hast das Level geschafft!
-              </p>
+              </h2>
             </div>
             <div className="traffic-light">
               <div className={`light red ${isRedActive ? "active" : ""}`}></div>

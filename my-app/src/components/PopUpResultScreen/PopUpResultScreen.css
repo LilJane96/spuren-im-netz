@@ -78,4 +78,8 @@
   .containerDialogResult .imageDiv img {
     width: 40%;
   }
+
+  .containerDialogResult .btn-cstm-width {
+    width: 100%;
+  }
 }
