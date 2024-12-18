@@ -1,21 +1,20 @@
-import { test, expect } from '@playwright/test';
+import { test, expect } from "@playwright/test";
 
-test('has title', async ({ page }) => {
-  await page.goto('/');
+test("has title", async ({ page }) => {
+  await page.goto("http://localhost:3000/");
 
   // Expect a title "to contain" a substring.
   await expect(page).toHaveTitle(/Spuren im Netz/);
 });
 
-test('game start', async ({ page }) => {
-  await page.goto('/');
+test("game start", async ({ page }) => {
+  await page.goto("http://localhost:3000/");
 
   // Click the start button
-  await page.getByRole('button', { name: 'SPIEL STARTEN' }).click();
+  await page.getByRole("button", { name: "SPIEL STARTEN" }).click();
 
   // Expects page to have the string "Willkommen bei 'Spuren-im-Netz'!".
-  await expect(page.getByText(/Willkommen bei 'Spuren-im-Netz'!/)).toHaveCount(1);
+  await expect(page.getByText(/Willkommen bei 'Spuren-im-Netz'!/)).toHaveCount(
+    1
+  );
 });
-
-
-

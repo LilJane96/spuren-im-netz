@@ -19,6 +19,10 @@ export default function ColorContainer({ headingsize }) {
     document.documentElement.setAttribute("data-theme", color);
     // Farbe sofort speichern, wenn sie angeklickt wird
     localStorage.setItem("selectedColor", color);
+    console.log(
+      "document",
+      document.documentElement.getAttribute("data-theme")
+    );
   };
 
   return (

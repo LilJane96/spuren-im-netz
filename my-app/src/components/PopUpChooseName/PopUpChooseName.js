@@ -22,7 +22,7 @@ const PopUpChooseName = ({ open }) => {
     localStorage.setItem("userName", inputValue);
     navigate("/frameone/unit1/step1");
   };
-  console.log("opne", open);
+
   return (
     <div className={`PopUpChooseName ${open}`}>
       <div className="dialog" open={open} maxWidth={"md"}>

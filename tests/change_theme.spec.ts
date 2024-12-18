@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 
 test("test", async ({ page }) => {
-  await page.goto("/hub");
+  await page.goto("http://localhost:3000/hub", { timeout: 60000 });
   await page.getByRole("button").click();
   await page
     .locator("div")

@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test";
 
 test("results_unit1_test", async ({ page }) => {
   //Click through Unit 1, make some Mistakes and check if the results are displayed correctly
-  await page.goto("/hub");
+  await page.goto("http://localhost:3000/hub");
   await page.getByRole("img", { name: "Pin1" }).click();
   await page.getByPlaceholder("Name").fill("TEST");
   await page.getByRole("button", { name: "Weiter" }).click();
