@@ -19,19 +19,15 @@ const Stepper = ({ currentStep, totalSteps }) => {
               <img
                 src={HeartActiveDefault}
                 alt={`Step ${index + 1}`}
-                style={{ width: "42px", height: "41px" }}
+                className="heart active"
               />
             ) : index + 1 === totalSteps ? (
-              <img
-                src={Goal}
-                alt={`Step ${index + 1}`}
-                style={{ width: "59px", height: "44px" }}
-              />
+              <img src={Goal} alt={`Step ${index + 1}`} className="goal" />
             ) : (
               <img
                 src={Heart}
                 alt={`Step ${index + 1}`}
-                style={{ width: "42px", height: "37px" }}
+                className="heart inactive"
               />
             )}
             {index > 0 && (

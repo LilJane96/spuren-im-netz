@@ -51,7 +51,7 @@ const images = [
     img: Home,
     text: "Meint ihr, hier gibt es etwas schönes glitzerndes für mich?",
   },
-]
+];
 
 export default function UserProfileEndUnit() {
   const [currentImage, setCurrentImage] = useState(Profilepicture);

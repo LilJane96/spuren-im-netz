@@ -7,6 +7,7 @@
 
 .Privacy .headlineContainer {
   display: flex;
+  align-items: center;
 }
 
 .Privacy .header {
@@ -29,4 +30,17 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+@media only screen and (max-width: 1000px) and (max-height: 500px) {
+  .Privacy .PrivacyText {
+    font-size: 10px;
+  }
+  .Privacy .TextContainer {
+    margin: 12px;
+  }
+
+  .Privacy .PrivacyContainer {
+    margin: 7px 10px;
+  }
 }

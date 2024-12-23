@@ -11,52 +11,71 @@ export default function MessageOfStranger({ answer }) {
   const messagesEndRef = useRef(null);
 
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'instant', block: 'end' });
-  }
+    messagesEndRef.current?.scrollIntoView({
+      behavior: "instant",
+      block: "end",
+    });
+  };
 
   useEffect(scrollToBottom, []);
 
   return (
     <div className="GroupChatReport">
       <div className="Headline">
-        Club schlechter Detektive
-        <img src={Report} alt="Report"/>
+        <p>Club schlechter Detektive</p>
+        <img src={Report} alt="Report" />
       </div>
 
       <div className="MessagesContainer">
         <div className="MessagesWrapper">
-
           <div className="MessageSpeachbubbleContainer">
             <div className="speachBubble">
               <p id="name1">Böser Fuchs Felix</p>
-              <img src={BadFoxWalking} alt="Profilbild" className="BigPicture" />
-              Pixel hat letzte Woche jemandem Geld geklaut!
+              <img
+                src={BadFoxWalking}
+                alt="Profilbild"
+                className="BigPicture"
+              />
+              <span>Pixel hat letzte Woche jemandem Geld geklaut!</span>
             </div>
-            <img src={BadFoxPicture} alt="Profilbild" className="ProfilePicture" />
+            <img
+              src={BadFoxPicture}
+              alt="Profilbild"
+              className="ProfilePicture"
+            />
           </div>
 
           <div className="MessageSpeachbubbleContainer">
             <div className="speachBubble">
               <p id="name2">Schildkröte</p>
-              Vlt hast du recht und Detektive sind echt blöd
+              <span>Vlt hast du recht und Detektive sind echt blöd</span>
             </div>
-            <img src={AnonymProfile} alt="Profilbild" className="ProfilePicture" />
+            <img
+              src={AnonymProfile}
+              alt="Profilbild"
+              className="ProfilePicture"
+            />
           </div>
 
           <div className="MessageSpeachbubbleContainer">
             <div className="speachBubble">
               <p id="name3">Fisch</p>
-              Vlt hast du recht und Detektive sind echt blöd            </div>
-            <img src={AnonymProfile} alt="Profilbild" className="ProfilePicture" />
+              <span>Vlt hast du recht und Detektive sind echt blöd </span>
+            </div>
+            <img
+              src={AnonymProfile}
+              alt="Profilbild"
+              className="ProfilePicture"
+            />
           </div>
-        
+
           <div ref={messagesEndRef} />
         </div>
       </div>
 
       <div className="SendMessage">
         <div className="InputMock">
-          Nachricht schreiben...
+          <p>Nachricht schreiben...</p>
         </div>
         <div className="SendImageContainer">
           <img src={SendImg} alt="Nachricht senden" className="SendImage" />

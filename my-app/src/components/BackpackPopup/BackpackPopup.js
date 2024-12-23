@@ -21,7 +21,12 @@ export default function BackpackPopup({ open, onClose }) {
   };
 
   const getBackpackImage = () => {
-    const completedUnits = [isUnit1Done, isUnit2Done, isUnit3Done, isUnit4Done].filter(Boolean).length;
+    const completedUnits = [
+      isUnit1Done,
+      isUnit2Done,
+      isUnit3Done,
+      isUnit4Done,
+    ].filter(Boolean).length;
 
     switch (completedUnits) {
       case 0:
@@ -39,22 +44,22 @@ export default function BackpackPopup({ open, onClose }) {
     }
   };
   return (
-      <>
-        {open && (
-            <>
-              <div className="CloseBackpack">
-                <CustomButton type="quaternary" onClick={handleCloseBackpack} />
-              </div>
-              <div className="BackpackPopupOverlay">
-                <div className="BackpackPopup">
-                  <p>Dein Rucksack!</p>
-                </div>
-                <div>
-                  <img src={getBackpackImage()} alt="Backpack"/>
-                </div>
-              </div>
-            </>
-        )}
-      </>
+    <>
+      {open && (
+        <>
+          <div className="CloseBackpack">
+            <CustomButton type="quaternary" onClick={handleCloseBackpack} />
+          </div>
+          <div className="BackpackPopupOverlay">
+            <div className="BackpackPopup">
+              <p>Dein Rucksack!</p>
+            </div>
+            <div className="BackpackImg">
+              <img src={getBackpackImage()} alt="Backpack" />
+            </div>
+          </div>
+        </>
+      )}
+    </>
   );
 }

@@ -119,3 +119,21 @@
   margin: 0 15px;
   cursor: pointer;
 }
+
+@media only screen and (max-width: 1000px) and (max-height: 500px) {
+  .ImageScrollContainer .backBtn {
+    top: 5px;
+    margin: 0 7px;
+  }
+  .css-i4bv87-MuiSvgIcon-root {
+    width: 0.7em !important;
+    height: 0.7em !important;
+  }
+
+  .UserProfileContainer .flexContainer .textContainer {
+    margin: 18px 0px 20px 4px;
+  }
+  .UserProfileContainer .text {
+    font-size: 0.65em !important;
+  }
+}

@@ -87,15 +87,16 @@ export default function PopUpResultScreen({ open, unit }) {
               {!buttonStatus && (
                 <div
                   className="dialogActions"
-                  style={{ marginTop: 20, marginBottom: 5 }}>
+                  style={{ marginTop: 20, marginBottom: 5, width: "100%" }}>
                   <Link
                     to={`/result/${unit}/step1`}
-                    style={{ textDecoration: "none" }}>
-                    <CustomButton
-                      name="Schau dir deine Ergebnisse an!"
-                      type="quinary"
-                      style={{ width: "200px" }}
-                    />
+                    style={{ textDecoration: "none", width: "100%" }}>
+                    <div className="btn-cstm-width">
+                      <CustomButton
+                        name="Schau dir deine Ergebnisse an!"
+                        type="quinary"
+                      />
+                    </div>
                   </Link>
                 </div>
               )}

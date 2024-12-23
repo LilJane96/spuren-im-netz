@@ -179,11 +179,11 @@ export default function FrameOne() {
         <Stepper currentStep={currentStep} totalSteps={totalTasks} />
         <CustomButton type="quaternary" onClick={handleEndUnit} />
       </div>
-      <div className="frameContainer">
+      <div>
         {currentUnitData.task.map((tasks, index) => (
           <div className="currentFrame" key={index}>
             {currentTaskIndex === index && (
-              <div>
+              <div className="frameContainer">
                 <div className="frame" key={index}>
                   <div className="SpeachbubbleBox">
                     {tasks.step.map((step, stepIndex) =>

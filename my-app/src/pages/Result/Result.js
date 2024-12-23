@@ -122,7 +122,7 @@ export default function Result() {
       {popupOpen && (
         <Ampel
           initialTime={initialTime}
-          open={popupOpen}
+          open={true}
           onClose={() => setPopupOpen(false)}
         />
       )}

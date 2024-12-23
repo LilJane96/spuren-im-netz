@@ -32,10 +32,14 @@ export default function FinalFrameSeven() {
 
   return (
     <div className="FinalFrameSevenContainer">
-
       <div className="SpeechbubbleContainer">
         <div className="Bubble">
-        Danke für deine Hilfe. Ich habe nun ein tolles Geschenk gefunden, nachdem ich mich nochmal genauer informiert habe. Die Werbung war nicht gut, da hat die Beschreibung gar nicht zu dem Produkt gepasst! Ich hoffe es wird Mara gefallen.
+          <p>
+            Danke für deine Hilfe. Ich habe nun ein tolles Geschenk gefunden,
+            nachdem ich mich nochmal genauer informiert habe. Die Werbung war
+            nicht gut, da hat die Beschreibung gar nicht zu dem Produkt gepasst!
+            Ich hoffe es wird Mara gefallen.
+          </p>
         </div>
       </div>
 

@@ -2,12 +2,11 @@
   position: relative;
 }
 
-.container {
+.SpeachbubbleContainer .container {
   display: grid;
   margin: 50px 20px;
 }
-
-.foxImg {
+.SpeachbubbleContainer .foxImg {
   border: 6px solid #4e4e4e;
   border-radius: 60px;
 }
@@ -77,12 +76,48 @@ div.bubble:after {
 }
 
 @keyframes pulseBorder {
-  0%, 100% { border-color: red; box-shadow: 0 0 8px red; }
-  50% { border-color: red; box-shadow: 0 0 12px red; }
+  0%,
+  100% {
+    border-color: red;
+    box-shadow: 0 0 8px red;
+  }
+  50% {
+    border-color: red;
+    box-shadow: 0 0 12px red;
+  }
 }
 
 #wrong-answer {
   border: 2px solid red;
   animation: pulseBorder 0.5s ease-in-out 2;
   box-shadow: 0 0 8px red;
+}
+
+@media only screen and (max-width: 1000px) and (max-height: 500px) {
+  .SpeachbubbleContainer .content img {
+    width: 25%;
+    border: 3px solid #4e4e4e;
+  }
+
+  .bubble.speech p {
+    margin: 7px 0;
+    line-height: 17px;
+  }
+
+  .circle {
+    left: 88px;
+  }
+  div.bubble {
+    margin: 0 auto;
+    width: 100%;
+    border-radius: 17px;
+  }
+
+  .SpeachbubbleContainer .container {
+    margin: 12px 20px;
+  }
+
+  .SpeachbubbleContainer .content {
+    top: -63px;
+  }
 }

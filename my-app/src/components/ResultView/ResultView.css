@@ -175,3 +175,59 @@
     color: #e54e17;
   }
 }
+
+@media only screen and (max-width: 1000px) and (max-height: 500px) {
+  .ResultViewContainer {
+    width: 400px;
+    height: 249px;
+    margin: 0 27px 10px 27px;
+  }
+
+  .TitleBackgroundContainer {
+    width: 286px;
+    height: 90px;
+  }
+
+  .TitleBackgroundContainer .Text {
+    font-size: 15px !important;
+    width: 190px;
+    top: 19px;
+  }
+
+  .ResultViewContainer .Description .Text p {
+    font-size: 18px;
+    margin: 12px;
+  }
+
+  .ResultViewContainer .colorBox {
+    width: 25px;
+    height: 21px;
+  }
+  .ResultRowContainer .List p {
+    font-size: 14px;
+  }
+
+  .ResultViewContainer .Description li {
+    width: calc(27.33% - 10px);
+    height: 60px;
+    margin: 0px 10px 9px 13px;
+  }
+
+  .ResultRowContainer .List .Heart {
+    width: 27px;
+    height: 27px;
+  }
+
+  .ResultRowContainer .List.two .Heart {
+    border: 2px solid #febd01;
+  }
+
+  .ResultRowContainer .List.one .Heart {
+    border: 2px solid #06865b;
+  }
+
+  .ResultRowContainer .List.one .Heart img {
+    width: 26px !important;
+    height: 20px !important;
+  }
+}

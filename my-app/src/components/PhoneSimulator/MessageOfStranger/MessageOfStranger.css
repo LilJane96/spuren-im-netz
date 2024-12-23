@@ -87,3 +87,26 @@
 .MessageContainer .selected {
   background: rgb(202, 202, 215);
 }
+
+@media only screen and (max-width: 1000px) and (max-height: 500px) {
+  .MessageContainer .MessageSpeachbubbleContainer p {
+    font-size: 12px;
+    border-radius: 17px;
+  }
+
+  .MessageContainer .firstText {
+    font-size: 12px;
+  }
+
+  .MessageContainer .ButtonContainer .btn {
+    width: 64px;
+    height: 37px;
+    font-size: 11px;
+    margin: 0px 2px;
+    border-radius: 7px;
+  }
+
+  .MessageContainer .AcceptMessageViewContainer {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.25);
+  }
+}

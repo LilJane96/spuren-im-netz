@@ -1,7 +1,7 @@
 :root {
   --primary-color: #f36b21;
-  --background-default: #ffffff; 
-  --background-blue: #003148; 
+  --background-default: #ffffff;
+  --background-blue: #003148;
 }
 
 [data-theme="default"] {
@@ -39,10 +39,14 @@
   --result-header: url("../images/ResultPage/ResultBackgroundYellow.svg");
 
   --answerbox-right: #65dcb4;
+  --answerbox-right-border: #06865b;
+
   --answerbox-wrong: #ff8653;
 
   --backpack-header-bg-color: #e54e17;
   --welcome-bg-img: url("../images/WelcomePage/PfotenYellow.svg");
+
+  --circle-border-color: #febd01;
 }
 
 [data-theme="blue"] {
@@ -86,6 +90,8 @@
 
   --backpack-header-bg-color: #f36b21;
   --welcome-bg-img: url("../images/WelcomePage/PfotenBlue.svg");
+
+  --circle-border-color: #5780f0;
 }
 
 [data-theme="yellow"] {
@@ -164,6 +170,8 @@
   --result-header: url("../images/ResultPage/ResultBackgroundPink.svg");
 
   --answerbox-right: #a2e360;
+  --answerbox-right-border: #06865b;
+
   --answerbox-wrong: #eb4b4b;
 
   --backpack-header-bg-color: #8d0f3a;

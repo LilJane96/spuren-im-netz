@@ -68,3 +68,28 @@
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
+
+@media only screen and (max-width: 1000px) and (max-height: 500px) {
+  .AnswerBoxesComponent {
+    width: 12rem;
+    height: 50px;
+  }
+
+  .AnswerBoxesComponent.green.notImage {
+    width: 13rem;
+  }
+
+  .AnswerBoxesComponent.imageContent {
+    width: 75px;
+    height: 92px;
+  }
+
+  .AnswerBoxesComponent.imageContent p {
+    margin: -8px 0 0 0 !important;
+  }
+
+  .textContainer.image {
+    width: 116px;
+    height: 78px;
+  }
+}

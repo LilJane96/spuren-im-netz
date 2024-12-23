@@ -14,7 +14,7 @@
   z-index: 998;
 }
 
-.StopPopupBackground .TextContainer.first p {
+.StopPopupBackground .TextContainer.first h2 {
   color: var(--Yellow-Style-Guide-Primary-Nav-Button, #f36b21);
   text-align: center;
   font-family: Quicksand;
@@ -96,4 +96,27 @@
   display: flex;
   justify-content: flex-end;
   flex: 0 0 74%;
+}
+
+@media only screen and (max-width: 1000px) and (max-height: 500px) {
+  .StopPopupBackground .StopPopupContainer {
+    width: 34rem;
+    height: 22rem;
+  }
+
+  .StopPopupBackground .TextContainer.second {
+    width: 80%;
+  }
+
+  .StopPopupBackground .TextContainer.first h2 {
+    font-size: 1.2rem !important;
+  }
+  .StopPopupBackground .TimeContainer {
+    width: 30%;
+  }
+
+  .StopPopupBackground .StopPopupContainer .traffic-light {
+    width: 4.1rem;
+    padding: 10px;
+  }
 }
