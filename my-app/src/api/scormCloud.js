@@ -1,0 +1,34 @@
+import ScormCloud from "@rusticisoftware/scormcloud-api-v2-client-javascript";
+
+// SCORM Cloud API konfigurieren
+const configureScormCloud = () => {
+  const defaultClient = ScormCloud.ApiClient.instance;
+
+  const basicAuth = defaultClient.authentications["APP_NORMAL"];
+  basicAuth.username = process.env.REACT_APP_SCORM_CLOUD_APP_ID; // App ID
+  basicAuth.password = process.env.REACT_APP_SCORM_CLOUD_SECRET_KEY; // Secret Key
+
+  return new ScormCloud.PingApi();
+};
+
+const dispatchApi = new ScormCloud.DispatchApi();
+dispatchApi.updateDispatches(
+  new ScormCloud.UpdateDispatchSchema(),
+  { since: new Date().toISOString() },
+  function (err, data, response) {
+    console.log("dispatchApi", response.headers["x-total-count"]);
+  }
+);
+
+// Testaufruf an SCORM Cloud (Ping)
+export const testScormCloudConnection = async () => {
+  try {
+    // SCORM Cloud Ping ausführen
+    const response = await configureScormCloud();
+    console.log("Ping erfolgreich! Antwort:", response);
+    return response;
+  } catch (error) {
+    console.error("Ping fehlgeschlagen:", error);
+    throw error;
+  }
+};
