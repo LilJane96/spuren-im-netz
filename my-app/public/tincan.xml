@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<tincan xmlns="http://projecttincan.com/tincan.xsd">
+    <activities>
+        <activity id="https://spuren-im-netz.web.app/activity/game" type="http://activitystrea.ms/schema/1.0/game">
+            <name>Spuren im Netz</name>
+            <description lang="en-US">In this game, students can learn about the dangers of social media and how to deal with them.</description>
+            <launch>http://localhost:3000</launch>
+        </activity>
+    </activities>
+</tincan>

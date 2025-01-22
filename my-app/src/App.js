@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Routes from "./Routes/Routes.js";
 import "./App.css";
-import { testScormCloudConnection } from "./api/scormCloud.js";
 
 const App = () => {
   const [isPortrait, setIsPortrait] = useState(
@@ -17,12 +16,6 @@ const App = () => {
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
-
-  useEffect(() => {
-    testScormCloudConnection()
-      .then((response) => console.log("SCORM Cloud Ping Antwort:", response))
-      .catch((error) => console.error("SCORM Cloud Fehler:", error));
   }, []);
 
   if (isPortrait) {

@@ -11,6 +11,7 @@ import UnitOne from "../../Units/UnitOne";
 import UnitTwo from "../../Units/UnitTwo";
 import UnitThree from "../../Units/UnitThree";
 import UnitFour from "../../Units/UnitFour";
+import { sendXAPIStatementWithLRS } from "../../api/scormCloud";
 
 export default function FrameOne() {
   const unitsArray = [UnitOne(), UnitTwo(), UnitThree(), UnitFour()];
@@ -75,14 +76,16 @@ export default function FrameOne() {
     );
   };
 
-  const handleSubmit = (
+  const handleSubmit = async (
     question,
     answer,
     isCorrect,
     rightAnswer,
     wrongAnswer,
-    reason
+    reason,
+    actor
   ) => {
+    console.log("handleSubmit is clicked");
     setSelectedAnswer(answer);
     setReasonText(reason);
     setIsAnswerWrong(isCorrect);
@@ -124,6 +127,39 @@ export default function FrameOne() {
       setSpeachbubbleText(rightAnswer);
     } else {
       setSpeachbubbleText(wrongAnswer);
+    }
+
+    const statement = {
+      actor: {
+        name: "Liljana Stefanelli",
+        mbox: "mailto:stefanelli1996@googlemail.com",
+      },
+      verb: {
+        id: "http://adlnet.gov/expapi/verbs/answered",
+        display: { "en-US": "answered" },
+      },
+      object: {
+        id: `http://spuren-im-netz/${unitId}/step${currentTaskIndex + 1}`,
+        definition: {
+          name: { "en-US": question },
+          description: {
+            "en-US": `Task ${currentTaskIndex + 1} in Unit ${unitId}`,
+          },
+        },
+      },
+      result: {
+        response: answer,
+        success: isCorrect,
+      },
+      timestamp: new Date().toISOString(),
+    };
+    console.log("Zu sendendes Statement:", JSON.stringify(statement, null, 2));
+
+    try {
+      await sendXAPIStatementWithLRS(statement);
+      console.log("Statement erfolgreich gesendet:", statement);
+    } catch (error) {
+      console.error("Fehler beim Senden des Statements:", error);
     }
   };
 

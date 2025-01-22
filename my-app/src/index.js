@@ -1,23 +1,29 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import reportWebVitals from './reportWebVitals';
-import App from './App';
-import { BrowserRouter } from 'react-router-dom';
-import { getSelectedColor } from './utilis/colorUtils';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
+import App from "./App";
+import { BrowserRouter } from "react-router-dom";
+import { getSelectedColor } from "./utilis/colorUtils";
+import { TinCanProvider } from "react-tincan";
+import * as os from "os-browserify/browser";
+
+console.log(os.type());
 
 const initialColor = getSelectedColor();
 
-document.documentElement.setAttribute('data-theme', initialColor);
+document.documentElement.setAttribute("data-theme", initialColor);
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
-</React.StrictMode>,
+    <BrowserRouter>
+      <TinCanProvider>
+        <App />
+      </TinCanProvider>
+    </BrowserRouter>
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
