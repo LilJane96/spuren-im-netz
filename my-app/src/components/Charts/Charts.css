@@ -1,0 +1,32 @@
+.AnswerChart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.AnswerChart canvas {
+  width: 95% !important;
+  height: 100% !important;
+}
+
+.MostErrorsChart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.MostErrorsChart canvas {
+  width: 95% !important;
+  height: 100% !important;
+}
+
+.AttemptsChart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.AttemptsChart canvas {
+  width: 95% !important;
+  height: 100% !important;
+}

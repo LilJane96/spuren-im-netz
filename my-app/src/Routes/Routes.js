@@ -6,6 +6,9 @@ import Result from "../pages/Result/Result";
 import GameIntroduction from "../pages/GameIntroduction/GameIntroduction";
 import FinishGame from "../pages/FinishGame/FinishGame";
 import PhoneSimulator from "../components/PhoneSimulator/PhoneSimulator";
+import ChartResults from "../pages/ChartResults/ChartResults";
+import Dashboard from "../pages/Dashboard/Dashboard";
+import UnitDashBoard from "../pages/Dashboard/UnitDashboard";
 
 function Directions() {
   return (
@@ -27,6 +30,9 @@ function Directions() {
             path="/testUserProfile"
             element={<PhoneSimulator content={13} />}
           />
+          <Route path="/chartResults" element={<ChartResults />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/dashboard/:unitId" element={<UnitDashBoard />} />
         </Routes>
       </main>
     </div>

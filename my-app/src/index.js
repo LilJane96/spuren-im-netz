@@ -7,6 +7,7 @@ import { BrowserRouter } from "react-router-dom";
 import { getSelectedColor } from "./utilis/colorUtils";
 import { TinCanProvider } from "react-tincan";
 import * as os from "os-browserify/browser";
+import process from "process";
 
 console.log(os.type());
 

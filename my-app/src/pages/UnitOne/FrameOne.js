@@ -11,7 +11,15 @@ import UnitOne from "../../Units/UnitOne";
 import UnitTwo from "../../Units/UnitTwo";
 import UnitThree from "../../Units/UnitThree";
 import UnitFour from "../../Units/UnitFour";
-import { sendXAPIStatementWithLRS } from "../../api/scormCloud";
+import {
+  sendAnswerStatement,
+  sendAttemptedStatements,
+  sendLevelEndStatement,
+  sendLevelStartStatement,
+  sendStepDurationStatement,
+} from "../../utilis/xAPIStatements";
+import { v4 as uuidv4 } from "uuid";
+import { sendXAPIStatementWithLRS } from "../../components/XapiComponent/XapiComponent";
 
 export default function FrameOne() {
   const unitsArray = [UnitOne(), UnitTwo(), UnitThree(), UnitFour()];
@@ -28,11 +36,36 @@ export default function FrameOne() {
   const navigate = useNavigate();
   const [openBox, setOpenBox] = useState(false);
   const [isAnswerWrong, setIsAnswerWrong] = useState(true);
+  const username = localStorage.getItem("userUUID");
+  const xapiRegistrationId = localStorage.getItem("xapiRegistrationId");
+
+  const convertToISODuration = (seconds) => {
+    const hours = Math.floor(seconds / 3600);
+    const minutes = Math.floor((seconds % 3600) / 60);
+    const remainingSeconds = Math.floor(seconds % 60);
+
+    let duration = "PT";
+    if (hours > 0) {
+      duration += `${hours}H`;
+    }
+    if (minutes > 0 || hours > 0) {
+      duration += `${minutes}M`;
+    }
+    if (remainingSeconds > 0 || (hours === 0 && minutes === 0)) {
+      duration += `${remainingSeconds}S`;
+    }
+    return duration;
+  };
 
   useEffect(() => {
     const stepFromUrl = parseInt(stepId.replace("step", ""), 10) || 1;
     setCurrentStep(stepFromUrl);
-  }, [stepId]);
+
+    if (stepFromUrl === 1) {
+      console.log("step", stepFromUrl);
+      sendLevelStartStatement(unitId, username, xapiRegistrationId);
+    }
+  }, [stepId, unitId, username]);
 
   useEffect(() => {
     const taskIndex = currentStep - 1;
@@ -43,6 +76,23 @@ export default function FrameOne() {
     const unitData = unitsArray.find((unit) => unit.name === unitId);
     setCurrentUnitData(unitData);
   }, [unitId]);
+
+  useEffect(() => {
+    const startTime = Date.now();
+
+    return () => {
+      const endTime = Date.now();
+      const durationInSeconds = (endTime - startTime) / 1000; // in Sekunden
+      const isoDuration = convertToISODuration(durationInSeconds);
+      sendStepDurationStatement(
+        unitId,
+        currentTaskIndex,
+        isoDuration,
+        username,
+        xapiRegistrationId
+      );
+    };
+  }, [currentTaskIndex]);
 
   let units = JSON.parse(localStorage.getItem("UnitsArray")) || {};
 
@@ -85,7 +135,6 @@ export default function FrameOne() {
     reason,
     actor
   ) => {
-    console.log("handleSubmit is clicked");
     setSelectedAnswer(answer);
     setReasonText(reason);
     setIsAnswerWrong(isCorrect);
@@ -106,21 +155,19 @@ export default function FrameOne() {
 
     const existingAnswerIndex = findAnswerIndex(currentTaskIndex);
 
-    // Check if an answer for the current task already exists in the answers array
     if (existingAnswerIndex !== -1) {
       // Update existing answer
       units[unitId].answers[existingAnswerIndex] = newItem;
     } else {
-      // Add the new item to the array for the current unit
+      // Add new item to the array
       units[unitId].answers.push(newItem);
     }
 
-    // Increment wrong attempts count for the current task
     units[unitId].taskAttempts[currentTaskIndex] =
       (units[unitId].taskAttempts[currentTaskIndex] || 0) +
       newItem.wrongAttempts;
 
-    // Saving the updated array in local storage
+    // Saving updated array
     localStorage.setItem("UnitsArray", JSON.stringify(units));
 
     if (isCorrect) {
@@ -129,41 +176,28 @@ export default function FrameOne() {
       setSpeachbubbleText(wrongAnswer);
     }
 
-    const statement = {
-      actor: {
-        name: "Liljana Stefanelli",
-        mbox: "mailto:stefanelli1996@googlemail.com",
-      },
-      verb: {
-        id: "http://adlnet.gov/expapi/verbs/answered",
-        display: { "en-US": "answered" },
-      },
-      object: {
-        id: `http://spuren-im-netz/${unitId}/step${currentTaskIndex + 1}`,
-        definition: {
-          name: { "en-US": question },
-          description: {
-            "en-US": `Task ${currentTaskIndex + 1} in Unit ${unitId}`,
-          },
-        },
-      },
-      result: {
-        response: answer,
-        success: isCorrect,
-      },
-      timestamp: new Date().toISOString(),
-    };
-    console.log("Zu sendendes Statement:", JSON.stringify(statement, null, 2));
+    await sendAnswerStatement(
+      unitId,
+      question,
+      answer,
+      isCorrect,
+      currentTaskIndex,
+      username,
+      xapiRegistrationId
+    );
 
-    try {
-      await sendXAPIStatementWithLRS(statement);
-      console.log("Statement erfolgreich gesendet:", statement);
-    } catch (error) {
-      console.error("Fehler beim Senden des Statements:", error);
-    }
+    // xAPI-Statement für den abgeschlossenen Step senden
+    await sendAttemptedStatements(
+      unitId,
+      `step${currentStep}`,
+      units[unitId].taskAttempts[currentTaskIndex],
+      currentTaskIndex,
+      username,
+      xapiRegistrationId
+    );
   };
 
-  const handleNextTask = () => {
+  const handleNextTask = async () => {
     setTimeout(() => {
       setCurrentTaskIndex((prevIndex) => prevIndex + 1);
       setCurrentStep((prevStep) => prevStep + 1);
@@ -195,6 +229,8 @@ export default function FrameOne() {
   };
 
   const handleGoToResult = () => {
+    const sessionId = uuidv4();
+    sendLevelEndStatement(unitId, username, xapiRegistrationId, sessionId);
     units[unitId].topic = currentUnitData.topic;
     units[unitId].done = true;
     localStorage.setItem("UnitsArray", JSON.stringify(units));

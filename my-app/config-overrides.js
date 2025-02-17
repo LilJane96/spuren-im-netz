@@ -10,6 +10,7 @@ module.exports = function override(config) {
   config.resolve.fallback = {
     ...config.resolve.fallback,
     url: false,
+    fs: false,
   };
 
   config.module.rules.push({
@@ -18,6 +19,20 @@ module.exports = function override(config) {
       amd: false,
     },
   });
+
+  let plugs = config.plugins;
+
+  // plugs.push(
+  //   new webpack.ProvidePlugin({
+  //     Buffer: ["buffer", "Buffer"],
+  //   })
+  // );
+
+  // plugs.push(
+  //   new webpack.ProvidePlugin({
+  //     process: "process/browser.js",
+  //   })
+  // );
 
   const fallback = config.resolve.fallback || {};
   Object.assign(fallback, {
@@ -32,7 +47,9 @@ module.exports = function override(config) {
   config.resolve.fallback = fallback;
   config.plugins = (config.plugins || []).concat([
     new webpack.ProvidePlugin({
-      process: "process/browser",
+      process: "process/browser.js",
+    }),
+    new webpack.ProvidePlugin({
       Buffer: ["buffer", "Buffer"],
     }),
   ]);

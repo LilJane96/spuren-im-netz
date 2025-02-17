@@ -31,7 +31,6 @@ export default function ResultContentSteps({ unitId, stepId }) {
           const imgBorderColor = obj.right
             ? "6px solid #06865B"
             : "6px solid var(--answerbox-wrong)";
-          console.log("obj", obj.right);
           return (
             <li className="Answer" key={index}>
               {obj.type === "image" ? (

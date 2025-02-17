@@ -66,6 +66,9 @@
 .PopUpChooseName .NameInputFieldContainer {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
 .PopUpChooseName .NameInputFieldContainer input:focus-visible {

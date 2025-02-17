@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import BarHomePage from "../../images/BarHomePage.svg";
 import WavingFox from "../../images/Foxes/FoxGreeting.svg";
 import SideFox from "../../images/Foxes/sideFox.svg";
@@ -19,8 +19,10 @@ import Screenshot4 from "../../images/Screenshots/Screenshot4.svg";
 import Screenshot5 from "../../images/Screenshots/Screenshot5.svg";
 import PhoneSimulator from "../../components/PhoneSimulator/PhoneSimulator";
 import { Link } from "react-router-dom";
+import PopUpChooseName from "../../components/PopUpChooseName/PopUpChooseName";
 
 function Home() {
+  const [open, setOpen] = useState(false);
   const images = [
     Screenshot1,
     Screenshot2,
@@ -29,7 +31,8 @@ function Home() {
     Screenshot5,
   ];
   const handleStartClick = () => {
-    localStorage.clear(); // Lösche den Local Storage
+    localStorage.clear();
+    setOpen(true);
   };
 
   return (
@@ -53,14 +56,14 @@ function Home() {
             </div>
           </div>
           <div>
-            <Link
+            {/* <Link
               to="/introduction/GameIntroduction"
-              style={{ textDecoration: "none" }}>
-              <CustomButton
-                name="Spiel starten"
-                type="primary"
-                onClick={handleStartClick()}></CustomButton>
-            </Link>
+              style={{ textDecoration: "none" }}> */}
+            <CustomButton
+              name="Spiel starten"
+              type="primary"
+              onClick={handleStartClick}></CustomButton>
+            {/* </Link> */}
           </div>
         </div>
         <div className="containerHome">
@@ -174,6 +177,9 @@ function Home() {
             </div>
           </div>
         </div>
+      </div>
+      <div>
+        <PopUpChooseName open={open}></PopUpChooseName>
       </div>
     </div>
   );

@@ -1,0 +1,17 @@
+.UnitPage {
+}
+
+.UnitPage .charts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 45px;
+}
+
+.UnitPage .charts .ChartContainer {
+  width: 45%;
+  background-color: rgb(80 80 80 / 14%);
+  backdrop-filter: blur(5px);
+  border-radius: 22px;
+  padding: 35px 0px;
+  margin: 0 20px;
+}

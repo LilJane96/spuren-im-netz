@@ -12,14 +12,12 @@ import Pin2Locked from "../../images/Hub/Level2Locked.png";
 import Pin3Locked from "../../images/Hub/Level3Locked.png";
 import Pin4Locked from "../../images/Hub/Level4Locked.png";
 import FoxPicture from "../../images/foxPicture.svg";
-import PopUpChooseName from "../../components/PopUpChooseName/PopUpChooseName";
 import { useNavigate } from "react-router-dom";
 import CustomButton from "../../components/Button/CustomButton";
 import BackpackPopup from "../../components/BackpackPopup/BackpackPopup";
 import PhoneSimulator from "../../components/PhoneSimulator/PhoneSimulator";
 
 function Hub() {
-  const [open, setOpen] = useState(false);
   const [openFoxProfile, setOpenFoxProfile] = useState(false);
   const [openUserProfile, setOpenUserProfile] = useState(false);
   const [openBackpack, setOpenBackpack] = useState(false);
@@ -51,9 +49,6 @@ function Hub() {
     setUserProfilePicture();
   }, [units.unit1?.done]);
 
-  const handleOpenPopup = () => {
-    setOpen(true);
-  };
   const handleOpenUserProfile = () => {
     setOpenUserProfile(true);
   };
@@ -65,7 +60,11 @@ function Hub() {
   };
 
   const handleOpenUnit = (unit) => {
-    navigate("/introduction/" + unit);
+    if (unit === "unit1") {
+      navigate("/frameone/unit1/step1");
+    } else {
+      navigate("/introduction/" + unit);
+    }
   };
   const toggleSidebarVisibility = () => {
     setSidebarCollapsed(!sidebarCollapsed);
@@ -117,38 +116,114 @@ function Hub() {
         </div>
       </div>
       <div className="BoardContainer">
-          <div className="BoardWrapper" style={{position: 'relative'}}>
-              <img className="Board" src={BoardBackground} alt=""/>
-              <img className="Pin" style={{position: 'absolute', top: '10%', left: '20%',  width: '60%', zIndex: '5', pointerEvents: "none"}} src={String} alt=""/>
-              <img className="Pin" style={{position: 'absolute', top: '10%', left: '1%',  width: '30%', zIndex: '2'}} src={Pin1Unlocked} alt="Pin1" 
-                onClick={handleOpenPopup}
-              />
-              {units.unit1?.done ? (
-              <img className="Pin" style={{position: 'absolute', top: '13%', left: '32%',  width: '55%'}} src={Pin2Unlocked} alt="Pin2" 
-                onClick={() => handleOpenUnit("unit2")}
-              />
-              ) : (
-                <img className="Pin" style={{position: 'absolute', top: '13%', left: '32%',  width: '55%'}} src={Pin2Locked} alt="Pin2" />
-              )}
-              {units.unit2?.done ? (
-              <img className="Pin" style={{position: 'absolute', top: '57%', left: '10%',  width: '35%'}} src={Pin3Unlocked} alt="Pin3" 
-                onClick={() => handleOpenUnit("unit3")}
-              />
-              ) : (
-                <img className="Pin" style={{position: 'absolute', top: '57%', left: '10%',  width: '35%'}} src={Pin3Locked} alt="Pin3" />
-              )}
-              {units.unit3?.done ? (
-              <img className="Pin" style={{position: 'absolute', top: '55%', left: '70%',  width: '20%'}} src={Pin4Unlocked} alt="Pin4"
-                onClick={() => handleOpenUnit("unit4")}
-              />
-              ) : (
-                <img className="Pin" style={{position: 'absolute', top: '55%', left: '70%',  width: '20%'}} src={Pin4Locked} alt="Pin4" />
-              )}
-
-          </div>
-      </div>
-      <div>
-        <PopUpChooseName open={open}></PopUpChooseName>
+        <div></div>
+        <div className="BoardWrapper" style={{ position: "relative" }}>
+          <img className="Board" src={BoardBackground} alt="" />
+          <img
+            className="Pin"
+            style={{
+              position: "absolute",
+              top: "10%",
+              left: "20%",
+              width: "60%",
+              zIndex: "5",
+              pointerEvents: "none",
+            }}
+            src={String}
+            alt=""
+          />
+          <img
+            className="Pin"
+            style={{
+              position: "absolute",
+              top: "10%",
+              left: "1%",
+              width: "30%",
+              zIndex: "2",
+            }}
+            src={Pin1Unlocked}
+            alt="Pin1"
+            onClick={() => handleOpenUnit("unit1")}
+          />
+          {units.unit1?.done ? (
+            <img
+              className="Pin"
+              style={{
+                position: "absolute",
+                top: "13%",
+                left: "32%",
+                width: "55%",
+              }}
+              src={Pin2Unlocked}
+              alt="Pin2"
+              onClick={() => handleOpenUnit("unit2")}
+            />
+          ) : (
+            <img
+              className="Pin"
+              style={{
+                position: "absolute",
+                top: "13%",
+                left: "32%",
+                width: "55%",
+              }}
+              src={Pin2Locked}
+              alt="Pin2"
+            />
+          )}
+          {units.unit2?.done ? (
+            <img
+              className="Pin"
+              style={{
+                position: "absolute",
+                top: "57%",
+                left: "10%",
+                width: "35%",
+              }}
+              src={Pin3Unlocked}
+              alt="Pin3"
+              onClick={() => handleOpenUnit("unit3")}
+            />
+          ) : (
+            <img
+              className="Pin"
+              style={{
+                position: "absolute",
+                top: "57%",
+                left: "10%",
+                width: "35%",
+              }}
+              src={Pin3Locked}
+              alt="Pin3"
+            />
+          )}
+          {units.unit3?.done ? (
+            <img
+              className="Pin"
+              style={{
+                position: "absolute",
+                top: "55%",
+                left: "70%",
+                width: "20%",
+              }}
+              src={Pin4Unlocked}
+              alt="Pin4"
+              onClick={() => handleOpenUnit("unit4")}
+            />
+          ) : (
+            <img
+              className="Pin"
+              style={{
+                position: "absolute",
+                top: "55%",
+                left: "70%",
+                width: "20%",
+              }}
+              src={Pin4Locked}
+              alt="Pin4"
+            />
+          )}
+        </div>
       </div>
       {openUserProfile && (
         <div className="ProfileViewContainer">
