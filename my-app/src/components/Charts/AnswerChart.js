@@ -12,6 +12,8 @@ import {
   Legend,
 } from "chart.js";
 import ChartsLoader from "../Loader/ChartsLoader";
+import StudentFilter from "../StudentFilter/StudentFilter";
+import ClassFilter from "../ClassFilter/ClassFilter";
 
 ChartJS.register(
   CategoryScale,
@@ -24,18 +26,26 @@ ChartJS.register(
 
 const AnswerChart = ({ levelId }) => {
   const [data, setData] = useState({});
+  const [selectedStudent, setSelectedStudent] = useState("");
+  const [selectedClass, setSelectedClass] = useState("");
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const loadData = async () => {
-      const result = await fetchAnswerDataFromLRS(levelId);
+      setLoading(true); // Ladezustand setzen
+      const result = await fetchAnswerDataFromLRS(
+        levelId,
+        selectedStudent,
+        selectedClass
+      );
       setData(result);
+      setLoading(false); // Ladezustand beenden
     };
     loadData();
-  }, [levelId]);
+  }, [levelId, selectedStudent, selectedClass]);
 
   const steps = Object.keys(data[levelId] || {}).map((step) => step);
 
-  // Daten für das Diagramm vorbereiten
   const chartData = {
     labels: steps.map((item) => `Step ${item}`),
     datasets: [
@@ -55,9 +65,7 @@ const AnswerChart = ({ levelId }) => {
   const options = {
     responsive: true,
     plugins: {
-      legend: {
-        position: "top",
-      },
+      legend: { position: "top" },
       title: {
         display: true,
         text: `Richtige/Falsche Antworten für Level ${levelId}`,
@@ -68,10 +76,21 @@ const AnswerChart = ({ levelId }) => {
   return (
     <div className="AnswerChart">
       <h3>Richtig/Falsch Antworten für Level {levelId}</h3>
-      {chartData ? (
-        <Bar data={chartData} options={options} style={{ width: "80%" }} />
-      ) : (
+      <div>
+        <div>
+          <StudentFilter
+            onSelectStudent={setSelectedStudent}
+            selectedClass={selectedClass}
+          />
+        </div>
+        <div>
+          <ClassFilter onSelectClass={setSelectedClass} />
+        </div>
+      </div>
+      {loading ? (
         <ChartsLoader />
+      ) : (
+        <Bar data={chartData} options={options} style={{ width: "80%" }} />
       )}
     </div>
   );

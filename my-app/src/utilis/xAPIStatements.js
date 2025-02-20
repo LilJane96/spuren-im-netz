@@ -3,7 +3,8 @@ import { sendXAPIStatementWithLRS } from "../components/XapiComponent/XapiCompon
 export const sendLevelStartStatement = async (
   unitId,
   actor,
-  xapiRegistrationId
+  xapiRegistrationId,
+  className
 ) => {
   const statement = {
     actor: {
@@ -30,6 +31,9 @@ export const sendLevelStartStatement = async (
           },
         ],
       },
+      extensions: {
+        "http://example.com/xapi/extensions/className": className,
+      },
     },
   };
   await sendXAPIStatementWithLRS(statement);
@@ -39,7 +43,8 @@ export const sendLevelEndStatement = async (
   unitId,
   username,
   xapiRegistrationId,
-  sessionId
+  sessionId,
+  className
 ) => {
   const statement = {
     actor: {
@@ -73,6 +78,9 @@ export const sendLevelEndStatement = async (
           },
         ],
       },
+      extensions: {
+        "http://example.com/xapi/extensions/className": className,
+      },
     },
   };
   await sendXAPIStatementWithLRS(statement);
@@ -85,7 +93,8 @@ export const sendAnswerStatement = async (
   isCorrect,
   taskIndex,
   username,
-  xapiRegistrationId
+  xapiRegistrationId,
+  className
 ) => {
   const statement = {
     actor: {
@@ -121,6 +130,9 @@ export const sendAnswerStatement = async (
           },
         ],
       },
+      extensions: {
+        "http://example.com/xapi/extensions/className": className,
+      },
     },
     timestamp: new Date().toISOString(),
   };
@@ -133,7 +145,8 @@ export const sendAttemptedStatements = async (
   attempts,
   taskIndex,
   username,
-  xapiRegistrationId
+  xapiRegistrationId,
+  className
 ) => {
   const statement = {
     actor: {
@@ -154,15 +167,7 @@ export const sendAttemptedStatements = async (
       },
     },
     result: {
-      success: false,
-      completion: false,
       response: `${attempts}`,
-      score: {
-        scaled: 0.5,
-        raw: 50,
-        min: 0,
-        max: 100,
-      },
     },
     context: {
       registration: xapiRegistrationId,
@@ -172,6 +177,9 @@ export const sendAttemptedStatements = async (
             id: "https://spuren-im-netz.web.app/activity/game",
           },
         ],
+      },
+      extensions: {
+        "http://example.com/xapi/extensions/className": className,
       },
     },
   };
@@ -183,7 +191,8 @@ export const sendStepDurationStatement = async (
   stepIndex,
   duration,
   username,
-  xapiRegistrationId
+  xapiRegistrationId,
+  className
 ) => {
   const statement = {
     actor: {
@@ -214,6 +223,9 @@ export const sendStepDurationStatement = async (
             id: "https://spuren-im-netz.web.app/activity/game",
           },
         ],
+      },
+      extensions: {
+        "http://example.com/xapi/extensions/className": className,
       },
     },
   };

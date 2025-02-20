@@ -32,86 +32,71 @@ const OUTPUT_BORDER =
  *
  * All input variables used in this sample are defined up above.
  */
-export const handleRegistration = (
+export const handleRegistration = async (
   COURSE_ID,
   LEARNER_ID,
   FIRSTNAME,
   LASTNAME,
   REGISTRATION_ID
 ) => {
-  console.log("SCROM Scloud", ScormCloud);
+  try {
+    // Configure HTTP basic authorization
+    const APP_NORMAL =
+      ScormCloud.ApiClient.instance.authentications["APP_NORMAL"];
+    APP_NORMAL.username = APP_ID;
+    APP_NORMAL.password = SECRET_KEY;
 
-  // Configure HTTP basic authorization: APP_NORMAL
-  const APP_NORMAL =
-    ScormCloud.ApiClient.instance.authentications["APP_NORMAL"];
-  APP_NORMAL.username = APP_ID;
-  APP_NORMAL.password = SECRET_KEY;
+    // Registrierung erstellen
+    await createRegistration(
+      COURSE_ID,
+      LEARNER_ID,
+      FIRSTNAME,
+      LASTNAME,
+      REGISTRATION_ID
+    );
 
-  // Create a registration for the course
-  createRegistration(
-    COURSE_ID,
-    LEARNER_ID,
-    FIRSTNAME,
-    LASTNAME,
-    REGISTRATION_ID,
-    function () {
-      // Create the registration launch link
-      buildLaunchLink(COURSE_ID, REGISTRATION_ID, function (launchLink) {
-        // Show the launch link
-        console.log(OUTPUT_BORDER);
-        console.log(`Launck Link: ${launchLink}`);
-        console.log(
-          "Navigate to the url above to take the course. " +
-            (jsEnv.isNode
-              ? "Hit enter once complete."
-              : "Click OK on the in-browser prompt once complete.")
-        );
-        prompt();
-
-        // Get the results for the registration
-        getResultForRegistration(
-          COURSE_ID,
-          REGISTRATION_ID,
-          function (registrationProgress) {
-            // Show details of the registration progress
-            console.log(OUTPUT_BORDER);
-            console.log("Registration Progress: ");
-            console.log(registrationProgress);
-
-            // Get information about all the courses in ScormCloud
-            getAllCourses(function (courseList) {
-              // Show details of the courses
-              console.log(OUTPUT_BORDER);
-              console.log("Course List: ");
-              courseList.forEach((course) => {
-                console.log(course);
-              });
-
-              // Get information about all the registrations in ScormCloud
-              getAllRegistrations(function (registrationList) {
-                // Show details of the registrations
-                console.log(OUTPUT_BORDER);
-                console.log("Registration List: ");
-                registrationList.forEach((registration) => {
-                  console.log(registration);
-                });
-
-                // Delete all the data created by this sample
-                // cleanUp(COURSE_ID, REGISTRATION_ID);
-              });
-            });
-          }
-        );
+    // Launch-Link generieren
+    const launchLink = await new Promise((resolve, reject) => {
+      buildLaunchLink(COURSE_ID, REGISTRATION_ID, (link, error) => {
+        if (error) reject(error);
+        else resolve(link);
       });
-    }
-  );
+    });
+
+    console.log(OUTPUT_BORDER);
+    console.log(`Launch Link: ${launchLink}`);
+
+    // Fortschritt abrufen
+    const registrationProgress = await new Promise((resolve, reject) => {
+      getResultForRegistration(
+        COURSE_ID,
+        REGISTRATION_ID,
+        (progress, error) => {
+          if (error) reject(error);
+          else resolve(progress);
+        }
+      );
+    });
+
+    console.log(OUTPUT_BORDER);
+    console.log("Registration Progress: ");
+    console.log(registrationProgress);
+
+    return registrationProgress;
+  } catch (error) {
+    console.error("Fehler bei der Registrierung:", error);
+    throw new Error(error?.message || "Unbekannter Fehler");
+  }
 };
 
 function logErrorAndCleanUp(COURSE_ID, REGISTRATION_ID, error) {
-  console.error(error);
+  console.log("ERROR", error);
 
-  // Delete all the data created by this sample
-  // cleanUp(COURSE_ID, REGISTRATION_ID);
+  if (jsEnv.isBrowser) {
+    alert("Fehler: " + error);
+  } else {
+    console.error("Fehler:", error);
+  }
 }
 
 /**
@@ -135,15 +120,14 @@ function logErrorAndCleanUp(COURSE_ID, REGISTRATION_ID, error) {
  * @param {String} learnerId Id that will be used to identify the learner.
  * @param {string} registrationId Id that will be used to identify the registration.
  */
-function createRegistration(
+async function createRegistration(
   courseId,
   learnerId,
   fname,
   lname,
-  registrationId,
-  callback
+  registrationId
 ) {
-  function createRegistrationLogic() {
+  try {
     const registrationApi = new ScormCloud.RegistrationApi();
     const learner = { id: learnerId, firstName: fname, lastName: lname };
     const registration = {
@@ -151,23 +135,19 @@ function createRegistration(
       learner: learner,
       registrationId: registrationId,
     };
-    registrationApi.createRegistration(registration, {}, function (error) {
-      if (error) {
-        return logErrorAndCleanUp(
-          courseId,
-          registrationId,
-          error.response.text
-        );
-      }
 
-      callback();
+    await new Promise((resolve, reject) => {
+      registrationApi.createRegistration(registration, {}, (error) => {
+        if (error) reject(error);
+        else resolve();
+      });
     });
-  }
 
-  // (Optional) Further authenticate via OAuth token access
-  // First line is with OAuth, second is without
-  // configureOAuth([ "write:registration" ], createRegistrationLogic);
-  createRegistrationLogic();
+    console.log("Registrierung erfolgreich erstellt.");
+  } catch (error) {
+    console.error("Fehler bei der Registrierung:", error);
+    throw new Error(error?.response?.text || "Fehler bei der Registrierung");
+  }
 }
 
 /**
@@ -382,166 +362,3 @@ function cleanUp(courseId, registrationId) {
   // configureOAuth([ "delete:course", "delete:registration" ], cleanUpLogic);
   cleanUpLogic();
 }
-
-// If running through the browser, call browserFileUpload instead:
-
-// <!DOCTYPE html>
-// <html>
-//     <body>
-//         <p>
-//             When running the sample in the browser, a File object is required to be passed to the sample code.
-//             Input a file using the input below and then run the sample code.
-//         </p>
-//         <input id="fileButton" type=file />
-//     </br>
-//         <button onclick="runSample()">Click here to run sample code in the console.</button>
-//         <p id="runLog"></p>
-//     </body>
-// </html>
-// <script src="bundle.js"></script>
-// <script>
-//     function runSample() {
-//         const file = document.getElementById('fileButton').files[0];
-//         browserFileUpload(file);
-//
-//         document.getElementById("runLog").innerHTML += "Sample is running, please see console for output. The process may take a few seconds. <br>";
-//     }
-// </script>
-
-// import React, { useState } from "react";
-// import ScormCloud from "@rusticisoftware/scormcloud-api-v2-client-javascript";
-
-// const APP_NORMAL = ScormCloud.ApiClient.instance.authentications["APP_NORMAL"];
-// const APP_ID = process.env.REACT_APP_SCORM_CLOUD_APP_ID;
-// const SECRET_KEY = process.env.REACT_APP_SCORM_CLOUD_SECRET_KEY;
-
-// export const handleRegistration = (
-//   COURSE_ID,
-//   LEARNER_ID,
-//   FIRSTNAME,
-//   REGISTRATION_ID
-// ) => {
-//   console.log("SCROM Scloud", ScormCloud);
-
-//   APP_NORMAL.username = APP_ID;
-//   APP_NORMAL.password = SECRET_KEY;
-
-//   // Schritt 1: Registrierung für den Kurs erstellen
-//   createRegistration(COURSE_ID, LEARNER_ID, FIRSTNAME, REGISTRATION_ID, () => {
-//     // Schritt 2: Build Launch-Link für die Registrierung
-//     buildLaunchLink(REGISTRATION_ID, function (launchLink) {
-//       console.log("launchLink", launchLink);
-
-//       // Schritt 3: Hole die Fortschritte der Registrierung
-//       getResultForRegistration(
-//         REGISTRATION_ID,
-//         function (registrationProgress) {
-//           console.log("registrationProgress", registrationProgress);
-//           const xapiRegistrationId = registrationProgress.xapiRegistrationId;
-//           if (xapiRegistrationId) {
-//             localStorage.setItem("xapiRegistrationId", xapiRegistrationId); // Speichern im localStorage
-//             console.log("xapiRegistrationId gespeichert:", xapiRegistrationId);
-//           } else {
-//             console.warn("xapiRegistrationId nicht verfügbar in der Antwort.");
-//           }
-//           getAllRegistrations(function (registrationList) {
-//             // Show details of the registrations
-//             console.log("Registration List: ");
-//             registrationList.forEach((registration) => {
-//               console.log(registration);
-//             });
-//           });
-//         }
-//       );
-//     });
-//   });
-// };
-
-// // Registrierung erstellen
-// const createRegistration = (
-//   courseId,
-//   learnerId,
-//   firstName,
-//   registrationId,
-//   callback
-// ) => {
-//   const registrationApi = new ScormCloud.RegistrationApi();
-//   const learner = { id: learnerId, firstName: firstName };
-//   const registration = {
-//     courseId: courseId,
-//     learner: learner,
-//     registrationId: registrationId,
-//   };
-//   registrationApi.createRegistration(registration, {}, (error) => {
-//     if (error) {
-//       console.log("Registrierung nicht erfolgt: ", error.response.text);
-//     }
-
-//     callback();
-//   });
-// };
-
-// // Launch-Link erstellen
-// const buildLaunchLink = (registrationId, callback) => {
-//   const registrationApi = new ScormCloud.RegistrationApi();
-//   const settings = { redirectOnExitUrl: "Message" };
-//   registrationApi.buildRegistrationLaunchLink(
-//     registrationId,
-//     settings,
-//     (error, data) => {
-//       if (error) {
-//         console.log("Launch-Link nicht erfolgt: ", error.response.text);
-//       }
-//       callback(data.launchLink);
-//     }
-//   );
-// };
-
-// // Fortschritt der Registrierung abfragen
-// function getResultForRegistration(registrationId, callback) {
-//   function getResultForRegistrationLogic() {
-//     const registrationApi = new ScormCloud.RegistrationApi();
-//     registrationApi.getRegistrationProgress(
-//       registrationId,
-//       {},
-//       function (error, data) {
-//         if (error) {
-//           console.log(
-//             "Forschritt der Registrierung nicht erfolgt: ",
-//             error.response.text
-//           );
-//         }
-
-//         callback(data);
-//       }
-//     );
-//   }
-
-//   getResultForRegistrationLogic();
-// }
-
-// function getAllRegistrations(callback) {
-//   function getAllRegistrationsLogic() {
-//     const registrationApi = new ScormCloud.RegistrationApi();
-//     const registrationList = [];
-
-//     function getPaginatedRegistrations(more) {
-//       registrationApi.getRegistrations({ more: more }, function (error, data) {
-//         if (error) {
-//           console.log(error.response.text);
-//         }
-
-//         registrationList.push(...data.registrations);
-
-//         if (data.more) {
-//           return getPaginatedRegistrations(data.more);
-//         }
-
-//         callback(registrationList);
-//       });
-//     }
-//     getPaginatedRegistrations(null);
-//   }
-
-//   getAllRegistrationsLogic();
-// }

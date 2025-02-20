@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import MostErrorsChart from "../../components/Charts/MostErrorsChart";
 import AverageTimeChart from "../../components/Charts/AverageTimeChart";

@@ -37,6 +37,7 @@ export default function FrameOne() {
   const [openBox, setOpenBox] = useState(false);
   const [isAnswerWrong, setIsAnswerWrong] = useState(true);
   const username = localStorage.getItem("userUUID");
+  const classname = localStorage.getItem("classValue");
   const xapiRegistrationId = localStorage.getItem("xapiRegistrationId");
 
   const convertToISODuration = (seconds) => {
@@ -63,7 +64,7 @@ export default function FrameOne() {
 
     if (stepFromUrl === 1) {
       console.log("step", stepFromUrl);
-      sendLevelStartStatement(unitId, username, xapiRegistrationId);
+      sendLevelStartStatement(unitId, username, xapiRegistrationId, classname);
     }
   }, [stepId, unitId, username]);
 
@@ -89,7 +90,8 @@ export default function FrameOne() {
         currentTaskIndex,
         isoDuration,
         username,
-        xapiRegistrationId
+        xapiRegistrationId,
+        classname
       );
     };
   }, [currentTaskIndex]);
@@ -156,10 +158,8 @@ export default function FrameOne() {
     const existingAnswerIndex = findAnswerIndex(currentTaskIndex);
 
     if (existingAnswerIndex !== -1) {
-      // Update existing answer
       units[unitId].answers[existingAnswerIndex] = newItem;
     } else {
-      // Add new item to the array
       units[unitId].answers.push(newItem);
     }
 
@@ -183,17 +183,18 @@ export default function FrameOne() {
       isCorrect,
       currentTaskIndex,
       username,
-      xapiRegistrationId
+      xapiRegistrationId,
+      classname
     );
 
-    // xAPI-Statement für den abgeschlossenen Step senden
     await sendAttemptedStatements(
       unitId,
       `step${currentStep}`,
       units[unitId].taskAttempts[currentTaskIndex],
       currentTaskIndex,
       username,
-      xapiRegistrationId
+      xapiRegistrationId,
+      classname
     );
   };
 
@@ -230,7 +231,13 @@ export default function FrameOne() {
 
   const handleGoToResult = () => {
     const sessionId = uuidv4();
-    sendLevelEndStatement(unitId, username, xapiRegistrationId, sessionId);
+    sendLevelEndStatement(
+      unitId,
+      username,
+      xapiRegistrationId,
+      sessionId,
+      classname
+    );
     units[unitId].topic = currentUnitData.topic;
     units[unitId].done = true;
     localStorage.setItem("UnitsArray", JSON.stringify(units));

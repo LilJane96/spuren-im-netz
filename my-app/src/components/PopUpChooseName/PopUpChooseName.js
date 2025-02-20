@@ -18,8 +18,7 @@ const PopUpChooseName = ({ open }) => {
   const [selectedColor, setSelectedColor] = useState(getSelectedColor());
   const [inputValue, setInputValue] = useState("");
   const [courseValue, setCoursetValue] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const xapiRegistrationId = localStorage.getItem("xapiRegistrationId");
+  const [classValue, setClassValue] = useState("");
 
   const navigate = useNavigate();
 
@@ -31,6 +30,10 @@ const PopUpChooseName = ({ open }) => {
     setCoursetValue(event.target.value);
   };
 
+  const handleClassValueChange = (event) => {
+    setClassValue(event.target.value);
+  };
+
   const handleContinueClick = async () => {
     const registrationId = uuidv4();
     const learnerId = uuidv4();
@@ -38,19 +41,25 @@ const PopUpChooseName = ({ open }) => {
     localStorage.setItem("userName", inputValue);
     localStorage.setItem("registrationId", registrationId);
     localStorage.setItem("userUUID", learnerId);
+    localStorage.setItem("classValue", classValue);
 
     try {
-      handleRegistration(
+      // Falls handleRegistration ein Promise zurückgibt, dann warten wir auf die Auflösung
+      await handleRegistration(
         courseValue,
         learnerId,
-        inputValue,
+        learnerId,
         "USER",
         registrationId
       );
 
+      // Navigiere nur, wenn handleRegistration erfolgreich war
       navigate("/introduction/GameIntroduction");
     } catch (err) {
       console.log("Registrierung fehlgeschlagen", err);
+      alert(
+        "Die Registrierung war nicht erfolgreich. Bitte versuche es erneut."
+      );
     }
   };
 
@@ -77,6 +86,15 @@ const PopUpChooseName = ({ open }) => {
                   placeholder="Kurs ID"
                   value={courseValue}
                   onChange={handleCourseValueChange}
+                  width="523px"
+                  height="30px"
+                  type="text"></Inputfield>
+              </div>
+              <div>
+                <Inputfield
+                  placeholder="Klasse"
+                  value={classValue}
+                  onChange={handleClassValueChange}
                   width="523px"
                   height="30px"
                   type="text"></Inputfield>
