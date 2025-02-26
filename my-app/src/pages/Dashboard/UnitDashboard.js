@@ -5,6 +5,7 @@ import AverageTimeChart from "../../components/Charts/AverageTimeChart";
 import AnswerChart from "../../components/Charts/AnswerChart";
 import "./UnitDashboard.css";
 import AttemptsChart from "../../components/Charts/AttemptsChart";
+import TimePerQuestionChart from "../../components/Charts/TimePerQuestionChart";
 
 export default function UnitDashBoard() {
   const { unitId } = useParams();
@@ -22,6 +23,7 @@ export default function UnitDashBoard() {
         </div>
         <div className="ChartContainer">
           {/* <AverageTimeChart levelId={currentUnit} />  */}
+          <TimePerQuestionChart levelId={currentUnit} />
         </div>
         <div className="ChartContainer">
           <AttemptsChart levelId={currentUnit} />

@@ -16,7 +16,7 @@ export const sendLevelStartStatement = async (
       display: { "en-US": "started" },
     },
     object: {
-      id: `http://example.com/xapi/units/${unitId}`,
+      id: `https://spuren-im-netz.web.app/${unitId}`,
       definition: {
         name: { "en-US": `Started Unit ${unitId}` },
         description: { "en-US": `The learner has started Unit ${unitId}.` },
@@ -94,6 +94,7 @@ export const sendAnswerStatement = async (
   taskIndex,
   username,
   xapiRegistrationId,
+  duration,
   className
 ) => {
   const statement = {
@@ -106,7 +107,7 @@ export const sendAnswerStatement = async (
       display: { "en-US": "answered" },
     },
     object: {
-      id: `http://spuren-im-netz/${unitId}/step${taskIndex + 1}`,
+      id: `http://spuren-im-netz.web.app/${unitId}/step${taskIndex + 1}`,
       definition: {
         name: { "en-US": question },
         description: {
@@ -117,9 +118,7 @@ export const sendAnswerStatement = async (
     result: {
       response: answer,
       success: isCorrect,
-      extensions: {
-        "http://spuren-im-netz/xapi/extensions/wrongAttempts": taskIndex,
-      },
+      duration: duration,
     },
     context: {
       registration: xapiRegistrationId,
@@ -158,7 +157,7 @@ export const sendAttemptedStatements = async (
       display: { "en-Us": "attempted" },
     },
     object: {
-      id: `http://spuren-im-netz/${unitId}/step${taskIndex + 1}`,
+      id: `https://spuren-im-netz.web.app/${unitId}/step${taskIndex + 1}`,
       definition: {
         name: { "en-US": question },
         description: {
@@ -188,7 +187,7 @@ export const sendAttemptedStatements = async (
 
 export const sendStepDurationStatement = async (
   unitId,
-  stepIndex,
+  taskIndex,
   duration,
   username,
   xapiRegistrationId,
@@ -204,11 +203,11 @@ export const sendStepDurationStatement = async (
       display: { "en-US": "experienced" },
     },
     object: {
-      id: `http://example.com/xapi/units/${unitId}/steps${stepIndex}`,
+      id: `https://spuren-im-netz.web.app/${unitId}/step${taskIndex + 1}`,
       definition: {
-        name: { "en-US": `Step ${stepIndex + 1}` },
+        name: { "en-US": `Step ${taskIndex + 1}` },
         description: {
-          "en-US": `The learner experienced step ${stepIndex + 1}.`,
+          "en-US": `The learner experienced step ${taskIndex + 1}.`,
         },
       },
     },

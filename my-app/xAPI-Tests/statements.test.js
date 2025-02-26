@@ -67,7 +67,7 @@ describe("xAPI Statement Tests", () => {
     const mockStatement = {
       actor: { mbox: "mailto:test@example.com" },
       verb: { id: "http://adlnet.gov/expapi/verbs/answered" },
-      object: { id: "http://spuren-im-netz/unit1/step1" },
+      object: { id: "http://spuren-im-netz.web.app/unit1/step1" },
     };
 
     // Simuliert eine fehlgeschlagene Fetch-Response mit Status 500

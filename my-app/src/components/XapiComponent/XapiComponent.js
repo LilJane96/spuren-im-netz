@@ -50,8 +50,6 @@ export const fetchClassesFromLRS = async () => {
     const classNames = new Set();
 
     statements.forEach((statement) => {
-      console.log("statement.context", statement.context);
-
       if (
         statement.context &&
         statement.context.extensions &&
@@ -119,14 +117,14 @@ export const fetchAnswerDataFromLRS = async (
     let resultByUnit = {};
 
     for (let step = 1; step <= 5; step++) {
-      const activityId = `http://spuren-im-netz/unit${levelId}/step${step}`;
+      const activityId = `http://spuren-im-netz.web.app/unit${levelId}/step${step}`;
 
       const params = {
         verb: "http://adlnet.gov/expapi/verbs/answered",
         activity: activityId,
         limit: 100,
       };
-      // Falls ein Schüler ausgewählt ist, füge den Filter hinzu
+
       if (studentName) {
         params.agent = JSON.stringify({
           mbox: `mailto:${studentName.replace(/ +/g, "")}@example.com`,
@@ -141,15 +139,17 @@ export const fetchAnswerDataFromLRS = async (
         }
       );
 
-      console.log("statements", response.data.statements);
-
       const statements = response.data.statements;
 
       if (!resultByUnit[levelId]) {
         resultByUnit[levelId] = {};
       }
       if (!resultByUnit[levelId][step]) {
-        resultByUnit[levelId][step] = { correct: 0, incorrect: 0 };
+        resultByUnit[levelId][step] = {
+          correct: 0,
+          incorrect: 0,
+          durations: [],
+        };
       }
 
       statements.forEach((statement) => {
@@ -168,9 +168,17 @@ export const fetchAnswerDataFromLRS = async (
         } else {
           resultByUnit[levelId][step].incorrect += 1;
         }
+
+        // Dauer extrahieren und umwandeln
+        if (statement.result?.duration) {
+          const durationSeconds = parseDuration(statement.result.duration);
+          resultByUnit[levelId][step].durations.push(durationSeconds);
+        }
+
+        console.log("resultByUnit", resultByUnit[levelId][step]);
       });
     }
-
+    console.log("resultByUnit", resultByUnit);
     return resultByUnit;
   } catch (error) {
     console.error("Fehler beim Abrufen der Daten:", error);
@@ -184,7 +192,7 @@ export const fetchMostErrorsByLevel = async (levelId, numberOfSteps = 5) => {
     const errorsByStep = [];
 
     for (let step = 1; step <= numberOfSteps; step++) {
-      const activityId = `http://spuren-im-netz/unit${levelId}/step${step}`;
+      const activityId = `http://spuren-im-netz.web.app/unit${levelId}/step${step}`;
       const response = await axios.get(
         "https://cloud.scorm.com/lrs/XLZUV3LRMW/statements",
         {
@@ -209,15 +217,15 @@ export const fetchMostErrorsByLevel = async (levelId, numberOfSteps = 5) => {
       errorsByStep.push({ step, errors: errorCount });
     }
 
-    // Finde die maximale Anzahl an Fehlern
+    // Findet die maximale Anzahl an Fehlern
     const maxErrors = Math.max(...errorsByStep.map((item) => item.errors));
 
-    // Finde alle Steps mit der maximalen Anzahl an Fehlern
+    // Findet alle Steps mit der maximalen Anzahl an Fehlern
     const maxErrorSteps = errorsByStep.filter(
       (item) => item.errors === maxErrors
     );
 
-    // Verschiebe diese Steps in die Mitte (falls mehrere, mittig platzieren)
+    // Verschiebt diese Steps in die Mitte (falls mehrere, mittig platzieren)
     const centerIndex = Math.floor(errorsByStep.length / 2);
     const remainingSteps = errorsByStep.filter(
       (item) => item.errors !== maxErrors
@@ -244,7 +252,7 @@ export const fetchAverageTimeByLevel = async (levelId, numberOfSteps = 5) => {
     let totalDuration = 0;
 
     for (let step = 1; step <= numberOfSteps; step++) {
-      const activityId = `http://spuren-im-netz/unit${levelId}/step${step}`;
+      const activityId = `http://spuren-im-netz.web.app/unit${levelId}/step${step}`;
       const response = await axios.get(
         "https://cloud.scorm.com/lrs/XLZUV3LRMW/statements",
         {
@@ -288,7 +296,7 @@ export const fetchAttemptsByStep = async (levelId, numberOfSteps = 5) => {
     const attemptsData = {};
 
     for (let step = 1; step <= numberOfSteps; step++) {
-      const activityId = `http://spuren-im-netz/unit${levelId}/step${step}`;
+      const activityId = `http://spuren-im-netz.web.app/unit${levelId}/step${step}`;
       const response = await axios.get(
         "https://cloud.scorm.com/lrs/XLZUV3LRMW/statements",
         {
@@ -301,14 +309,14 @@ export const fetchAttemptsByStep = async (levelId, numberOfSteps = 5) => {
       );
       const statements = response.data.statements;
 
-      // Extrahiere die Anzahl der Versuche aus den Statements
+      // Extrahiert die Anzahl der Versuche aus den Statements
       const attempts = statements
         .map((statement) =>
           statement.result && statement.result.response
             ? parseInt(statement.result.response, 10)
             : 0
         )
-        .filter((attempt) => !isNaN(attempt)); // Filtere ungültige Werte heraus
+        .filter((attempt) => !isNaN(attempt));
 
       if (attempts.length > 0) {
         // Berechne Min, Median und Max
@@ -339,59 +347,12 @@ export const fetchAttemptsByStep = async (levelId, numberOfSteps = 5) => {
   }
 };
 
-// Hilfsfunktion zur Umrechnung von ISO-8601-Dauer
+// Hilfsfunktion zur Umrechnung von ISO-8601-Dauer in Sekunden
 const parseDuration = (isoDuration) => {
-  const regex = /PT(\d+H)?(\d+M)?(\d+S)?/;
+  const regex = /PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?/;
   const matches = isoDuration.match(regex);
-  const hours = matches[1] ? parseInt(matches[1]) : 0;
-  const minutes = matches[2] ? parseInt(matches[2]) : 0;
-  const seconds = matches[3] ? parseInt(matches[3]) : 0;
+  const hours = matches[1] ? parseInt(matches[1], 10) : 0;
+  const minutes = matches[2] ? parseInt(matches[2], 10) : 0;
+  const seconds = matches[3] ? parseInt(matches[3], 10) : 0;
   return hours * 3600 + minutes * 60 + seconds;
 };
-
-// import React from "react";
-// import TinCan from "tincanjs";
-
-// export const XapiTinCanStatement = async (statement) => {
-//   // TinCan LRS Konfiguration
-//   let lrs;
-//   try {
-//     lrs = new TinCan.LRS({
-//       endpoint: process.env.REACT_APP_SCORM_CLOUD_LRS_ENDPOINT,
-//       username: process.env.REACT_APP_SCORM_CLOUD_APP_ID,
-//       password: process.env.REACT_APP_SCORM_CLOUD_SECRET_KEY,
-//       allowFail: false,
-//     });
-//   } catch (error) {
-//     console.error("Failed to setup LRS object: ", error);
-//     return; // Funktion hier abbrechen, falls Initialisierung fehlschlägt
-//   }
-
-//   // Validierung des Statements
-//   if (!statement || typeof statement !== "object") {
-//     console.error("Invalid statement provided:", statement);
-//     return;
-//   }
-
-//   // Speichere das Statement im LRS
-//   lrs.saveStatement(statement, {
-//     callback: function (err, xhr) {
-//       if (err) {
-//         if (xhr) {
-//           console.error(
-//             "Failed to save statement: " +
-//               xhr.responseText +
-//               " (" +
-//               xhr.status +
-//               ")"
-//           );
-//         } else {
-//           console.error("Failed to save statement: ", err);
-//         }
-//         return;
-//       }
-
-//       console.log("Statement successfully saved:", statement);
-//     },
-//   });
-// };

@@ -36,6 +36,8 @@ export default function FrameOne() {
   const navigate = useNavigate();
   const [openBox, setOpenBox] = useState(false);
   const [isAnswerWrong, setIsAnswerWrong] = useState(true);
+  const [startTime, setStartTime] = useState(null);
+
   const username = localStorage.getItem("userUUID");
   const classname = localStorage.getItem("classValue");
   const xapiRegistrationId = localStorage.getItem("xapiRegistrationId");
@@ -74,12 +76,18 @@ export default function FrameOne() {
   }, [currentStep]);
 
   useEffect(() => {
+    setStartTime(Date.now());
+  }, [currentTaskIndex]);
+
+  useEffect(() => {
     const unitData = unitsArray.find((unit) => unit.name === unitId);
     setCurrentUnitData(unitData);
   }, [unitId]);
 
   useEffect(() => {
+    console.log("STARTET Timer");
     const startTime = Date.now();
+    console.log("startTime", startTime);
 
     return () => {
       const endTime = Date.now();
@@ -137,6 +145,10 @@ export default function FrameOne() {
     reason,
     actor
   ) => {
+    const endTime = Date.now();
+    const durationInSeconds = (endTime - startTime) / 1000;
+    const isoDuration = convertToISODuration(durationInSeconds);
+
     setSelectedAnswer(answer);
     setReasonText(reason);
     setIsAnswerWrong(isCorrect);
@@ -184,6 +196,7 @@ export default function FrameOne() {
       currentTaskIndex,
       username,
       xapiRegistrationId,
+      isoDuration,
       classname
     );
 

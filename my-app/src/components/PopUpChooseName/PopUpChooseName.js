@@ -44,7 +44,6 @@ const PopUpChooseName = ({ open }) => {
     localStorage.setItem("classValue", classValue);
 
     try {
-      // Falls handleRegistration ein Promise zurückgibt, dann warten wir auf die Auflösung
       await handleRegistration(
         courseValue,
         learnerId,

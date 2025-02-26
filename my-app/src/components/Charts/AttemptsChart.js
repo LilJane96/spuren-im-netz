@@ -79,7 +79,7 @@ const AttemptsChart = ({ levelId }) => {
 
   return (
     <div className="AttemptsChart">
-      <h3>Anzahl der häufigsten Versuche {levelId}</h3>
+      <h3>Anzahl der häufigsten Versuche Level {levelId}</h3>
       {chartData ? <canvas ref={chartRef} /> : <ChartsLoader />}
     </div>
   );

@@ -82,6 +82,19 @@ export const handleRegistration = async (
     console.log("Registration Progress: ");
     console.log(registrationProgress);
 
+    if (registrationProgress?.xapiRegistrationId) {
+      localStorage.setItem(
+        "xapiRegistrationId",
+        registrationProgress.xapiRegistrationId
+      );
+      console.log(
+        "xapiRegistrationId gespeichert:",
+        registrationProgress.xapiRegistrationId
+      );
+    } else {
+      console.warn("xapiRegistrationId nicht verfügbar.");
+    }
+
     return registrationProgress;
   } catch (error) {
     console.error("Fehler bei der Registrierung:", error);
