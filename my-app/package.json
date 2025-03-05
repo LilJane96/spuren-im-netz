@@ -9,6 +9,7 @@
     "@mui/icons-material": "^5.15.0",
     "@mui/material": "^5.15.0",
     "@rusticisoftware/scormcloud-api-v2-client-javascript": "^4.0.0",
+    "@sgratzl/chartjs-chart-boxplot": "^4.4.4",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
