@@ -5,6 +5,9 @@ Dieses Dokument beschreibt die Schritte zur Ausführung der Anwendung sowie der 
 ## Anwendung ausführen
 
 1. **Projekt klonen**
+   ```bash
+   git clone https://github.com/LilJane96/spuren-im-netz.git
+   ``` 
 2. **Auf den Branch wechseln**
    ```bash
    git checkout thesis-Liljana-Stefanelli
