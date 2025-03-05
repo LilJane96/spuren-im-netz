@@ -55,7 +55,7 @@ Dieses Dokument beschreibt die Schritte zur Ausführung der Anwendung sowie der 
 
 ## Cypress-Tests ausführen
 
-⚠ **Hinweis:** Es gibt eine Begrenzung auf **10 Registrierungen**. Die Tests verwenden **6 Registrierungen**. Falls Tests fehlschlagen, könnte es daran liegen, dass keine weiteren Registrierungen möglich sind.
+⚠ **Hinweis:** Es gibt eine Begrenzung auf **10 Registrierungen**. Die Tests wurden deswegen auf **4 Registrierungen** begrenzt. Falls Tests fehlschlagen, könnte es daran liegen, dass keine weiteren Registrierungen möglich sind.
 
 1. Ein **zweites Terminal** öffnen (die Anwendung muss weiterhin auf `localhost:3000` laufen).
 2. Ins Unterverzeichnis `my-app` navigieren:
