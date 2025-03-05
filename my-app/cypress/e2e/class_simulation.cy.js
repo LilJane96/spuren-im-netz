@@ -2,10 +2,8 @@ describe("Simulation einer Klasse im Lernspiel mit xAPI-Überprüfung", () => {
   const students = [
     { name: "Alice", password: "994spu31", class: "3c" },
     { name: "Bob", password: "994spu31", class: "3c" },
-    { name: "Charlie", password: "994spu31", class: "3c" },
+    { name: "Charlie", password: "994spu31", class: "5a" },
     { name: "Dana", password: "994spu31", class: "5a" },
-    { name: "Erika", password: "994spu31", class: "5a" },
-    { name: "Felix", password: "994spu31", class: "5a" },
   ];
 
   const app_id = Cypress.env("SCORM_CLOUD_APP_ID");

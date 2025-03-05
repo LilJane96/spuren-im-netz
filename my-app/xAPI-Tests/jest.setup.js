@@ -1,7 +1,7 @@
 process.env.REACT_APP_SCORM_CLOUD_LRS_ENDPOINT =
-  "https://cloud.scorm.com/tc/7EPYU5VK7C";
+  "https://cloud.scorm.com/tc/MXZR80GL07";
 process.env.REACT_APP_SCORM_CLOUD_LRS_STATEMENTS_ENDPOINT =
-  "https://cloud.scorm.com/lrs/7EPYU5VK7C/statements";
-process.env.REACT_APP_SCORM_CLOUD_APP_ID = "7EPYU5VK7C";
+  "https://cloud.scorm.com/lrs/MXZR80GL07/statements";
+process.env.REACT_APP_SCORM_CLOUD_APP_ID = "MXZR80GL07";
 process.env.REACT_APP_SCORM_CLOUD_SECRET_KEY =
-  "UuG4H4D6CoFTPJqKBktXWUcu2F9Ju0XXya94ksmt";
+  "d5RaacKxoHQSgcqrqqAFE2f8iPc6vyu3ommtttK1";
