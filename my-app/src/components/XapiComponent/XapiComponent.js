@@ -1,21 +1,32 @@
 import axios from "axios";
 
-const lrsEndpoint =
-  process.env.REACT_APP_SCORM_CLOUD_LRS_ENDPOINT + "/statements";
-const lrsStatementEndpoint =
-  process.env.REACT_APP_SCORM_CLOUD_LRS_STATEMENTS_ENDPOINT;
 const app_id = process.env.REACT_APP_SCORM_CLOUD_APP_ID;
 const secret_key = process.env.REACT_APP_SCORM_CLOUD_SECRET_KEY;
 
+const urlParams =
+  typeof window !== "undefined"
+    ? new URLSearchParams(window.location.search)
+    : new URLSearchParams();
+
+const lrsEndpoint =
+  urlParams.get("endpoint") ||
+  process.env.REACT_APP_SCORM_CLOUD_LRS_ENDPOINT + "/";
+const authToken =
+  urlParams.get("auth") || `Basic ${btoa(`${app_id}:${secret_key}`)}`;
+
+console.log("lrsEndpoint", lrsEndpoint);
+console.log("authToken", authToken);
+
 const authHeader = {
-  Authorization: `Basic ${btoa(`${app_id}:${secret_key}`)}`,
+  Authorization: authToken,
   "Content-Type": "application/json",
   "X-Experience-API-Version": "1.0.3",
 };
 
+// Senden des xAPI-Statements an SCORM Cloud
 export const sendXAPIStatementWithLRS = async (statement) => {
   try {
-    const response = await fetch(lrsEndpoint, {
+    const response = await fetch(`${lrsEndpoint}statements`, {
       method: "POST",
       headers: authHeader,
       body: JSON.stringify(statement),
@@ -26,6 +37,7 @@ export const sendXAPIStatementWithLRS = async (statement) => {
       console.error("Fehler beim Senden des Statements:", errorData);
       throw new Error(`HTTP Fehler ${response.status}`);
     }
+
     const responseData = await response.json();
     return responseData;
   } catch (error) {
@@ -36,15 +48,12 @@ export const sendXAPIStatementWithLRS = async (statement) => {
 
 export const fetchClassesFromLRS = async () => {
   try {
-    const response = await axios.get(
-      "https://cloud.scorm.com/lrs/XLZUV3LRMW/statements",
-      {
-        headers: authHeader,
-        params: {
-          verb: "http://adlnet.gov/expapi/verbs/answered",
-        },
-      }
-    );
+    const response = await axios.get(`${lrsEndpoint}statements`, {
+      headers: authHeader,
+      params: {
+        verb: "http://adlnet.gov/expapi/verbs/answered",
+      },
+    });
 
     const statements = response.data.statements;
     const classNames = new Set();
@@ -74,15 +83,12 @@ export const fetchClassesFromLRS = async () => {
 
 export const fetchStudentsFromLRS = async (selectedClass = "") => {
   try {
-    const response = await axios.get(
-      "https://cloud.scorm.com/lrs/XLZUV3LRMW/statements",
-      {
-        headers: authHeader,
-        params: {
-          verb: "http://adlnet.gov/expapi/verbs/answered",
-        },
-      }
-    );
+    const response = await axios.get(`${lrsEndpoint}statements`, {
+      headers: authHeader,
+      params: {
+        verb: "http://adlnet.gov/expapi/verbs/answered",
+      },
+    });
 
     const statements = response.data.statements;
     const studentNames = new Set();
@@ -92,14 +98,12 @@ export const fetchStudentsFromLRS = async (selectedClass = "") => {
         statement.context?.extensions?.[
           "http://example.com/xapi/extensions/className"
         ];
-
       if (statement.actor?.name) {
         if (!selectedClass || classId === selectedClass) {
           studentNames.add(statement.actor.name);
         }
       }
     });
-
     return Array.from(studentNames);
   } catch (error) {
     console.error("Fehler beim Abrufen der Schülerliste:", error);
@@ -109,75 +113,80 @@ export const fetchStudentsFromLRS = async (selectedClass = "") => {
 
 // Funktion, um Statements aus dem LRS zu holen und nach Erfolg zu aggregieren
 export const fetchAnswerDataFromLRS = async (
-  levelId,
   studentName = "",
   selectedClass = ""
 ) => {
   try {
     let resultByUnit = {};
 
-    for (let step = 1; step <= 5; step++) {
-      const activityId = `http://spuren-im-netz.web.app/unit${levelId}/step${step}`;
+    const params = {
+      verb: "http://adlnet.gov/expapi/verbs/answered",
+      limit: 100,
+    };
 
-      const params = {
-        verb: "http://adlnet.gov/expapi/verbs/answered",
-        activity: activityId,
-        limit: 100,
-      };
-
-      if (studentName) {
-        params.agent = JSON.stringify({
-          mbox: `mailto:${studentName.replace(/ +/g, "")}@example.com`,
-        });
-      }
-
-      const response = await axios.get(
-        "https://cloud.scorm.com/lrs/XLZUV3LRMW/statements",
-        {
-          params,
-          headers: authHeader,
-        }
-      );
-
-      const statements = response.data.statements;
-
-      if (!resultByUnit[levelId]) {
-        resultByUnit[levelId] = {};
-      }
-      if (!resultByUnit[levelId][step]) {
-        resultByUnit[levelId][step] = {
-          correct: 0,
-          incorrect: 0,
-          durations: [],
-        };
-      }
-
-      statements.forEach((statement) => {
-        const isCorrect = statement.result?.success ?? false;
-        const classId =
-          statement.context?.extensions?.[
-            "http://example.com/xapi/extensions/className"
-          ] || "";
-
-        if (selectedClass && classId !== selectedClass) {
-          return; // Überspringe dieses Statement, wenn es nicht zur Klasse gehört
-        }
-
-        if (isCorrect) {
-          resultByUnit[levelId][step].correct += 1;
-        } else {
-          resultByUnit[levelId][step].incorrect += 1;
-        }
-
-        // Dauer extrahieren und umwandeln
-        if (statement.result?.duration) {
-          const durationSeconds = parseDuration(statement.result.duration);
-          resultByUnit[levelId][step].durations.push(durationSeconds);
-        }
-
-        console.log("resultByUnit", resultByUnit[levelId][step]);
+    if (studentName) {
+      console.log("StudentName", studentName);
+      params.agent = JSON.stringify({
+        account: {
+          homePage: "http://cloud.scorm.com",
+          name: studentName.replace("User", ""),
+        },
       });
     }
+    console.log("params", params);
+    const response = await axios.get(`${lrsEndpoint}statements`, {
+      params,
+      headers: authHeader,
+    });
+
+    const statements = response.data.statements;
+
+    statements.forEach((statement) => {
+      const parentActivities =
+        statement.context?.contextActivities?.parent || [];
+
+      parentActivities.forEach((parent) => {
+        const match = parent.id.match(/unit(\d+)\/step(\d+)/);
+
+        if (match) {
+          const [_, unitId, step] = match.map(Number);
+
+          if (!resultByUnit[unitId]) {
+            resultByUnit[unitId] = {};
+          }
+          if (!resultByUnit[unitId][step]) {
+            resultByUnit[unitId][step] = {
+              correct: 0,
+              incorrect: 0,
+              durations: [],
+            };
+          }
+
+          const isCorrect = statement.result?.success ?? false;
+          const classId =
+            statement.context?.extensions?.[
+              "http://example.com/xapi/extensions/className"
+            ] || "";
+
+          if (selectedClass && classId !== selectedClass) {
+            return; // Überspringt dieses Statement, wenn es nicht zur Klasse gehört
+          }
+
+          if (isCorrect) {
+            resultByUnit[unitId][step].correct += 1;
+          } else {
+            resultByUnit[unitId][step].incorrect += 1;
+          }
+
+          // Dauer extrahieren und umwandeln
+          if (statement.result?.duration) {
+            const durationSeconds = parseDuration(statement.result.duration);
+            resultByUnit[unitId][step].durations.push(durationSeconds);
+          }
+        }
+      });
+    });
+
     console.log("resultByUnit", resultByUnit);
     return resultByUnit;
   } catch (error) {
@@ -192,24 +201,30 @@ export const fetchMostErrorsByLevel = async (levelId, numberOfSteps = 5) => {
     const errorsByStep = [];
 
     for (let step = 1; step <= numberOfSteps; step++) {
-      const activityId = `http://spuren-im-netz.web.app/unit${levelId}/step${step}`;
-      const response = await axios.get(
-        "https://cloud.scorm.com/lrs/XLZUV3LRMW/statements",
-        {
-          headers: authHeader,
-          params: {
-            verb: "http://adlnet.gov/expapi/verbs/answered",
-            activity: activityId,
-          },
-        }
-      );
+      const response = await axios.get(`${lrsEndpoint}statements`, {
+        headers: authHeader,
+        params: {
+          verb: "http://adlnet.gov/expapi/verbs/answered",
+        },
+      });
 
       const statements = response.data.statements;
       let errorCount = 0;
 
       // Zähle die Fehler für diesen Step
       statements.forEach((statement) => {
-        if (statement.result && statement.result.success === false) {
+        const parentId =
+          statement.context?.contextActivities?.parent?.[0]?.id || "";
+        const stepMatch = parentId.match(/unit(\d+)\/step(\d+)/);
+        const statementUnitId = stepMatch ? stepMatch[1] : null;
+        const statementStep = stepMatch ? parseInt(stepMatch[2], 10) : null;
+
+        if (
+          statement.result &&
+          statement.result.success === false &&
+          statementUnitId === String(levelId) &&
+          statementStep === step
+        ) {
           errorCount++;
         }
       });
@@ -246,28 +261,35 @@ export const fetchMostErrorsByLevel = async (levelId, numberOfSteps = 5) => {
 };
 
 // Fetch durchschnittliche Bearbeitungszeit pro Schritt
+
 export const fetchAverageTimeByLevel = async (levelId, numberOfSteps = 5) => {
   try {
     let count = 0;
     let totalDuration = 0;
 
     for (let step = 1; step <= numberOfSteps; step++) {
-      const activityId = `http://spuren-im-netz.web.app/unit${levelId}/step${step}`;
-      const response = await axios.get(
-        "https://cloud.scorm.com/lrs/XLZUV3LRMW/statements",
-        {
-          headers: authHeader,
-          params: {
-            verb: "http://adlnet.gov/expapi/verbs/answered",
-            activity: activityId,
-          },
-        }
-      );
+      const response = await axios.get(`${lrsEndpoint}statements`, {
+        headers: authHeader,
+        params: {
+          verb: "http://adlnet.gov/expapi/verbs/answered",
+        },
+      });
 
       const statements = response.data.statements;
 
       statements.forEach((statement) => {
-        if (statement.result && statement.result.duration) {
+        const parentId =
+          statement.context?.contextActivities?.parent?.[0]?.id || "";
+        const stepMatch = parentId.match(/unit(\d+)\/step(\d+)/);
+        const statementUnitId = stepMatch ? stepMatch[1] : null;
+        const statementStep = stepMatch ? parseInt(stepMatch[2], 10) : null;
+
+        if (
+          statement.result &&
+          statement.result.duration &&
+          statementUnitId === String(levelId) &&
+          statementStep === step
+        ) {
           const duration = statement.result.duration;
           const seconds = parseDuration(duration);
           totalDuration += seconds;
@@ -296,26 +318,30 @@ export const fetchAttemptsByStep = async (levelId, numberOfSteps = 5) => {
     const attemptsData = {};
 
     for (let step = 1; step <= numberOfSteps; step++) {
-      const activityId = `http://spuren-im-netz.web.app/unit${levelId}/step${step}`;
-      const response = await axios.get(
-        "https://cloud.scorm.com/lrs/XLZUV3LRMW/statements",
-        {
-          headers: authHeader,
-          params: {
-            verb: "http://adlnet.gov/expapi/verbs/attempted",
-            activity: activityId,
-          },
-        }
-      );
+      const response = await axios.get(`${lrsEndpoint}statements`, {
+        headers: authHeader,
+        params: {
+          verb: "http://adlnet.gov/expapi/verbs/attempted",
+        },
+      });
       const statements = response.data.statements;
 
       // Extrahiert die Anzahl der Versuche aus den Statements
       const attempts = statements
-        .map((statement) =>
-          statement.result && statement.result.response
-            ? parseInt(statement.result.response, 10)
-            : 0
-        )
+        .map((statement) => {
+          const parentId =
+            statement.context?.contextActivities?.parent?.[0]?.id || "";
+          const stepMatch = parentId.match(/unit(\d+)\/step(\d+)/);
+          const statementUnitId = stepMatch ? stepMatch[1] : null;
+          const statementStep = stepMatch ? parseInt(stepMatch[2], 10) : null;
+
+          if (statementUnitId === String(levelId) && statementStep === step) {
+            return statement.result && statement.result.response
+              ? parseInt(statement.result.response, 10)
+              : 0;
+          }
+          return 0;
+        })
         .filter((attempt) => !isNaN(attempt));
 
       if (attempts.length > 0) {

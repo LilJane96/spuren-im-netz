@@ -1,33 +1,70 @@
 import { sendXAPIStatementWithLRS } from "../components/XapiComponent/XapiComponent";
 
+// Extrahiere Launch-Parameter aus der URL
+const urlParams =
+  typeof window !== "undefined"
+    ? new URLSearchParams(window.location.search)
+    : new URLSearchParams();
+
+const registration = urlParams.get("registration");
+
+const actorParam = urlParams.get("actor");
+const actor = actorParam && JSON.parse(actorParam);
+// Sicherstellen, dass 'name' immer ein String ist
+if (Array.isArray(actor?.name)) {
+  actor.name = actor.name.join(" ");
+}
+let account = null;
+if (actor?.account && Array.isArray(actor.account)) {
+  account = actor.account[0];
+} else if (actor?.account && typeof actor.account === "object") {
+  account = actor.account;
+}
+
+console.log("actor", actor);
+console.log("Account:", account);
+console.log("registration:", registration);
+
 export const sendLevelStartStatement = async (
   unitId,
-  actor,
-  xapiRegistrationId,
+  taskIndex,
+  registrationId,
   className
 ) => {
   const statement = {
     actor: {
-      mbox: `mailto:${actor}@example.com`,
-      name: actor,
+      objectType: "Agent",
+      name: actor?.name || registrationId,
+      account: {
+        homePage: account?.accountServiceHomePage || "http://cloud.scorm.com",
+        name: account?.accountName || registrationId,
+      },
     },
     verb: {
       id: "http://activitystrea.ms/schema/1.0/start",
       display: { "en-US": "started" },
     },
     object: {
-      id: `https://spuren-im-netz.web.app/${unitId}`,
+      id: `https://spuren-im-netz.web.app/activity/game`,
       definition: {
         name: { "en-US": `Started Unit ${unitId}` },
         description: { "en-US": `The learner has started Unit ${unitId}.` },
       },
     },
     context: {
-      registration: xapiRegistrationId,
+      registration: registration,
       contextActivities: {
         parent: [
           {
-            id: "https://spuren-im-netz.web.app/activity/game",
+            id: `http://spuren-im-netz.web.app/${unitId}/step${taskIndex + 1}`,
+            definition: {
+              name: { "en-US": `Step ${taskIndex + 1} of ${unitId}` },
+              description: {
+                "en-US": `The learner is on Step ${
+                  taskIndex + 1
+                } of ${unitId}.`,
+              },
+            },
           },
         ],
       },
@@ -41,16 +78,19 @@ export const sendLevelStartStatement = async (
 
 export const sendLevelEndStatement = async (
   unitId,
-  username,
-  xapiRegistrationId,
+  taskIndex,
+  registrationId,
   sessionId,
   className
 ) => {
-  const statement = {
+  const completedStatement = {
     actor: {
       objectType: "Agent",
-      name: `${username}`,
-      mbox: `mailto:${username}@example.com`,
+      name: actor?.name || registrationId,
+      account: {
+        homePage: account?.accountServiceHomePage || "http://cloud.scorm.com",
+        name: account?.accountName || registrationId,
+      },
     },
     verb: {
       id: "http://adlnet.gov/expapi/verbs/completed",
@@ -59,7 +99,7 @@ export const sendLevelEndStatement = async (
       },
     },
     object: {
-      id: `https://spuren-im-netz.web.app/activity/game/${unitId}`,
+      id: "https://spuren-im-netz.web.app/activity/game",
       objectType: "Activity",
     },
     result: {
@@ -70,11 +110,19 @@ export const sendLevelEndStatement = async (
       },
     },
     context: {
-      registration: xapiRegistrationId,
+      registration: registration,
       contextActivities: {
         parent: [
           {
-            id: "https://spuren-im-netz.web.app/activity/game",
+            id: `http://spuren-im-netz.web.app/${unitId}/step${taskIndex + 1}`,
+            definition: {
+              name: { "en-US": `Step ${taskIndex + 1} of ${unitId}` },
+              description: {
+                "en-US": `The learner is on Step ${
+                  taskIndex + 1
+                } of ${unitId}.`,
+              },
+            },
           },
         ],
       },
@@ -83,7 +131,55 @@ export const sendLevelEndStatement = async (
       },
     },
   };
-  await sendXAPIStatementWithLRS(statement);
+  const passedStatement = {
+    actor: {
+      objectType: "Agent",
+      name: actor?.name || registrationId,
+      account: {
+        homePage: account?.accountServiceHomePage || "http://cloud.scorm.com",
+        name: account?.accountName || registrationId,
+      },
+    },
+    verb: {
+      id: "http://adlnet.gov/expapi/verbs/passed",
+      display: { "en-US": "passed" },
+    },
+    object: {
+      id: "https://spuren-im-netz.web.app/activity/game",
+      objectType: "Activity",
+    },
+    result: {
+      success: true,
+      score: {
+        scaled: 0.9,
+      },
+    },
+    context: {
+      registration: registration,
+      contextActivities: {
+        parent: [
+          {
+            id: `http://spuren-im-netz.web.app/${unitId}/step${taskIndex + 1}`,
+            definition: {
+              name: { "en-US": `Step ${taskIndex + 1} of ${unitId}` },
+              description: {
+                "en-US": `The learner is on Step ${
+                  taskIndex + 1
+                } of ${unitId}.`,
+              },
+            },
+          },
+        ],
+      },
+      extensions: {
+        "http://example.com/xapi/extensions/className": className,
+      },
+    },
+  };
+
+  // Beide Statements senden
+  await sendXAPIStatementWithLRS(completedStatement);
+  await sendXAPIStatementWithLRS(passedStatement);
 };
 
 export const sendAnswerStatement = async (
@@ -92,22 +188,25 @@ export const sendAnswerStatement = async (
   answer,
   isCorrect,
   taskIndex,
-  username,
-  xapiRegistrationId,
+  registrationId,
   duration,
   className
 ) => {
   const statement = {
     actor: {
-      name: `${username}`,
-      mbox: `mailto:${username}@example.com`,
+      objectType: "Agent",
+      name: actor?.name || registrationId,
+      account: {
+        homePage: account?.accountServiceHomePage || "http://cloud.scorm.com",
+        name: account?.accountName || registrationId,
+      },
     },
     verb: {
       id: "http://adlnet.gov/expapi/verbs/answered",
       display: { "en-US": "answered" },
     },
     object: {
-      id: `http://spuren-im-netz.web.app/${unitId}/step${taskIndex + 1}`,
+      id: `https://spuren-im-netz.web.app/activity/game`,
       definition: {
         name: { "en-US": question },
         description: {
@@ -121,11 +220,19 @@ export const sendAnswerStatement = async (
       duration: duration,
     },
     context: {
-      registration: xapiRegistrationId,
+      registration: registration,
       contextActivities: {
         parent: [
           {
-            id: "https://spuren-im-netz.web.app/activity/game",
+            id: `http://spuren-im-netz.web.app/${unitId}/step${taskIndex + 1}`,
+            definition: {
+              name: { "en-US": `Step ${taskIndex + 1} of ${unitId}` },
+              description: {
+                "en-US": `The learner is on Step ${
+                  taskIndex + 1
+                } of ${unitId}.`,
+              },
+            },
           },
         ],
       },
@@ -143,21 +250,24 @@ export const sendAttemptedStatements = async (
   question,
   attempts,
   taskIndex,
-  username,
-  xapiRegistrationId,
+  registrationId,
   className
 ) => {
   const statement = {
     actor: {
-      name: `${username}`,
-      mbox: `mailto:${username}@example.com`,
+      objectType: "Agent",
+      name: actor?.name || registrationId,
+      account: {
+        homePage: account?.accountServiceHomePage || "http://cloud.scorm.com",
+        name: account?.accountName || registrationId,
+      },
     },
     verb: {
       id: "http://adlnet.gov/expapi/verbs/attempted",
       display: { "en-Us": "attempted" },
     },
     object: {
-      id: `https://spuren-im-netz.web.app/${unitId}/step${taskIndex + 1}`,
+      id: `https://spuren-im-netz.web.app/activity/game`,
       definition: {
         name: { "en-US": question },
         description: {
@@ -169,11 +279,19 @@ export const sendAttemptedStatements = async (
       response: `${attempts}`,
     },
     context: {
-      registration: xapiRegistrationId,
+      registration: registration,
       contextActivities: {
         parent: [
           {
-            id: "https://spuren-im-netz.web.app/activity/game",
+            id: `http://spuren-im-netz.web.app/${unitId}/step${taskIndex + 1}`,
+            definition: {
+              name: { "en-US": `Step ${taskIndex + 1} of ${unitId}` },
+              description: {
+                "en-US": `The learner is on Step ${
+                  taskIndex + 1
+                } of ${unitId}.`,
+              },
+            },
           },
         ],
       },
@@ -189,21 +307,24 @@ export const sendStepDurationStatement = async (
   unitId,
   taskIndex,
   duration,
-  username,
-  xapiRegistrationId,
+  registrationId,
   className
 ) => {
   const statement = {
     actor: {
-      name: `${username}`,
-      mbox: `mailto:${username}@example.com`,
+      objectType: "Agent",
+      name: actor?.name || registrationId,
+      account: {
+        homePage: account?.accountServiceHomePage || "http://cloud.scorm.com",
+        name: account?.accountName || registrationId,
+      },
     },
     verb: {
       id: "http://adlnet.gov/expapi/verbs/experienced",
       display: { "en-US": "experienced" },
     },
     object: {
-      id: `https://spuren-im-netz.web.app/${unitId}/step${taskIndex + 1}`,
+      id: `https://spuren-im-netz.web.app/activity/game`,
       definition: {
         name: { "en-US": `Step ${taskIndex + 1}` },
         description: {
@@ -215,11 +336,19 @@ export const sendStepDurationStatement = async (
       duration: duration,
     },
     context: {
-      registration: xapiRegistrationId,
+      registration: registration,
       contextActivities: {
         parent: [
           {
-            id: "https://spuren-im-netz.web.app/activity/game",
+            id: `http://spuren-im-netz.web.app/${unitId}/step${taskIndex + 1}`,
+            definition: {
+              name: { "en-US": `Step ${taskIndex + 1} of ${unitId}` },
+              description: {
+                "en-US": `The learner is on Step ${
+                  taskIndex + 1
+                } of ${unitId}.`,
+              },
+            },
           },
         ],
       },

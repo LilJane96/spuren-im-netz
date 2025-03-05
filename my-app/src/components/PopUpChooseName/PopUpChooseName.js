@@ -46,8 +46,8 @@ const PopUpChooseName = ({ open }) => {
     try {
       await handleRegistration(
         courseValue,
-        learnerId,
-        learnerId,
+        registrationId,
+        registrationId,
         "USER",
         registrationId
       );

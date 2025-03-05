@@ -4,7 +4,7 @@
         <activity id="https://spuren-im-netz.web.app/activity/game" type="http://activitystrea.ms/schema/1.0/game">
             <name>Spuren im Netz</name>
             <description lang="en-US">In this game, students can learn about the dangers of social media and how to deal with them.</description>
-            <launch>http://localhost:3000</launch>
+            <launch>http://localhost:3000/introduction/GameIntroduction</launch>
         </activity>
     </activities>
 </tincan>

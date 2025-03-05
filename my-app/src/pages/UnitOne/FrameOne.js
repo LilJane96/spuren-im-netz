@@ -40,7 +40,7 @@ export default function FrameOne() {
 
   const username = localStorage.getItem("userUUID");
   const classname = localStorage.getItem("classValue");
-  const xapiRegistrationId = localStorage.getItem("xapiRegistrationId");
+  const registrationId = localStorage.getItem("registrationId");
 
   const convertToISODuration = (seconds) => {
     const hours = Math.floor(seconds / 3600);
@@ -66,7 +66,7 @@ export default function FrameOne() {
 
     if (stepFromUrl === 1) {
       console.log("step", stepFromUrl);
-      sendLevelStartStatement(unitId, username, xapiRegistrationId, classname);
+      sendLevelStartStatement(unitId, stepId, registrationId, classname);
     }
   }, [stepId, unitId, username]);
 
@@ -97,8 +97,7 @@ export default function FrameOne() {
         unitId,
         currentTaskIndex,
         isoDuration,
-        username,
-        xapiRegistrationId,
+        registrationId,
         classname
       );
     };
@@ -194,8 +193,7 @@ export default function FrameOne() {
       answer,
       isCorrect,
       currentTaskIndex,
-      username,
-      xapiRegistrationId,
+      registrationId,
       isoDuration,
       classname
     );
@@ -205,8 +203,7 @@ export default function FrameOne() {
       `step${currentStep}`,
       units[unitId].taskAttempts[currentTaskIndex],
       currentTaskIndex,
-      username,
-      xapiRegistrationId,
+      registrationId,
       classname
     );
   };
@@ -246,8 +243,8 @@ export default function FrameOne() {
     const sessionId = uuidv4();
     sendLevelEndStatement(
       unitId,
-      username,
-      xapiRegistrationId,
+      currentTaskIndex,
+      registrationId,
       sessionId,
       classname
     );

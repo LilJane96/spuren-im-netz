@@ -65,7 +65,12 @@ describe("xAPI Statement Tests", () => {
 
   test("sendXAPIStatement sollte einen Fehler werfen, wenn Response nicht ok ist", async () => {
     const mockStatement = {
-      actor: { mbox: "mailto:test@example.com" },
+      actor: {
+        account: {
+          name: "testUser",
+          homePage: "http://cloud.scorm.com",
+        },
+      },
       verb: { id: "http://adlnet.gov/expapi/verbs/answered" },
       object: { id: "http://spuren-im-netz.web.app/unit1/step1" },
     };
@@ -111,7 +116,7 @@ describe("xAPI Statement Tests", () => {
       mockSessionId,
       mockClassName
     );
-    expect(fetch).toHaveBeenCalledTimes(1);
+    expect(fetch).toHaveBeenCalledTimes(2);
     expect(fetch).toHaveBeenCalledWith(
       expect.stringContaining(url),
       expect.objectContaining({

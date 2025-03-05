@@ -46,6 +46,9 @@ export const handleRegistration = async (
     APP_NORMAL.username = APP_ID;
     APP_NORMAL.password = SECRET_KEY;
 
+    console.log("App ID:", APP_ID);
+    console.log("Secret Key:", SECRET_KEY);
+
     // Registrierung erstellen
     await createRegistration(
       COURSE_ID,
@@ -63,8 +66,17 @@ export const handleRegistration = async (
       });
     });
 
-    console.log(OUTPUT_BORDER);
     console.log(`Launch Link: ${launchLink}`);
+
+    if (jsEnv.isBrowser) {
+      // Öffnet ein Popup mit dem Launch-Link
+      window.open(launchLink, "_blank");
+    } else {
+      console.log(
+        "Navigiere zur URL oben, um den Kurs zu starten. Drücke Enter, wenn du fertig bist."
+      );
+      prompt();
+    }
 
     // Fortschritt abrufen
     const registrationProgress = await new Promise((resolve, reject) => {
@@ -78,9 +90,7 @@ export const handleRegistration = async (
       );
     });
 
-    console.log(OUTPUT_BORDER);
-    console.log("Registration Progress: ");
-    console.log(registrationProgress);
+    console.log("Registration Progress: ", registrationProgress);
 
     if (registrationProgress?.xapiRegistrationId) {
       localStorage.setItem(

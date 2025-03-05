@@ -32,14 +32,14 @@ const AnswerChart = ({ levelId }) => {
 
   useEffect(() => {
     const loadData = async () => {
-      setLoading(true); // Ladezustand setzen
+      setLoading(true);
       const result = await fetchAnswerDataFromLRS(
         levelId,
         selectedStudent,
         selectedClass
       );
       setData(result);
-      setLoading(false); // Ladezustand beenden
+      setLoading(false);
     };
     loadData();
   }, [levelId, selectedStudent, selectedClass]);

@@ -60,10 +60,10 @@ describe("Simulation einer Klasse im Lernspiel mit xAPI-Überprüfung", () => {
         expect(response.status).to.eq(200);
         expect(response.body.registrations).to.be.an("array");
 
-        // Die Registrierung für den aktuellen Schüler suchen
-        const registration = response.body.registrations.find(
-          (reg) => reg.learner.id === student.name
-        );
+        // // Die Registrierung für den aktuellen Schüler suchen
+        // const registration = response.body.registrations.find(
+        //   (reg) => reg.learner.id === student.name
+        // );
 
         console.log("response.body.registrations", response.body.registrations);
 
