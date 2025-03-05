@@ -34,7 +34,6 @@ const AnswerChart = ({ levelId }) => {
     const loadData = async () => {
       setLoading(true);
       const result = await fetchAnswerDataFromLRS(
-        levelId,
         selectedStudent,
         selectedClass
       );

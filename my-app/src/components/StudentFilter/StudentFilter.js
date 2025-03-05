@@ -9,7 +9,6 @@ const StudentFilter = ({ onSelectStudent, selectedClass }) => {
     const loadStudents = async () => {
       console.log("selectedClass", selectedClass);
       const studentList = await fetchStudentsFromLRS(selectedClass);
-      console.log("studentlist", studentList);
       setStudents(studentList);
     };
     loadStudents();
